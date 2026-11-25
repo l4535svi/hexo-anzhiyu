@@ -1,0 +1,32 @@
+---
+title: 免费教你用 Cloudflare + Gmail 搭建自定义域名邮箱！零成本打造自己的 @域名 邮箱，不暴露真实邮箱，安全又专业！
+date: '2025-12-15 12:00:00'
+tags:
+- 临时邮箱
+categories:
+- 临时邮箱
+description: 1.在cf里面配置好。解析好邮箱转发 2.把这个打开，可以防止垃圾邮件 3.在谷歌账号里面搜索app pass生成专用密码 4.在谷歌邮件后面，添加域名 5.添加smtp.gmail.com 谷歌邮箱，谷歌app密码，保存成功，可以无限制添加，只要改一下二级域名都可以了
+---
+[![](https://blogger.googleusercontent.com/img/a/AVvXsEhHD5F3o9f_dC2OIo7trHXi-zVfWl2H_yoSe3KihLwfri8WN9-xCgn9hNKsk2NU6YIG7pPB4UZo9Wqxuo-YPG3ewx5EltvyDSf_udLmA1gOiqT9pGs5O5HuIIafbE0COn3UhDF7-9TxhWtPQz7txsvgQa2SCxVn_QbnzrraENXdJ6iXdp0_mY2ZNoz0z-v-=w568-h198)](https://blogger.googleusercontent.com/img/a/AVvXsEhHD5F3o9f_dC2OIo7trHXi-zVfWl2H_yoSe3KihLwfri8WN9-xCgn9hNKsk2NU6YIG7pPB4UZo9Wqxuo-YPG3ewx5EltvyDSf_udLmA1gOiqT9pGs5O5HuIIafbE0COn3UhDF7-9TxhWtPQz7txsvgQa2SCxVn_QbnzrraENXdJ6iXdp0_mY2ZNoz0z-v-)
+
+1.在cf里面配置好。解析好邮箱转发
+
+[![](https://blogger.googleusercontent.com/img/a/AVvXsEjZ2zYgnuvdgKHUiwD4ECUm9I7k3u_Wi52TCufphYbZntgKEYkyCYCOIxV7zDcNV-j0mWJVCAlZsgGac_sAMFSDMdYH3ZZ_EiN1LMRHXbb947K-0PKlZG7u-Sg3hMScdV2dK9GE4FeRDaJRShHX4q-sYJRU1vvCzsEM_QQQTFb5MX6XYv-s-oUg57BjoQhr)](https://blogger.googleusercontent.com/img/a/AVvXsEjZ2zYgnuvdgKHUiwD4ECUm9I7k3u_Wi52TCufphYbZntgKEYkyCYCOIxV7zDcNV-j0mWJVCAlZsgGac_sAMFSDMdYH3ZZ_EiN1LMRHXbb947K-0PKlZG7u-Sg3hMScdV2dK9GE4FeRDaJRShHX4q-sYJRU1vvCzsEM_QQQTFb5MX6XYv-s-oUg57BjoQhr)
+
+2.把这个打开，可以防止垃圾邮件  
+
+[![](https://blogger.googleusercontent.com/img/a/AVvXsEi0IvkJsHE-18uJGTU4o5p39JN2pqQYzU_0NKHbkMfp7XstPT-LpDh_Yuhz8S22dnXRqr_MkcCIpCXK2Rj_wrhC57fxDp_88ILkly9J6risKZ__3DtvDtdHI968cPN-09RtlNNLHg9wCuw2bJbq1ea8m7-NvlV9vlpjZd0KVIHQqOBiHUtT7QtgVdbyy0fA)](https://blogger.googleusercontent.com/img/a/AVvXsEi0IvkJsHE-18uJGTU4o5p39JN2pqQYzU_0NKHbkMfp7XstPT-LpDh_Yuhz8S22dnXRqr_MkcCIpCXK2Rj_wrhC57fxDp_88ILkly9J6risKZ__3DtvDtdHI968cPN-09RtlNNLHg9wCuw2bJbq1ea8m7-NvlV9vlpjZd0KVIHQqOBiHUtT7QtgVdbyy0fA)
+
+  
+3.在谷歌账号里面搜索app pass生成专用密码
+
+[![](https://blogger.googleusercontent.com/img/a/AVvXsEgUfcsMLstt5KLtsNvrwou3oFz29iixllbkFqbbEUH_4zNWCXEJ8LpFY-f-nucW7_udL8mEOdcdojrO6VeqNHPL7WwaKEgyIZJzb0s36JdLPoCuERb9GD5kiXuestT8qUXH4QK6IWyj6zG7mv43gtUqqftMciLFnYDqOdT57ILMEfqqGgT4M_BpBRUVXPdw)](https://blogger.googleusercontent.com/img/a/AVvXsEgUfcsMLstt5KLtsNvrwou3oFz29iixllbkFqbbEUH_4zNWCXEJ8LpFY-f-nucW7_udL8mEOdcdojrO6VeqNHPL7WwaKEgyIZJzb0s36JdLPoCuERb9GD5kiXuestT8qUXH4QK6IWyj6zG7mv43gtUqqftMciLFnYDqOdT57ILMEfqqGgT4M_BpBRUVXPdw)
+
+  
+4.在谷歌邮件后面，添加域名
+
+[![](https://blogger.googleusercontent.com/img/a/AVvXsEiP7qr0_6Js9WnxDqOncPUzF4tajEpfMNScLl4nGjxq4NT3nW1cg7UF9nyCqF8CpMGOUWxpvNwqBKFP2v2O-6wIVRuT-JbCQ_tNjN3xJdAdl3slAef4ZfN8fDp2aJhyV6bSr2ap29O2tP31zBoPzaG8YNIBlYiaEUyzGf5Yg7_oSw46HWtrbBcCvZr9HjEJ)](https://blogger.googleusercontent.com/img/a/AVvXsEiP7qr0_6Js9WnxDqOncPUzF4tajEpfMNScLl4nGjxq4NT3nW1cg7UF9nyCqF8CpMGOUWxpvNwqBKFP2v2O-6wIVRuT-JbCQ_tNjN3xJdAdl3slAef4ZfN8fDp2aJhyV6bSr2ap29O2tP31zBoPzaG8YNIBlYiaEUyzGf5Yg7_oSw46HWtrbBcCvZr9HjEJ)
+
+5.添加smtp.gmail.com
+
+谷歌邮箱，谷歌app密码，保存成功，可以无限制添加，只要改一下二级域名都可以了

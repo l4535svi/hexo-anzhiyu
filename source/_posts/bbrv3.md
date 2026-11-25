@@ -1,0 +1,339 @@
+---
+title: BBRv3 管理脚本
+date: '2026-06-15 12:00:00'
+tags:
+- 节点搭建
+categories:
+- 节点搭建
+description: 一个用于 Debian/Ubuntu VPS 的 BBRv3 内核安装与网络加速管理脚本。 脚本入口： bash <( curl -fsSL https://raw.githubusercontent.com/byJoey/Actions-bbr-v3/main/install.
+---
+一个用于 Debian/Ubuntu VPS 的 BBRv3 内核安装与网络加速管理脚本。
+
+脚本入口：
+[code]
+    bash <(curl -fsSL https://raw.githubusercontent.com/byJoey/Actions-bbr-v3/main/install.sh)
+[/code]
+
+脚本会自动识别当前系统架构，从本仓库 GitHub Releases 下载匹配的 BBRv3 内核 `.deb` 包，并提供安装、指定版本安装、状态检查、加速模式切换和卸载功能。
+
+## 支持环境
+
+[](https://github.com/byJoey/Actions-bbr-v3/tree/main#%E6%94%AF%E6%8C%81%E7%8E%AF%E5%A2%83)
+
+项目| 要求  
+---|---  
+最低支持系统| Ubuntu 24.04+ / Debian 12+  
+推荐系统| Ubuntu 24.04+ / Debian 12+  
+包管理器| `apt-get`  
+架构| `x86_64` / `aarch64`  
+引导方式| 建议使用 GRUB  
+使用场景| VPS / 云服务器 / 独立服务器  
+  
+不建议在树莓派、NanoPi 等依赖 U-Boot 或厂商定制内核链路的设备上使用。此类设备的内核安装和启动流程通常与通用 Debian/Ubuntu VPS 不一致。
+
+本项目当前内核主线为 Linux 7.x。安装内核时脚本会按最低支持系统拦截过旧环境，避免因用户态、initramfs 或引导链路过旧导致启动失败或 kernel panic。推荐系统是更稳妥的部署选择；旧系统仍可使用状态检查、网络调优、清空优化和卸载功能。
+
+安装内核前，脚本会先刷新关键用户态组件：更新 apt 索引，并在缺少时补装 `dpkg`、`kmod`、`initramfs-tools`，同时仅升级当前系统已安装的 `dpkg`、`kmod`、`initramfs-tools`、`systemd`、`udev` 等组件。该步骤不是全量系统升级，也不会执行 `dist-upgrade`；脚本不会自动升级 `grub-pc`、`grub-efi-*`、`shim-signed` 等 GRUB 安装器包，避免触发 `grub-install` 设备选择问题。如果检测到上一次 apt/dpkg 留下 GRUB 半配置状态，脚本会先自动尝试修复，失败后才提示手动处理；如果关键用户态刷新仍失败，脚本会在卸载旧内核前中止安装。
+
+## 菜单功能
+
+[](https://github.com/byJoey/Actions-bbr-v3/tree/main#%E8%8F%9C%E5%8D%95%E5%8A%9F%E8%83%BD)
+
+运行脚本后会进入交互菜单：
+[code]
+    1. 安装或更新 BBR v3 最新版
+    2. 指定版本安装
+    3. 检查 BBR v3 状态
+    4. 启用 BBR + FQ
+    5. 启用 BBR + FQ_CODEL
+    6. 启用 BBR + FQ_PIE
+    7. 启用 BBR + CAKE
+    8. 亚太机器 TCP 调优
+    9. 卸载 BBR 内核
+    10. BBR v3 智能带宽优化
+    11. 清空网络优化配置
+    
+[/code]
+
+常用流程：
+
+  1. 选择 `1` 安装或更新 BBRv3 内核。
+  2. 按提示重启系统。
+  3. 重新运行脚本，选择 `3` 检查 BBRv3 状态。
+  4. 按需选择 `4` 到 `7` 设置队列算法。
+  5. 亚太线路机器可选择 `8` 写入 TCP 收发窗口与空闲慢启动调优。
+  6. 不确定线路参数时可选择 `10` 自动测速并按带宽档位计算 TCP 缓冲区。
+  7. 需要撤回调优时可选择 `11` 清空脚本写入的网络优化配置。
+
+## 内核与 BBR 策略
+
+[](https://github.com/byJoey/Actions-bbr-v3/tree/main#%E5%86%85%E6%A0%B8%E4%B8%8E-bbr-%E7%AD%96%E7%95%A5)
+
+本项目的构建目标是：
+[code]
+    BBRv3 补丁固定，内核自动跟随 kernel.org 最新 stable 更新。
+    
+[/code]
+
+也就是说，BBR 实现不会在自动构建时偷偷更新；自动更新的是 Linux stable 内核版本。构建流程会把仓库内固定的 BBRv3 patch 应用到最新 stable 内核上。
+
+当前 patch 选择规则：
+[code]
+    linux-7.0.y -> patches/bbrv3-linux-7.0.patch
+    linux-7.1.y -> patches/bbrv3-linux-7.1.patch
+    
+[/code]
+
+同一个主线系列内的小版本更新会自动复用同一个 patch，例如 `7.0.11 -> 7.0.12`。如果内核跳到新的主线系列但仓库内还没有对应 patch，构建会直接失败，避免产出不可验证的内核包。
+
+## 安装最新版
+
+[](https://github.com/byJoey/Actions-bbr-v3/tree/main#%E5%AE%89%E8%A3%85%E6%9C%80%E6%96%B0%E7%89%88)
+[code]
+    bash <(curl -fsSL https://raw.githubusercontent.com/byJoey/Actions-bbr-v3/main/install.sh)
+[/code]
+
+选择：
+[code]
+    1. 安装或更新 BBR v3 最新版
+    
+[/code]
+
+脚本会：
+
+  * 检查系统是否为 Debian/Ubuntu。
+  * 检查架构是否为 `x86_64` 或 `aarch64`。
+  * 从 GitHub Releases 获取当前架构最新版本。
+  * 下载非 debug 的内核 `.deb` 包。
+  * 安装新内核并更新引导配置。
+  * 提示是否重启。
+
+如果遇到 GitHub API rate limit，可先设置 token：
+[code]
+    export GITHUB_TOKEN=你的 GitHub Token
+    bash <(curl -fsSL https://raw.githubusercontent.com/byJoey/Actions-bbr-v3/main/install.sh)
+[/code]
+
+## 指定版本安装
+
+[](https://github.com/byJoey/Actions-bbr-v3/tree/main#%E6%8C%87%E5%AE%9A%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85)
+
+运行脚本后选择：
+[code]
+    2. 指定版本安装
+    
+[/code]
+
+脚本会列出当前架构可用的 release tag，并按编号安装指定版本。
+
+release tag 格式：
+[code]
+    x86_64-7.0.11
+    arm64-7.0.11
+    
+[/code]
+
+## 检查 BBRv3 状态
+
+[](https://github.com/byJoey/Actions-bbr-v3/tree/main#%E6%A3%80%E6%9F%A5-bbrv3-%E7%8A%B6%E6%80%81)
+
+运行脚本后选择：
+[code]
+    3. 检查 BBR v3 状态
+    
+[/code]
+
+脚本会检查：
+
+  * `tcp_bbr` 模块版本是否为 `3`。
+  * 当前 TCP 拥塞控制算法是否为 `bbr`。
+  * Dirty Frag 相关模块黑名单是否写入。
+
+也可以手动检查：
+[code]
+    uname -r
+    sysctl net.ipv4.tcp_congestion_control
+    sysctl net.core.default_qdisc
+    modinfo tcp_bbr 2>/dev/null | grep '^version:'
+[/code]
+
+## 加速模式
+
+[](https://github.com/byJoey/Actions-bbr-v3/tree/main#%E5%8A%A0%E9%80%9F%E6%A8%A1%E5%BC%8F)
+
+脚本支持以下组合：
+
+菜单| 拥塞控制| 队列算法  
+---|---|---  
+4| `bbr`| `fq`  
+5| `bbr`| `fq_codel`  
+6| `bbr`| `fq_pie`  
+7| `bbr`| `cake`  
+  
+选择后脚本会立即尝试应用配置，并询问是否永久写入：
+[code]
+    /etc/sysctl.d/99-joeyblog.conf
+    
+[/code]
+
+脚本不仅会写入 `net.core.default_qdisc`，还会尝试把当前默认路由出口网卡的 root qdisc 立即替换为所选算法，避免只对新建队列生效、当前网卡实际仍保持旧队列。
+
+对于需要模块加载的队列算法，脚本会尝试加载对应 `sch_*` 模块，并在需要时写入：
+[code]
+    /etc/modules-load.d/joeyblog-qdisc.conf
+    
+[/code]
+
+## 亚太机器 TCP 调优
+
+[](https://github.com/byJoey/Actions-bbr-v3/tree/main#%E4%BA%9A%E5%A4%AA%E6%9C%BA%E5%99%A8-tcp-%E8%B0%83%E4%BC%98)
+
+运行脚本后选择：
+[code]
+    8. 亚太机器 TCP 调优
+    
+[/code]
+
+脚本会立即应用并永久写入以下配置：
+[code]
+    net.ipv4.tcp_wmem = 4096 16384 12582912
+    net.ipv4.tcp_rmem = 4096 131072 33554432
+    net.ipv4.tcp_limit_output_bytes = 4194304
+    net.ipv4.tcp_slow_start_after_idle = 0
+    
+[/code]
+
+配置文件路径：
+[code]
+    /etc/sysctl.d/99-joeyblog.conf
+    
+[/code]
+
+## BBR v3 智能带宽优化
+
+[](https://github.com/byJoey/Actions-bbr-v3/tree/main#bbr-v3-%E6%99%BA%E8%83%BD%E5%B8%A6%E5%AE%BD%E4%BC%98%E5%8C%96)
+
+运行脚本后选择：
+[code]
+    10. BBR v3 智能带宽优化
+    
+[/code]
+
+脚本会优先安装并运行 Ookla 官方 `speedtest 1.2.0`，自动尝试附近测速服务器并获取上传/下载带宽；如果检测到 Python 版 `speedtest-cli`，会先自动移除并安装需要的 Ookla 官方版本。测速失败时会提示手动输入上传带宽。Speedtest 的测速节点延迟会被隐藏，不展示也不参与 RTT 计算，避免把测速节点延迟误当作真实业务线路延迟。
+
+优化逻辑：
+
+  * 自动启用 `bbr` 拥塞控制和 `fq` 队列算法。
+  * 根据上传带宽和地区模式映射推荐 TCP buffer 档位。
+  * RTT 必须由用户手动输入，应填写真实链接延迟，使用 v2rayN 测出来的结果即可；不使用 Speedtest 测出来的 Ping。
+  * 用户手动选择亚太、美欧或手动 RTT + buffer 档位，不再按测速 RTT 自动判断。
+  * 亚太线路使用较保守的 buffer，美欧高延迟线路使用更大 buffer。
+  * 按机器内存设置 TCP buffer 上限，避免小内存 VPS 过度放大缓冲区。
+  * 同步写入 `net.core.rmem_max` / `net.core.wmem_max` / `tcp_rmem` / `tcp_wmem`。
+  * 保留 `tcp_limit_output_bytes = 4194304` 和 `tcp_slow_start_after_idle = 0`。
+
+地区模式参考：
+
+模式| RTT 参考  
+---|---  
+亚太线路| 通常小于 `100ms`  
+美欧线路| 通常 `150-300ms`  
+手动 RTT| 按用户输入 RTT，并手动选择亚太或美欧 buffer 档位  
+  
+配置同样写入：
+[code]
+    /etc/sysctl.d/99-joeyblog.conf
+    
+[/code]
+
+## 清空网络优化配置
+
+[](https://github.com/byJoey/Actions-bbr-v3/tree/main#%E6%B8%85%E7%A9%BA%E7%BD%91%E7%BB%9C%E4%BC%98%E5%8C%96%E9%85%8D%E7%BD%AE)
+
+运行脚本后选择：
+[code]
+    11. 清空网络优化配置
+    
+[/code]
+
+脚本会清理本项目写入的网络优化持久配置：
+
+  * `net.core.default_qdisc`
+  * `net.ipv4.tcp_congestion_control`
+  * `net.core.rmem_max` / `net.core.wmem_max`
+  * `net.ipv4.tcp_rmem` / `net.ipv4.tcp_wmem`
+  * `net.ipv4.tcp_limit_output_bytes`
+  * `net.ipv4.tcp_slow_start_after_idle`
+
+同时删除：
+[code]
+    /etc/modules-load.d/joeyblog-qdisc.conf
+    
+[/code]
+
+该功能只清空网络优化配置，不卸载 BBR 内核，也不移除 Dirty Frag 安全缓解规则。当前运行态参数可能需要重启后完全恢复为系统默认值。
+
+## 安全缓解
+
+[](https://github.com/byJoey/Actions-bbr-v3/tree/main#%E5%AE%89%E5%85%A8%E7%BC%93%E8%A7%A3)
+
+脚本启动时会写入 Dirty Frag 风险面收敛规则：
+[code]
+    /etc/modprobe.d/99-joeyblog-security.conf
+    
+[/code]
+
+包含：
+
+  * `esp4` / `esp6` / `rxrpc` 黑名单，用于收敛 Dirty Frag 相关风险面。
+
+如果模块当前已加载，脚本会尝试卸载；如果模块被占用，则黑名单会在重启后生效。
+
+CVE-2026-31431 对应的 AEAD userspace 接口在新构建内核中由内核配置侧收敛：
+[code]
+    # CONFIG_CRYPTO_USER_API_AEAD is not set
+    
+[/code]
+
+因此安装脚本不再额外写入 `algif_aead` 黑名单。 如果旧版本脚本已经写入过该黑名单，新脚本只会在当前运行内核确认关闭 `CONFIG_CRYPTO_USER_API_AEAD` 后移除它。
+
+## CVE-2026-31431 检测
+
+[](https://github.com/byJoey/Actions-bbr-v3/tree/main#cve-2026-31431-%E6%A3%80%E6%B5%8B)
+
+仅检测，不利用：
+[code]
+    command -v python3 >/dev/null 2>&1 || (sudo apt update && sudo apt install -y python3)
+    curl -fsSL -o cve_2026_31431_detector.py https://raw.githubusercontent.com/byJoey/Actions-bbr-v3/main/cve_2026_31431_detector.py
+    chmod +x cve_2026_31431_detector.py
+    sudo python3 cve_2026_31431_detector.py
+[/code]
+
+## 内核包来源
+
+[](https://github.com/byJoey/Actions-bbr-v3/tree/main#%E5%86%85%E6%A0%B8%E5%8C%85%E6%9D%A5%E6%BA%90)
+
+`.deb` 内核包由 GitHub Actions 构建并发布到本仓库 Releases。
+
+构建流程会：
+
+  * 读取 kernel.org 最新 stable 版本。
+  * 下载 `gregkh/linux` 对应 stable 分支。
+  * 应用仓库内固定 BBRv3 patch。
+  * 强制默认启用 BBR 和 fq。
+  * 关闭 debug info。
+  * 拒绝发布 `*-dbg*.deb` / `*-dbgsym*.deb`。
+
+构建不会自动更新 BBR patch 本身。
+
+## 卸载
+
+[](https://github.com/byJoey/Actions-bbr-v3/tree/main#%E5%8D%B8%E8%BD%BD)
+
+运行脚本后选择：
+[code]
+    9. 卸载 BBR 内核
+    
+[/code]
+
+脚本会卸载由本项目安装的 `joeyblog` 内核包，并更新引导配置。卸载后建议重启。
