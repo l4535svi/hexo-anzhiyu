@@ -1,6 +1,7 @@
 ---
 title: LuCI App for Tuple ECH Worker
 date: '2025-12-18 12:00:00'
+cover: https://picsum.photos/seed/luci-app-for-tuple-ech-worker/800/450
 tags:
 - 节点搭建
 categories:

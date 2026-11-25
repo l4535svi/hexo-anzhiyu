@@ -1,6 +1,7 @@
 ---
 title: 青蛇探针
 date: '2025-03-17 12:00:00'
+cover: https://picsum.photos/seed/blog-post-16/800/450
 tags:
 - 建站
 categories:

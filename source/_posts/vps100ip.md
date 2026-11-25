@@ -1,6 +1,7 @@
 ---
 title: 一键给你的VPS获取100条免费的落地住宅IP体验，注册、养号、薅羊毛必备！
 date: '2026-05-29 12:00:00'
+cover: https://picsum.photos/seed/vps100ip/800/450
 tags:
 - 节点搭建
 categories:

@@ -1,6 +1,7 @@
 ---
 title: KatelyaTV各种tv搭建教程
 date: '2025-09-18 12:00:00'
+cover: https://picsum.photos/seed/katelyatvtv/800/450
 tags:
 - 影视大全
 categories:

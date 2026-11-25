@@ -1,6 +1,7 @@
 ---
 title: Windows Memory Cleaner 电脑内存清理工具，堪称神器！
 date: '2024-10-01 12:00:00'
+cover: https://picsum.photos/seed/windows-memory-cleaner/800/450
 tags:
 - 电脑优化
 categories:

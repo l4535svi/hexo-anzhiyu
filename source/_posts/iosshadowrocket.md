@@ -1,6 +1,7 @@
 ---
 title: iOS使用Shadowrocket
 date: '2022-02-20 12:00:00'
+cover: https://picsum.photos/seed/iosshadowrocket/800/450
 tags:
 - 免流搭建苹果
 categories:

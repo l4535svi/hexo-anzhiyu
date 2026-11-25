@@ -1,6 +1,7 @@
 ---
 title: V2ray-magisk模块使用教程
 date: '2022-03-01 12:00:00'
+cover: https://picsum.photos/seed/v2ray-magisk/800/450
 tags:
 - 免流搭建安卓
 - 科学上网

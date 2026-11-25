@@ -1,6 +1,7 @@
 ---
 title: Openclaw免费模式情况
 date: '2026-02-24 12:00:00'
+cover: https://picsum.photos/seed/openclaw-23/800/450
 tags:
 - OpenClaw
 categories:

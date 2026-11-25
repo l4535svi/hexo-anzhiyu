@@ -1,6 +1,7 @@
 ---
 title: MoonTv 一键搭建数据接口
 date: '2026-11-19 12:00:00'
+cover: https://picsum.photos/seed/moontv/800/450
 tags:
 - MoonTv 资源
 categories:

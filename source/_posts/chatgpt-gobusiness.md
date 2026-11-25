@@ -1,6 +1,7 @@
 ---
 title: ChatGPT GO翻车？来薅一个月Business
 date: '2025-11-17 12:00:00'
+cover: https://picsum.photos/seed/chatgpt-gobusiness/800/450
 tags:
 - GPT
 categories:

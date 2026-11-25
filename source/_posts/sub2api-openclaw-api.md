@@ -1,6 +1,7 @@
 ---
 title: 部署 sub2api 并对接 OpenClaw：统一中转 API 入口实践
 date: '2026-08-03 12:00:00'
+cover: https://picsum.photos/seed/sub2api-openclaw-api/800/450
 tags:
 - GPT
 categories:

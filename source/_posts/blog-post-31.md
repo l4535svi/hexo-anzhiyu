@@ -1,6 +1,7 @@
 ---
 title: 哪吒探针显示流量使用进度
 date: '2025-08-01 12:00:00'
+cover: https://picsum.photos/seed/blog-post-31/800/450
 tags:
 - 哪吒探针
 categories:

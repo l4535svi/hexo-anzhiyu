@@ -1,6 +1,7 @@
 ---
 title: 苹果V2RAY免流使用教程
 date: '2021-05-17 12:00:00'
+cover: https://picsum.photos/seed/v2ray-43/800/450
 tags:
 - 免流搭建苹果
 - 科学上网

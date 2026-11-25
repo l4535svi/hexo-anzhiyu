@@ -1,6 +1,7 @@
 ---
 title: 最新 v2rayN 使用教程快速入门篇
 date: '2025-03-05 12:00:00'
+cover: https://picsum.photos/seed/v2rayn/800/450
 tags:
 - 节点分享
 categories:

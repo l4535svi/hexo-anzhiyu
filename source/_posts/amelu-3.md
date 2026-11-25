@@ -1,6 +1,7 @@
 ---
 title: 📧 免费拥有自己的域名邮箱！Amelu 荷兰邮箱托管，永久免费版支持3个邮箱！
 date: '2026-10-26 12:00:00'
+cover: https://picsum.photos/seed/amelu-3/800/450
 tags:
 - 临时邮箱
 categories:

@@ -1,6 +1,7 @@
 ---
 title: gpt图床搭建无限画布 (infinite-canvas)
 date: '2026-05-21 12:00:00'
+cover: https://picsum.photos/seed/gpt-infinite-canvas/800/450
 tags:
 - GPT
 categories:

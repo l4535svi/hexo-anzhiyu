@@ -1,6 +1,7 @@
 ---
 title: '[图文]手把手教你Antigravity反代，全程不用敲代码，小白也能看懂的保姆教程'
 date: '2026-02-26 12:00:00'
+cover: https://picsum.photos/seed/antigravity/800/450
 tags:
 - Clawdbot
 categories:

@@ -1,6 +1,7 @@
 ---
 title: 4g 随身 Wi-Fi 刷 openwrt 变成软路由
 date: '2024-09-28 12:00:00'
+cover: https://picsum.photos/seed/4g-wi-fi-openwrt/800/450
 tags:
 - 科学上网
 categories:

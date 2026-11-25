@@ -1,6 +1,7 @@
 ---
 title: 哪吒探针VPS监控面板
 date: '2025-02-28 12:00:00'
+cover: https://picsum.photos/seed/vps-2/800/450
 tags:
 - 建站
 categories:

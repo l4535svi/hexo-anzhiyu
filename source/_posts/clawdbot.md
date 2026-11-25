@@ -1,6 +1,7 @@
 ---
 title: Clawdbot完全本地化部署教程
 date: '2026-02-06 12:00:00'
+cover: https://picsum.photos/seed/clawdbot/800/450
 tags:
 - Clawdbot
 categories:

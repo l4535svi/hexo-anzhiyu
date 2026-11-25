@@ -1,6 +1,7 @@
 ---
 title: 亚瑟扩容1G内存后如何刷入1G的CDT文件
 date: '2026-02-02 12:00:00'
+cover: https://picsum.photos/seed/1g1gcdt/800/450
 tags:
 - 软路由
 categories:

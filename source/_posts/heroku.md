@@ -1,6 +1,7 @@
 ---
 title: heroku最新教程
 date: '2022-04-22 12:00:00'
+cover: https://picsum.photos/seed/heroku/800/450
 tags:
 - 建站
 categories:

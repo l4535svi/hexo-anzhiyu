@@ -1,6 +1,7 @@
 ---
 title: CPA-Manager-Plus最新版本搭建教程
 date: '2026-07-16 12:00:00'
+cover: https://picsum.photos/seed/cpa-manager-plus/800/450
 tags:
 - GPT
 categories:

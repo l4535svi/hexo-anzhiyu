@@ -1,6 +1,7 @@
 ---
 title: 临时邮箱一键部署指南
 date: '2026-03-13 12:00:00'
+cover: https://picsum.photos/seed/blog-post-24/800/450
 tags:
 - 临时邮箱
 categories:

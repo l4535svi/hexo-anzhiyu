@@ -1,6 +1,7 @@
 ---
 title: intro-wifi-40-nas-120-2usb17sd128g-3usb
 date: '2024-09-06 12:00:00'
+cover: https://picsum.photos/seed/intro-wifi-40-nas-120-2usb17sd128g-3usb/800/450
 description: Intro 哈喽伙计们，大家好啊，你们一直让我做小雅的教程，那么这期它来了，我相信我这个这个应该是目前全网价格最低的方式了，其实本来我是准备拿这个（拿起来动作）随身wifi搞了一下，发现是自己想多了，这个东西的玩法很多，感兴趣的可以看我以前的视频，那么咱们退而求其次，就是用玩客云
 ---
 ## Intro

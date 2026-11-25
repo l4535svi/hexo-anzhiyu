@@ -1,6 +1,7 @@
 ---
 title: 免费领取 ChatGPT Plus、Business 一个月的高级会员！及强制开启方法
 date: '2025-12-18 12:00:00'
+cover: https://picsum.photos/seed/chatgpt-plusbusiness/800/450
 tags:
 - GPT
 categories:

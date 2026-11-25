@@ -1,6 +1,7 @@
 ---
 title: 完全免费!一个APIKey调用DeepSeek/千问/MiniMax等多模态大模型|BlazeAPI完整使用教程
 date: '2026-05-07 12:00:00'
+cover: https://picsum.photos/seed/apikeydeepseekminimaxblazeapi/800/450
 tags:
 - OpenClaw
 categories:

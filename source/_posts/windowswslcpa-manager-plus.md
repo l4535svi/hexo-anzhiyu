@@ -1,6 +1,7 @@
 ---
 title: Windows端WSL安装和CPA-Manager-Plus 反代理安装
 date: '2026-07-14 12:00:00'
+cover: https://picsum.photos/seed/windowswslcpa-manager-plus/800/450
 tags:
 - GPT
 categories:

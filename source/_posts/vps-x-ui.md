@@ -1,6 +1,7 @@
 ---
 title: 科学上网：VPS 搭建 X-UI 面板
 date: '2022-03-22 12:00:00'
+cover: https://picsum.photos/seed/vps-x-ui/800/450
 tags:
 - 建站
 categories:

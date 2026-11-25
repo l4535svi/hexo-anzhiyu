@@ -1,6 +1,7 @@
 ---
 title: Fuwari静态博客搭建教程
 date: '2025-07-17 12:00:00'
+cover: https://picsum.photos/seed/fuwari/800/450
 tags:
 - 建站
 categories:

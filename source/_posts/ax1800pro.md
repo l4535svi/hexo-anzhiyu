@@ -1,6 +1,7 @@
 ---
 title: 京东AX1800Pro最佳实践折腾记
 date: '2025-08-25 12:00:00'
+cover: https://picsum.photos/seed/ax1800pro/800/450
 tags:
 - 软路由
 categories:

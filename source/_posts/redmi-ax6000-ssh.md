@@ -1,6 +1,7 @@
 ---
 title: Redmi AX6000 解锁SSH 和 科学上网教程
 date: '2024-10-03 12:00:00'
+cover: https://picsum.photos/seed/redmi-ax6000-ssh/800/450
 tags:
 - 科学上网
 categories:

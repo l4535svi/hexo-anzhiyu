@@ -1,6 +1,7 @@
 ---
 title: 如何将 Google Analytics 4 添加到 WordPress（以及为什么它会彻底改变您的数据）
 date: '2026-10-15 12:00:00'
+cover: https://picsum.photos/seed/google-analytics-4-wordpress/800/450
 tags:
 - 谷歌seo
 categories:

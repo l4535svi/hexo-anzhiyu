@@ -1,6 +1,7 @@
 ---
 title: 拉取Bili库(青龙重要文件)
 date: '2025-01-10 12:00:00'
+cover: https://picsum.photos/seed/bili/800/450
 tags:
 - 青龙全部
 categories:

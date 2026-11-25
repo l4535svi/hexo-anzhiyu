@@ -1,6 +1,7 @@
 ---
 title: cloudns-cloudns2-ns-donovan
 date: '2025-03-05 12:00:00'
+cover: https://picsum.photos/seed/cloudns-cloudns2-ns-donovan/800/450
 tags:
 - 免费域名
 categories:

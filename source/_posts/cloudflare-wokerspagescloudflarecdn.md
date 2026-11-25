@@ -1,6 +1,7 @@
 ---
 title: 白嫖永久免费域名！稳定运行老牌神站，无限域名!无需双向解析！小白有手就行！从注册到托管，再到账号自动保活，一步到位!可托管到cloudflare wokers/pages自定义域名必备！完美接入Cloudflare开启CDN加速！
 date: '2025-11-11 12:00:00'
+cover: https://picsum.photos/seed/cloudflare-wokerspagescloudflarecdn/800/450
 tags:
 - 免费域名
 categories:

@@ -1,6 +1,7 @@
 ---
 title: 2026最新！免费获取ChatGPT Plus教师版K12账号教程 | GPT-5.2完整功能 | 无需付费
 date: '2026-01-05 12:00:00'
+cover: https://picsum.photos/seed/2026chatgpt-plusk12-gpt-52/800/450
 tags:
 - GPT
 categories:

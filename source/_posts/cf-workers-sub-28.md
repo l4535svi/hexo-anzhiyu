@@ -1,6 +1,7 @@
 ---
 title: 自建订阅！CF-Workers-SUB 教你如何将多节点多订阅汇聚合并为一个订阅！
 date: '2025-01-28 12:00:00'
+cover: https://picsum.photos/seed/cf-workers-sub-28/800/450
 tags:
 - 节点分享
 categories:

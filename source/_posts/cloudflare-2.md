@@ -1,6 +1,7 @@
 ---
 title: ➖Cloudflare部署机场订阅转换链接
 date: '2026-07-01 12:00:00'
+cover: https://picsum.photos/seed/cloudflare-2/800/450
 tags:
 - 节点搭建
 categories:

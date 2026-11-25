@@ -1,6 +1,7 @@
 ---
 title: OpenClaw Control Center
 date: '2026-03-13 12:00:00'
+cover: https://picsum.photos/seed/openclaw-control-center/800/450
 tags:
 - OpenClaw
 categories:

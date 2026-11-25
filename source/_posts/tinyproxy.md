@@ -1,6 +1,7 @@
 ---
 title: TinyProxy免流
 date: '2021-04-10 12:00:00'
+cover: https://picsum.photos/seed/tinyproxy/800/450
 tags:
 - 免流搭建安卓
 categories:

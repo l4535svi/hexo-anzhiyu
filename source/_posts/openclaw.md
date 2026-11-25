@@ -1,6 +1,7 @@
 ---
 title: OpenClaw搭建有手就行
 date: '2026-02-04 12:00:00'
+cover: https://picsum.photos/seed/openclaw/800/450
 tags:
 - OpenClaw
 categories:

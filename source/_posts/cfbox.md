@@ -1,6 +1,7 @@
 ---
 title: CFBOX面板搭建
 date: '2026-09-01 12:00:00'
+cover: https://picsum.photos/seed/cfbox/800/450
 tags:
 - 节点搭建
 - cloudflare项目

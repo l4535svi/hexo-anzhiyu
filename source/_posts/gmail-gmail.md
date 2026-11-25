@@ -1,6 +1,7 @@
 ---
 title: Gmail 邮箱前缀 修改已经全部放开，但是请谨慎修改 Gmail 邮箱前缀：避免“谷歌授权登录”引发账号丢失
 date: '2026-06-25 12:00:00'
+cover: https://picsum.photos/seed/gmail-gmail/800/450
 tags:
 - GPT
 categories:

@@ -1,6 +1,7 @@
 ---
 title: I自动化多平台内容采集诊断助手一键部署软件 想要快速补齐AI Agent的联网与多平台信息采集能力吗？这款OpenClaw专属一键部署套件，支持网页、搜索、视频及社媒等多渠道内容抓取，自带诊断修复功能，复制一句话即可完成安装。
 date: '2026-03-14 12:00:00'
+cover: https://picsum.photos/seed/i-ai-agentopenclaw/800/450
 tags:
 - OpenClaw
 categories:

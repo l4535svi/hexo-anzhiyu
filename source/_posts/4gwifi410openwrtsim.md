@@ -1,6 +1,7 @@
 ---
 title: 4g随身wifi高通410刷openwrt软路由插sim卡无法识别问题解决方案！
 date: '2024-09-30 12:00:00'
+cover: https://picsum.photos/seed/4gwifi410openwrtsim/800/450
 tags:
 - 科学上网
 categories:

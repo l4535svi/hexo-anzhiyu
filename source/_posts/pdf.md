@@ -1,6 +1,7 @@
 ---
 title: 手把手教你跑爆品：我用了几年的一个笨方法，但真的一直赚钱 （文末附PDF)
 date: '2026-04-02 12:00:00'
+cover: https://picsum.photos/seed/pdf/800/450
 tags:
 - 选品
 categories:

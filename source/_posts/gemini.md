@@ -1,6 +1,7 @@
 ---
 title: 最后一期！Gemini学生会员方法合集 | 从注册到订阅全过程方法演示与总结 | 解决资格账号、学生认证、绑卡、养号等所有问题
 date: '2026-01-17 12:00:00'
+cover: https://picsum.photos/seed/gemini/800/450
 tags:
 - GPT
 categories:

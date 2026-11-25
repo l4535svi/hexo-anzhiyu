@@ -1,6 +1,7 @@
 ---
 title: gpt提示词
 date: '2026-10-19 12:00:00'
+cover: https://picsum.photos/seed/gpt/800/450
 tags:
 - GPT
 categories:

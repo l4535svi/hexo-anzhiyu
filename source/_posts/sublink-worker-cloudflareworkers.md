@@ -1,6 +1,7 @@
 ---
 title: Sublink Worker-轻量订阅转换，一键部署cloudflareWorkers，附带汉化教程
 date: '2024-12-01 12:00:00'
+cover: https://picsum.photos/seed/sublink-worker-cloudflareworkers/800/450
 tags:
 - 科学上网
 categories:

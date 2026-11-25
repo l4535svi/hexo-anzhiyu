@@ -1,6 +1,7 @@
 ---
 title: colabvpnyoutube8kkbpsgptv2rayclashsingo
 date: '2025-04-05 12:00:00'
+cover: https://picsum.photos/seed/colabvpnyoutube8kkbpsgptv2rayclashsingo/800/450
 tags:
 - 节点分享
 categories:

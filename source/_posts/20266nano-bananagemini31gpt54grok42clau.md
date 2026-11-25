@@ -1,6 +1,7 @@
 ---
 title: 2026年6个可以白嫖Nano Banana生图的网站，无需魔法翻墙（附gemini3.1、gpt5.4、grok4.2、Claude4.6）
 date: '2026-03-28 12:00:00'
+cover: https://picsum.photos/seed/20266nano-bananagemini31gpt54grok42clau/800/450
 tags:
 - banana
 categories:

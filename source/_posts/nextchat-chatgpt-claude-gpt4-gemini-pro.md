@@ -1,6 +1,7 @@
 ---
 title: NextChat一键免费部署你的私人 ChatGPT 网页应用，支持 Claude, GPT4 & Gemini Pro 模型。
 date: '2026-03-23 12:00:00'
+cover: https://picsum.photos/seed/nextchat-chatgpt-claude-gpt4-gemini-pro/800/450
 tags:
 - OpenClaw
 categories:

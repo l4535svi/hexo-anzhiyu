@@ -1,6 +1,7 @@
 ---
 title: Flow2API反代无限次数的Banana Pro
 date: '2026-04-27 12:00:00'
+cover: https://picsum.photos/seed/flow2apibanana-pro/800/450
 tags:
 - GPT
 categories:

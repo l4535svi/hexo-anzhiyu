@@ -1,6 +1,7 @@
 ---
 title: 免费所有AI大模型，神仙级提示词生成，无论什么AI模型，免费生成高级提示词！
 date: '2026-01-14 12:00:00'
+cover: https://picsum.photos/seed/aiai/800/450
 tags:
 - AI视频
 categories:

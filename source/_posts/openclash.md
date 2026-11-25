@@ -1,6 +1,7 @@
 ---
 title: 最新 OpenClash 使用教程快速入门篇
 date: '2025-01-10 12:00:00'
+cover: https://picsum.photos/seed/openclash/800/450
 tags:
 - 科学上网
 categories:

@@ -1,6 +1,7 @@
 ---
 title: plus-gpt-image-2.6-flare搭建教程(个人项目二次改写11.5)
 date: '2026-11-05 12:00:00'
+cover: https://picsum.photos/seed/plus-gpt-image-26-flare115/800/450
 tags:
 - GPT
 categories:

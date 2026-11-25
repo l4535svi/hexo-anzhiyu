@@ -1,6 +1,7 @@
 ---
 title: 白嫖顶级模型！GLM-4.7 + MiniMax M2.1 免费 API，媲美 Claude Code！
 date: '2026-01-31 12:00:00'
+cover: https://picsum.photos/seed/glm-47-minimax-m21-api-claude-code/800/450
 tags:
 - GPT
 categories:

@@ -1,6 +1,7 @@
 ---
 title: 代理软件合集(持续更新中)
 date: '2025-04-03 12:00:00'
+cover: https://picsum.photos/seed/blog-post-17/800/450
 tags:
 - 科学上网
 categories:

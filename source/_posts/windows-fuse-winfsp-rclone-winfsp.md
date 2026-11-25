@@ -1,6 +1,7 @@
 ---
 title: windows-fuse-winfsp-rclone-winfsp
 date: '2025-11-21 12:00:00'
+cover: https://picsum.photos/seed/windows-fuse-winfsp-rclone-winfsp/800/450
 tags:
 - Azure薅羊毛
 categories:

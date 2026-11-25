@@ -1,6 +1,7 @@
 ---
 title: GitHub 上的 Copilot Chat 现已面向所有用户免费开放，支持使用 Claude 3.5 Sonnet or OpenAI GPT-4o.
 date: '2024-12-20 12:00:00'
+cover: https://picsum.photos/seed/github-copilot-chat-claude-35-sonnet-or/800/450
 tags:
 - 节点分享
 categories:

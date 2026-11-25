@@ -1,6 +1,7 @@
 ---
 title: 有域名一定要收藏！免费打造自己的专属邮箱系统，OquMail这个平台太方便了
 date: '2026-08-12 12:00:00'
+cover: https://picsum.photos/seed/oqumail/800/450
 tags:
 - 临时邮箱
 categories:

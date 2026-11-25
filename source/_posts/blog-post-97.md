@@ -1,6 +1,7 @@
 ---
 title: 苹果免流教程
 date: '2021-04-10 12:00:00'
+cover: https://picsum.photos/seed/blog-post-97/800/450
 tags:
 - 免流搭建苹果
 categories:

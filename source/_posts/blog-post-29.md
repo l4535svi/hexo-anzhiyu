@@ -1,6 +1,7 @@
 ---
 title: 携趣代理
 date: '2022-04-30 12:00:00'
+cover: https://picsum.photos/seed/blog-post-29/800/450
 tags:
 - 青龙全部
 categories:

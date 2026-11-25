@@ -1,6 +1,7 @@
 ---
 title: OpenClaw + CLIProxyAPI 深度实战：解锁 AI 算力“白嫖”新姿势
 date: '2026-03-09 12:00:00'
+cover: https://picsum.photos/seed/openclaw-cliproxyapi-ai/800/450
 tags:
 - OpenClaw
 categories:

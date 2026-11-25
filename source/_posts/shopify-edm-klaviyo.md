@@ -1,6 +1,7 @@
 ---
 title: Shopify EDM 邮件营销神器 Klaviyo 最新免费系列教程
 date: '2025-11-20 12:00:00'
+cover: https://picsum.photos/seed/shopify-edm-klaviyo/800/450
 tags:
 - Shopify教程
 categories:

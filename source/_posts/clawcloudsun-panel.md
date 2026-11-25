@@ -1,6 +1,7 @@
 ---
 title: 如何在ClawCloud上搭建Sun-Panel个人标签面板
 date: '2025-05-10 12:00:00'
+cover: https://picsum.photos/seed/clawcloudsun-panel/800/450
 tags:
 - Docker项目
 categories:

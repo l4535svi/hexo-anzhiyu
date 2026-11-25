@@ -1,6 +1,7 @@
 ---
 title: TVBOX助手
 date: '2024-09-14 12:00:00'
+cover: https://picsum.photos/seed/tvbox/800/450
 tags:
 - Netfix
 categories:

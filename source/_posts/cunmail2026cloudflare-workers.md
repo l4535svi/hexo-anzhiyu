@@ -1,6 +1,7 @@
 ---
 title: CunMail临时邮箱部署教程（2026）：如何使用Cloudflare Workers搭建免费域名邮箱系统
 date: '2026-07-31 12:00:00'
+cover: https://picsum.photos/seed/cunmail2026cloudflare-workers/800/450
 tags:
 - 临时邮箱
 categories:

@@ -1,6 +1,7 @@
 ---
 title: 【白嫖一年停机卡】申请电信星卡快捷方式
 date: '2021-07-02 12:00:00'
+cover: https://picsum.photos/seed/blog-post-70/800/450
 tags:
 - 免流搭建安卓
 - 科学上网

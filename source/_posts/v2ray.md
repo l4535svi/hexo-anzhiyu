@@ -1,6 +1,7 @@
 ---
 title: 安卓V2RAY免流 热点教程
 date: '2021-06-27 12:00:00'
+cover: https://picsum.photos/seed/v2ray/800/450
 tags:
 - 免流搭建安卓
 - 科学上网

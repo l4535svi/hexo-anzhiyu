@@ -1,6 +1,7 @@
 ---
 title: 代理在苹果手机配置使用教程
 date: '2025-03-13 12:00:00'
+cover: https://picsum.photos/seed/blog-post-13-2/800/450
 tags:
 - 科学上网
 categories:

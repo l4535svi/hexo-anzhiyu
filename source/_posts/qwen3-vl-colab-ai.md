@@ -1,6 +1,7 @@
 ---
 title: Qwen3-VL 实测：免费 Colab 跑视频提示词逆向，AI 视频一键反推提示词
 date: '2026-10-26 12:00:00'
+cover: https://picsum.photos/seed/qwen3-vl-colab-ai/800/450
 tags:
 - AI视频
 categories:

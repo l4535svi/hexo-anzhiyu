@@ -1,6 +1,7 @@
 ---
 title: IPTV、电视直播相关资源整理分享
 date: '2022-04-18 12:00:00'
+cover: https://picsum.photos/seed/iptv/800/450
 tags:
 - Netfix
 categories:

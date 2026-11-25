@@ -1,6 +1,7 @@
 ---
 title: 2026年最新白嫖一年 Google Gemini 会员流程！
 date: '2026-01-26 12:00:00'
+cover: https://picsum.photos/seed/2026-google-gemini/800/450
 tags:
 - GPT
 categories:

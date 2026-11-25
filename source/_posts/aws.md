@@ -1,6 +1,7 @@
 ---
 title: AWS免费白嫖方案(注意)
 date: '2025-07-28 12:00:00'
+cover: https://picsum.photos/seed/aws/800/450
 tags:
 - VPS
 categories:

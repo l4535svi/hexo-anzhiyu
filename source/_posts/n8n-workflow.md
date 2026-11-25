@@ -1,6 +1,7 @@
 ---
 title: 🎬 實戰分享｜把 n8n Workflow 變成真正的網站（附 工作流 + 提示詞）
 date: '2026-01-10 12:00:00'
+cover: https://picsum.photos/seed/n8n-workflow/800/450
 tags:
 - n8n工作流
 categories:

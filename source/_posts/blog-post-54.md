@@ -1,6 +1,7 @@
 ---
 title: 电信停机卡免流教程
 date: '2021-04-10 12:00:00'
+cover: https://picsum.photos/seed/blog-post-54/800/450
 tags:
 - 免流搭建安卓
 categories:

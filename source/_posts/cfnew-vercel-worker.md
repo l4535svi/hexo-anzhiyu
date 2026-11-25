@@ -1,6 +1,7 @@
 ---
 title: CFnew 独立面板部署教程：Vercel 一键部署，面板与 Worker 分开运行
 date: '2026-10-19 12:00:00'
+cover: https://picsum.photos/seed/cfnew-vercel-worker/800/450
 tags:
 - cloudflare项目
 categories:

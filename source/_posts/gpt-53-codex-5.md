@@ -1,6 +1,7 @@
 ---
 title: 如何快速搭建本地 GPT-5.3-Codex ？5分钟保姆级教程
 date: '2026-03-04 12:00:00'
+cover: https://picsum.photos/seed/gpt-53-codex-5/800/450
 tags:
 - Clawdbot
 categories:

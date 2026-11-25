@@ -1,6 +1,7 @@
 ---
 title: 【Telegram老司機群組】13個色色成人TG頻道和社群
 date: '2021-02-26 12:00:00'
+cover: https://picsum.photos/seed/telegram13tg/800/450
 tags:
 - 建站
 categories:

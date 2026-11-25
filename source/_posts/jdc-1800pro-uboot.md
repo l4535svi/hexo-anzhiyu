@@ -1,6 +1,7 @@
 ---
 title: JDC-1800pro 亚瑟京东云 免拆刷机 基础刷uboot以及备份
 date: '2026-11-05 12:00:00'
+cover: https://picsum.photos/seed/jdc-1800pro-uboot/800/450
 tags:
 - 软路由
 categories:

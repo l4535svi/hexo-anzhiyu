@@ -1,6 +1,7 @@
 ---
 title: 🚀 零成本部署使用 GitHub 榜首 AI Agent：OpenClaw (ClawdBot) 保姆级指南
 date: '2026-02-04 12:00:00'
+cover: https://picsum.photos/seed/github-ai-agentopenclaw-clawdbot/800/450
 tags:
 - OpenClaw
 categories:

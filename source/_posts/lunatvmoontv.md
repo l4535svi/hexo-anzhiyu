@@ -1,6 +1,7 @@
 ---
 title: 【拒绝为影视会员买单】LunaTV：MoonTV 的华丽转身与部署教程
 date: '2025-08-17 12:00:00'
+cover: https://picsum.photos/seed/lunatvmoontv/800/450
 tags:
 - 影视大全
 categories:

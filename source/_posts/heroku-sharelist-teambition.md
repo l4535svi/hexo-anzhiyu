@@ -1,6 +1,7 @@
 ---
 title: 通过 Heroku 部署 ShareList 挂载 Teambition
 date: '2022-05-09 12:00:00'
+cover: https://picsum.photos/seed/heroku-sharelist-teambition/800/450
 tags:
 - 建站
 categories:

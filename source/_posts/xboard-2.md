@@ -1,6 +1,7 @@
 ---
 title: XBoard 机场全新部署方案全网首发
 date: '2026-05-07 12:00:00'
+cover: https://picsum.photos/seed/xboard-2/800/450
 tags:
 - 科学上网
 categories:

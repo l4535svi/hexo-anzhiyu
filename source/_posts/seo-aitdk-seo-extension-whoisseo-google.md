@@ -1,6 +1,7 @@
 ---
 title: seo-aitdk-seo-extension-whoisseo-google
 date: '2026-04-02 12:00:00'
+cover: https://picsum.photos/seed/seo-aitdk-seo-extension-whoisseo-google/800/450
 tags:
 - 谷歌seo
 categories:

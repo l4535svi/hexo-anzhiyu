@@ -1,6 +1,7 @@
 ---
 title: S-UI(改版)
 date: '2026-08-11 12:00:00'
+cover: https://picsum.photos/seed/s-ui/800/450
 tags:
 - 节点搭建
 categories:

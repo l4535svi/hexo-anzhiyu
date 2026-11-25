@@ -1,6 +1,7 @@
 ---
 title: 最便宜vps 最快协议 搭建vpn节点 Hysteria2 抢占宽带 拯救垃圾线路 提升上网速度
 date: '2025-04-02 12:00:00'
+cover: https://picsum.photos/seed/vps-vpn-hysteria2/800/450
 tags:
 - VPS
 categories:

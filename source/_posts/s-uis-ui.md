@@ -1,6 +1,7 @@
 ---
 title: s-ui科学上网面板进阶玩法|一键脚本搭建教程|可视化S-UI面板
 date: '2025-11-18 12:00:00'
+cover: https://picsum.photos/seed/s-uis-ui/800/450
 tags:
 - 节点分享
 categories:

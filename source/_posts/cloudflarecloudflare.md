@@ -1,6 +1,7 @@
 ---
 title: 【保姆教程】Cloudflare自家域名也能做节点？教你优选Cloudflare自家域名变成节点
 date: '2024-10-20 12:00:00'
+cover: https://picsum.photos/seed/cloudflarecloudflare/800/450
 tags:
 - 节点分享
 categories:

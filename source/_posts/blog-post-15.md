@@ -1,6 +1,7 @@
 ---
 title: 一键搭建多个协议节点教程
 date: '2025-03-07 12:00:00'
+cover: https://picsum.photos/seed/blog-post-15/800/450
 tags:
 - 科学上网
 categories:

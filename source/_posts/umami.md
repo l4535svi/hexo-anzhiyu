@@ -1,6 +1,7 @@
 ---
 title: 让你的网站对接高级的Umami统计！
 date: '2025-07-11 12:00:00'
+cover: https://picsum.photos/seed/umami/800/450
 tags:
 - 建站
 categories:

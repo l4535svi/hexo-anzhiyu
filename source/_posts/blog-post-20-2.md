@@ -1,6 +1,7 @@
 ---
 title: 亚瑟刷机教程
 date: '2025-11-20 12:00:00'
+cover: https://picsum.photos/seed/blog-post-20-2/800/450
 tags:
 - 软路由
 categories:

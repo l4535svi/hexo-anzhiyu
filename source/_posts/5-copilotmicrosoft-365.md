@@ -1,6 +1,7 @@
 ---
 title: 免费获取 5 年 Copilot（Microsoft 365）实操整理指南
 date: '2026-01-23 12:00:00'
+cover: https://picsum.photos/seed/5-copilotmicrosoft-365/800/450
 tags:
 - Azure薅羊毛
 categories:

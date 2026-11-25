@@ -1,6 +1,7 @@
 ---
 title: 2025年最新NeXT Panel面板搭建机场教程，超详细！从零开始搭机场|机场搭建优化方案，一个视频看完机场搭建过程，NeXT Panel面板功能更加完善，设置、节点对接更加简单#一瓶奶油
 date: '2025-02-21 12:00:00'
+cover: https://picsum.photos/seed/2025next-panelnext-panel/800/450
 tags:
 - 科学上网
 categories:

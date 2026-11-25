@@ -1,6 +1,7 @@
 ---
 title: Telegram超智能群组机器人  免费开源、一键部署
 date: '2026-10-26 12:00:00'
+cover: https://picsum.photos/seed/telegram/800/450
 tags:
 - TG
 categories:

@@ -1,6 +1,7 @@
 ---
 title: 搬瓦工翻墙 搭建高速vpn教程 搭建节点 无需域名 只要vps 从零开始 保姆级教程 hysteria2
 date: '2025-04-02 12:00:00'
+cover: https://picsum.photos/seed/vpn-vps-hysteria2/800/450
 tags:
 - 节点分享
 categories:

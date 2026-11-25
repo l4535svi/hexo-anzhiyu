@@ -1,6 +1,7 @@
 ---
 title: 自建安全抗封锁节点+BBR，ShadowSocks、Tuic+TLS、Vless+Reality、Hysteria2+TLS 哪家强？完美网络40
 date: '2025-08-30 12:00:00'
+cover: https://picsum.photos/seed/bbrshadowsockstuictlsvlessrealityhyster/800/450
 tags:
 - 节点分享
 categories:

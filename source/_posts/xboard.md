@@ -1,6 +1,7 @@
 ---
 title: xboard机场搭建教程
 date: '2025-07-01 12:00:00'
+cover: https://picsum.photos/seed/xboard/800/450
 tags:
 - 建站
 categories:

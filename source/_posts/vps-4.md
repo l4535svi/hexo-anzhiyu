@@ -1,6 +1,7 @@
 ---
 title: vps机器人没有反应执行命令
 date: '2026-03-15 12:00:00'
+cover: https://picsum.photos/seed/vps-4/800/450
 tags:
 - OpenClaw
 categories:

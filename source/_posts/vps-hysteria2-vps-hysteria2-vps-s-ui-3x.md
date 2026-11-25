@@ -1,6 +1,7 @@
 ---
 title: vps-hysteria2-vps-hysteria2-vps-s-ui-3x
 date: '2025-03-06 12:00:00'
+cover: https://picsum.photos/seed/vps-hysteria2-vps-hysteria2-vps-s-ui-3x/800/450
 tags:
 - 科学上网
 categories:

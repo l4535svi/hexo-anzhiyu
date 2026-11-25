@@ -1,6 +1,7 @@
 ---
 title: XrayR开源项目地址
 date: '2025-07-01 12:00:00'
+cover: https://picsum.photos/seed/xrayr/800/450
 tags:
 - 建站
 categories:

@@ -1,6 +1,7 @@
 ---
 title: Heroku部署V2ray节点教程
 date: '2022-04-14 12:00:00'
+cover: https://picsum.photos/seed/herokuv2ray/800/450
 tags:
 - 建站
 categories:

@@ -1,6 +1,7 @@
 ---
 title: hysteria2搭建游戏加速线路，一键脚本搭建，超简单！阿里云科学上网|Alibaba Cloud 搭建服务器2025年最新、最详细教程可视化操作面板|新手上车|低延迟、稳定、秒开4K#一瓶奶油
 date: '2025-03-05 12:00:00'
+cover: https://picsum.photos/seed/hysteria2alibaba-cloud-20254k/800/450
 tags:
 - 科学上网
 categories:

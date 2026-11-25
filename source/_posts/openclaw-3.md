@@ -1,6 +1,7 @@
 ---
 title: openclaw创建生图机器人
 date: '2026-04-15 12:00:00'
+cover: https://picsum.photos/seed/openclaw-3/800/450
 tags:
 - OpenClaw
 categories:

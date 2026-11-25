@@ -1,6 +1,7 @@
 ---
 title: 电视接口
 date: '2026-02-10 12:00:00'
+cover: https://picsum.photos/seed/blog-post-23/800/450
 tags:
 - 影视大全
 categories:

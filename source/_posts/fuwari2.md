@@ -1,6 +1,7 @@
 ---
 title: fuwari博客(研究2天终于研究成功)
 date: '2025-07-23 12:00:00'
+cover: https://picsum.photos/seed/fuwari2/800/450
 tags:
 - 建站
 categories:

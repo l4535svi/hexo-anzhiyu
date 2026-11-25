@@ -1,6 +1,7 @@
 ---
 title: 解决换行问题
 date: '2025-04-12 12:00:00'
+cover: https://picsum.photos/seed/blog-post-11-2/800/450
 tags:
 - 电脑优化
 categories:

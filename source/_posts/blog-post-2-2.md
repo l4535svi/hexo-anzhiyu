@@ -1,6 +1,7 @@
 ---
 title: 电信停机/绿通免流的警告（务必看完）
 date: '2021-07-02 12:00:00'
+cover: https://picsum.photos/seed/blog-post-2-2/800/450
 tags:
 - 免流搭建安卓
 - 科学上网

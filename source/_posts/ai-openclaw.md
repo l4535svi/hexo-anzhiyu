@@ -1,6 +1,7 @@
 ---
 title: 内置 AI 助手的 OpenClaw 管理面板 — 一键安装、配置、诊断、修复
 date: '2026-03-26 12:00:00'
+cover: https://picsum.photos/seed/ai-openclaw/800/450
 tags:
 - OpenClaw
 categories:

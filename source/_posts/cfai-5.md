@@ -1,6 +1,7 @@
 ---
 title: 白嫖CF算力部署自己私人AI聊天机器人 支持多个模型
 date: '2025-09-06 12:00:00'
+cover: https://picsum.photos/seed/cfai-5/800/450
 tags:
 - GPT
 categories:

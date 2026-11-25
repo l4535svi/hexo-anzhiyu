@@ -1,6 +1,7 @@
 ---
 title: 分享几个全球卖的最火的shopify模板
 date: '2026-04-02 12:00:00'
+cover: https://picsum.photos/seed/shopify-2/800/450
 tags:
 - Shopify教程
 categories:

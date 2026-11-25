@@ -1,6 +1,7 @@
 ---
 title: 告别繁琐！AI 智能工具，助你快速打造 Shopify 高转化落地页
 date: '2025-12-25 12:00:00'
+cover: https://picsum.photos/seed/ai-shopify/800/450
 tags:
 - Shopify教程
 categories:

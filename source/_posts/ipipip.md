@@ -1,6 +1,7 @@
 ---
 title: 🔍实测超实用IP检测网站合集！教你快速识别住宅IP、数据中心IP、延迟&路由&伪装&风险值全面分析｜IP纯净度详解+节点挑选&养号避坑教程
 date: '2025-12-10 12:00:00'
+cover: https://picsum.photos/seed/ipipip/800/450
 tags:
 - TIKTOK
 categories:

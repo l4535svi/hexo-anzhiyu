@@ -1,6 +1,7 @@
 ---
 title: 最好用的 sing-box 一键安装脚本
 date: '2025-03-19 12:00:00'
+cover: https://picsum.photos/seed/sing-box-2/800/450
 tags:
 - 节点分享
 categories:

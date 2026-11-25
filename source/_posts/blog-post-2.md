@@ -1,6 +1,7 @@
 ---
 title: 搭建教程
 date: '2021-05-01 12:00:00'
+cover: https://picsum.photos/seed/blog-post-2/800/450
 tags:
 - 免流搭建安卓
 - 科学上网

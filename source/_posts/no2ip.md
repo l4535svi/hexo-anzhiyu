@@ -1,6 +1,7 @@
 ---
 title: 【软路由 NO.2】自己动手搭建跨境电商工作室软路由，一设备一住宅IP。
 date: '2025-06-02 12:00:00'
+cover: https://picsum.photos/seed/no2ip/800/450
 tags:
 - TIKTOK
 categories:

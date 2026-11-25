@@ -1,6 +1,7 @@
 ---
 title: 🤖️安卓免流教程
 date: '2021-06-27 12:00:00'
+cover: https://picsum.photos/seed/blog-post-3/800/450
 tags:
 - 免流搭建安卓
 categories:

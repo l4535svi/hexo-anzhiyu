@@ -1,6 +1,7 @@
 ---
 title: Quick软件共享热点给iOS教程
 date: '2022-02-20 12:00:00'
+cover: https://picsum.photos/seed/quickios/800/450
 tags:
 - 免流搭建安卓
 categories:

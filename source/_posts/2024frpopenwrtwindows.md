@@ -1,6 +1,7 @@
 ---
 title: 2024最新的一键脚本搭建frp内网穿透，在外轻松远程访问内网设备|远程桌面！非常简单的配置流程，搭配openwrt软路由来使用，非常好用！windows配置#一瓶奶油
 date: '2025-03-30 12:00:00'
+cover: https://picsum.photos/seed/2024frpopenwrtwindows/800/450
 tags:
 - 建站
 categories:

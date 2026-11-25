@@ -1,6 +1,7 @@
 ---
 title: Cunlink短链接系统部署教程（2026）：Cloudflare Workers + D1，自建免费短链服务
 date: '2026-07-26 12:00:00'
+cover: https://picsum.photos/seed/cunlink2026cloudflare-workers-d1/800/450
 tags:
 - cloudflare项目
 categories:

@@ -1,6 +1,7 @@
 ---
 title: 【教程】ROOT热点教程{安卓}
 date: '2021-04-17 12:00:00'
+cover: https://picsum.photos/seed/root/800/450
 tags:
 - 免流搭建安卓
 categories:

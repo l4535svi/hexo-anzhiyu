@@ -1,6 +1,7 @@
 ---
 title: 云免ios免流教程
 date: '2021-08-15 12:00:00'
+cover: https://picsum.photos/seed/ios-2/800/450
 tags:
 - 免流搭建苹果
 - 科学上网

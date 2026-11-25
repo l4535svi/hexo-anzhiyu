@@ -1,6 +1,7 @@
 ---
 title: 垃圾Dev！Office E3 Symphony可以订阅200万个授权许可
 date: '2025-11-17 12:00:00'
+cover: https://picsum.photos/seed/devoffice-e3-symphony200/800/450
 tags:
 - Azure薅羊毛
 categories:

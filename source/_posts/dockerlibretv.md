@@ -1,6 +1,7 @@
 ---
 title: 用Docker搭建一个在线观影平台LibreTV
 date: '2025-05-09 12:00:00'
+cover: https://picsum.photos/seed/dockerlibretv/800/450
 tags:
 - Netfix
 categories:

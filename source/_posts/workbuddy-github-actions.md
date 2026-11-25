@@ -1,6 +1,7 @@
 ---
 title: 把 WorkBuddy 每日签到丢给 GitHub Actions：一次配置，永久不用管
 date: '2026-09-23 12:00:00'
+cover: https://picsum.photos/seed/workbuddy-github-actions/800/450
 tags:
 - GPT
 categories:

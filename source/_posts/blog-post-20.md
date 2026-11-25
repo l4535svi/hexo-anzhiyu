@@ -1,6 +1,7 @@
 ---
 title: 客户端下载
 date: '2021-04-10 12:00:00'
+cover: https://picsum.photos/seed/blog-post-20/800/450
 tags:
 - 免流搭建苹果
 categories:

@@ -1,6 +1,7 @@
 ---
 title: FastNet 快速网络测速信息汇总
 date: '2025-12-19 12:00:00'
+cover: https://picsum.photos/seed/fastnet/800/450
 tags:
 - 节点搭建
 - 软路由
