@@ -11,7 +11,7 @@ language: zh-CN
 timezone: Asia/Shanghai
 
 # URL — 部署时再改成真实域名
-url: https://hexo-anzhiyu-chi.vercel.app/
+url: https://l4535.de5.net/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
