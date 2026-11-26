@@ -1,0 +1,15 @@
+- path_name: /album/daily/
+  cover: https://picsum.photos/seed/album-daily/800/450
+  class_name: 日常随手拍
+  description: 随手拍下的日常碎片
+  type: 1
+  top_background: https://picsum.photos/seed/album-daily-bg/1200/400
+  album_list:
+    - content: 随手拍的第一张，先占个位
+      image:
+        - https://picsum.photos/seed/album-1/800/600
+      date: 2026-11-26 11:45:00
+    - content: 第二张
+      image:
+        - https://picsum.photos/seed/album-2/800/600
+      date: 2026-11-25 11:45:00

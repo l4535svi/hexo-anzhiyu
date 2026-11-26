@@ -1,0 +1,77 @@
+- subtitle: 分享建站、玩机与 AI 折腾。
+  avatarImg: /img/avatar.jpg
+  name: 码境科技
+  description: 喜欢折腾数码、建站和 AI 的普通博主。
+  helloAbout: 你好呀，我是码境科技
+  skillsTips:
+    tips: 技能
+    title: 会点什么
+  aboutsiteTips:
+    tips: 关于本站
+    title1: 码境
+    title2: 分享建站、玩机与 AI 折腾
+    word:
+      - 建站
+      - 玩机
+      - AI
+      - 折腾
+      - 分享
+  careers:
+    tips: 经历
+    title: 一路走来
+    list:
+      - color: '#357ef5'
+        desc: 2021 年开始写博客，记录建站和玩机
+      - color: '#e58a33'
+        desc: 经营 Sosove 日本女装小店
+      - color: '#43a6c6'
+        desc: 2025 年 11 月搬到 Hexo + 安知鱼
+  map:
+    background: https://picsum.photos/seed/map-tokyo/800/400
+    backgroundDark: https://picsum.photos/seed/map-tokyo-dark/800/400
+    title: 现在在
+    StrengthenTitle: 东京
+  selfInfo:
+    selfInfoTips1: 写博客
+    selfInfoContentYear: 2021 年起
+    selfInfoTips2: 现在在
+    selfInfoContent2: 东京
+    selfInfoTips3: 平时爱
+    selfInfoContent3: 折腾数码和 AI
+  personalities:
+    author_name: 码境科技
+    personality_type: 好奇心驱动的行动派
+    photo_url: /img/avatar.jpg
+    personality_img: https://picsum.photos/seed/personality/400/400
+    name_url: https://www.16personalities.com/
+    personality_type_color: '#ac899c'
+  maxim:
+    maxim_tips: 格言
+    maxim_top: 折腾，
+    maxim_bottom: 就是最好的学习。
+  buff:
+    buff_tips: 增益
+    buff_top: 每天折腾一点点，
+    buff_bottom: 博客就丰富一点点。
+  game:
+    game_tips: 游戏
+    game_title: 塞尔达传说
+    game_uid: ''
+    game_bg: https://picsum.photos/seed/game-zelda/800/400
+  comic:
+    comic_tips: 追番
+    comic_title: 最近在追
+    comic_list:
+      - name: 镇魂街 第五季
+        href: https://www.bilibili.com/bangumi/media/md281812061
+        cover: https://i0.hdslb.com/bfs/bangumi/image/1ed67391cda77d7a18b604b9ba473bfb733039a9.jpg@220w_2
+  music:
+    music_tips: 音乐
+    music_title: 音乐馆
+    music_link: /music/
+    music_bg: https://picsum.photos/seed/music-bg/800/400
+  like:
+    like_tips: 喜欢
+    like_title: 喜欢折腾
+    like_bottom: 建站、玩机、AI，什么都想试试
+    like_bg: https://picsum.photos/seed/like-bg/800/400

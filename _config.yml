@@ -132,3 +132,17 @@ theme: anzhiyu
 # Deployment (placeholder — fill in when deploying)
 deploy:
   type: ''
+
+# 追番插件 hexo-bilibili-bangumi
+bangumi:
+  enable: true
+  source: bili
+  path: bangumis/index.html
+  vmid: 485156002
+  title: '追番列表'
+  quote: '生命不息，追番不止！'
+  theme: auto
+  show: 1
+  lazyload: true
+  webp: true
+  progress: false

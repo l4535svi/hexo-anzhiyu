@@ -1,0 +1,177 @@
+---
+layout: false
+---
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>小空调 - 码境</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(180deg, #fdf6ec 0%, #f7e8d5 55%, #e8d5b5 100%);
+    display: flex; flex-direction: column; align-items: center;
+    padding: 40px 16px; color: #5b4636; overflow-x: hidden;
+    transition: background 1s;
+  }
+  body.cool { background: linear-gradient(180deg, #e8f4fd 0%, #cfe8f7 55%, #aed6ee 100%); }
+  body.heat { background: linear-gradient(180deg, #fdeeda 0%, #fadfc0 55%, #f6c99a 100%); }
+  h1 { font-size: 22px; margin-bottom: 6px; }
+  .sub { font-size: 14px; opacity: .7; margin-bottom: 28px; }
+  .room { font-size: 15px; margin-bottom: 22px; background: rgba(255,255,255,.65); padding: 8px 18px; border-radius: 999px; }
+  .room b { font-size: 20px; }
+  /* 空调室内机 */
+  .ac {
+    width: min(560px, 92vw); height: 150px; position: relative;
+    background: linear-gradient(180deg, #ffffff, #f1ede8);
+    border-radius: 26px; box-shadow: 0 18px 40px rgba(90,60,20,.18), inset 0 2px 0 #fff;
+  }
+  .ac .brand { position: absolute; top: 18px; left: 26px; font-size: 13px; letter-spacing: 4px; color: #9a8a76; }
+  .ac .display {
+    position: absolute; top: 16px; right: 26px; min-width: 92px; text-align: center;
+    background: #2b2b2b; color: #7cf2c8; border-radius: 10px; padding: 8px 12px;
+    font-size: 26px; font-weight: bold; letter-spacing: 1px;
+  }
+  .ac .display small { font-size: 12px; color: #9fd8b8; display: block; letter-spacing: 2px; }
+  .ac .display.off { color: #666; }
+  .ac .display.off small { color: #777; }
+  .ac .vent {
+    position: absolute; left: 26px; right: 26px; bottom: 16px; height: 26px;
+    background: #e3ddd4; border-radius: 13px; overflow: hidden;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,.12);
+  }
+  .ac .vent::after {
+    content: ""; position: absolute; left: 0; right: 0; top: 11px; height: 3px; background: #cfc7bb;
+  }
+  .flow { position: absolute; left: 0; right: 0; top: 150px; height: 220px; pointer-events: none; overflow: hidden; }
+  .drop {
+    position: absolute; top: -20px; width: 8px; height: 26px; border-radius: 4px;
+    opacity: 0; animation: fall 2.4s linear infinite;
+  }
+  .drop.cool { background: linear-gradient(180deg, rgba(125,200,245,.9), rgba(125,200,245,0)); }
+  .drop.heat { background: linear-gradient(180deg, rgba(245,150,60,.9), rgba(245,150,60,0)); }
+  @keyframes fall { 0% { transform: translateY(0); opacity: 0; } 15% { opacity: .95; } 100% { transform: translateY(220px); opacity: 0; } }
+  /* 遥控器 */
+  .remote {
+    margin-top: 40px; width: min(300px, 86vw); background: #fff;
+    border-radius: 24px; padding: 22px; box-shadow: 0 14px 34px rgba(90,60,20,.16);
+    text-align: center;
+  }
+  .remote .screen {
+    background: #eef7f2; border-radius: 12px; padding: 12px; margin-bottom: 16px;
+    font-size: 15px; line-height: 1.9;
+  }
+  .remote .screen b { font-size: 26px; color: #2f8f6b; }
+  .btn-row { display: flex; gap: 10px; justify-content: center; margin-bottom: 10px; flex-wrap: wrap; }
+  button {
+    border: none; cursor: pointer; font-size: 15px; border-radius: 999px;
+    padding: 10px 18px; background: #f0ebe3; color: #5b4636; transition: .2s;
+  }
+  button:hover { transform: translateY(-1px); }
+  button.active { background: #2f8f6b; color: #fff; }
+  button.power { background: #e2574c; color: #fff; font-size: 17px; padding: 12px 30px; }
+  button.power.off { background: #b9b2a6; }
+  .tip { margin-top: 26px; font-size: 13px; opacity: .65; }
+  a.home { margin-top: 10px; font-size: 14px; color: #2f8f6b; text-decoration: none; }
+</style>
+</head>
+<body>
+  <h1>❄️ 小空调</h1>
+  <p class="sub">一台不用电费的空调，点一下就凉快</p>
+  <div class="room">室温 <b id="roomTemp">28</b> ℃</div>
+
+  <div class="ac" id="acUnit">
+    <span class="brand">MAJING · CODE REALM</span>
+    <div class="display off" id="display"><span id="setTemp">--</span><small id="modeText">已关机</small></div>
+    <div class="vent"></div>
+  </div>
+  <div class="flow" id="flow"></div>
+
+  <div class="remote">
+    <div class="screen">设定温度 <b id="screenTemp">--</b> ℃<br><span id="screenStatus">空调已关闭，点击电源开机</span></div>
+    <div class="btn-row"><button class="power off" id="powerBtn" onclick="togglePower()">⏻ 开机</button></div>
+    <div class="btn-row">
+      <button onclick="changeTemp(-1)">－ 降温</button>
+      <button onclick="changeTemp(1)">＋ 升温</button>
+    </div>
+    <div class="btn-row" id="modeRow">
+      <button data-mode="cool" class="active" onclick="setMode('cool')">❄ 制冷</button>
+      <button data-mode="heat" onclick="setMode('heat')">☀ 制热</button>
+      <button data-mode="fan" onclick="setMode('fan')">🌀 送风</button>
+    </div>
+    <div class="btn-row" id="speedRow">
+      <button data-speed="1" onclick="setSpeed(1)">低风</button>
+      <button data-speed="2" class="active" onclick="setSpeed(2)">中风</button>
+      <button data-speed="3" onclick="setSpeed(3)">高风</button>
+    </div>
+  </div>
+
+  <p class="tip">小提示：制冷时室温会慢慢降下来，制热会慢慢升上去，送风只吹风不改温度。</p>
+  <a class="home" href="/">← 返回首页</a>
+
+<script>
+  let on = false, mode = 'cool', speed = 2, setTemp = 26, roomTemp = 28;
+  let timer = null, drops = [];
+  const $ = id => document.getElementById(id);
+  const modeName = { cool: '制冷', heat: '制热', fan: '送风' };
+
+  function render() {
+    $('display').className = 'display' + (on ? '' : ' off');
+    $('setTemp').textContent = on ? setTemp + '°' : '--';
+    $('modeText').textContent = on ? modeName[mode] : '已关机';
+    $('screenTemp').textContent = on ? setTemp : '--';
+    $('screenStatus').textContent = on
+      ? modeName[mode] + '运行中 · ' + ['低风', '中风', '高风'][speed - 1] + ' · 目标 ' + setTemp + '℃'
+      : '空调已关闭，点击电源开机';
+    $('powerBtn').textContent = on ? '⏻ 关机' : '⏻ 开机';
+    $('powerBtn').className = 'power' + (on ? '' : ' off');
+    document.body.className = on ? mode : '';
+    document.querySelectorAll('#modeRow button').forEach(b => b.classList.toggle('active', b.dataset.mode === mode));
+    document.querySelectorAll('#speedRow button').forEach(b => b.classList.toggle('active', +b.dataset.speed === speed));
+    $('roomTemp').textContent = Math.round(roomTemp * 10) / 10;
+  }
+
+  function spawnDrops() {
+    clearDrops();
+    if (!on || mode === 'fan') return;
+    const flow = $('flow');
+    const n = 5 + speed * 3;
+    for (let i = 0; i < n; i++) {
+      const d = document.createElement('div');
+      d.className = 'drop ' + mode;
+      d.style.left = (6 + Math.random() * 88) + '%';
+      d.style.animationDuration = (2.6 - speed * 0.4 + Math.random() * 0.6) + 's';
+      d.style.animationDelay = (Math.random() * 2) + 's';
+      flow.appendChild(d); drops.push(d);
+    }
+  }
+  function clearDrops() { drops.forEach(d => d.remove()); drops = []; }
+
+  function togglePower() {
+    on = !on;
+    if (on) {
+      spawnDrops();
+      timer = setInterval(() => {
+        if (mode === 'cool' && roomTemp > setTemp) roomTemp -= 0.1;
+        if (mode === 'heat' && roomTemp < setTemp) roomTemp += 0.1;
+        if (mode === 'fan') roomTemp += (28 - roomTemp) * 0.01;
+        render();
+      }, 1000);
+    } else {
+      clearInterval(timer); clearDrops();
+      timer = setInterval(() => {
+        if (Math.abs(roomTemp - 28) > 0.05) { roomTemp += (28 - roomTemp) * 0.02; render(); }
+      }, 1000);
+    }
+    render();
+  }
+  function changeTemp(d) { if (!on) return; setTemp = Math.min(30, Math.max(16, setTemp + d)); render(); }
+  function setMode(m) { mode = m; if (on) spawnDrops(); render(); }
+  function setSpeed(s) { speed = s; if (on) spawnDrops(); render(); }
+  render();
+</script>
+</body>
+</html>
