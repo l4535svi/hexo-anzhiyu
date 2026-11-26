@@ -85,6 +85,47 @@ search:
   content: true
   format: html
 
+# Plugins
+plugins:
+  - hexo-generator-robotstxt
+
+# Sitemap
+sitemap:
+  path:
+    - sitemap.xml
+  tags: true
+  categories: true
+
+# Feed (RSS/Atom)
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  content: true
+  content_limit: false
+  order_by: -date
+  autodiscovery: true
+
+# robots.txt
+robotstxt:
+  useragent: "*"
+  allow:
+    - /
+  sitemap: /sitemap.xml
+
+# External links nofollow (own domains excluded)
+nofollow:
+  enable: true
+  exclude:
+    - l4535.de5.net
+    - hexo-anzhiyu-chi.vercel.app
+    - welcome4535.de5.net
+
+# HTML minifier: keep original HTML when a page fails to parse
+# (2 old Blogger posts contain malformed HTML and would otherwise render empty)
+html_minifier:
+  ignore_error: true
+
 # Extensions
 theme: anzhiyu
 
