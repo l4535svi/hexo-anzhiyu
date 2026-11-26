@@ -96,6 +96,10 @@ sitemap:
   tags: true
   categories: true
 
+# Baidu Sitemap
+baidusitemap:
+  path: baidusitemap.xml
+
 # Feed (RSS/Atom)
 feed:
   type: atom
