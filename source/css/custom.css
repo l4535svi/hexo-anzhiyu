@@ -1,0 +1,9 @@
+/* 天气挂件：主题默认在窗口宽度小于 1400px 时隐藏天气挂件。
+   把显示阈值降到 1200px，1366px 等常见笔记本宽度也能看到；
+   小于 1200px（手机、窄窗口）仍隐藏，避免遮住导航栏标题。 */
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+  body #he-plugin-simple {
+    display: block !important;
+    left: 262px !important;
+  }
+}
