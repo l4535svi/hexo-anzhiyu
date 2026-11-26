@@ -1,0 +1,13 @@
+- title: 闲言碎语
+  subTitle: 想到什么，就随手记下来
+  tips: 碎碎念、折腾记录、随手拍，都在这里
+  buttonLink: /archives/
+  buttonText: 看看文章
+  limit: 10
+  essay_list:
+    - content: 闲言碎语开通了。以后想到什么、折腾出什么好玩的，就随手记在这里，不用非得写成一篇文章。
+      date: 2026-11-26 11:14:00
+      from: 码境科技
+    - content: Hexo 新博客上线了，325 篇老文章都搬过来了，评论、搜索、订阅也都接上了。慢慢收拾，慢慢写。
+      date: 2026-11-25 18:00:00
+      from: 码境科技
