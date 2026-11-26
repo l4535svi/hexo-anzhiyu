@@ -14,11 +14,14 @@ menu:
     追番页: /bangumis/ || anzhiyu-icon-bilibili
     相册集: /album/ || anzhiyu-icon-images
     小空调: /air-conditioner/ || anzhiyu-icon-fan
+    小房间: /room/ || anzhiyu-icon-house-chimney
+    好物: /equipment/ || anzhiyu-icon-box-archive
 
   关于:
     闲言碎语: /essay/ || anzhiyu-icon-lightbulb
     关于本人: /about/ || anzhiyu-icon-paper-plane
     随便逛逛: javascript:toRandomPost() || anzhiyu-icon-shoe-prints1
+    隐私协议: /privacy/ || anzhiyu-icon-book
 
 # nav相关配置
 nav:
@@ -40,7 +43,7 @@ nav:
 # mourn （哀悼日，指定日期网站简单变灰，不包括滚动条）
 # 注意： 仅网站首页变灰，其他页面正常显示
 mourn:
-  enable: false
+  enable: true
   days: [4-5, 5-12, 7-7, 9-18, 12-13]
 
 # Code Blocks (代码相关)
@@ -127,8 +130,8 @@ mathjax:
 
 # KaTeX
 katex:
-  enable: false
-  per_page: false
+  enable: true
+  per_page: true
   hide_scrollbar: true
 
 # Image (图片设置)
@@ -254,10 +257,11 @@ reward:
 # Post edit
 # Easily browse and edit blog source code online.
 post_edit: # 目前仅可选择一个平台在线编辑
-  enable: false
+  enable: true
   # github: https://github.com/user-name/repo-name/edit/branch-name/subdirectory-name/
   # For example: https://github.com/jerryc127/butterfly.js.org/edit/main/source/
-  github: false
+  github: https://github.com/l4535svi/hexo-anzhiyu/edit/main/source/
+  url: https://github.com/l4535svi/hexo-anzhiyu/edit/main/source/
 
   # yuque: https://www.yuque.com/user-name/repo-name/
   # 示例: https://www.yuque.com/yuque/yuque/
@@ -437,7 +441,7 @@ footer:
   # 徽标部分配置项 https://shields.io/
   # https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&logo=jsDelivr
   bdageitem:
-    enable: false
+    enable: true
     list:
       - link: https://hexo.io/ #徽标指向网站链接
         shields: https://npm.elemecdn.com/anzhiyu-blog@2.1.5/img/badge/Frame-Hexo.svg #徽标API
@@ -455,34 +459,22 @@ footer:
       #   shields: https://npm.elemecdn.com/anzhiyu-blog@2.2.0/img/badge/Copyright-BY-NC-SA.svg
       #   message: 本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可
   socialBar:
-    enable: false
-    centerImg:
+    enable: true
+    centerImg: /img/avatar.jpg
     left:
-      # - title: email
-      #   link: mailto:anzhiyu-c@qq.com
-      #   icon: anzhiyu-icon-envelope
-      # - title: 微博
-      #   link: https://weibo.com/u/6378063631
-      #   icon: anzhiyu-icon-weibo
-      # - title: facebook
-      #   link: https://www.facebook.com/profile.php?id=100092208016287&sk=about
-      #   icon: anzhiyu-icon-facebook1
-      # - title: RSS
-      #   link: atom.xml
-      #   icon: anzhiyu-icon-rss
+      - title: email
+        link: mailto:1440456678@qq.com
+        icon: anzhiyu-icon-envelope
+      - title: RSS
+        link: /atom.xml
+        icon: anzhiyu-icon-rss
     right:
-      # - title: Github
-      #   link: https://github.com/anzhiyu-c
-      #   icon: anzhiyu-icon-github
-      # - title: Bilibili
-      #   link: https://space.bilibili.com/372204786
-      #   icon: anzhiyu-icon-bilibili
-      # - title: 抖音
-      #   link: https://v.douyin.com/DwCpMEy/
-      #   icon: anzhiyu-icon-tiktok
-      # - title: CC
-      #   link: /copyright
-      #   icon: anzhiyu-icon-copyright-line
+      - title: Github
+        link: https://github.com/l4535svi
+        icon: anzhiyu-icon-github
+      - title: Bilibili
+        link: https://space.bilibili.com/485156002
+        icon: anzhiyu-icon-bilibili
   list:
     enable: false
     randomFriends: 3
@@ -674,7 +666,7 @@ rightside-bottom: 100px
 # canvas_ribbon (静止彩带背景)
 # See: https://github.com/hustcc/ribbon.js
 canvas_ribbon:
-  enable: false
+  enable: true
   size: 150
   alpha: 0.6
   zIndex: -1
@@ -683,7 +675,7 @@ canvas_ribbon:
 
 # Fluttering Ribbon (动态彩带)
 canvas_fluttering_ribbon:
-  enable: false
+  enable: true
   mobile: false
 
 # canvas_nest
@@ -699,7 +691,7 @@ canvas_nest:
 # Typewriter Effect (打字效果)
 # https://github.com/disjukr/activate-power-mode
 activate_power_mode:
-  enable: false
+  enable: true
   colorful: true # open particle animation (冒光特效)
   shake: false #  open shake (抖动特效)
   mobile: false
@@ -717,11 +709,14 @@ click_heart:
 
 # Mouse click effects: words (鼠标点击效果: 文字)
 ClickShowText:
-  enable: false
+  enable: true
   text:
-    # - I
-    # - LOVE
-    # - YOU
+    - 折腾
+    - 建站
+    - 玩机
+    - AI
+    - 码境
+    - 加油
   fontSize: 15px
   random: false
   mobile: false
@@ -952,7 +947,7 @@ fancybox: true
 # mermaid
 # see https://github.com/mermaid-js/mermaid
 mermaid:
-  enable: false
+  enable: true
   # built-in themes: default/forest/dark/neutral
   theme:
     light: default
@@ -1011,7 +1006,7 @@ instantpage: true
 # https://github.com/vinta/pangu.js
 # Insert a space between Chinese character and English character (中英文之间添加空格)
 pangu:
-  enable: false
+  enable: true
   field: site # site/post
 
 # Lazyload (图片懒加载)
@@ -1027,7 +1022,7 @@ lazyload:
 # See https://github.com/JLHwung/hexo-offline
 # ---------------
 pwa:
-  enable: false
+  enable: true
   startup_image_enable: true
   manifest: /manifest.json
   theme_color: var(--anzhiyu-main)
@@ -1069,13 +1064,13 @@ home_top:
       icon: anzhiyu-icon-book
   default_descr: 再怎么看我也不知道怎么描述它的啦！
   swiper:
-    enable: false
+    enable: true
     swiper_css: https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/swiper/swiper.min.css #swiper css依赖
     swiper_js: https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/swiper/swiper.min.js #swiper js依赖
   banner:
     tips: 最新文章
     title: MoonTv 一键搭建数据接口
-    image: https://bu.dusays.com/2023/05/13/645fa3cf90d70.webp
+    image: https://picsum.photos/seed/moontv-banner/1200/600
     link: /2026/11/19/moontv/
 
 # 朋友圈配置
@@ -1151,33 +1146,30 @@ ptool:
 
 # 欢迎语配置
 greetingBox:
-  enable: false #开启后必须配置下面的list对应的时间段，不然会出现小白条
+  enable: true #开启后必须配置下面的list对应的时间段，不然会出现小白条
   default: 晚上好👋
   list:
-    # - greeting: 晚安😴
-    #   startTime: 0
-    #   endTime: 5
-    # - greeting: 早上好鸭👋, 祝你一天好心情！
-    #   startTime: 6
-    #   endTime: 9
-    # - greeting: 上午好👋, 状态很好，鼓励一下～
-    #   startTime: 10
-    #   endTime: 10
-    # - greeting: 11点多啦, 在坚持一下就吃饭啦～
-    #   startTime: 11
-    #   endTime: 11
-    # - greeting: 午安👋, 宝贝
-    #   startTime: 12
-    #   endTime: 14
-    # - greeting: 🌈充实的一天辛苦啦！
-    #   startTime: 14
-    #   endTime: 18
-    # - greeting: 19点喽, 奖励一顿丰盛的大餐吧🍔。
-    #   startTime: 19
-    #   endTime: 19
-    # - greeting: 晚上好👋, 在属于自己的时间好好放松😌~
-    #   startTime: 20
-    #   endTime: 24
+    - greeting: 夜深了，早点休息😴
+      startTime: 0
+      endTime: 5
+    - greeting: 早上好呀👋
+      startTime: 6
+      endTime: 8
+    - greeting: 上午好，开始折腾吧
+      startTime: 9
+      endTime: 11
+    - greeting: 中午好，记得吃饭
+      startTime: 12
+      endTime: 13
+    - greeting: 下午好，继续折腾
+      startTime: 14
+      endTime: 17
+    - greeting: 晚上好👋
+      startTime: 18
+      endTime: 22
+    - greeting: 夜深了，早点休息😴
+      startTime: 23
+      endTime: 23
 
 # 文章顶部ai摘要
 post_head_ai_description:
@@ -1193,7 +1185,7 @@ post_head_ai_description:
 
 # 快捷键配置
 shortcutKey:
-  enable: false
+  enable: true
   delay: 100 # 所有键位延时触发而不是立即触发（包括shift，以解决和浏览器键位冲突问题）
   shiftDelay: 200 # shift按下延时多久开启
 
@@ -1213,7 +1205,7 @@ pageThumbnailSuffix: ""
 
 # 隐私协议弹窗
 agreementPopup:
-  enable: false
+  enable: true
   url: /privacy
 
 # 右键菜单
@@ -1222,7 +1214,7 @@ rightClickMenu:
 
 # 首页随便逛逛people模式 而非技能点模式，关闭后为技能点模式需要配置creativity.yml
 peoplecanvas:
-  enable: false
+  enable: true
   img: https://upload-bbs.miyoushe.com/upload/2024/07/27/125766904/ba62475f396df9de3316a08ed9e65d86_5680958632268053399..png
 
 # 动效
@@ -1238,6 +1230,7 @@ inject:
   head:
     # 自定义css
     - <link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'">
+    - <script async src="https://gname4535.eu.cc/script.js" data-website-id="d4c0c59d-803c-4935-8aa8-2ee5ad13239e"></script>
 
   bottom:
     # 自定义js

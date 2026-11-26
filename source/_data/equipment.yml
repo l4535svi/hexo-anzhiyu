@@ -1,0 +1,26 @@
+- top_background: https://picsum.photos/seed/equipment-bg/1200/400
+  class_name: 我的装备
+  description: 每天陪我折腾的家伙们
+  tip: 点击名字可以复制
+  good_things:
+    - title: 电脑设备
+      description: 主力生产力
+      equipment_list:
+        - name: 主力电脑
+          image: https://picsum.photos/seed/pc/400/300
+          specification: 型号待补充
+          description: 每天写文章、跑博客的主力机
+          link: https://github.com/l4535svi
+        - name: 手机
+          image: https://picsum.photos/seed/phone/400/300
+          specification: 型号待补充
+          description: 随身携带的折腾工具
+          link: https://github.com/l4535svi
+    - title: 影音设备
+      description: 听歌看番用的
+      equipment_list:
+        - name: 耳机
+          image: https://picsum.photos/seed/earphone/400/300
+          specification: 型号待补充
+          description: 听歌、看番、剪视频都靠它
+          link: https://github.com/l4535svi
