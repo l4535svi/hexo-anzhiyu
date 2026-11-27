@@ -3,6 +3,8 @@ title: 朋友圈
 date: 2026-11-26 11:45:00
 ---
 
+这里汇集了友链博客的最新文章，每 4 小时自动更新一次。想看看都有哪些博客，可以去 [友人帐](/link/)。
+
 <div id="friend-circle-lite-root"></div>
 
 <script>
