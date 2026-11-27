@@ -49,11 +49,14 @@ irm https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/ins
 curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash
 
  
-[code]
+
+```
+
     ![](https://www.freedidi.com/wp-content/uploads/2026/04/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE-2026-04-11-211743.webp)
     
     过程中你会遇到：
-[/code]
+
+```
 
   * 是否导入 OpenClaw 数据 → 建议 YES
   * 是否 migration → 必须 YES
@@ -112,11 +115,14 @@ Hermes 使用的是：
 ## 第一步：找到 Hermes 环境
 
 cd $env:LOCALAPPDATA\hermes\hermes-agent
-[code]
+
+```
+
     你会看到：
     
     venv
-[/code]
+
+```
 
 ## 第二步：给 Hermes 的 Python 安装依赖
 
@@ -127,14 +133,20 @@ cd $env:LOCALAPPDATA\hermes\hermes-agent
 hermes doctor
 
 看到：
-[code]
+
+```
+
     ✓ python-telegram-bot
-[/code]
+
+```
 
 ## 第四步：启动 gateway
-[code]
+
+```
+
     hermes gateway
-[/code]
+
+```
 
 ### Telegram 无法连接的解决的完整步骤如下：
 
@@ -165,10 +177,13 @@ hermes gateway
 ###  五、测试 Telegram 控制
 
 打开 Telegram，给你的 Bot 发送：
-[code]
+
+```
+
     hello
     
-[/code]
+
+```
 
 如果正常：
 

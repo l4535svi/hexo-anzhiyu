@@ -57,14 +57,21 @@ CFnat 相关项目仅供教育、研究和安全测试目的而设计和开发�
   * 使用`cmd`带参执行原程序，例如：
 
 cmd
-[code]1  
+
+```
+1  
         
-[/code]
+
+```
 
 | 
-[code]cfnat-windows-amd64.exe -addr="0.0.0.0:1234" -colo=HKG -delay=100 -port=80 -tls=false  
+
+```
+cfnat-windows-amd64.exe -addr="0.0.0.0:1234" -colo=HKG -delay=100 -port=80 -tls=false  
         
-[/code]  
+
+```
+  
   
 ---|---  
 
@@ -73,7 +80,9 @@ cmd
 ## [](https://xn--1uto7rutmzjk.us.kg/p/cfnat/#GUI%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84 "GUI文件结构")GUI文件结构
 
 shell
-[code]
+
+```
+
     1  
     2  
     3  
@@ -95,10 +104,13 @@ shell
     19  
     20  
     
-[/code]
+
+```
 
 | 
-[code]
+
+```
+
     CFnat Windows GUI.exe      # GUI本体  
     cfnat.ini                  # GUI配置文件  
     cfnat-windows-386.exe      # cfnat x86_32位 原程序本体  
@@ -120,7 +132,9 @@ shell
     ips-v6.txt                 # 缓存IPv6库  
     locations.json             # CF数据中心json文件  
     
-[/code]  
+
+```
+  
   
 ---|---  
   
@@ -137,29 +151,43 @@ shell
   * 终端命令
 
 shell
-[code]1  
+
+```
+1  
         
-[/code]
+
+```
 
 | 
-[code]bash <(curl -Ls https://raw.cmliussss.com/cfnat.sh)  
+
+```
+bash <(curl -Ls https://raw.cmliussss.com/cfnat.sh)  
         
-[/code]  
+
+```
+  
   
 ---|---  
   * 或
 
 shell
-[code]1  
+
+```
+1  
         2  
         
-[/code]
+
+```
 
 | 
-[code]curl -sSL https://raw.cmliussss.com/cfnat.sh -o ~/cfnat.sh && chmod +x ~/cfnat.sh  
+
+```
+curl -sSL https://raw.cmliussss.com/cfnat.sh -o ~/cfnat.sh && chmod +x ~/cfnat.sh  
         bash ~/cfnat.sh  
         
-[/code]  
+
+```
+  
   
 ---|---  
   
@@ -171,22 +199,29 @@ shell
   * 无交互命令
 
 shell
-[code]1  
+
+```
+1  
         2  
         3  
         4  
         5  
         
-[/code]
+
+```
 
 | 
-[code]# 无交互直接跑SJC,LAX优选，需要提前将脚本下载到~目录  
+
+```
+# 无交互直接跑SJC,LAX优选，需要提前将脚本下载到~目录  
         cfnat SJC,LAX   
           
         # 无交互直接跑HKG优选  
         bash <(curl -Ls https://raw.cmliussss.com/cfnat.sh) HKG  
         
-[/code]  
+
+```
+  
   
 ---|---  
   
@@ -197,7 +232,9 @@ shell
 ## [](https://xn--1uto7rutmzjk.us.kg/p/cfnat/#%E8%84%9A%E6%9C%AC%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84 "脚本文件结构")脚本文件结构
 
 shell
-[code]
+
+```
+
     1  
     2  
     3  
@@ -206,10 +243,13 @@ shell
     6  
     7  
     
-[/code]
+
+```
 
 | 
-[code]
+
+```
+
     cfnat.sh            # sh脚本 本体  
     cfnat  
      ├─ cfnat-linux-*   # cfnat 原程序本体  
@@ -218,7 +258,9 @@ shell
      ├─ ips-v6.txt      # IPv6库  
      └─ locations.json  # CF数据中心json文件  
     
-[/code]  
+
+```
+  
   
 ---|---  
   
@@ -237,39 +279,55 @@ shell
   * 官方仓库拉取
 
 shell
-[code]
+
+```
+
     1  
     
-[/code]
+
+```
 
 | 
-[code]
+
+```
+
     docker run -d --name mycfnat --restart always -p 1234:1234 cmliu/cfnat:latest  
     
-[/code]  
+
+```
+  
   
 ---|---  
   
   * 镜像仓库拉取
 
 shell
-[code]
+
+```
+
     1  
     
-[/code]
+
+```
 
 | 
-[code]
+
+```
+
     docker run -d --name mycfnat --restart always -p 1234:1234 docker.fxxk.dedyn.io/cmliu/cfnat:latest  
     
-[/code]  
+
+```
+  
   
 ---|---  
   
 ### [](https://xn--1uto7rutmzjk.us.kg/p/cfnat/#%E5%88%9B%E5%BB%BA-docker-compose-yml "创建 docker-compose.yml")创建 `docker-compose.yml`
 
 yml
-[code]
+
+```
+
     1  
     2  
     3  
@@ -292,10 +350,13 @@ yml
     20  
     21  
     
-[/code]
+
+```
 
 | 
-[code]
+
+```
+
     version: '3'  
       
     services:  
@@ -318,7 +379,9 @@ yml
           - "1234:1234"  # 将主机的 1234 端口映射到容器的 1234 端口  
         restart: always  
     
-[/code]  
+
+```
+  
   
 ---|---  
   
@@ -329,14 +392,21 @@ yml
   * IP类型(ips): 6
 
 shell
-[code]1  
+
+```
+1  
         
-[/code]
+
+```
 
 | 
-[code]docker run -d -e colo="HKG" -e delay=160 -e ips=6 --restart always -p 1234:1234 cmliu/cfnat:latest  
+
+```
+docker run -d -e colo="HKG" -e delay=160 -e ips=6 --restart always -p 1234:1234 cmliu/cfnat:latest  
         
-[/code]  
+
+```
+  
   
 ---|---  
 
@@ -350,14 +420,21 @@ shell
   * 本地映射端口: 8080
 
 shell
-[code]1  
+
+```
+1  
         
-[/code]
+
+```
 
 | 
-[code]docker run -d -e colo="HKG" -e delay=160 -e ips=4 -e port=80 -e tls=false --restart always -p 8080:1234 cmliu/cfnat:latest  
+
+```
+docker run -d -e colo="HKG" -e delay=160 -e ips=4 -e port=80 -e tls=false --restart always -p 8080:1234 cmliu/cfnat:latest  
         
-[/code]  
+
+```
+  
   
 ---|---  
 
@@ -368,14 +445,21 @@ shell
   * IP类型(ips): 4
 
 shell
-[code]1  
+
+```
+1  
         
-[/code]
+
+```
 
 | 
-[code]docker run -d -e colo="SJC,LAX" -e delay=300 -e ips=4 --restart always -p 1234:1234 cmliu/cfnat:latest  
+
+```
+docker run -d -e colo="SJC,LAX" -e delay=300 -e ips=4 --restart always -p 1234:1234 cmliu/cfnat:latest  
         
-[/code]  
+
+```
+  
   
 ---|---  
 
@@ -394,7 +478,9 @@ shell
   * 检查域名(domain): “cloudflaremirrors.com/debian”
 
 shell
-[code]1  
+
+```
+1  
         2  
         3  
         4  
@@ -410,10 +496,13 @@ shell
         14  
         15  
         
-[/code]
+
+```
 
 | 
-[code]docker run -d \  
+
+```
+docker run -d \  
             -e colo="LAX" \  
             -e delay=300 \  
             -e ips=4 \  
@@ -429,7 +518,9 @@ shell
             -p 1234:1234 \  
             cmliu/cfnat:latest  
         
-[/code]  
+
+```
+  
   
 ---|---  
 
@@ -438,7 +529,9 @@ shell
   * 使用`docker-compose.yml`同时启动多个cfnat容器
 
 yml
-[code]1  
+
+```
+1  
         2  
         3  
         4  
@@ -498,10 +591,13 @@ yml
         58  
         59  
         
-[/code]
+
+```
 
 | 
-[code]version: '3'  
+
+```
+version: '3'  
           
         services:  
               cfnat1:  
@@ -561,14 +657,18 @@ yml
                           - "1234:1234"  # 将主机的 1234 端口映射到容器的 1234 端口  
                     restart: always  
         
-[/code]  
+
+```
+  
   
 ---|---  
 
 ## [](https://xn--1uto7rutmzjk.us.kg/p/cfnat/#%E6%9F%A5%E7%9C%8B%E6%97%A5%E5%BF%97 "查看日志")查看日志
 
 shell
-[code]
+
+```
+
     1  
     2  
     3  
@@ -576,10 +676,13 @@ shell
     5  
     6  
     
-[/code]
+
+```
 
 | 
-[code]
+
+```
+
     # 查看cfnat容器执行日志  
     docker logs 容器ID  
     docker logs -f 容器ID    # 实时查看日志  
@@ -587,7 +690,9 @@ shell
     # 查看cfnat容器启动日志  
     docker exec 容器ID cat cfnat.log  
     
-[/code]  
+
+```
+  
   
 ---|---  
   
@@ -602,27 +707,41 @@ shell
   * 下载并赋权，示例（`cfnat-linux-amd64`程序名架构自行对照[下载目录](https://xn--1uto7rutmzjk.us.kg/p/cfnat/#%E4%B8%8B%E8%BD%BD%E7%9B%AE%E5%BD%95)修改）：
 
 shell
-[code]1  
+
+```
+1  
         
-[/code]
+
+```
 
 | 
-[code]curl -sSL https://raw.cmliussss.com/cfnat/cfnat-linux-amd64 -o cfnat-linux-amd64 && chmod +x cfnat-linux-amd64  
+
+```
+curl -sSL https://raw.cmliussss.com/cfnat/cfnat-linux-amd64 -o cfnat-linux-amd64 && chmod +x cfnat-linux-amd64  
         
-[/code]  
+
+```
+  
   
 ---|---  
   * 执行命令，示例：
 
 shell
-[code]1  
+
+```
+1  
         
-[/code]
+
+```
 
 | 
-[code]./cfnat-linux-amd64 -addr="0.0.0.0:1234" -colo=HKG -delay=100  
+
+```
+./cfnat-linux-amd64 -addr="0.0.0.0:1234" -colo=HKG -delay=100  
         
-[/code]  
+
+```
+  
   
 ---|---  
 
@@ -633,7 +752,9 @@ shell
   * 下载地址`https://raw.cmliussss.com/cfnat/*`，自行替换`*`为下载文件名：
 
 cmd
-[code]1  
+
+```
+1  
         2  
         3  
         4  
@@ -676,10 +797,13 @@ cmd
         41  
         42  
         
-[/code]
+
+```
 
 | 
-[code]cfnat-android-arm64  
+
+```
+cfnat-android-arm64  
         cfnat-darwin-amd64  
         cfnat-darwin-arm64  
         cfnat-dragonfly-amd64  
@@ -722,14 +846,18 @@ cmd
         ips-v4.txt  
         ips-v6.txt  
         
-[/code]  
+
+```
+  
   
 ---|---  
 
 ## [](https://xn--1uto7rutmzjk.us.kg/p/cfnat/#%E5%8F%82%E6%95%B0%E5%91%BD%E4%BB%A4 "参数命令")参数命令
 
 shell
-[code]
+
+```
+
     1  
     2  
     3  
@@ -756,10 +884,13 @@ shell
     24  
     25  
     
-[/code]
+
+```
 
 | 
-[code]
+
+```
+
     Usage of cfnat:  
       -addr string  
             本地监听的 IP 和端口 (default "0.0.0.0:1234")  
@@ -786,7 +917,9 @@ shell
       -tls  
             是否为 TLS 端口 (default true)  
     
-[/code]  
+
+```
+  
   
 ---|---  
   

@@ -34,10 +34,13 @@ description: '本教程用到的所有软件和工具 手机 扫码 电脑 链�
 ## 检测是否被墙
 
 打开命令行 快捷键 Win+R, 输入 cmd 敲回车
-[code]
+
+```
+
     ping 你vps的ip地址
     
-[/code]
+
+```
 
 ## 检测响应速度
 
@@ -48,34 +51,48 @@ htpps://itdog.cn
 Ubuntu 22.04 或 Ubuntu 24.0
 
 ## 升级apt
-[code]
+
+```
+
     apt update
     
-[/code]
+
+```
 
 ## 安装防火墙
-[code]
+
+```
+
     apt install ufw -y
     
-[/code]
+
+```
 
 ## 开启端口
 
 开启 80 443 22 端口(追求安全)
-[code]
+
+```
+
     sudo iptables -A INPUT -p tcp --dport 80 -j ACCEPT
     sudo iptables -A INPUT -p tcp --dport 443 -j ACCEPT
     sudo iptables -A INPUT -p tcp --dport 22 -j ACCEPT
-[/code]
+
+```
 
 或者 开启所有端口(省事 推荐)
-[code]
+
+```
+
     ufw disable
     
-[/code]
+
+```
 
 ## 核心脚本
-[code]
+
+```
+
     #一键安装Hysteria2
     bash <(curl -fsSL https://get.hy2.sh/)
     
@@ -85,10 +102,13 @@ Ubuntu 22.04 或 Ubuntu 24.0
     #启用Hysteria2 设置开机自启
     systemctl enable hysteria-server.service
     
-[/code]
+
+```
 
 ## VPS配置文件
-[code]
+
+```
+
     cat << EOF > /etc/hysteria/config.yaml
     listen: :443 #监听端口
     
@@ -108,19 +128,26 @@ Ubuntu 22.04 或 Ubuntu 24.0
         rewriteHost: true
     EOF
     
-[/code]
+
+```
 
 ## 重启Hysteria2
-[code]
+
+```
+
     systemctl restart hysteria-server.service
     
-[/code]
+
+```
 
 ## 查看Hysteria2状态
-[code]
+
+```
+
     systemctl status hysteria-server.service
     
-[/code]
+
+```
 
 查看后, 在英文输入法下 按字母 Q 退出  
 同时看到以下两个结果代表成功  
@@ -134,7 +161,9 @@ Hysteria 2下载：<https://github.com/apernet/hysteria/releases>
 v2rayN阿飞版：<https://pan.quark.cn/s/df9d5063d07b>
 
 ## 客户端配置文件
-[code]
+
+```
+
     server: 104.160.22.22:443
     auth: 123456
     
@@ -151,12 +180,15 @@ v2rayN阿飞版：<https://pan.quark.cn/s/df9d5063d07b>
     http:
       listen: 127.0.0.1:8080
     
-[/code]
+
+```
 
 ## sing-box配置文件(Android/IOS)
 
 美区apple id登录后, app store, 搜 sing-box
-[code]
+
+```
+
     {
       "dns": {
         "servers": [
@@ -250,4 +282,6 @@ v2rayN阿飞版：<https://pan.quark.cn/s/df9d5063d07b>
         "auto_detect_interface": true
       }
     }
-[/code]
+
+```
+

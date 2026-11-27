@@ -45,7 +45,9 @@ V2rayNG-安卓客户端：[【点此打开】](https://github.com/2dust/v2rayng/
 ②[【点此进入】](http://ip.flares.cloud/)
 
 ③[【点此进入】](https://stock.hostmonit.com/CloudFlareYes)
-[code]
+
+```
+
     gamer.com.tw
     steamdb.info
     toy-people.com
@@ -106,7 +108,8 @@ V2rayNG-安卓客户端：[【点此打开】](https://github.com/2dust/v2rayng/
     acjp2.cloudflarest.link
     acsg.cloudflarest.link
     acsg3.cloudflarest.link
-[/code]
+
+```
 
 * * *
 
@@ -115,7 +118,9 @@ V2rayNG-安卓客户端：[【点此打开】](https://github.com/2dust/v2rayng/
 * * *
 
 5、节点端口替换推荐（详细操作请参照教学视频）
-[code]
+
+```
+
     443
     2053
     2087
@@ -125,7 +130,8 @@ V2rayNG-安卓客户端：[【点此打开】](https://github.com/2dust/v2rayng/
     2083
     2096
     2095
-[/code]
+
+```
 
 `  
 `

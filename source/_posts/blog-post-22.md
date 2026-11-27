@@ -3,9 +3,9 @@ title: 看视频神器 免费看遍所有视频
 date: '2025-11-16 12:00:00'
 cover: /img/covers/blog-post-22.jpg
 tags:
-- Netfix
+- Netflix
 categories:
-- Netfix
+- Netflix
 description: 1、开心电视助手：【 点击进入 】（ 需要更新adb，从下面下载即可 ） adb新版下载：【 点击进入 】 2、电视盒子： 电视盒子收集：【 点击进入 】 影视仓盒子下载（TVBox改版）（ 需要单独添加接口 ） 海信版：【 点击进入 】密码:ho72 通用版：【 点击进入 】密
 ---
 ![](https://naiyous.com/wp-content/uploads/2025/10/%E7%9C%8B%E8%A7%86%E9%A2%91%E7%A5%9E%E5%99%A8-1024x576.jpg)

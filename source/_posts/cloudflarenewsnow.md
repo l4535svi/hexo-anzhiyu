@@ -46,7 +46,9 @@ description: 《部署教程说明》 解决 多个新闻来源 要打开多个�
 ### 2、环境变量配置
 
 plaintext
-[code]
+
+```
+
     1  
     2  
     3  
@@ -58,10 +60,13 @@ plaintext
     9  
     10  
     
-[/code]
+
+```
 
 | 
-[code]
+
+```
+
     # Github Clien ID  
     G_CLIENT_ID=  
     # Github Clien Secret  
@@ -73,7 +78,9 @@ plaintext
     # 是否启用缓存  
     ENABLE_CACHE=true  
     
-[/code]  
+
+```
+  
   
 ---|---  
   

@@ -23,9 +23,12 @@ MobaXterm:[MobaXterm官网](https://mobaxterm.mobatek.net/)
 ### 1、必要更新操作(Debian/Ubuntu)
 
 [](https://github.com/xiaochaib/chaiwiki/wiki/%E9%9B%B6%E5%9F%BA%E7%A1%80%E6%96%B0%E6%89%8B%E8%8A%82%E7%82%B9%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B%E3%80%81S%E2%80%90UI%E9%9D%A2%E6%9D%BF%E8%87%AA%E5%BB%BA%E4%B8%8A%E7%BD%91%E8%8A%82%E7%82%B9%E3%80%81%E5%8C%85%E5%90%AB%E5%A4%9A%E5%8D%8F%E8%AE%AE%E5%BA%94%E6%9C%89%E5%B0%BD%E6%9C%89%E3%80%81%E4%B8%80%E6%AC%A1%E5%AD%A6%E4%BC%9A#1%E5%BF%85%E8%A6%81%E6%9B%B4%E6%96%B0%E6%93%8D%E4%BD%9Cdebianubuntu)
-[code]
+
+```
+
     apt update -y && apt install -y curl socat wget
-[/code]
+
+```
 
 **注意：**如果是centos系统，则运行yum update -y && yum install -y curl socat wget
 
@@ -34,14 +37,19 @@ MobaXterm:[MobaXterm官网](https://mobaxterm.mobatek.net/)
 [](https://github.com/xiaochaib/chaiwiki/wiki/%E9%9B%B6%E5%9F%BA%E7%A1%80%E6%96%B0%E6%89%8B%E8%8A%82%E7%82%B9%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B%E3%80%81S%E2%80%90UI%E9%9D%A2%E6%9D%BF%E8%87%AA%E5%BB%BA%E4%B8%8A%E7%BD%91%E8%8A%82%E7%82%B9%E3%80%81%E5%8C%85%E5%90%AB%E5%A4%9A%E5%8D%8F%E8%AE%AE%E5%BA%94%E6%9C%89%E5%B0%BD%E6%9C%89%E3%80%81%E4%B8%80%E6%AC%A1%E5%AD%A6%E4%BC%9A#2%E5%AE%89%E8%A3%85s-ui)
 
 感谢alireza0大佬开发如此好用的安装脚本
-[code]
+
+```
+
     VERSION=1.3.6 && bash <(curl -Ls https://raw.githubusercontent.com/alireza0/s-ui/$VERSION/install.sh) $VERSION
-[/code]
+
+```
 
 ### 3、挑选SNI伪装域名（任选一个）
 
 [](https://github.com/xiaochaib/chaiwiki/wiki/%E9%9B%B6%E5%9F%BA%E7%A1%80%E6%96%B0%E6%89%8B%E8%8A%82%E7%82%B9%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B%E3%80%81S%E2%80%90UI%E9%9D%A2%E6%9D%BF%E8%87%AA%E5%BB%BA%E4%B8%8A%E7%BD%91%E8%8A%82%E7%82%B9%E3%80%81%E5%8C%85%E5%90%AB%E5%A4%9A%E5%8D%8F%E8%AE%AE%E5%BA%94%E6%9C%89%E5%B0%BD%E6%9C%89%E3%80%81%E4%B8%80%E6%AC%A1%E5%AD%A6%E4%BC%9A#3%E6%8C%91%E9%80%89sni%E4%BC%AA%E8%A3%85%E5%9F%9F%E5%90%8D%E4%BB%BB%E9%80%89%E4%B8%80%E4%B8%AA)
-[code]
+
+```
+
     如发现节点不能使用，或延迟显示-1，以下域名请随机挑选用于SNI，直到正常使用即可，或者直接照抄视频中一模一样的域名填写，确保可用
     aws.com
     bing.com
@@ -65,7 +73,8 @@ MobaXterm:[MobaXterm官网](https://mobaxterm.mobatek.net/)
     beacon.gtv-pub.com
     amd.com
     
-[/code]
+
+```
 
 # 面板管理、BBR加速
 

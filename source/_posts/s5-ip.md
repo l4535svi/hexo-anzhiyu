@@ -21,7 +21,9 @@ IP:5555
 ![image](https://kycloud3.koyoo.cn/20250717dea53202507171511026075.png)
 
 配合AWS，用面板进行更换IP，即可获取无限制的S5代理
-[code]
+
+```
+
     # 定义SOCKS代理端口
     SOCKS_PORT=5555
     
@@ -140,7 +142,8 @@ IP:5555
         fi
     done
     
-[/code]
+
+```
 
 `  
 `

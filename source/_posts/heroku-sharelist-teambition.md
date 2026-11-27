@@ -25,9 +25,12 @@ description: 通过 Heroku 部署 ShareList 挂载 Teambition 最后更新时间
 [![](https://www.2025168.xyz/usr/uploads/2021/07/112865936.png)](https://www.2025168.xyz/usr/uploads/2021/07/112865936.png "点击放大图片")
 
 App name 随便填，CONFIG 配置文件填下面这个，替换成 Fork 的 sharelist 仓库里的对应的 json 地址
-[code]
+
+```
+
     https://raw.githubusercontent.com/reruin/sharelist/master/package.json
-[/code]
+
+```
 
 点击 deploy app 按钮
 

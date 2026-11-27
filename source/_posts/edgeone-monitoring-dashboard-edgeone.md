@@ -45,27 +45,39 @@ description: ✨ 主要功能 实时概览 ：展示站点总请求数、总流�
 [](https://github.com/wangai14/eo_monitor#%E6%96%B9%E5%BC%8F%E4%BA%8C%E6%9C%AC%E5%9C%B0%E8%BF%90%E8%A1%8C--nodejs-%E7%8E%AF%E5%A2%83)
 
   1. 克隆仓库：
-[code]git clone https://github.com/afoim/eo_monitior
+
+```
+git clone https://github.com/afoim/eo_monitior
          cd eo_monitior
-[/code]
+
+```
 
   2. 安装依赖：
-[code]npm install -g edgeone
+
+```
+npm install -g edgeone
          edgeone login
-[/code]
+
+```
 
   3. 配置密钥：
 
      * 方法 A (环境变量)：创建 `.env` 文件或直接导出环境变量 `SECRET_ID` 和 `SECRET_KEY`。
      * 方法 B (文件配置)：在项目根目录创建 `key.txt` 文件，内容格式如下（注意使用中文冒号）：
-[code]SecretId：您的SecretId
+
+```
+SecretId：您的SecretId
            SecretKey：您的SecretKey
            
-[/code]
+
+```
 
   4. 启动服务：
-[code]edgeone pages dev
-[/code]
+
+```
+edgeone pages dev
+
+```
 
   5. 访问 `http://localhost:8088`。
 

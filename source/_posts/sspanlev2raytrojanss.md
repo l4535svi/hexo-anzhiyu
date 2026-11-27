@@ -59,28 +59,39 @@ v2board| √| √| √
 ## 
 
 安装lrzsz软件，root权限下。安装lrzsz 并上传 [XrayR](https://blog.lvuy.xyz/wp-content/uploads/2022/03/XrayR-linux-32.zip)
-[code]
+
+```
+
     yum -y install lrzsz  
     rz   // 选择文件上传即可
-[/code]
+
+```
 
 安装unzip,CentOS ZIP解压工具 并解压   [XrayR](https://blog.lvuy.xyz/wp-content/uploads/2022/03/XrayR-linux-32.zip)
-[code]
+
+```
+
     yum install -y unzip zip  
     unzip XrayR-linux-32.zip
-[/code]
+
+```
 
 root目录下，修改cogfig并运行xrayr
-[code]
+
+```
+
     ./XrayR -config config.yml
-[/code]
+
+```
 
 ### 使用systemctl管理守护进程
 
 ### vim /etc/systemd/system/XrayR.service
 
 ### 把以下内容复制进去
-[code]
+
+```
+
     [Unit]  
     Description=XrayR Service  
     After=network.target nss-lookup.target  
@@ -102,18 +113,24 @@ root目录下，修改cogfig并运行xrayr
     [Install]  
     WantedBy=multi-user.target  
     
-[/code]
-[code]
+
+```
+
+```
+
     systemctl enable --now  XrayR  #运行 并添加开机自启  
     systemctl status XrayR    #查看状态
-[/code]
+
+```
 
  
 
  
 
 # config示例：
-[code]
+
+```
+
     PanelType: "V2board" # Panel type: SSpanel, V2board, PMpanel #面板类型  
     ApiConfig:  
         ApiHost: "http://127.0.0.1:667"    #机场域名  
@@ -127,10 +144,13 @@ root目录下，修改cogfig并运行xrayr
         DeviceLimit: 0 # Local settings will replace remote settings, 0 means disable  
         RuleListPath: # /etc/XrayR/rulelist Path to local rulelist file  
         DisableCustomConfig: false # Disable custom config
-[/code]
+
+```
 
 ## 如果需要增加TLS 则修改
-[code]
+
+```
+
     CertConfig:  
         CertMode: dns # Option about how to get certificate: none, file, http, dns. Choose "none" will forcedly disable the tls config.  
         RejectUnknownSni: false # Reject unknown SNI, default false  
@@ -142,6 +162,7 @@ root目录下，修改cogfig并运行xrayr
         DNSEnv: # DNS ENV option used by DNS provider  
             ALICLOUD_ACCESS_KEY: aaa   #证书注册商账号  
             ALICLOUD_SECRET_KEY: bbb   #证书注册商密钥
-[/code]
+
+```
 
 PS:未作注释则不需要修改

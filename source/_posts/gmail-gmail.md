@@ -54,24 +54,30 @@ description: '- 六月 22, 2026 在使用 ChatGPT Team 账号搭配 Codex 时，
 在终端中执行以下命令：
 
 PowerShell
-[code]
+
+```
+
     $env:CODEX_ACCESS_TOKEN = "你的_token"
     $env:CODEX_ACCESS_TOKEN | codex login --with-access-token
     
-[/code]
+
+```
 
 **方式 B：通过修改`auth.json` 配置文件**
 
 找到 Codex 的配置文件 `auth.json`，将其修改为如下格式：
 
 JSON
-[code]
+
+```
+
     {
       "OPENAI_API_KEY": null,
       "personal_access_token": "你的token"
     }
     
-[/code]
+
+```
 
 配置完成后，您就可以顺畅地使用 Codex，无需再进行繁琐的网页授权了。
 
@@ -90,18 +96,23 @@ CPA 安装使用教程：https://www.youtube.com/watch?v=sLjTilvm2RQ
 在 CPA 的相关配置中，添加如下 Headers 即可：
 
 JSON
-[code]{
+
+```
+{
            "authorization": "Bearer 你的token"
          }
          
-[/code]
+
+```
 
   2. **自动化生成 CPA 格式 JSON 文件：**
 
 为了方便导入配置，您可以登录 ChatGPT 网页版，打开开发者工具（F12），在 Console (控制台) 中粘贴并运行以下 JavaScript 脚本。它会自动获取当前的 Session，并结合您输入的 Codex Token 生成一份适配 CPA 的配置文件并自动下载：
 
 JavaScript
-[code]
+
+```
+
     (async () => {
         try {
             const inputToken = prompt("请输入你创建的 Codex 令牌（Access Token）：");
@@ -158,7 +169,8 @@ JavaScript
         }
     })();
     
-[/code]
+
+```
 
 > **📌 温馨提示** ：导出的 Token 和配置文件属于高度敏感的隐私数据，请勿在公开场合泄露，以免造成账号损失或 API 额度被盗刷。
 

@@ -53,24 +53,33 @@ v2board| √| √| √
 ## 
 
 ## 关闭防火墙
-[code]
+
+```
+
     systemctl stop firewalld.service #关闭  
     systemctl disable firewalld.service#开机禁止自启
-[/code]
+
+```
 
 ## 同步时间（对接v2ray需要执行，Trojan不需要执行）
-[code]
+
+```
+
     yum -y install ntpdate  
     timedatectl set-timezone Asia/Shanghai  
     ntpdate ntp2.aliyun.com
-[/code]
+
+```
 
 ## 安装XrayR
 
 一键脚本
-[code]
+
+```
+
     bash <(curl -Ls https://raw.githubusercontent.com/XrayR-project/XrayR-release/master/install.sh)
-[/code]
+
+```
 
 ## 默认对接sspanel前端
 
@@ -171,7 +180,9 @@ sspanel升级到此版本[Anankke/SSPanel-Uim@8f68b63](https://github.com/Anankk
 ## 
 
 配置文件路径：`/etc/XrayR/config.yml`
-[code]
+
+```
+
     PanelType: "sspanel"            # 面板类型是V2board就写V2board，是sspanel就写sspanel  
     ApiConfig:  
     ApiHost: "http://127.0.0.1:667" #更改为前端域名  
@@ -185,12 +196,15 @@ sspanel升级到此版本[Anankke/SSPanel-Uim@8f68b63](https://github.com/Anankk
     DeviceLimit: 0 # Local settings will replace remote settings, 0 means disable  
     RuleListPath: # /etc/XrayR/rulelist Path to local rulelist file  
     DisableCustomConfig: false # Disable custom config
-[/code]
+
+```
 
 如果只对接单纯的vmess 只需要修改以上配置
 
 如果需要配置tls则需要更改以下配置
-[code]
+
+```
+
     CertConfig:  
     CertMode: dns # 默认  
     CertDomain: "node2.test.com" # 更改为节点域名  
@@ -201,13 +215,17 @@ sspanel升级到此版本[Anankke/SSPanel-Uim@8f68b63](https://github.com/Anankk
     DNSEnv: # DNS ENV option used by DNS provider  
     ALICLOUD_ACCESS_KEY: aaa   #不同的DNS供应商对应不同的配置值 可在这里获得支持https://go-acme.github.io/lego/dns/  
     ALICLOUD_SECRET_KEY: bbb   #不同的DNS供应商对应不同的配置值 可在这里获得支持https://go-acme.github.io/lego/dns/
-[/code]
+
+```
 
 重启XrayR，如果重启失败自行分析日志
-[code]
+
+```
+
     xrayr resart #重启  
     xrayr log  #日志
-[/code]
+
+```
 
 ## 对接Trojan
 
@@ -242,7 +260,9 @@ sspanel升级到此版本[Anankke/SSPanel-Uim@8f68b63](https://github.com/Anankk
 示例：gz.aaa.com;port=443|host=gz.aaa.com|enable_xtls=true|flow=xtls-rprx-direct
 
 配置文件路径：`/etc/XrayR/config.yml`
-[code]
+
+```
+
     PanelType: "sspanel" # 面板类型是V2board就写V2board，是sspanel就写sspanel  
     ApiConfig:  
     ApiHost: "http://127.0.0.1:667" #更改为前端域名  
@@ -256,8 +276,11 @@ sspanel升级到此版本[Anankke/SSPanel-Uim@8f68b63](https://github.com/Anankk
     DeviceLimit: 0 # Local settings will replace remote settings, 0 means disable  
     RuleListPath: # /etc/XrayR/rulelist Path to local rulelist file  
     DisableCustomConfig: false # Disable custom config
-[/code]
-[code]
+
+```
+
+```
+
     CertConfig:  
     CertMode: dns # 默认  
     CertDomain: "node2.test.com" # 更改为节点域名  
@@ -268,10 +291,15 @@ sspanel升级到此版本[Anankke/SSPanel-Uim@8f68b63](https://github.com/Anankk
     DNSEnv: # DNS ENV option used by DNS provider  
     ALICLOUD_ACCESS_KEY: aaa #不同的DNS供应商对应不同的配置值 可在这里获得支持https://go-acme.github.io/lego/dns/  
     ALICLOUD_SECRET_KEY: bbb #不同的DNS供应商对应不同的配置值 可在这里获得支持https://go-acme.github.io/lego/dns/
-[/code]
+
+```
 
 重启XrayR，如果重启失败自行分析日志
-[code]
+
+```
+
     xrayr resart #重启  
     xrayr log  #日志
-[/code]
+
+```
+

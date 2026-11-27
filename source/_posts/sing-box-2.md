@@ -119,9 +119,12 @@ Socks
 系统支持：Ubuntu，Debian，CentOS，推荐使用 Ubuntu 22，谨慎使用 CentOS，脚本可能无法正常运行！
 
 执行如下命令：
-[code]
+
+```
+
     bash <(wget -qO- -o- https://github.com/233boy/sing-box/raw/main/install.sh)
-[/code]
+
+```
 
 如果需要指定 sing-box 版本，请在安装命令后面加 `-v ver` 参数
 
@@ -812,8 +815,11 @@ Github 地址：<https://github.com/233boy/sing-box>
 你可以 Fork 一份，如果本人一键删库跑路了，你也可以照样正常安装使用
 
 安装命令如下：
-[code]
+
+```
+
     wget https://github.com/233boy/sing-box/archive/main.tar.gz -O sing-box-main.tar.gz;tar -zxvf sing-box-main.tar.gz;cd sing-box-main;chmod +x i*;./i* -l
-[/code]
+
+```
 
 记得要把安装命令中的 `233boy` 更改成你的 Github 用户名

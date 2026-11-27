@@ -15,19 +15,28 @@ description: 、下载SSH连接工具Finalshell：【 点击进入 】 2、域�
 3、开源项目地址：【[点击进入](https://github.com/alireza0/s-ui)】
 
 4、关闭防火墙（注意：不同平台/系统，关闭防火墙的设置有所不一样，请根据实际情况来）
-[code]
+
+```
+
     sudo ufw disableCopy
-[/code]
+
+```
 
 5、一键申请SSL证书
-[code]
+
+```
+
     bash <(curl -fsSL https://raw.githubusercontent.com/slobys/SSL-Renewal/main/acme.sh)Copy
-[/code]
+
+```
 
 6、一键搭建脚本
-[code]
+
+```
+
     bash <(curl -Ls https://raw.githubusercontent.com/alireza0/s-ui/master/install.sh)Copy
-[/code]
+
+```
 
 7、设置路径（特别需要注意：每次设置完之后，记得点击右上角的保存，很容易遗漏，没保存会导致连接不上）
 

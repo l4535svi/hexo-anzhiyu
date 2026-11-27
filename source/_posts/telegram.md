@@ -22,12 +22,14 @@ description: 一．准备工作 确保网络可以魔法上网 服务器配置�
 
   * 注意：红色部分为密码，可以自定义
 
-[code]
+```
+
     echo root:ZKrjSvGT9n5jXAfa |sudo chpasswd root
     sudo sed -i 's/^#\?PermitRootLogin.*/PermitRootLogin yes/g' /etc/ssh/sshd_config
     sudo sed -i 's/^#\?PasswordAuthentication.*/PasswordAuthentication yes/g' /etc/ssh/sshd_config
     sudo reboot
-[/code]
+
+```
 
 Copy
 
@@ -46,29 +48,40 @@ Copy
 [在线使用文档](https://slobys.github.io/telegram-group-manager/)
 
 一键部署
-[code]
+
+```
+
     bash -o pipefail -c 'curl -fsSL https://raw.githubusercontent.com/slobys/telegram-group-manager/main/install.sh | bash'
-[/code]
+
+```
 
 Copy
 
 打开菜单与更新
-[code]
+
+```
+
     gg
-[/code]
+
+```
 
 Copy
 
   * 更新快捷命令（常用）
 
-[code]
+```
+
     gg update
-[/code]
+
+```
 
 Copy
 
   * 安装OCR
 
-[code]
+```
+
     gg ocr
-[/code]
+
+```
+

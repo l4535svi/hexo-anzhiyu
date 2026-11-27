@@ -51,20 +51,27 @@ Trojan免费节点部署项目地址：<https://github.com/amclubs/am-cf-trojan>
 ### [](https://am.809098.xyz/am-cf-domain/#1%E3%80%81%E7%99%BB%E5%BD%95Cloudflare-%E7%82%B9%E5%87%BB%E5%B7%A6%E8%BE%B9-%E7%BD%91%E7%AB%99-%E5%9C%A8%E7%BB%91%E5%AE%9A%E7%9A%84%E5%9F%9F%E5%90%8D%E4%B8%AD-%E7%82%B9%E5%87%BB%E7%BB%91%E5%AE%9A%E7%9A%84%E5%9F%9F%E5%90%8D-%E8%BF%9B%E5%85%A5%E9%A1%B5%E9%9D%A2%E7%82%B9%E5%87%BB%E5%B7%A6%E8%BE%B9-DNS-%E7%82%B9%E5%87%BB-%E8%AE%B0%E5%BD%95-%E5%9C%A8-Cloudflare-%E5%90%8D%E7%A7%B0%E6%9C%8D%E5%8A%A1%E5%99%A8-%E7%9C%8B%E5%88%B0DNS%E8%AE%B0%E5%BD%95%EF%BC%8C%E5%A6%82%E4%B8%8B "1、登录Cloudflare ->点击左边 网站 ->在绑定的域名中 点击绑定的域名 -> 进入页面点击左边 DNS -> 点击 记录 -> 在 Cloudflare 名称服务器 看到DNS记录，如下")1、登录Cloudflare ->点击左边 网站 ->在绑定的域名中 点击绑定的域名 -> 进入页面点击左边 DNS -> 点击 记录 -> 在 Cloudflare 名称服务器 看到DNS记录，如下
 
 plaintext
-[code]
+
+```
+
     1  
     2  
     3  
     
-[/code]
+
+```
 
 | 
-[code]
+
+```
+
     类型	值  
     NS	piotr.ns.cloudflare.com  
     NS	violet.ns.cloudflare.com  
     
-[/code]  
+
+```
+  
   
 ---|---  
   

@@ -35,18 +35,25 @@ iStoreOS是一个修改版的openwrt系统，在原系统上做了一定的优�
 ### [](https://oser.space/d5262f31-4455-40d0-b94a-7df386c93119/#%E8%B0%83%E6%95%B4%E5%88%86%E5%8C%BA%E8%A1%A8)调整分区表
 
 ssh远程，安装cfdisk
-[code]
+
+```
+
     1
     2
     
-[/code]
+
+```
 
 | 
-[code]
+
+```
+
     opkg update
     opkg install cfdisk
     
-[/code]  
+
+```
+  
   
 ---|---  
   
@@ -61,16 +68,23 @@ cfdisk /dev/mmcblk0，选择Free sapce, 再最下面的菜单选择New, 直接�
 ### [](https://oser.space/d5262f31-4455-40d0-b94a-7df386c93119/#%E9%AD%94%E6%B3%95%E4%B8%8A%E7%BD%91%E6%8F%92%E4%BB%B6%E5%BC%80%E5%90%AF)魔法上网插件开启
 
 因为这个固件是基于lean的openwrt的修改版本，所以有个魔法开关
-[code]
+
+```
+
     1
     
-[/code]
+
+```
 
 | 
-[code]
+
+```
+
     echo 0xDEADBEEF > /etc/config/google_fu_mode
     
-[/code]  
+
+```
+  
   
 ---|---  
   
@@ -79,37 +93,53 @@ cfdisk /dev/mmcblk0，选择Free sapce, 再最下面的菜单选择New, 直接�
 ### [](https://oser.space/d5262f31-4455-40d0-b94a-7df386c93119/#%E5%BC%80%E5%90%AFswap)开启swap
 
 即使改了1G的ram，也建议打开swap，很可能运行进程过多依然会有oom问题，我在这里开启了1GB的swap，在内存不足的时候，系统则会用swap文件扩容内存，在挂载的/opt路径下，运行如下命令
-[code]
+
+```
+
     1
     2
     
-[/code]
+
+```
 
 | 
-[code]
+
+```
+
     dd if=/dev/zero of=/opt/swapfile bs=1M count=1024
     mkswap /opt/swapfile
     
-[/code]  
+
+```
+  
   
 ---|---  
   
 创建开机脚本如下，命令:
-[code]
+
+```
+
     1
     
-[/code]
+
+```
 
 | 
-[code]
+
+```
+
     vi /etc/init.d/swap
     
-[/code]  
+
+```
+  
   
 ---|---  
   
 在vi中粘如下代码
-[code]
+
+```
+
     1
     2
     3
@@ -119,10 +149,13 @@ cfdisk /dev/mmcblk0，选择Free sapce, 再最下面的菜单选择New, 直接�
     7
     8
     
-[/code]
+
+```
 
 | 
-[code]
+
+```
+
     #!/bin/sh /etc/rc.common
     START=99
     start() {
@@ -132,23 +165,32 @@ cfdisk /dev/mmcblk0，选择Free sapce, 再最下面的菜单选择New, 直接�
         swapoff /opt/swapfile
     }
     
-[/code]  
+
+```
+  
   
 ---|---  
   
 运行命令使swap开机启动生效:
-[code]
+
+```
+
     1
     2
     
-[/code]
+
+```
 
 | 
-[code]
+
+```
+
     chmod +x /etc/init.d/swap
     /etc/init.d/swap enable
     
-[/code]  
+
+```
+  
   
 ---|---  
   
@@ -177,24 +219,31 @@ WireGuard是一个内核支持的VPN，在我们设置好动态DNS后，如果�
   2. 每一个终端需要一个公钥和私钥，公钥和私钥的生成在新版本的插件上是很方便可以自动的（但这里是老版本没这种功能，而且别乱升插件，库文件不匹配很容易导致路由挂掉）
 
 生成密钥，在ubuntu下需要安装wireguard `apt install wireguard`
-[code]
+
+```
+
     1
     2
     3
     4
     5
     
-[/code]
+
+```
 
 | 
-[code]
+
+```
+
     #生成私钥
     $ wg genkey > private1.key
     
     # 生成公钥
     $ wg pubkey < private1.key > public1.key
     
-[/code]  
+
+```
+  
   
 ---|---  
   
@@ -208,7 +257,8 @@ IP地址填和内网网段不冲突的，比如 (192.168.26.1/24) (fd12:26::1/64
 
   4. 自己写一个conf扩展名的文件，内容如下:
 
-[code]
+```
+
     1
     2
     3
@@ -219,10 +269,13 @@ IP地址填和内网网段不冲突的，比如 (192.168.26.1/24) (fd12:26::1/64
     8
     9
     
-[/code]
+
+```
 
 | 
-[code]
+
+```
+
     [Interface]
     Address = 192.168.26.10/32, fd12:26::10/128
     PrivateKey =（priv2的内容）
@@ -233,7 +286,9 @@ IP地址填和内网网段不冲突的，比如 (192.168.26.1/24) (fd12:26::1/64
     Endpoint = （DDNS设置中IPv6的解析域名）:（监听端口号）
     PersistentKeepalive = 25
     
-[/code]  
+
+```
+  
   
 ---|---  
   
@@ -256,7 +311,9 @@ IP地址填和内网网段不冲突的，比如 (192.168.26.1/24) (fd12:26::1/64
 下载地址如下：<https://github.com/GopeedLab/gopeed/releases>，选择linux arm64版本。
 
 在gopeed同目录下写入配置文件config.json
-[code]
+
+```
+
     1
     2
     3
@@ -264,10 +321,13 @@ IP地址填和内网网段不冲突的，比如 (192.168.26.1/24) (fd12:26::1/64
     5
     6
     
-[/code]
+
+```
 
 | 
-[code]
+
+```
+
     {
       "port": 9999,
       "username": "<用户名>",
@@ -275,26 +335,37 @@ IP地址填和内网网段不冲突的，比如 (192.168.26.1/24) (fd12:26::1/64
       "storageDir": "<下载路径>"
     }
     
-[/code]  
+
+```
+  
   
 ---|---  
   
 配置gopeed下载开机启动
-[code]
+
+```
+
     1
     
-[/code]
+
+```
 
 | 
-[code]
+
+```
+
     vi /etc/init.d/gopeed
     
-[/code]  
+
+```
+  
   
 ---|---  
   
 在vi中粘如下代码
-[code]
+
+```
+
     1
     2
     3
@@ -304,10 +375,13 @@ IP地址填和内网网段不冲突的，比如 (192.168.26.1/24) (fd12:26::1/64
     7
     8
     
-[/code]
+
+```
 
 | 
-[code]
+
+```
+
     #!/bin/sh /etc/rc.common
     START=100
     start() {
@@ -317,23 +391,32 @@ IP地址填和内网网段不冲突的，比如 (192.168.26.1/24) (fd12:26::1/64
       ps -ef | grep gopeed | grep -v grep | awk '{print $1}' | xargs -r kill
     }
     
-[/code]  
+
+```
+  
   
 ---|---  
   
 开机生效使能
-[code]
+
+```
+
     1
     2
     
-[/code]
+
+```
 
 | 
-[code]
+
+```
+
     chmod +x /etc/init.d/gopeed
     /etc/init.d/gopeed enable
     
-[/code]  
+
+```
+  
   
 ---|---  
   
@@ -353,16 +436,22 @@ gopeed启动后，在http://路由ip:9999，即可访问并使用远程下载
 
   2. 在系统->计划任务中，添加一行
 
-[code]
+```
+
     1
     
-[/code]
+
+```
 
 | 
-[code]
+
+```
+
     0 5 * * * ps -ef | grep gopeed | grep -v grep | awk '{print $1}' | xargs -r kill && sleep 10 && touch /etc/banner && reboot
     
-[/code]  
+
+```
+  
   
 ---|---  
   

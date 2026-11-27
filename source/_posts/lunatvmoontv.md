@@ -9,7 +9,9 @@ categories:
 description: '{ "cache_time": 9200, "api_site": { "api_1": { "name": "TV-1080资源", "api": "https://api.1080zyku.com/inc/api_mac10.php", "detail": "https://'
 ---
 {
-[code]
+
+```
+
         "cache_time": 9200,
         "api_site": {
             "api_1": {
@@ -492,7 +494,8 @@ description: '{ "cache_time": 9200, "api_site": { "api_1": { "name": "TV-1080资
             }
         }
     }
-[/code]
+
+```
 
 # 🌙 LunaTV：MoonTV 的华丽转生与部署教程
 
@@ -564,7 +567,9 @@ description: '{ "cache_time": 9200, "api_site": { "api_1": { "name": "TV-1080资
   4. **复制并修改 Compose 代码** ：
 
      * 将以下 Compose 代码复制到编辑框中：
-[code]services:
+
+```
+services:
       moontv-core:
         image: ghcr.io/moontechlab/lunatv:latest
         container_name: moontv-core
@@ -577,20 +582,27 @@ description: '{ "cache_time": 9200, "api_site": { "api_1": { "name": "TV-1080资
           - NEXT_PUBLIC_STORAGE_TYPE=upstash
           - UPSTASH_URL={上面 https 开头的 HTTPS ENDPOINT} # 必填
           - UPSTASH_TOKEN={上面的 TOKEN} # 必填
-[/code]
+
+```
 
      * **重要修改事项** ：
 
        * **端口修改** ：相信很多同学的 Docker 容器中，`3000` 端口可能已被 Nastools 等应用占用。我们需要修改默认端口，例如改为 `4000`。
-[code]ports:
+
+```
+ports:
                - '4000:3000' # 将 '3000:3000' 修改为 '你的本地端口:3000'
-[/code]
+
+```
 
        * **登录密码** ：本地部署时，为了方便，你可以将 `PASSWORD` 修改得简单一些。
-[code]environment:
+
+```
+environment:
                - USERNAME=admin
                - PASSWORD=your_easy_password # 修改为你的密码
-[/code]
+
+```
 
        * **🎯 重点来了！Upstash 连接信息** ：
 
@@ -623,8 +635,11 @@ description: '{ "cache_time": 9200, "api_site": { "api_1": { "name": "TV-1080资
 
      * 在 “配置订阅” 中填入我们准备好的订阅地址。
      * ✨ **神奇妙妙代码** ：
-[code]https://gist.githubusercontent.com/senshinya/5a5cb900dfa888fd61d767530f00fc48/raw/gistfile1.txt
-[/code]
+
+```
+https://gist.githubusercontent.com/senshinya/5a5cb900dfa888fd61d767530f00fc48/raw/gistfile1.txt
+
+```
 
 (此订阅地址在博客中会同步更新，请注意查阅最新信息)
 

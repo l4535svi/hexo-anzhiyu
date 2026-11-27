@@ -163,15 +163,21 @@ description: 跨平台的 ECH Workers 代理客户端，支持 Windows、macOS �
 [](https://github.com/byJoey/ech-wk#%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4)
 
   1. 解压文件
-[code]# Windows: 解压到任意目录
+
+```
+# Windows: 解压到任意目录
          # macOS/Linux: 解压到 /usr/local/bin 或自定义目录
          tar -xzf ECHWorkers-linux-amd64.tar.gz
-[/code]
+
+```
 
   2. 设置执行权限（Linux/macOS）
-[code]chmod +x ech-workers
+
+```
+chmod +x ech-workers
          chmod +x ECHWorkersGUI  # 如果使用 GUI
-[/code]
+
+```
 
   3. 运行程序
 
@@ -190,9 +196,12 @@ description: 跨平台的 ECH Workers 代理客户端，支持 Windows、macOS �
 ### 命令语法
 
 [](https://github.com/byJoey/ech-wk#%E5%91%BD%E4%BB%A4%E8%AF%AD%E6%B3%95)
-[code]
+
+```
+
     ech-workers [选项]
-[/code]
+
+```
 
 ### 参数说明
 
@@ -243,29 +252,37 @@ description: 跨平台的 ECH Workers 代理客户端，支持 Windows、macOS �
 #### 基本用法
 
 [](https://github.com/byJoey/ech-wk#%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95)
-[code]
+
+```
+
     # Windows
     ech-workers.exe -f your-worker.workers.dev:443
     
     # macOS / Linux
     ./ech-workers -f your-worker.workers.dev:443
-[/code]
+
+```
 
 #### 指定监听地址
 
 [](https://github.com/byJoey/ech-wk#%E6%8C%87%E5%AE%9A%E7%9B%91%E5%90%AC%E5%9C%B0%E5%9D%80)
-[code]
+
+```
+
     # 监听所有网络接口（适合软路由）
     ./ech-workers -f your-worker.workers.dev:443 -l 0.0.0.0:30001
     
     # 仅监听本地（默认）
     ./ech-workers -f your-worker.workers.dev:443 -l 127.0.0.1:30001
-[/code]
+
+```
 
 #### 使用分流模式
 
 [](https://github.com/byJoey/ech-wk#%E4%BD%BF%E7%94%A8%E5%88%86%E6%B5%81%E6%A8%A1%E5%BC%8F)
-[code]
+
+```
+
     # 全局代理模式（默认）
     ./ech-workers -f your-worker.workers.dev:443 -routing global
     
@@ -274,12 +291,15 @@ description: 跨平台的 ECH Workers 代理客户端，支持 Windows、macOS �
     
     # 直连模式
     ./ech-workers -f your-worker.workers.dev:443 -routing none
-[/code]
+
+```
 
 #### 完整参数示例
 
 [](https://github.com/byJoey/ech-wk#%E5%AE%8C%E6%95%B4%E5%8F%82%E6%95%B0%E7%A4%BA%E4%BE%8B)
-[code]
+
+```
+
     ./ech-workers \
       -f your-worker.workers.dev:443 \
       -l 0.0.0.0:30001 \
@@ -288,16 +308,20 @@ description: 跨平台的 ECH Workers 代理客户端，支持 Windows、macOS �
       -dns dns.alidns.com/dns-query \
       -ech cloudflare-ech.com \
       -routing bypass_cn
-[/code]
+
+```
 
 #### 查看帮助
 
 [](https://github.com/byJoey/ech-wk#%E6%9F%A5%E7%9C%8B%E5%B8%AE%E5%8A%A9)
-[code]
+
+```
+
     ./ech-workers -h
     # 或
     ./ech-workers --help
-[/code]
+
+```
 
 ### 后台运行
 
@@ -308,21 +332,29 @@ description: 跨平台的 ECH Workers 代理客户端，支持 Windows、macOS �
 [](https://github.com/byJoey/ech-wk#linuxmacos)
 
 使用 nohup:
-[code]
+
+```
+
     nohup ./ech-workers -f your-worker.workers.dev:443 -l 127.0.0.1:30001 > ech-workers.log 2>&1 &
-[/code]
+
+```
 
 使用 screen:
-[code]
+
+```
+
     screen -S ech-workers
     ./ech-workers -f your-worker.workers.dev:443 -l 127.0.0.1:30001
     # 按 Ctrl+A 然后 D 分离会话
-[/code]
+
+```
 
 使用 systemd (推荐):
 
 创建服务文件 `/etc/systemd/system/ech-workers.service`:
-[code]
+
+```
+
     [Unit]
     Description=ECH Workers Proxy Client
     After=network.target
@@ -339,31 +371,41 @@ description: 跨平台的 ECH Workers 代理客户端，支持 Windows、macOS �
     
     [Install]
     WantedBy=multi-user.target
-[/code]
+
+```
 
 启用并启动服务:
-[code]
+
+```
+
     sudo systemctl daemon-reload
     sudo systemctl enable ech-workers
     sudo systemctl start ech-workers
     sudo systemctl status ech-workers
-[/code]
+
+```
 
 查看日志:
-[code]
+
+```
+
     sudo journalctl -u ech-workers -f
-[/code]
+
+```
 
 #### Windows
 
 [](https://github.com/byJoey/ech-wk#windows)
 
 使用 PowerShell:
-[code]
+
+```
+
     Start-Process -FilePath "ech-workers.exe" `
       -ArgumentList "-f", "your-worker.workers.dev:443", "-l", "127.0.0.1:30001" `
       -WindowStyle Hidden
-[/code]
+
+```
 
 使用任务计划程序:
 
@@ -388,13 +430,16 @@ description: 跨平台的 ECH Workers 代理客户端，支持 Windows、macOS �
 [](https://github.com/byJoey/ech-wk#%E6%B5%8F%E8%A7%88%E5%99%A8%E9%85%8D%E7%BD%AE)
 
 Chrome/Edge:
-[code]
+
+```
+
     # Linux/macOS
     google-chrome --proxy-server="socks5://127.0.0.1:30001"
     
     # Windows
     chrome.exe --proxy-server="socks5://127.0.0.1:30001"
-[/code]
+
+```
 
 Firefox:
 
@@ -408,18 +453,24 @@ Firefox:
 [](https://github.com/byJoey/ech-wk#%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE)
 
 Linux/macOS:
-[code]
+
+```
+
     export ALL_PROXY=socks5://127.0.0.1:30001
     export HTTP_PROXY=socks5://127.0.0.1:30001
     export HTTPS_PROXY=socks5://127.0.0.1:30001
-[/code]
+
+```
 
 Windows (PowerShell):
-[code]
+
+```
+
     $env:ALL_PROXY="socks5://127.0.0.1:30001"
     $env:HTTP_PROXY="socks5://127.0.0.1:30001"
     $env:HTTPS_PROXY="socks5://127.0.0.1:30001"
-[/code]
+
+```
 
 ### 日志输出
 
@@ -433,9 +484,12 @@ Windows (PowerShell):
   * 代理连接和错误信息
 
 将输出重定向到文件：
-[code]
+
+```
+
     ./ech-workers -f your-worker.workers.dev:443 -l 127.0.0.1:30001 > ech-workers.log 2>&1
-[/code]
+
+```
 
 ## 🖥️ 图形界面使用
 
@@ -498,40 +552,54 @@ Windows (PowerShell):
 ### 一键脚本
 
 [](https://github.com/byJoey/ech-wk#%E4%B8%80%E9%94%AE%E8%84%9A%E6%9C%AC)
-[code]
+
+```
+
     wget https://raw.githubusercontent.com/byJoey/ech-wk/refs/heads/main/softrouter.sh
     chmod +x softrouter.sh
     ./softrouter.sh
-[/code]
-[code]
+
+```
+
+```
+
     #后续使用只需要这一行
     ./softrouter.sh
-[/code]
+
+```
 
 #### 1\. 上传文件
 
 [](https://github.com/byJoey/ech-wk#1-%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6)
-[code]
+
+```
+
     # 通过 SCP 上传
     scp ech-workers root@192.168.1.1:/usr/bin/
     
     # 或通过 WinSCP、FileZilla 等工具上传
-[/code]
+
+```
 
 #### 2\. 设置执行权限
 
 [](https://github.com/byJoey/ech-wk#2-%E8%AE%BE%E7%BD%AE%E6%89%A7%E8%A1%8C%E6%9D%83%E9%99%90)
-[code]
+
+```
+
     ssh root@192.168.1.1
     chmod +x /usr/bin/ech-workers
-[/code]
+
+```
 
 #### 3\. 创建启动脚本
 
 [](https://github.com/byJoey/ech-wk#3-%E5%88%9B%E5%BB%BA%E5%90%AF%E5%8A%A8%E8%84%9A%E6%9C%AC)
 
 创建 `/etc/init.d/ech-workers`：
-[code]
+
+```
+
     #!/bin/sh /etc/rc.common
     
     START=99
@@ -550,28 +618,38 @@ Windows (PowerShell):
         procd_set_param stderr 1
         procd_close_instance
     }
-[/code]
+
+```
 
 设置权限：
-[code]
+
+```
+
     chmod +x /etc/init.d/ech-workers
-[/code]
+
+```
 
 #### 4\. 启用并启动服务
 
 [](https://github.com/byJoey/ech-wk#4-%E5%90%AF%E7%94%A8%E5%B9%B6%E5%90%AF%E5%8A%A8%E6%9C%8D%E5%8A%A1)
-[code]
+
+```
+
     /etc/init.d/ech-workers enable
     /etc/init.d/ech-workers start
-[/code]
+
+```
 
 #### 5\. 查看服务状态
 
 [](https://github.com/byJoey/ech-wk#5-%E6%9F%A5%E7%9C%8B%E6%9C%8D%E5%8A%A1%E7%8A%B6%E6%80%81)
-[code]
+
+```
+
     /etc/init.d/ech-workers status
     logread | grep ech-workers
-[/code]
+
+```
 
 #### 6\. 配置 OpenWrt 代理
 
@@ -598,31 +676,42 @@ Windows (PowerShell):
 [](https://github.com/byJoey/ech-wk#2-%E5%88%9B%E5%BB%BA%E5%90%AF%E5%8A%A8%E8%84%9A%E6%9C%AC)
 
 创建 `/etc/init.d/ech-workers.sh`：
-[code]
+
+```
+
     #!/bin/sh
     /bin/ech-workers -f your-worker.workers.dev:443 -l 127.0.0.1:30001 -routing bypass_cn &
-[/code]
+
+```
 
 设置权限：
-[code]
+
+```
+
     chmod +x /etc/init.d/ech-workers.sh
-[/code]
+
+```
 
 #### 3\. 添加到开机启动
 
 [](https://github.com/byJoey/ech-wk#3-%E6%B7%BB%E5%8A%A0%E5%88%B0%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8)
 
 编辑 `/etc/rc.local`，添加：
-[code]
+
+```
+
     /etc/init.d/ech-workers.sh
-[/code]
+
+```
 
 ### Docker部署
 
 [](https://github.com/byJoey/ech-wk#docker%E9%83%A8%E7%BD%B2)
 
 参数说明：
-[code]
+
+```
+
     --network host #网络类型一般推荐直接host 
       -e ARG_F="" #填写你的workers域名和端口 
       -e ARG_ECH="cloudflare-ech.com" #ech查询域名，一般保持默认 
@@ -631,10 +720,13 @@ Windows (PowerShell):
       -e ARG_L="0.0.0.0:30000" #Socks5服务器的IP和端口，0.0.0.0为全局监听
       -e ARG_ROUTING="global" #分流模式，global=全局代理 bypass_cn=绕过大陆
     
-[/code]
+
+```
 
 docker运行命令模板，按照上面的说明填写，然后复制到终端运行：
-[code]
+
+```
+
     docker run -d \
       --name cfech \
       --restart always \
@@ -647,7 +739,8 @@ docker运行命令模板，按照上面的说明填写，然后复制到终端�
       -e ARG_ROUTING="global" \
       cirnosalt/ech-workers-docker:latest
     
-[/code]
+
+```
 
 ### 软路由配置建议
 
@@ -656,20 +749,25 @@ docker运行命令模板，按照上面的说明填写，然后复制到终端�
 #### 网络配置
 
 [](https://github.com/byJoey/ech-wk#%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE)
-[code]
+
+```
+
     # 监听所有网络接口（推荐）
     ./ech-workers -f your-worker.workers.dev:443 -l 0.0.0.0:30001 -routing bypass_cn
     
     # 或仅监听内网接口
     ./ech-workers -f your-worker.workers.dev:443 -l 192.168.1.1:30001 -routing bypass_cn
-[/code]
+
+```
 
 #### 防火墙规则
 
 [](https://github.com/byJoey/ech-wk#%E9%98%B2%E7%81%AB%E5%A2%99%E8%A7%84%E5%88%99)
 
 确保防火墙允许代理端口：
-[code]
+
+```
+
     # OpenWrt
     uci add firewall rule
     uci set firewall.@rule[-1].name='Allow-ECH-Workers'
@@ -679,7 +777,8 @@ docker运行命令模板，按照上面的说明填写，然后复制到终端�
     uci set firewall.@rule[-1].target='ACCEPT'
     uci commit firewall
     /etc/init.d/firewall reload
-[/code]
+
+```
 
 #### 性能优化
 
@@ -692,7 +791,9 @@ docker运行命令模板，按照上面的说明填写，然后复制到终端�
 #### 监控和日志
 
 [](https://github.com/byJoey/ech-wk#%E7%9B%91%E6%8E%A7%E5%92%8C%E6%97%A5%E5%BF%97)
-[code]
+
+```
+
     # 查看进程状态
     ps | grep ech-workers
     
@@ -701,7 +802,8 @@ docker运行命令模板，按照上面的说明填写，然后复制到终端�
     
     # 测试连接
     curl --socks5 127.0.0.1:30001 http://www.google.com
-[/code]
+
+```
 
 ## 📋 系统要求
 
@@ -745,12 +847,15 @@ docker运行命令模板，按照上面的说明填写，然后复制到终端�
 
   1. 检查网络连接，确保能够访问 GitHub
   2. 手动下载 IP 列表文件：
-[code]# IPv4 列表
+
+```
+# IPv4 列表
          curl -L -o chn_ip.txt "https://raw.githubusercontent.com/mayaxcn/china-ip-list/refs/heads/master/chn_ip.txt"
          
          # IPv6 列表
          curl -L -o chn_ip_v6.txt "https://raw.githubusercontent.com/mayaxcn/china-ip-list/refs/heads/master/chn_ip_v6.txt"
-[/code]
+
+```
 
   3. 将文件放在程序目录下，程序会自动使用
 
@@ -763,13 +868,19 @@ docker运行命令模板，按照上面的说明填写，然后复制到终端�
 解决方案:
 
   1. 确保已编译 Go 程序：
-[code]go build -o ech-workers ech-workers.go
-[/code]
+
+```
+go build -o ech-workers ech-workers.go
+
+```
 
   2. 确保 `ech-workers` 与 GUI 在同一目录
   3. 检查文件执行权限（Linux/macOS）：
-[code]chmod +x ech-workers
-[/code]
+
+```
+chmod +x ech-workers
+
+```
 
 ### Windows 11 系统代理问题
 
@@ -793,8 +904,11 @@ docker运行命令模板，按照上面的说明填写，然后复制到终端�
 
   * 在系统设置中配置 SOCKS5 代理为 `127.0.0.1:端口`
   * 或使用环境变量：
-[code]export ALL_PROXY=socks5://127.0.0.1:端口
-[/code]
+
+```
+export ALL_PROXY=socks5://127.0.0.1:端口
+
+```
 
 ### bad CPU type in executable (macOS)
 
@@ -814,7 +928,9 @@ docker运行命令模板，按照上面的说明填写，然后复制到终端�
 问题: GUI 无法启动，提示 PyQt5 未安装
 
 解决方案:
-[code]
+
+```
+
     # macOS
     pip3 install --user PyQt5
     
@@ -823,7 +939,8 @@ docker运行命令模板，按照上面的说明填写，然后复制到终端�
     
     # Linux (Debian/Ubuntu)
     sudo apt install python3-pyqt5
-[/code]
+
+```
 
 ### 软路由重启后服务未启动
 
@@ -834,16 +951,25 @@ docker运行命令模板，按照上面的说明填写，然后复制到终端�
 解决方案:
 
   1. 检查启动脚本权限：
-[code]chmod +x /etc/init.d/ech-workers
-[/code]
+
+```
+chmod +x /etc/init.d/ech-workers
+
+```
 
   2. 确保服务已启用：
-[code]/etc/init.d/ech-workers enable
-[/code]
+
+```
+/etc/init.d/ech-workers enable
+
+```
 
   3. 检查系统日志：
-[code]logread | grep ech-workers
-[/code]
+
+```
+logread | grep ech-workers
+
+```
 
 ## 📚 技术文档
 

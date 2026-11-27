@@ -24,11 +24,14 @@ description: 方法 1：使用文本编辑器（如 Notepad++） 下载 Notepad+
 
   1. 右键点击 `.txt` 文件所在文件夹，选择 在此处打开 PowerShell。
   2. 执行以下命令：
-[code]powershell复制代码
+
+```
+powershell复制代码
          
          (Get-Content -Path "input.txt" -Raw) -replace "`n", "`r`n" | Set-Content -Path "output.txt"
          
-[/code]
+
+```
 
      * `input.txt` 替换为你的文件名。
      * 生成的新文件 `output.txt` 会包含 `\r\n` 换行符。
@@ -39,41 +42,53 @@ description: 方法 1：使用文本编辑器（如 Notepad++） 下载 Notepad+
 
   1. 安装 Python（确保勾选 `Add to PATH`）。
   2. 创建一个脚本 `convert.py`，内容如下：
-[code]python复制代码
+
+```
+python复制代码
          
          with open('input.txt', 'r', newline='') as f:
              content = f.read()
          with open('output.txt', 'w', newline='\r\n') as f:
              f.write(content)
          
-[/code]
+
+```
 
   3. 将 `input.txt` 和脚本放在同一目录，运行脚本：
-[code]bash复制代码
+
+```
+bash复制代码
          
          python convert.py
          
-[/code]
+
+```
 
 * * *
 
 ### 方法 4：使用命令行工具（Unix/Linux/macOS）
 
 如果使用 Linux/macOS，可以通过 `sed` 或 `awk` 转换后传输到新文件：
-[code]
+
+```
+
     bash复制代码
     
     sed 's/$/\r/' input.txt > output.txt
     
-[/code]
+
+```
 
 或
-[code]
+
+```
+
     bash复制代码
     
     awk '1 {printf "%s\r\n", \$0}' input.txt > output.txt
     
-[/code]
+
+```
 
 * * *
 

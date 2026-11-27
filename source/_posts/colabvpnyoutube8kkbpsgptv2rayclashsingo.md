@@ -39,26 +39,35 @@ description: 主页 每日免费节点更新，科学上网 一段代码简单�
 **谷歌colab【[点击直达](https://colab.research.google.com/)】**   （https://colab.research.google.com/）
 
 *   * 在新建的笔记本中，运行以下命令以克隆项目仓库：​
-[code]
+
+```
+
         
         !git clone https://github.com/wzdnzd/aggregator.git
         
-[/code]
+
+```
 
 * **安装依赖项** ：
 
   * 进入克隆的项目目录：​
-[code]
+
+```
+
         
         %cd aggregator
         
-[/code]
+
+```
 
   * 安装项目所需的 Python 依赖项：​
-[code]
+
+```
+
         
         !pip install -r requirements.txt​
-[/code]
+
+```
 
 * **运行项目** ：
 

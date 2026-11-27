@@ -124,153 +124,240 @@ D1 Console 每次只能执行一条 SQL。以下每条代码单独复制，粘�
 按以下顺序执行：
 
 第 1 条 — 创建链接表
-[code]
+
+```
+
     CREATE TABLE IF NOT EXISTS links ( id INTEGER PRIMARY KEY AUTOINCREMENT, url TEXT NOT NULL, label TEXT, created_at INTEGER NOT NULL, expires_at INTEGER, created_via TEXT DEFAULT 'app', created_by TEXT DEFAULT 'anonymous' );
-[/code]
+
+```
 
 第 2 条 — 创建短码表
-[code]
+
+```
+
     CREATE TABLE IF NOT EXISTS slugs ( link_id INTEGER NOT NULL REFERENCES links(id) ON DELETE CASCADE, slug TEXT NOT NULL PRIMARY KEY, is_custom INTEGER NOT NULL DEFAULT 0, is_primary INTEGER NOT NULL DEFAULT 0, created_at INTEGER NOT NULL, disabled_at INTEGER );
-[/code]
+
+```
 
 第 3 条 — 创建点击记录表
-[code]
+
+```
+
     CREATE TABLE IF NOT EXISTS clicks ( id INTEGER PRIMARY KEY AUTOINCREMENT, slug TEXT NOT NULL REFERENCES slugs(slug) ON DELETE CASCADE, clicked_at INTEGER NOT NULL, referrer TEXT, referrer_host TEXT, country TEXT, region TEXT, city TEXT, device_type TEXT, os TEXT, browser TEXT, language TEXT, link_mode TEXT DEFAULT 'link', channel TEXT, utm_source TEXT, utm_medium TEXT, utm_campaign TEXT, utm_term TEXT, utm_content TEXT, user_agent TEXT, is_bot INTEGER DEFAULT 0, visitor_fp TEXT, is_self_referrer INTEGER DEFAULT 0 );
-[/code]
+
+```
 
 第 4 条 — 创建设置表
-[code]
+
+```
+
     CREATE TABLE IF NOT EXISTS settings ( identity TEXT NOT NULL, key TEXT NOT NULL, value TEXT NOT NULL, PRIMARY KEY (identity, key) );
-[/code]
+
+```
 
 第 5 条 — 创建 API 密钥表
-[code]
+
+```
+
     CREATE TABLE IF NOT EXISTS api_keys ( id INTEGER PRIMARY KEY AUTOINCREMENT, title TEXT NOT NULL, key_prefix TEXT NOT NULL, key_hash TEXT NOT NULL UNIQUE, scope TEXT NOT NULL, created_at INTEGER NOT NULL, last_used_at INTEGER, identity TEXT NOT NULL DEFAULT 'anonymous' );
-[/code]
+
+```
 
 第 6 条 — 创建分组表
-[code]
+
+```
+
     CREATE TABLE IF NOT EXISTS bundles ( id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT NOT NULL, description TEXT, icon TEXT, accent TEXT NOT NULL DEFAULT 'orange' CHECK (accent IN ('orange','red','green','blue','purple')), archived_at INTEGER, created_via TEXT DEFAULT 'app', created_by TEXT NOT NULL, created_at INTEGER NOT NULL, updated_at INTEGER NOT NULL );
-[/code]
+
+```
 
 第 7 条 — 创建分组-链接关联表
-[code]
+
+```
+
     CREATE TABLE IF NOT EXISTS bundle_links ( bundle_id INTEGER NOT NULL REFERENCES bundles(id) ON DELETE CASCADE, link_id INTEGER NOT NULL REFERENCES links(id) ON DELETE CASCADE, added_at INTEGER NOT NULL, PRIMARY KEY (bundle_id, link_id) );
-[/code]
+
+```
 
 第 8 条 — 插入默认设置
-[code]
+
+```
+
     IINSERT OR IGNORE INTO settings (identity, key, value) VALUES ('anonymous', 'slug_default_length', '3');
-[/code]
+
+```
 
 第 9 条 — 创建索引（第 1 个）
-[code]
+
+```
+
     CREATE INDEX IF NOT EXISTS idx_slugs_link_id ON slugs(link_id);
-[/code]
+
+```
 
 第 10 条 — 创建索引（第 2 个）
-[code]
+
+```
+
     CREATE INDEX IF NOT EXISTS idx_clicks_slug ON clicks(slug);
-[/code]
+
+```
 
 第 11 条 — 创建索引（第 3 个）
-[code]
+
+```
+
     CREATE INDEX IF NOT EXISTS idx_clicks_clicked_at ON clicks(clicked_at);
-[/code]
+
+```
 
 第 12 条 — 创建索引（第 4 个）
-[code]
+
+```
+
     CREATE INDEX IF NOT EXISTS idx_clicks_country ON clicks(country);
-[/code]
+
+```
 
 第 13 条 — 创建索引（第 5 个）
-[code]
+
+```
+
     CREATE INDEX IF NOT EXISTS idx_clicks_link_mode ON clicks(link_mode);
-[/code]
+
+```
 
 第 14 条 — 创建索引（第 6 个）
-[code]
+
+```
+
     CREATE INDEX IF NOT EXISTS idx_clicks_referrer_host ON clicks(referrer_host);
-[/code]
+
+```
 
 第 15 条 — 创建索引（第 7 个）
-[code]
+
+```
+
     CREATE INDEX IF NOT EXISTS idx_clicks_os ON clicks(os);
-[/code]
+
+```
 
 第 16 条 — 创建索引（第 8 个）
-[code]
+
+```
+
     CREATE INDEX IF NOT EXISTS idx_clicks_visitor_fp ON clicks(visitor_fp);
-[/code]
+
+```
 
 第 17 条 — 创建索引（第 9 个）
-[code]
+
+```
+
     CREATE INDEX IF NOT EXISTS idx_clicks_is_self_referrer ON clicks(is_self_referrer);
-[/code]
+
+```
 
 第 18 条 — 创建索引（第 10 个）
-[code]
+
+```
+
     CREATE INDEX IF NOT EXISTS idx_api_keys_hash ON api_keys(key_hash);
-[/code]
+
+```
 
 第 19 条 — 创建索引（第 11 个）
-[code]
+
+```
+
     CREATE INDEX IF NOT EXISTS idx_api_keys_identity ON api_keys(identity);
-[/code]
+
+```
 
 第 20 条 — 创建索引（第 12 个）
-[code]
+
+```
+
     CREATE INDEX IF NOT EXISTS idx_bundles_created_by ON bundles(created_by);
-[/code]
+
+```
 
 第 21 条 — 创建索引（第 13 个）
-[code]
+
+```
+
     CREATE INDEX IF NOT EXISTS idx_bundles_archived_at ON bundles(archived_at);
-[/code]
+
+```
 
 第 22 条 — 创建索引（第 14 个）
-[code]
+
+```
+
     CREATE INDEX IF NOT EXISTS idx_bundle_links_link_id ON bundle_links(link_id);
-[/code]
+
+```
 
 #### 如果数据库已有旧数据，需要清空重建,新数据库则忽略以下7条代码的执行
 
 先逐条执行以下 7 条 DROP 语句（同样每次一条）：
 
 DROP 第 1 条
-[code]
+
+```
+
     DROP TABLE IF EXISTS bundle_links;
-[/code]
+
+```
 
 DROP 第 2 条
-[code]
+
+```
+
     DROP TABLE IF EXISTS bundles;
-[/code]
+
+```
 
 DROP 第 3 条
-[code]
+
+```
+
     DROP TABLE IF EXISTS api_keys;
-[/code]
+
+```
 
 DROP 第 4 条
-[code]
+
+```
+
     DROP TABLE IF EXISTS settings;
-[/code]
+
+```
 
 DROP 第 5 条
-[code]
+
+```
+
     DROP TABLE IF EXISTS clicks;
-[/code]
+
+```
 
 DROP 第 6 条
-[code]
+
+```
+
     DROP TABLE IF EXISTS slugs;
-[/code]
+
+```
 
 DROP 第 7 条
-[code]
+
+```
+
     DROP TABLE IF EXISTS links;
-[/code]
+
+```
 
 执行完 7 条 DROP 后，再按上面的 第 1-22 条 顺序执行建表和建索引。
 
@@ -310,16 +397,22 @@ Cunlink 内置了对 Cloudflare Access（零信任）的支持，配置方法如
 ### 本地开发（可选）
 
 如果你的开发环境有 Node.js 22+ 和 Yarn：
-[code]
+
+```
+
     yarn install
     npx wrangler d1 migrations apply DB --local
     npx wrangler dev
-[/code]
+
+```
 
 在项目根目录创建 `.dev.vars` 文件可以免登录开发：
-[code]
+
+```
+
     DEV_IDENTITY=dev@local
-[/code]
+
+```
 
 ## 我的部署体验
 

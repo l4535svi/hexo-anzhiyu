@@ -21,7 +21,9 @@ description: 设备说明 2024-05 购于京东，512M 内存/128G 存储版本 �
 拿到手之后先不要插 WAN 口网线，避免系统自动升级。开机按照默认配置进入管理界面之后，在路由设置/系统/升级检测路径关闭自动升级，确认底部版本显示为 1.2.2.r2080 - 1.3.0.r2106。然后使用 Chrome 浏览器打开路由器管理后台 http://192.168.68.1/ 按 F12 打开控制台，参考截图输入下面的代码，通过调用接口的方式开启 SSH。
 
 如果是 2023 年 5 月份左右出厂的 r2242 版本可以参考 <https://www.bilibili.com/read/cv34442695/> 这个教程开启 SSH。
-[code]
+
+```
+
     // 作者：cdlif https://www.bilibili.com/read/cv15885352/ 出处：bilibili
     
     $.ajax({
@@ -45,18 +47,24 @@ description: 设备说明 2024-05 购于京东，512M 内存/128G 存储版本 �
       type: 'POST',
     })
     
-[/code]
+
+```
 
 ![picture 1](https://oss.phyng.com/imgproxy/unsigned/rs:fit:1500:1500/plain/public/md/2024-05-05/e75b1551.png@webp)
 
 开通之后可以用通过终端连接 SSH，密码就是路由器的管理密码。macOS/Linux 以及 Windows 11 用系统自带的终端工具即可。SSH 密码和路由器管理密码一致。
-[code]
+
+```
+
     ssh -oHostKeyAlgorithms=+ssh-rsa -l root 192.168.68.1
     
-[/code]
+
+```
 
 下面是登录成功之后的界面
-[code]
+
+```
+
     ➜  ~ ssh -oHostKeyAlgorithms=+ssh-rsa -l root 192.168.68.1
     The authenticity of host '192.168.68.1 (192.168.68.1)' can't be established.
     RSA key fingerprint is SHA256:*.
@@ -85,14 +93,17 @@ description: 设备说明 2024-05 购于京东，512M 内存/128G 存储版本 �
        For those about to rock... (1.2.2.r2080, 14433b06a+r49254)
      --------------------------------------------------------------------------
     
-[/code]
+
+```
 
 登录 SSH 之后就可以执行下面的操作刷入 u-boot 和 OpenWrt 了。
 
 ## 刷入 u-boot
 
 根据项目 <https://github.com/0x5826/uboot-ipq60xx-build> 编译得到 u-boot.mbn 文件，也可以用下面我编译好的文件，下面是需要执行的命令和说明，后面有执行记录。
-[code]
+
+```
+
     # 我是上传到了阿里云的 oss 上，通过 curl 下载，也可以通过其他方式比如 WinSCP 上传到路由器里面
     # 如果是通过 curl 下载，此时路由器需要插上 WAN 口连上互联网，可以给 WAN 口接上网线
     curl -o u-boot.mbn http://oss-hk4.oss-cn-hongkong.aliyuncs.com/tmp/u-boot.mbn
@@ -104,17 +115,23 @@ description: 设备说明 2024-05 购于京东，512M 内存/128G 存储版本 �
     md5sum /root/u-boot.mbn
     # 2b37c2b85b009a93a1a01ed80e5bc47b  u-boot.mbn
     
-[/code]
-[code]
+
+```
+
+```
+
     # 刷入 u-boot，此步骤需要谨慎，刷错可能导致路由器无法启动，需要确保文件存在且完整
     # 如果文件不完整这一步可能会导致路由器无法启动，所以一定要确认文件完整性
     dd if=/root/u-boot.mbn of=/dev/mmcblk0p13
     dd if=/root/u-boot.mbn of=/dev/mmcblk0p14
     
-[/code]
+
+```
 
 下面是执行记录
-[code]
+
+```
+
     root@JDBoxV2:~# curl -o u-boot.mbn http://oss-hk4.oss-cn-hongkong.aliyuncs.com/tmp/u-boot.mbn
       % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                      Dload  Upload   Total   Spent    Left  Speed
@@ -135,7 +152,8 @@ description: 设备说明 2024-05 购于京东，512M 内存/128G 存储版本 �
     
     root@JDBoxV2:~#
     
-[/code]
+
+```
 
 刷入 u-boot 成功之后可以按照下面的步骤进入 u-boot 界面，然后刷入 OpenWrt 固件。
 
@@ -165,7 +183,9 @@ description: 设备说明 2024-05 购于京东，512M 内存/128G 存储版本 �
     * 恩山论坛 <https://www.right.com.cn/forum/thread-8366456-1-1.html>
 
 尝试了一圈固件之后最后参考 [koksaver/OpenWrt360_6.1](https://github.com/koksaver/OpenWrt360_6.1/) 项目编译了一个版本 [phyng/OpenWrt](https://github.com/phyng/OpenWrt) ，6.6 内核、支持安装 OpenClash、自带 WireGuard、支持 NSS 加速、无线速度稳定，下面是 `iperf3` 的无线测试结果。
-[code]
+
+```
+
     ➜  iperf3 -c 192.168.1.215
     Connecting to host 192.168.1.215, port 5201
     [  5] local 192.168.1.25 port 56718 connected to 192.168.1.215 port 5201
@@ -187,12 +207,15 @@ description: 设备说明 2024-05 购于京东，512M 内存/128G 存储版本 �
     
     iperf Done.
     
-[/code]
+
+```
 
 ## 扩展 overlay 分区
 
 默认 /overlay 分区非常小，在不改分区的情况下可以通过挂载大分区的方式扩展 overlay 分区
-[code]
+
+```
+
     [root@OpenWrt:10:13 PM ~] # df -h
     Filesystem                Size      Used Available Use% Mounted on
     /dev/root                33.3M     33.3M         0 100% /rom
@@ -205,12 +228,15 @@ description: 设备说明 2024-05 购于京东，512M 内存/128G 存储版本 �
     /dev/mmcblk0p24          79.2M     18.0K     76.6M   0% /mnt/mmcblk0p24
     /dev/mmcblk0p25         280.5M      2.0K    273.5M   0% /mnt/mmcblk0p25
     
-[/code]
+
+```
 
 参考教程 <https://post.smzdm.com/p/a7p2opw5/> 可以将 /dev/mmcblk0p27 这个大分区挂载为 /overlay
 
 其中 `mkfs.ext4 -F /dev/mmcblk0p27` 需要执行几分钟，需要耐心等待结束再执行下一步
-[code]
+
+```
+
     # 格式化 mmcblk0p27 大分区
     umount /dev/mmcblk0p27
     mkfs.ext4 -F /dev/mmcblk0p27
@@ -226,7 +252,8 @@ description: 设备说明 2024-05 购于京东，512M 内存/128G 存储版本 �
     # 重启路由器
     reboot
     
-[/code]
+
+```
 
 执行完之后重启路由器。可以在软件包管理看到剩余可用的空间变大了。
 

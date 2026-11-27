@@ -60,9 +60,12 @@ $99.99 / 年
 用 FinalShell 以 root 身份 SSH 连上 VPS。FinalShell官网：<https://www.hostbuf.com/>
 
 面板的一键安装命令如下：
-[code]
+
+```
+
     bash <(curl -Ls https://raw.githubusercontent.com/mhsanaei/3x-ui/master/install.sh)
-[/code]
+
+```
 
 安装时数据库选 1，面板端口保持默认不自定义，证书选第一个。面板需要绑定一个域名并申请 https，我是在 Cloudflare 里加一条 A 记录，名称随便写一个，指向搬瓦工的 IP，并把代理状态关掉。
 
@@ -93,26 +96,38 @@ v2rayN下载：<https://github.com/2dust/v2rayN>
 导入之后我先测了一下延迟，结果不太对。按理说这个时候还没有做端口转发，应该是测不通的，但它却显示有延迟，说明流量根本没走跳跃端口。
 
 先在 VPS 上装一个抓包工具：（如果已经安装，则跳过这一步）
-[code]
+
+```
+
     apt update && apt install tcpdump -y
-[/code]
+
+```
 
 装好后监控跳跃端口范围：
-[code]
+
+```
+
     tcpdump -ni any 'udp portrange 30000-31000'
-[/code]
+
+```
 
 跑起来没有任何反应。再换一条命令，同时监控固定端口和跳跃端口：
-[code]
+
+```
+
     tcpdump -ni any 'udp port 15843 or udp portrange 30000-31000'
-[/code]
+
+```
 
 这下能看到，流量一直在走固定端口 15843，说明前面设置的跳跃规则压根没有生效。
 
 温馨提示：上面这条监控命令如果不是 root 账户登录，也可以用 sudo 执行，效果完全相同：
-[code]
+
+```
+
     sudo tcpdump -ni any 'udp portrange 30000-31000'
-[/code]
+
+```
 
 我去查了一下，GitHub 上有个情况和我一样的 issue：端口跳跃不生效，是 Xray、sing-box 内核这边的问题。v2rayN 里核心类型默认用的是 Xray，哪怕设置了端口跳跃，它还是走固定端口联网，跳跃功能等于没开。
 
@@ -121,23 +136,32 @@ v2rayN下载：<https://github.com/2dust/v2rayN>
 ## 端口转发：把跳跃范围指到 15843(重要)
 
 接下来去 VPS 上做端口转发，核心命令是把 UDP 30000 到 31000 的流量统一转发到 HY2 实际监听的 15843：
-[code]
+
+```
+
     iptables -t nat -A PREROUTING -p udp --dport 30000:31000 -j REDIRECT --to-ports 15843
-[/code]
+
+```
 
 转发完回到 v2rayN 再测，延迟能测通了，这才算端口转发完成。端口按你自己的实际配置来改，不用照抄我的数字。
 
 ## 验证转发确实生效
 
 转发通了之后，还要确认它真的在走跳跃端口，而不是又回到了固定端口。先看转发规则的计数器，每隔 1 秒刷新一次：
-[code]
+
+```
+
     watch -n 1 'iptables -t nat -L PREROUTING -n -v -x --line-numbers'
-[/code]
+
+```
 
 随便打开几个网站，能看到计数一直在增加，说明转发规则已经生效。再换一条命令，直接看客户端实际访问的目标端口变化：
-[code]
+
+```
+
     tcpdump -ni any 'udp dst portrange 30000-31000'
-[/code]
+
+```
 
 能看到很多端口在跑，比如 30097，这就确认客户端正在使用跳跃范围内的端口，而不是最开始那个固定端口 15843。
 

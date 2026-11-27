@@ -46,18 +46,24 @@ description: 索引 推薦信息 訂閱鏈接 翻牆教程 免流混淆 TG語言
 ### [](https://github.com/GreenFishStudio/GreenFish#v2ray)v2ray
 
 综合
-[code]
+
+```
+
     https://dllx.tk/GreenFishYYDS  
     
-[/code]
+
+```
 
 ### [](https://github.com/GreenFishStudio/GreenFish#clash)Clash
 
 综合:
-[code]
+
+```
+
     https://dllx.tk/GreenFishYYDS-Clash  
     
-[/code]
+
+```
 
 #### [](https://github.com/GreenFishStudio/GreenFish#ps-%E9%93%BE%E6%8E%A5%E4%B8%AD%E7%9A%84dllx%E5%8F%AF%E6%9B%BF%E6%8D%A2%E4%B8%BAdllc-dlli-dllo-dllv)PS: 链接中的`dllx`可替换为`dllc` `dlli` `dllo` `dllv`
 

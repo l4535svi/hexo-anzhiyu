@@ -89,7 +89,9 @@ description: 你需要准备的东西 一个牛逼的脑子，支持并行运算
         * 这里我附上我的 `config.ts`
 
         * 
-[code]import type {
+
+```
+import type {
                 LicenseConfig,
                 NavBarConfig,
                 ProfileConfig,
@@ -182,7 +184,8 @@ description: 你需要准备的东西 一个牛逼的脑子，支持并行运算
                 name: 'CC BY-NC-SA 4.0',
                 url: 'https://creativecommons.org/licenses/by-nc-sa/4.0/',
               }
-[/code]
+
+```
 
      2. 清理多余文件。在根目录下的 `src/content/posts` 文件夹中会有一些示例文章，这些文章介绍了一些MarkDown语法和技巧，可以让你更快上手Fuwari和fuwari，我们可以将其保存到别处
 
@@ -197,7 +200,9 @@ description: 你需要准备的东西 一个牛逼的脑子，支持并行运算
      3. 我们使用MarkText打开这个文件，你可以看到一些基本信息，我们只需要关注几个重要的信息
 
      4. 
-[code]title: xxx
+
+```
+title: xxx
             published: 2024-10-14
             description: ''
             image: ''
@@ -205,7 +210,8 @@ description: 你需要准备的东西 一个牛逼的脑子，支持并行运算
             categories: ''
             draft: false 
             lang: ''
-[/code]
+
+```
 
         * title：文章标题
 

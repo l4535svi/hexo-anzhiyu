@@ -52,7 +52,9 @@ Sublink Worker 是一个可部署在 Cloudflare Worker 上轻量级的订阅转�
   1. 打开github中`src/htmlBuilder.js`文件
   2. 编辑文件替换为以下代码,然后保存，等待工作流部署完成即可
   3. 
-[code]import { UNIFIED_RULES, PREDEFINED_RULE_SETS } from './config.js';  
+
+```
+import { UNIFIED_RULES, PREDEFINED_RULE_SETS } from './config.js';  
          import { generateStyles } from './style.js';  
            
          export function generateHtml(xrayUrl, singboxUrl, clashUrl, baseUrl) {  
@@ -826,4 +828,6 @@ Sublink Worker 是一个可部署在 Cloudflare Worker 上轻量级的订阅转�
          }  
          `;  
          
-[/code]
+
+```
+

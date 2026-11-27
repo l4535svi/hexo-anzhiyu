@@ -11,27 +11,39 @@ description: Hermes Agent 新手使用十大技巧 1、安装 Hermes curl -fsSL 
 Hermes Agent 新手使用十大技巧
 
 # 1、安装 Hermes
-[code]
+
+```
+
     curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash
-[/code]
+
+```
 
 注意：windows 用户需要在 WSL2 环境中使用
-[code]
+
+```
+
     wsl --install
-[/code]
+
+```
 
 更新 hermes
-[code]
+
+```
+
     hermes update
-[/code]
+
+```
 
 # 2、配置主模型
-[code]
+
+```
+
     hermes  model
     或者直接配置
     hermes config set model.default anthropic/claude-sonnet-4
     
-[/code]
+
+```
 
   
 
@@ -44,17 +56,25 @@ https://openrouter.ai/models?q=free
   
 
 注意，因为输入 APIKEY 看不到，容易重复输入两次，可以查看配置文件
-[code]
+
+```
+
     ～/.hermes/.env
-[/code]
+
+```
 
 # 3、配置辅助模型
-[code]
+
+```
+
     model:
       default: anthropic/claude-sonnet-4
       provider: anthropic
-[/code]
-[code]
+
+```
+
+```
+
     auxiliary:
       vision:
         provider: auto
@@ -81,7 +101,8 @@ https://openrouter.ai/models?q=free
         provider: auto
         model: ""
     
-[/code]
+
+```
 
 ## 任务模块
 
@@ -106,9 +127,11 @@ https://openrouter.ai/models?q=free
   * 首先得在模型配置里面配好你要用的所有模型
   * 然后通过对话的方式让 hermes 直接修改
 
-[code]
+```
+
     请将我的 vision 模型更换 openrouter 的google/gemini-2.5-flash
-[/code]
+
+```
 
 ![](https://my.feishu.cn/space/api/box/stream/download/asynccode/?code=Y2VlODAwNjhlYTMyMzhkZDUwZTdiNzcwNzg1YjVhMTZfaW4ySThIQUtqdkl6MUZxUmZpM0hGamRKQ21uR3BMWVJfVG9rZW46U2tKZmJUNFNtb2hmdkR4UjY0VmNxTTM5bnViXzE3NzYyMTkyMTQ6MTc3NjIyMjgxNF9WNA)
 
@@ -127,14 +150,18 @@ https://openrouter.ai/models?q=free
 
   * 直接编辑 SOUL.md, 在 ～/.hermes/SOUL.md
 
-[code]
+```
+
     你是谁
     你怎么说话
     你做事偏什么风格
     你遇到问题时优先怎么处理
     所以 SOUL.md 不是“多记一点东西”，而是“先定人格底色”。
-[/code]
-[code]
+
+```
+
+```
+
     你是一个偏研究型的 AI 助手。
     
     你的默认工作方式：
@@ -144,13 +171,16 @@ https://openrouter.ai/models?q=free
     - 如果信息不足，先查证，不急着下判断
     - 输出风格简洁，像内部研究备忘录
     
-[/code]
+
+```
 
   * 让 AI 帮你总结
 
-[code]
+```
+
     根据我们的对话记录，重新设置我的“灵魂”
-[/code]
+
+```
 
 # 5、搞懂Hermes记忆机制
 
@@ -166,9 +196,12 @@ https://openrouter.ai/models?q=free
   
 
 # 6、配置聊天通道
-[code]
+
+```
+
     执行 hermes  gateway setup
-[/code]
+
+```
 
 Platform| Voice| Images| Files| Threads| Reactions| Typing| Streaming  
 ---|---|---|---|---|---|---|---  
@@ -197,27 +230,36 @@ BlueBubbles| —| ✅| ✅| —| ✅| ✅| —
   
 
 # 7、执行 hermes doctor 做一个全面检查
-[code]
+
+```
+
     hermes doctor
-[/code]
+
+```
 
 输出全绿就说明 Hermes 运行正常，依赖和配置都没问题。如果有报错，它会提示具体是哪里出了问题。
 
 # 8、接入 UI
 
 https://github.com/nesquena/hermes-webui
-[code]
+
+```
+
     git clone https://github.com/nesquena/hermes-webui.git hermes-webui
     cd hermes-webui
     ./start.sh
-[/code]
+
+```
 
 # 9、一键迁移OpenClaw
 
 可以，Hermes 内置了迁移命令：
-[code]
+
+```
+
     hermes claw migrate
-[/code]
+
+```
 
 # 10、安装技能
 

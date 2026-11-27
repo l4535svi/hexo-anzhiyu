@@ -23,20 +23,25 @@ description: 1、设置逻辑思路 2、添加节点 节点添加方案一：添
 
   * 节点添加方案二：【[点击进入](https://github.com/wyx2685/V2bX)】
 
-[code]
+```
+
     wget -N https://raw.githubusercontent.com/wyx2685/V2bX-script/master/install.sh && bash install.sh
-[/code]
+
+```
 
 Copy
 
 3、订阅模板（参考）
-[code]
+
+```
+
     更快的网络
     流媒体解锁
     不限制设备数
     500 GB流量/月
     500英里限速 
-[/code]
+
+```
 
 在线客服售后保障 
 
@@ -53,9 +58,11 @@ Copy
 
   * 一键部署
 
-[code]
+```
+
     bash <(curl -fsSL https://raw.githubusercontent.com/slobys/xboard-one-click/main/bootstrap.sh)
-[/code]
+
+```
 
 Copy
 
@@ -63,9 +70,11 @@ Copy
 
   * 流量路径如下（红色端口部分根据实际情况填写）：
 
-[code]
+```
+
     客户端 → jp.naiyou163.xyz:36332 → NPM 容器 443 → 反代到宿主机 51012 → xboard-node
-[/code]
+
+```
 
 Copy
 
@@ -82,6 +91,9 @@ Copy
 
   * 证书路径（默认在root下安装）：
 
-[code]
+```
+
     /root/xboard-one-click/runtime/nginx-proxy-manager/letsencrypt/archive
-[/code]
+
+```
+

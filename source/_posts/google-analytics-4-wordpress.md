@@ -139,7 +139,9 @@ Site Kit 的优势：由于它由 Google 维护，其实现 GA4 代码片段的�
 ### 第 3 步——获取全局网站标签
 
 在您的数据流设置中，点击查看标签说明。在手动安装下，您将看到完整的 `gtag.js` 代码片段：
-[code]
+
+```
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
@@ -148,7 +150,8 @@ Site Kit 的优势：由于它由 Google 维护，其实现 GA4 代码片段的�
       gtag('js', new Date());
       gtag('config', 'G-XXXXXXXXXX');
     </script>HTMLCopy
-[/code]
+
+```
 
 将 `G-XXXXXXXXXX` 替换为您的实际 Measurement ID。
 
@@ -157,7 +160,9 @@ Site Kit 的优势：由于它由 Google 维护，其实现 GA4 代码片段的�
 选项 A——主题的 `functions.php`（推荐，优于直接编辑文件）：
 
 这种方法可以在主题文件编辑器限制下正常使用，比直接编辑 `header.php` 更简洁。
-[code]
+
+```
+
     function alexhost_add_ga4() {
         ?>
         <!-- Google tag (gtag.js) -->
@@ -171,7 +176,8 @@ Site Kit 的优势：由于它由 Google 维护，其实现 GA4 代码片段的�
         <?php
     }
     add_action('wp_head', 'alexhost_add_ga4');PHPCopy
-[/code]
+
+```
 
 将此代码添加到您的子主题的 `functions.php` 中。切勿直接修改父主题的 `functions.php`——主题更新会覆盖您的更改。
 
@@ -202,7 +208,9 @@ GA4 DebugView：
 ### WordPress 操作的自定义事件跟踪
 
 增强型衡量涵盖了基础内容，但 WordPress 网站通常需要跟踪特定交互。您可以使用 JavaScript 将自定义事件推送到 GA4 的数据层：
-[code]
+
+```
+
     // Track a specific button click
     document.getElementById('cta-button').addEventListener('click', function() {
       gtag('event', 'cta_click', {
@@ -211,7 +219,8 @@ GA4 DebugView：
         'value': 1
       });
     });JavaScriptCopy
-[/code]
+
+```
 
 如果您使用 GTM，将其实现为由点击触发器触发的自定义 HTML 标签——无需部署代码。
 

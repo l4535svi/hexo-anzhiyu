@@ -18,26 +18,36 @@ description: 1、解析域名Cloudflare：【 点击进入 】 2、开源项目�
 
   * 更新系统
 
-[code]
+```
+
     apt update -yCopy
-[/code]
+
+```
 
   * 一键安装脚本
 
-[code]
+```
+
     wget -P /root -N --no-check-certificate "https://raw.githubusercontent.com/mack-a/v2ray-agent/master/install.sh" && chmod 700 /root/install.sh && /root/install.shCopy
-[/code]
+
+```
 
   * 快捷方式启动
 
-[code]
+```
+
     vasmaCopy
-[/code]
+
+```
 
   * 具体功能选择
     * 选择1——选择2——输入解析好的域名——选择n（如果想用DNS API的选择y）——回车（默认选择1）——回车——回车——回车——回车——回车——输入y——回车——回车——输入y——回车——回车——根据自家宽带实际情况填写——回车——回车——选择1——回车
 
 3、BBR加速脚本：【[点击进入](https://github.com/ylx2016/Linux-NetSpeed)】
-[code]
+
+```
+
     wget -O tcpx.sh "https://github.com/ylx2016/Linux-NetSpeed/raw/master/tcpx.sh" && chmod +x tcpx.sh && ./tcpx.sh
-[/code]
+
+```
+

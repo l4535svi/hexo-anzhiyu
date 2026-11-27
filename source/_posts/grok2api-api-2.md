@@ -27,7 +27,9 @@ Grok2Api 把 Grok 包装成 OpenAI 风格的 API 服务，还能一键 NSFW
 教程
 
 一、系统ubuntu24，安装 Docker + Compose
-[code]
+
+```
+
     sudo apt update && sudo apt install -y ca-certificates curl gnupg && \
     sudo install -m 0755 -d /etc/apt/keyrings && \
     curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg && \
@@ -36,26 +38,33 @@ Grok2Api 把 Grok 包装成 OpenAI 风格的 API 服务，还能一键 NSFW
     sudo apt update && \
     sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
     
-[/code]
+
+```
 
 [![3c91a84e433cd5f5230b26bbca01ad65.png](https://github.com/helloyangy/Grok2API-Tutorial/raw/main/_resources/3c91a84e433cd5f5230b26bbca01ad65.png)](https://github.com/helloyangy/Grok2API-Tutorial/blob/main/_resources/3c91a84e433cd5f5230b26bbca01ad65.png) 二、启动 Docker
-[code]
+
+```
+
     sudo systemctl enable docker
     sudo systemctl start docker
     
-[/code]
+
+```
 
 [![67f276b1aef734debf6517b88995ea9f.png](https://github.com/helloyangy/Grok2API-Tutorial/raw/main/_resources/67f276b1aef734debf6517b88995ea9f.png)](https://github.com/helloyangy/Grok2API-Tutorial/blob/main/_resources/67f276b1aef734debf6517b88995ea9f.png)
 
 三、安装grok2Api
-[code]
+
+```
+
     git clone https://github.com/chenyme/grok2api
     
     cd grok2api
     
     docker compose up -d
     
-[/code]
+
+```
 
 [![c4efbe6ee4356861422c02ff542a97a7.png](https://github.com/helloyangy/Grok2API-Tutorial/raw/main/_resources/c4efbe6ee4356861422c02ff542a97a7.png)](https://github.com/helloyangy/Grok2API-Tutorial/blob/main/_resources/c4efbe6ee4356861422c02ff542a97a7.png)
 
@@ -96,7 +105,9 @@ Grok2Api 把 Grok 包装成 OpenAI 风格的 API 服务，还能一键 NSFW
 [![0962c691c9e3f63bda196c1688d666fc.png](https://github.com/helloyangy/Grok2API-Tutorial/raw/main/_resources/0962c691c9e3f63bda196c1688d666fc.png)](https://github.com/helloyangy/Grok2API-Tutorial/blob/main/_resources/0962c691c9e3f63bda196c1688d666fc.png)
 
 九、对话
-[code]
+
+```
+
     curl -X POST "http://154.9.227.209:8000/v1/chat/completions" \
       -H "Content-Type: application/json" \
       -H "Authorization: Bearer 你的API_KEY" \
@@ -110,7 +121,8 @@ Grok2Api 把 Grok 包装成 OpenAI 风格的 API 服务，还能一键 NSFW
         ]
       }'
     
-[/code]
+
+```
 
 [![9c16384c5ce591edbfa2e103b22cc642.png](https://github.com/helloyangy/Grok2API-Tutorial/raw/main/_resources/9c16384c5ce591edbfa2e103b22cc642.png)](https://github.com/helloyangy/Grok2API-Tutorial/blob/main/_resources/9c16384c5ce591edbfa2e103b22cc642.png)
 

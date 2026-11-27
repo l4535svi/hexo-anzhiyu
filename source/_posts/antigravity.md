@@ -15,30 +15,42 @@ description: 一、安装/升级 反代工具CLIProxyAPI Windows 直接下载最
 直接下载最新的文件，解压后就能使用，如果有更新，也是从这个链接中查找就行。
 
 比如写文章时的最新版为：CLIProxyAPI_6.6.84_windows_amd64.zip
-[code]
+
+```
+
     https://github.com/router-for-me/CLIProxyAPI/releases
-[/code]
+
+```
 
 本教程中我解压到了`D:\Tools\CLIProxyAPI_6.6.84_windows_amd64` 目录下，你可以解压到自己需要的目录，路径要全英文的，并且不能有空格。
 
 ### Ubuntu/Linux
 
 使用一键脚本安装或升级，都用这个命令就行
-[code]
+
+```
+
     curl -fsSL https://raw.githubusercontent.com/brokechubb/cliproxyapi-installer/refs/heads/master/cliproxyapi-installer | bash
-[/code]
+
+```
 
 ### MacOS
 
 使用brew安装命令
-[code]
+
+```
+
     brew install cliproxyapi
-[/code]
+
+```
 
 后续升级命令
-[code]
+
+```
+
     brew upgrade cliproxyapi
-[/code]
+
+```
 
 # 二、修改配置文件，启用后台管理
 
@@ -55,10 +67,13 @@ description: 一、安装/升级 反代工具CLIProxyAPI Windows 直接下载最
 `/opt/homebrew/etc`目录下找`cliproxyapi.conf`，即绝对路径为：`/opt/homebrew/etc/cliproxyapi.conf`，然后修改里面的内容。
 
 ### 修改文件如下内容(登录密码最好改成你自己的，我这里设置的是my-password)
-[code]
+
+```
+
     allow-remote: true  
     secret-key: "my-password"
-[/code]
+
+```
 
 ![在这里插入图片描述](https://mmbiz.qpic.cn/sz_mmbiz_png/EpgANI0GJ9vUdvp4gG2ebtvYy0bzpMfJxMuCt3DJSwxtmwDNbJmuG0IWVZseqGibibHGkUCTb2p7Piasswr0BCxnA/640?wx_fmt=png&from=appmsg&watermark=1&tp=webp&wxfrom=5&wx_lazy=1#imgIndex=0)Windows版本: 先复制出config.yaml，然后修改配置
 
@@ -72,17 +87,23 @@ description: 一、安装/升级 反代工具CLIProxyAPI Windows 直接下载最
 ### Ubuntu/Linux
 
 进入到`~/cliproxyapi/`目录后，启动。
-[code]
+
+```
+
     cd ~/cliproxyapi/  
     ./cli-proxy-api 
-[/code]
+
+```
 
 ### MacOS
 
 不需要进入任何目录，直接启动即可。
-[code]
+
+```
+
     brew services restart cliproxyapi
-[/code]
+
+```
 
 ### 登录网页后台
 
@@ -112,7 +133,9 @@ description: 一、安装/升级 反代工具CLIProxyAPI Windows 直接下载最
 模型的名称也要从网页后台拷贝，不要自己手写。  
 base url 填写为 `"http://localhost:8317"`  
 ![在这里插入图片描述](https://mmbiz.qpic.cn/sz_mmbiz_png/EpgANI0GJ9vUdvp4gG2ebtvYy0bzpMfJQuCmN0TGTPXcdX3r32KHomLpmUJbZjARgZ7LycbbR4cMtsUDiaCu5lw/640?wx_fmt=png&from=appmsg&watermark=1&tp=webp&wxfrom=5&wx_lazy=1#imgIndex=8)网页后台的API KEY获取位置
-[code]
+
+```
+
       
     {  
         "env": {  
@@ -126,7 +149,8 @@ base url 填写为 `"http://localhost:8317"`
         }  
     }  
     
-[/code]
+
+```
 
 # 六、其它OpenAI兼容接口中使用
 

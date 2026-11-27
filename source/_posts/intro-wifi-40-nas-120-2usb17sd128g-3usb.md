@@ -43,10 +43,13 @@ description: Intro 哈喽伙计们，大家好啊，你们一直让我做小雅�
 ## 二、安装小雅alist
 
 * * *
-[code] 
+
+```
+ 
     bash -c "$(curl <http://docker.xiaoya.pro/update_new.sh>)" -s host
     
-[/code]
+
+```
 
 ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/c2775636-9f30-408a-8e35-d6c8db330690/58b089bc-8b5c-4e55-9bab-37c6c046325b/Untitled.png)
 

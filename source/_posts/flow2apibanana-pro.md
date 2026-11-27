@@ -31,7 +31,9 @@ Flow2API反代无限次数的Banana Pro
 教程
 
 1.Ubuntu24系统安装Docker
-[code]
+
+```
+
     sudo apt update
     sudo apt install -y ca-certificates curl gnupg
     sudo install -m 0755 -d /etc/apt/keyrings
@@ -45,26 +47,33 @@ Flow2API反代无限次数的Banana Pro
     sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
     sudo docker run hello-world
     
-[/code]
+
+```
 
 [![df5bef0b9db29a8555c85009815ac8bf.png](https://github.com/helloyangy/Flow2API-Tutorial/raw/main/_resources/df5bef0b9db29a8555c85009815ac8bf.png)](https://github.com/helloyangy/Flow2API-Tutorial/blob/main/_resources/df5bef0b9db29a8555c85009815ac8bf.png)
 
 2.下载项目
-[code]
+
+```
+
     git clone https://github.com/TheSmallHanCat/flow2api.git
     cd flow2api
     
-[/code]
+
+```
 
 [![3cb4347025eece5c2d39613ae43530f1.png](https://github.com/helloyangy/Flow2API-Tutorial/raw/main/_resources/3cb4347025eece5c2d39613ae43530f1.png)](https://github.com/helloyangy/Flow2API-Tutorial/blob/main/_resources/3cb4347025eece5c2d39613ae43530f1.png)
 
 3.Docker 部署项目
-[code]
+
+```
+
     cd ~/flow2api
     sudo docker compose -f docker-compose.headed.yml up -d --build
     sudo docker compose -f docker-compose.headed.yml logs -f
     
-[/code]
+
+```
 
 [![05ef9d4536347e3fc32730acfbe66f93.png](https://github.com/helloyangy/Flow2API-Tutorial/raw/main/_resources/05ef9d4536347e3fc32730acfbe66f93.png)](https://github.com/helloyangy/Flow2API-Tutorial/blob/main/_resources/05ef9d4536347e3fc32730acfbe66f93.png)
 

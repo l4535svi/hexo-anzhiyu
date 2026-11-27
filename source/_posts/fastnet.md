@@ -21,22 +21,31 @@ Linux 系统上运行一键脚本测速：
 ### [](https://www.koolcenter.com/t/topic/9148#p-26817-this-script-is-meant-for-quick-easy-install-2)This script is meant for quick & easy install:
 
 #### [](https://www.koolcenter.com/t/topic/9148#p-26817-via-curl-3)via curl
-[code]
+
+```
+
     sh -c "$(curl -sSL https://www.linkease.com/rd/fastnet/)"
     
-[/code]
+
+```
 
 #### [](https://www.koolcenter.com/t/topic/9148#p-26817-via-wget-4)via wget
-[code]
+
+```
+
     bash -c "$(wget --no-check-certificate -qO- https://www.linkease.com/rd/fastnet/)"
     
-[/code]
+
+```
 
 ##### [](https://www.koolcenter.com/t/topic/9148#p-26817-or-5)Or
-[code]
+
+```
+
     cd /tmp; wget --no-check-certificate -O fastnet-install.sh https://www.linkease.com/rd/fastnet/; bash ./fastnet-install.sh
     
-[/code]
+
+```
 
 * * *
 

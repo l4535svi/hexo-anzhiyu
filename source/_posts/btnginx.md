@@ -27,7 +27,9 @@ description: 很多人都喜欢用BT宝塔面板做站，其中比较受大家�
 话不多说，直接上代码，这里我们要登录代理机的BT宝塔面板，找到对应的网站，点击配置文件
 
 ![](https://www.ovz.cc/wp-content/uploads/2021/02/2161146027.png)
-[code]
+
+```
+
     #PROXY-START/  
     location /  
     {  
@@ -77,7 +79,8 @@ description: 很多人都喜欢用BT宝塔面板做站，其中比较受大家�
     #expires 12h;  
     }  
     #PROXY-END/
-[/code]
+
+```
 
 针对以上代码的说明
 
@@ -88,11 +91,14 @@ description: 很多人都喜欢用BT宝塔面板做站，其中比较受大家�
 ### 如何对某些目录设置不缓存
 
 比如我们不希望缓存网站的某些目录，比如不希望缓存站点下的admin文件夹。那么可以进行相应的设置，将如下代码加入最后
-[code]
+
+```
+
     location /admin {  
     proxy_pass http://你的域名;  
     proxy_cache_valid any 0s;  
     }
-[/code]
+
+```
 
 修改域名为自己的网站，如果有多个目录的话，那么分别增加如上代码即可。

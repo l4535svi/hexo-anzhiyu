@@ -13,70 +13,81 @@ description: 更新命令 如果你当初是用它官方的一键脚本 / Docker
 ### 
 
 如果你当初是用它官方的一键脚本 / Docker 安装的，默认安装目录是：
-[code] 
+
+```
+ 
     /opt/chatgpt2api  
     
-[/code]
-[/code]
+
+```
 
 ### 最常见的更新方式
 
 ### 
-[code]
+
+```
+
     
     
     SSH 登录服务器后执行：
     
     
     
-[code]
     cd /opt/chatgpt2api
     
     docker compose pull
     docker compose up -d
-[/code]
-[/code]
+
+```
 
 `
-[/code]
-[/code]
 
 ###   
 
 ### Docker 一键部署的修改方法
 
 一键脚本默认安装目录是 `/opt/chatgpt2api`：
-[code] 
+
+```
+ 
     cd /opt/chatgpt2api
     nano .env
-[/code]
-[/code]
+
+```
 
 找到：
-[code] 
+
+```
+ 
     CHATGPT2API_AUTH_KEY=原来的密码
-[/code]
-[/code]
+
+```
 
 修改为新的密码，例如：
-[code] 
+
+```
+ 
     CHATGPT2API_AUTH_KEY=MyNewKey_2026_xxxxxxxxx
-[/code]
-[/code]
+
+```
 
 保存退出：
-[code] 
+
+```
+ 
     Ctrl + O
     回车
     Ctrl + X
-[/code]
-[/code]
+
+```
 
 然后重新创建容器：
-[code] 
+
+```
+ 
     docker compose up -d --force-recreate
-[/code]
-[/code]
+
+```
 
 必须重新创建容器，单纯执行 `docker restart chatgpt2api` 不会加载修改后的环境变量。
 
@@ -87,25 +98,34 @@ description: 更新命令 如果你当初是用它官方的一键脚本 / Docker
 ### 一键安装
 
 [](https://github.com/yukkcat/chatgpt2api#%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85)
-[code]
+
+```
+
     curl -fsSL https://raw.githubusercontent.com/yukkcat/chatgpt2api/main/deploy/install.sh | sudo bash
-[/code]
+
+```
 
 固定安装当前稳定版：
-[code]
+
+```
+
     curl -fsSL https://raw.githubusercontent.com/yukkcat/chatgpt2api/v2.7.0/deploy/install.sh | sudo bash -s -- --branch v2.7.0
-[/code]
+
+```
 
 ### Docker 运行
 
 [](https://github.com/yukkcat/chatgpt2api#docker-%E8%BF%90%E8%A1%8C)
-[code]
+
+```
+
     git clone https://github.com/yukkcat/chatgpt2api.git
     cd chatgpt2api
     cp .env.example .env
     printf '{ "auth-key": "your_secret_key_here" }\n' > config.json
     docker compose up -d
-[/code]
+
+```
 
 启动前请先在 `.env` 中设置 `CHATGPT2API_AUTH_KEY`，也可以继续在 `config.json` 中填写 `auth-key`。 仓库只保留 `config.example.yaml` 作为配置示例，运行时真实配置文件仍是本地 `config.json`，不要把本地配置提交到仓库。
 
@@ -118,11 +138,14 @@ description: 更新命令 如果你当初是用它官方的一键脚本 / Docker
 [](https://github.com/yukkcat/chatgpt2api#warp--flaresolverr-%E7%A8%B3%E5%AE%9A%E4%BB%A3%E7%90%86%E9%83%A8%E7%BD%B2)
 
 如果注册或图片链路经常遇到 Cloudflare 拦截，可以启用附带的 WARP + Privoxy + FlareSolverr 方案：
-[code]
+
+```
+
     cp .env.example .env
     printf '{ "auth-key": "your_secret_key_here" }\n' > config.json
     docker compose -f docker-compose.warp.yml up -d
-[/code]
+
+```
 
 该 compose 会启动：
 
@@ -141,25 +164,34 @@ description: 更新命令 如果你当初是用它官方的一键脚本 / Docker
 [](https://github.com/yukkcat/chatgpt2api#%E6%9C%AC%E5%9C%B0%E5%BC%80%E5%8F%91)
 
 启动后端：
-[code]
+
+```
+
     git clone https://github.com/yukkcat/chatgpt2api.git
     cd chatgpt2api
     uv sync
     uv run main.py
-[/code]
+
+```
 
 启动前端：
-[code]
+
+```
+
     cd chatgpt2api/web-vue
     npm install
     npm run dev
-[/code]
+
+```
 
 后续更新新版本：
-[code]
+
+```
+
     git pull
     docker compose up -d
-[/code]
+
+```
 
 ### 账号存储后端配置
 
@@ -175,11 +207,14 @@ description: 更新命令 如果你当初是用它官方的一键脚本 / Docker
 说明：该配置只影响账号池和管理 Key。系统设置、调用日志、概览统计、图片索引、注册机配置仍按各自模块独立保存，其中概览统计默认写入 `data/dashboard_metrics.json` 并滚动保留最近 30 天。
 
 示例：使用 PostgreSQL
-[code]
+
+```
+
     environment:
       - STORAGE_BACKEND=postgres
       - DATABASE_URL=postgresql://user:password@host:5432/dbname
-[/code]
+
+```
 
 ## 功能详情
 

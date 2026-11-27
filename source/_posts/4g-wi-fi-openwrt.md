@@ -41,14 +41,17 @@ description: 首先感谢酷安「随身 Wi-Fi」 社区，里面有很多资料
   5. 下载刷机需要的工具文件 [百度云](https://pan.baidu.com/s/15a2Imo4NcdG9u7ijsuHSAA) 提取码：1fqr 或自建 [onedrive](https://share.qust.me/%E8%B7%AF%E7%94%B1%E5%99%A8/%E9%9A%8F%E8%BA%AB%20wifi) 和 [「苏苏小亮亮」编译的 openwrt](https://www.kancloud.cn/a813630449/ufi_car/2792820)
 
 附带下我购买的 5 个产品的情况：
-[code]
+
+```
+
     铁恒信旗舰店 54 元款：UFI003 （后台密码 admin、切卡密码 UFIadmin1234）
     天天特卖工厂店 29 元款：SP970-Main-v2（后台：admin admin，切卡用酷安工具，无法直接进 9008，openwrt wifi 有问题不推荐）
     酷翼旗舰店 8.8 元款：UFI003 （后台密码 admin、切卡密码 无）
     纽皇 6.8 元款：可能是 UFI001W ？？？（后台密码 admin、切卡密码：qr0521）但会抽奖碰到高通 210 款
     天天特卖工厂店 28 元款 UFI001 C （后台密码 admin、切卡密码：UFIadmin1234，现在改成没卡槽了）
     
-[/code]
+
+```
 
 ## 检查和备份
 
@@ -125,7 +128,9 @@ description: 首先感谢酷安「随身 Wi-Fi」 社区，里面有很多资料
 ![](https://oss.qust.me/img/202206041344422.jpg)
 
 在 openwrt 里的软件包里选择配置 OPKG，将 /etc/opkg.conf 里的内容替换为以下：
-[code]
+
+```
+
     dest root /
     dest ram /tmp
     lists_dir ext /var/opkg-lists
@@ -135,10 +140,13 @@ description: 首先感谢酷安「随身 Wi-Fi」 社区，里面有很多资料
     arch aarch64_cortex-a53_neon 10
     arch aarch64_cortex-a53 100
     
-[/code]
+
+```
 
 将 /etc/opkg/distfeeds.conf 内容替换为：
-[code]
+
+```
+
     src/gz reboot_base http://mirrors.cloud.tencent.com/lede/releases/21.02.3/packages/aarch64_cortex-a53/base
     src/gz reboot_luci http://mirrors.cloud.tencent.com/lede/releases/21.02.3/packages/aarch64_cortex-a53/luci
     src/gz reboot_packages http://mirrors.cloud.tencent.com/lede/releases/21.02.3/packages/aarch64_cortex-a53/packages
@@ -147,7 +155,8 @@ description: 首先感谢酷安「随身 Wi-Fi」 社区，里面有很多资料
     src/gz openwrt_kiddin9 https://op.supes.top/packages/aarch64_cortex-a53
     
     
-[/code]
+
+```
 
 然后点击保存，就能通过 opkg 安装需要的软件包了。
 
@@ -160,10 +169,13 @@ description: 首先感谢酷安「随身 Wi-Fi」 社区，里面有很多资料
 ![](https://oss.qust.me/img/202206021907402.jpg)
 
 直接使用低版本的 wget 安装 shellclash。
-[code]
+
+```
+
     export url='http://shellclash.cf/' && wget -q -O /tmp/install.sh $url/install.sh  && sh /tmp/install.sh && source /etc/profile &> /dev/null
     
-[/code]
+
+```
 
 ![](https://oss.qust.me/img/202206021911781.jpg)
 

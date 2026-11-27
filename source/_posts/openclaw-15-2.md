@@ -11,9 +11,12 @@ description: 一、最简单的本地备份（推荐） 直接在终端运行：
 # 一、最简单的本地备份（推荐）
 
 直接在终端运行：
-[code] 
+
+```
+ 
     openclaw backup create --output ~/Backups/
-[/code]
+
+```
 
 作用：
 
@@ -48,14 +51,20 @@ description: 一、最简单的本地备份（推荐） 直接在终端运行：
 # 二、恢复备份
 
 如果换电脑或重装系统：
-[code] 
+
+```
+ 
     openclaw backup restore <backup-file>
-[/code]
+
+```
 
 例如：
-[code] 
+
+```
+ 
     openclaw backup restore ~/Backups/openclaw-2026-03-08.tar.gz
-[/code]
+
+```
 
 恢复后：
 
@@ -74,14 +83,20 @@ description: 一、最简单的本地备份（推荐） 直接在终端运行：
 # 三、自动每天备份（强烈建议）
 
 可以加一个 cron 任务：
-[code] 
+
+```
+ 
     crontab -e
-[/code]
+
+```
 
 添加：
-[code] 
+
+```
+ 
     0 2 * * * openclaw backup create --output ~/Backups/
-[/code]
+
+```
 
 含义：
 
@@ -98,12 +113,15 @@ description: 一、最简单的本地备份（推荐） 直接在终端运行：
 2️⃣ 定期 push
 
 例如脚本：
-[code] 
+
+```
+ 
     cd ~/Backups  
     git add .  
     git commit -m "backup"  
     git push
-[/code]
+
+```
 
 再配合 cron 自动执行。
 
@@ -112,7 +130,9 @@ description: 一、最简单的本地备份（推荐） 直接在终端运行：
 # 五、最推荐的备份方案（我自己建议）
 
 组合：
-[code] 
+
+```
+ 
     OpenClaw  
        ↓  
     每日本地备份  
@@ -120,7 +140,8 @@ description: 一、最简单的本地备份（推荐） 直接在终端运行：
     Backups目录  
        ↓  
     GitHub私有仓库
-[/code]
+
+```
 
 优点：
 
@@ -135,11 +156,18 @@ description: 一、最简单的本地备份（推荐） 直接在终端运行：
 # 六、检查备份是否成功
 
 备份后看目录：
-[code] 
+
+```
+ 
     ls ~/Backups
-[/code]
+
+```
 
 会看到类似：
-[code] 
+
+```
+ 
     openclaw-backup-2026-03-08.tar.gz
-[/code]
+
+```
+

@@ -33,16 +33,21 @@ description: 3.15脚本只支持单个机器人 钉钉企业内部机器人 Chan
 [](https://github.com/vip589455/openclaw-channel-dingtalk#%E6%96%B9%E6%B3%95-a%E9%80%9A%E8%BF%87%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E5%AE%89%E8%A3%85-%E6%8E%A8%E8%8D%90)
 
 直接运行 openclaw 插件安装命令，openclaw 会自动处理下载、安装依赖和注册：
-[code]
+
+```
+
     openclaw plugins install https://github.com/soimy/clawdbot-channel-dingtalk.git
-[/code]
+
+```
 
 ### 方法 B：通过本地源码安装
 
 [](https://github.com/vip589455/openclaw-channel-dingtalk#%E6%96%B9%E6%B3%95-b%E9%80%9A%E8%BF%87%E6%9C%AC%E5%9C%B0%E6%BA%90%E7%A0%81%E5%AE%89%E8%A3%85)
 
 如果你想对插件进行二次开发，可以先克隆仓库：
-[code]
+
+```
+
     # 1. 克隆仓库
     git clone https://github.com/soimy/openclaw-channel-dingtalk.git
     cd openclaw-channel-dingtalk
@@ -52,7 +57,8 @@ description: 3.15脚本只支持单个机器人 钉钉企业内部机器人 Chan
     
     # 3. 以链接模式安装 (方便修改代码后实时生效)
     openclaw plugins install -l .
-[/code]
+
+```
 
 ### 方法 C：手动安装
 
@@ -65,10 +71,13 @@ description: 3.15脚本只支持单个机器人 钉钉企业内部机器人 Chan
 ## 更新
 
 [](https://github.com/vip589455/openclaw-channel-dingtalk#%E6%9B%B4%E6%96%B0)
-[code]
+
+```
+
     openclaw plugins update dingtalk
     
-[/code]
+
+```
 
 ## 配置
 
@@ -124,7 +133,9 @@ description: 3.15脚本只支持单个机器人 钉钉企业内部机器人 Chan
   * 如果您创建自定义卡片模板，需要确保模板中包含相应的内容字段，并将 `cardTemplateKey` 配置为该字段名称
 
 模板配置示例：
-[code]
+
+```
+
     {
       "channels": {
         "dingtalk": {
@@ -136,7 +147,8 @@ description: 3.15脚本只支持单个机器人 钉钉企业内部机器人 Chan
         },
       },
     }
-[/code]
+
+```
 
 ### 4\. 获取凭证
 
@@ -157,7 +169,9 @@ description: 3.15脚本只支持单个机器人 钉钉企业内部机器人 Chan
 在 `~/.openclaw/openclaw.json` 的 `channels` 下添加：
 
 > 只添加dingtalk部分，内容自己替换
-[code]
+
+```
+
     {
       ...
       "channels": {
@@ -178,14 +192,18 @@ description: 3.15脚本只支持单个机器人 钉钉企业内部机器人 Chan
       },
       ...
     }
-[/code]
+
+```
 
 ### 6\. 重启 Gateway
 
 [](https://github.com/vip589455/openclaw-channel-dingtalk#6-%E9%87%8D%E5%90%AF-gateway)
-[code]
+
+```
+
     openclaw gateway restart
-[/code]
+
+```
 
 ## 配置选项
 
@@ -358,13 +376,16 @@ AI Card API 特性： 当配置 `messageType: 'card'` 时：
   4. 更稳定的流式体验，无需手动节流
 
 配置示例：
-[code]
+
+```
+
     {
       messageType: 'card', // 启用 AI 互动卡片模式
       cardTemplateId: '382e4302-551d-4880-bf29-a30acfab2e71.schema', // AI 卡片模板 ID（默认值）
       cardTemplateKey: 'msgContent', // 卡片内容字段键（默认值：msgContent）
     }
-[/code]
+
+```
 
 > 注意：`cardTemplateKey` 应与您的卡片模板中定义的字段名称一致。默认值为 `'msgContent'`，适用于 DingTalk 官方 AI 卡片模板。如果您使用自定义模板，请根据模板定义的字段名称进行配置。
 
@@ -414,18 +435,22 @@ AI Card API 特性： 当配置 `messageType: 'card'` 时：
 
   1. 克隆仓库并安装依赖
 
-[code]
+```
+
     git clone https://github.com/soimy/openclaw-channel-dingtalk.git
     cd openclaw-channel-dingtalk
     npm install
-[/code]
+
+```
 
   2. 验证开发环境
 
-[code]
+```
+
     npm run type-check              # TypeScript 类型检查
     npm run lint                    # ESLint 代码检查
-[/code]
+
+```
 
 ### 常用命令
 
@@ -440,7 +465,9 @@ AI Card API 特性： 当配置 `messageType: 'card'` 时：
 ### 项目结构
 
 [](https://github.com/vip589455/openclaw-channel-dingtalk#%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84)
-[code]
+
+```
+
     src/
       channel.ts           - 插件定义和辅助函数（535 行）
       runtime.ts           - 运行时管理（14 行）
@@ -453,7 +480,8 @@ AI Card API 特性： 当配置 `messageType: 'card'` 时：
     package.json          - 项目配置
     README.md             - 本文件
     
-[/code]
+
+```
 
 ### 代码质量
 
@@ -468,7 +496,9 @@ AI Card API 特性： 当配置 `messageType: 'card'` 时：
 [](https://github.com/vip589455/openclaw-channel-dingtalk#%E7%B1%BB%E5%9E%8B%E7%B3%BB%E7%BB%9F)
 
 核心类型定义在 `src/types.ts` 中，包括：
-[code]
+
+```
+
     // 配置
     DingTalkConfig; // 插件配置
     DingTalkChannelConfig; // 多账户配置
@@ -488,14 +518,17 @@ AI Card API 特性： 当配置 `messageType: 'card'` 时：
     Logger; // 日志接口
     RetryOptions; // 重试选项
     MediaFile; // 下载的媒体文件
-[/code]
+
+```
 
 ### 公开 API
 
 [](https://github.com/vip589455/openclaw-channel-dingtalk#%E5%85%AC%E5%BC%80-api)
 
 插件导出以下低级 API 函数，可用于自定义集成：
-[code]
+
+```
+
     // 文本/Markdown 消息
     sendBySession(config, sessionWebhook, text, options); // 通过会话发送
     
@@ -509,10 +542,13 @@ AI Card API 特性： 当配置 `messageType: 'card'` 时：
     
     // 认证
     getAccessToken(config, log); // 获取访问令牌
-[/code]
+
+```
 
 使用示例：
-[code]
+
+```
+
     import { createAICard, streamAICard, finishAICard } from './src/channel';
     
     // 创建 AI 卡片
@@ -525,4 +561,6 @@ AI Card API 特性： 当配置 `messageType: 'card'` 时：
     
     // 完成并关闭卡片
     await finishAICard(card, finalText, log);
-[/code]
+
+```
+

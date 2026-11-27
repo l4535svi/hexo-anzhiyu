@@ -13,9 +13,12 @@ description: 1、下载并安装SSH连接工具Finalshell：【 点击进入 】
 2、登录Cloudflare：【[点击进入](https://dash.cloudflare.com/login)】
 
 3、开源项目：【[点击进入](https://github.com/fscarmen/ArgoX)】
-[code]
+
+```
+
     bash <(wget -qO- https://raw.githubusercontent.com/fscarmen/argox/main/argox.sh)Copy
-[/code]
+
+```
 
   * 修改配置文件：/etc/argox
     * 修改path路径，根据inbound.json的配置更改

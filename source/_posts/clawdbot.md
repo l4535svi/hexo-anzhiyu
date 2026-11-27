@@ -25,10 +25,11 @@ description: 电脑安装 修复命令:openclaw doctor 修复高级命令:opencl
   1. 打开管理员 PowerShell。 
   2. 执行以下命令以允许本地脚本运行： 
 
-[code]
+```
+
     Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
-[/code]
-[/code]
+
+```
 
   * `RemoteSigned`：允许本地脚本运行，但从互联网下载的脚本必须有签名。 
   * `-Scope CurrentUser`：只修改当前用户，不影响系统全局策略。 
@@ -36,10 +37,11 @@ description: 电脑安装 修复命令:openclaw doctor 修复高级命令:opencl
   3. 确认提示时输入 `Y`。 
   4. 然后再运行： 
 
-[code] 
+```
+ 
     openclaw doctor --fix
-[/code]
-[/code]
+
+```
 
 # OpenClaw审核弹窗拦截自动化？关闭命令
 
@@ -95,38 +97,56 @@ Workspace directory/Users/superhuang/.openclaw/workspace-pod
 # 
 
 用管理员 CMD 执行：
-[code] 
+
+```
+ 
     schtasks /query | findstr OpenClaw
-[/code]
+
+```
 
 如果能看到类似：
-[code] 
+
+```
+ 
     OpenClaw Gateway
-[/code]
+
+```
 
 直接删除：
-[code] 
+
+```
+ 
     schtasks /delete /tn "OpenClaw Gateway" /f
-[/code]
+
+```
 
 # 第二步需要根据上面的报错任务发给ai执行直接执行
 
 ### 1️⃣ 强制删除任务
 
 在管理员 PowerShell 执行：
-[code] 
+
+```
+ 
     schtasks /delete /tn "OpenClaw Gateway" /f
-[/code]
+
+```
 
 如果提示拒绝访问，执行：
-[code] 
+
+```
+ 
     whoami /groups
-[/code]
+
+```
 
 确认是否包含：
-[code] 
+
+```
+ 
     BUILTIN\Administrators
-[/code]
+
+```
 
   
 
@@ -174,10 +194,13 @@ ollama run qwen3.5:cloud
 ****  
 ****5.中国版本安装**  
 **一件安装命令:**
-[code]
+
+```
+
      # 自动安装 Node.js 和所有依赖
     curl -fsSL https://clawd.org.cn/install.sh | bash
-[/code]
+
+```
 
 **  
 **
@@ -187,16 +210,22 @@ ollama run qwen3.5:cloud
 引导向导是在macOS、Linux 或Windows（通过WSL2；强烈推荐）上设置OpenClaw 的推荐方式。 它在一个引导流程中配置本地网关或远程网关连接，以及频道、技能和工作区默认设置。
 
 主要入口点：
-[code]
+
+```
+
     openclaw-cn onboard
-[/code]
+
+```
 
 最快首次聊天：打开控制UI（无需频道设置）。运行`openclaw-cn dashboard`并在浏览器中聊天。文档：[仪表板](https://clawd.org.cn/web/dashboard.html)。
 
 后续重新配置：
-[code]
+
+```
+
     openclaw-cn configure
-[/code]
+
+```
 
 推荐：设置Brave Search API 密钥，这样代理就可以使用`web_search`（`web_fetch`无需密钥即可工作）。最简单的方法：`openclaw-cn configure --section web`这会存储
 

@@ -90,10 +90,13 @@ description: 一键免费部署你的私人 ChatGPT 网页应用，支持 Claude
 > 警告：请务必将密码的位数设置得足够长，最好 7 位以上，否则[会被爆破](https://github.com/Yidadaa/ChatGPT-Next-Web/issues/518)。
 
 本项目提供有限的权限控制功能，请在 Vercel 项目控制面板的环境变量页增加名为 `CODE` 的环境变量，值为用英文逗号分隔的自定义密码：
-[code]
+
+```
+
     code1,code2,code3
     
-[/code]
+
+```
 
 增加或修改该环境变量后，请重新部署项目使改动生效。
 
@@ -392,13 +395,16 @@ SiliconFlow API URL.
 [![Open in Gitpod](https://camo.githubusercontent.com/6a4edb76a7e92e0faad09a11e42cba7c39803ee6723f8cb1b801f91113d59695/68747470733a2f2f676974706f642e696f2f627574746f6e2f6f70656e2d696e2d676974706f642e737667)](https://gitpod.io/#https://github.com/Yidadaa/ChatGPT-Next-Web)
 
 在开始写代码之前，需要在项目根目录新建一个 `.env.local` 文件，里面填入环境变量：
-[code]
+
+```
+
     OPENAI_API_KEY=<your api key here>
     
     # 中国大陆用户，可以使用本项目自带的代理进行开发，你也可以自由选择其他代理地址
     BASE_URL=https://b.nextweb.fun/api/proxy
     
-[/code]
+
+```
 
 ### 本地开发
 
@@ -425,38 +431,50 @@ SiliconFlow API URL.
 > Docker 版本需要在 20 及其以上，否则会提示找不到镜像。
 
 > ⚠️ 注意：docker 版本在大多数时间都会落后最新的版本 1 到 2 天，所以部署后会持续出现“存在更新”的提示，属于正常现象。
-[code]
+
+```
+
     docker pull yidadaa/chatgpt-next-web
     
     docker run -d -p 3000:3000 \
        -e OPENAI_API_KEY=sk-xxxx \
        -e CODE=页面访问密码 \
        yidadaa/chatgpt-next-web
-[/code]
+
+```
 
 你也可以指定 proxy：
-[code]
+
+```
+
     docker run -d -p 3000:3000 \
        -e OPENAI_API_KEY=sk-xxxx \
        -e CODE=页面访问密码 \
        --net=host \
        -e PROXY_URL=http://127.0.0.1:7890 \
        yidadaa/chatgpt-next-web
-[/code]
+
+```
 
 如需启用 MCP 功能，可以使用：
-[code]
+
+```
+
     docker run -d -p 3000:3000 \
        -e OPENAI_API_KEY=sk-xxxx \
        -e CODE=页面访问密码 \
        -e ENABLE_MCP=true \
        yidadaa/chatgpt-next-web
-[/code]
+
+```
 
 如果你的本地代理需要账号密码，可以使用：
-[code]
+
+```
+
     -e PROXY_URL="http://127.0.0.1:7890 user password"
-[/code]
+
+```
 
 如果你需要指定其他环境变量，请自行在上述命令中增加 `-e 环境变量=环境变量值` 来指定。
 
@@ -465,9 +483,12 @@ SiliconFlow API URL.
 [](https://github.com/ChatGPTNextWeb/NextChat/blob/main/README_CN.md#%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2)
 
 在控制台运行下方命令：
-[code]
+
+```
+
     bash <(curl -s https://raw.githubusercontent.com/Yidadaa/ChatGPT-Next-Web/main/scripts/setup.sh)
-[/code]
+
+```
 
 ⚠️ 注意：如果你安装过程中遇到了问题，请使用 docker 部署。
 

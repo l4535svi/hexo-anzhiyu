@@ -41,9 +41,12 @@ disableNunjucks: true
 新手提示：折扣码在 Shopify 店铺后台 ~ 折扣 （Discount）中创建。
 
 创建 Snippet 保存代码，并在产品模板中直接使用
-[code]
+
+```
+
     {% render 'copy-coupon' %}
-[/code]
+
+```
 
 复制
 
@@ -52,12 +55,17 @@ disableNunjucks: true
 如果产品信息模块 ~ 媒体文件宽度设置为 “大”，可能导致右侧宽度不够，改成 “中” 即可
 
 先创建文件：
-[code]
+
+```
+
     copy-coupon
-[/code]
+
+```
 
 复制
-[code]
+
+```
+
     <style>
             .coupon-container {
                 width: 100%;
@@ -271,7 +279,8 @@ disableNunjucks: true
                     });
             });
         </script>
-[/code]
+
+```
 
 复制
 
@@ -287,11 +296,14 @@ disableNunjucks: true
   * [批量编辑之添加和删除 Shopify 产品标签 设置产品模板和元字段](https://shopify2006.com/pi-liang-bian-ji-zhi-ru-he-tian-jia-he-shan-chu-shopify-chan-pin-biao-qian/)
 
 代码：
-[code]
+
+```
+
     {% if product.tags contains 'discount20'%}
       {% render 'copy-coupon' %}
     {% endif %}
-[/code]
+
+```
 
 复制
 
@@ -302,13 +314,16 @@ disableNunjucks: true
 ### 多组折扣码
 
 或者如果你想添加多组折扣（不够优雅但对新手友好，易于理解）：
-[code]
+
+```
+
     {% if product.tags contains 'discount20'%}
       {% render 'copy-coupon-20' %}
         {% elsif product.tags contains 'discount15' %}
       {% render 'copy-coupon-15' %}
     {% endif %}
-[/code]
+
+```
 
 复制
 

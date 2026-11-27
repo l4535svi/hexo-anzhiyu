@@ -33,10 +33,14 @@ Hello 大家，我是 Joey。
 ## 3\. 安装与初始化
 
 我们直接把官方的一键脚本粘贴到终端里。这个脚本会自动检测环境，非常省心：
-[code]
+
+```
+
     curl -fsSL https://openclaw.ai/install.sh | bash  
     ---
-[/code]  
+
+```
+  
   
 接下来就是全自动的流程，非常舒服。
 
@@ -86,10 +90,14 @@ Hello 大家，我是 Joey。
 这就对了。为了安全，必须在服务器端批准你的账号。
 
 回到终端，执行这条命令（记得换成你自己的 Code）：
-[code]
+
+```
+
     openclaw pairing approve telegram 你的配对码  
     ---
-[/code]  
+
+```
+  
   
 看到终端显示 `Approved`，那就大功告成了。
 

@@ -57,9 +57,12 @@ description: 今天看到有人说哪吒面板这款探针，看了一下，感�
 在这里其实有一个分岔口，也就是你是否要反代(和WEB服务器共用80口)、配置SSL，那么填写的内容、后面操作的先后顺序也不同。我就只说其中一个方法，免得把各位看官绕晕了，还请先往下看吧！
 
 参考图片填写，记得端口也填写上去，不填域名填IP也行，如果你只是用IP访问的话
-[code]
+
+```
+
     http://你的域名:8008http://你的域名:8008/oauth2/callback
-[/code]
+
+```
 
 ![哪吒面板，一个便携服务器状态监控面板搭建教程，不想拥有一个自己的探针吗？](https://pic.52nidea.cn/2020/12/nezha/OAuth_Apps2.jpg)
 
@@ -78,12 +81,18 @@ description: 今天看到有人说哪吒面板这款探针，看了一下，感�
 ### 3.2 部署面板服务
 
 哪吒面板开发者提供了一键脚本
-[code]
+
+```
+
     curl -L https://raw.githubusercontent.com/naiba/nezha/master/script/install.sh -o nezha.sh && chmod +x nezha.sh./nezha.sh
-[/code]
-[code]
+
+```
+
+```
+
     # 国内机器curl -L https://raw.sevencdn.com/naiba/nezha/master/script/install.sh -o nezha.sh && chmod +x nezha.shCN=true ./nezha.sh
-[/code]
+
+```
 
 ![哪吒面板，一个便携服务器状态监控面板搭建教程，不想拥有一个自己的探针吗？](https://pic.52nidea.cn/2020/12/nezha/script.jpg)
 
@@ -102,9 +111,12 @@ description: 今天看到有人说哪吒面板这款探针，看了一下，感�
 ### 3.3 反代、SSL、CDN
 
 反代配置
-[code]
+
+```
+
     location /{    proxy_pass http://127.0.0.1:8008;    proxy_set_header Host $host;}location /ws{    proxy_pass http://127.0.0.1:8008;    proxy_http_version 1.1;    proxy_set_header Upgrade $http_upgrade;    proxy_set_header Connection "Upgrade";    proxy_set_header Host $host;}location /terminal{    proxy_pass http://127.0.0.1:8008;    proxy_http_version 1.1;    proxy_set_header Upgrade $http_upgrade;    proxy_set_header Connection "Upgrade";    proxy_set_header Host $host;}
-[/code]
+
+```
 
 图片为宝塔的设置方法  
 ![哪吒面板，一个便携服务器状态监控面板搭建教程，不想拥有一个自己的探针吗？](https://pic.52nidea.cn/2020/12/nezha/nginx.jpg)
@@ -136,12 +148,18 @@ description: 今天看到有人说哪吒面板这款探针，看了一下，感�
 ![哪吒面板，一个便携服务器状态监控面板搭建教程，不想拥有一个自己的探针吗？](https://pic.52nidea.cn/2020/12/nezha/panel.jpg)
 
 到需要被监控的机器执行脚本
-[code]
+
+```
+
     curl -L https://raw.githubusercontent.com/naiba/nezha/master/script/install.sh -o nezha.sh && chmod +x nezha.sh./nezha.sh
-[/code]
-[code]
+
+```
+
+```
+
     # 国内机器curl -L https://raw.sevencdn.com/naiba/nezha/master/script/install.sh -o nezha.sh && chmod +x nezha.shCN=true ./nezha.sh
-[/code]
+
+```
 
 ![哪吒面板，一个便携服务器状态监控面板搭建教程，不想拥有一个自己的探针吗？](https://pic.52nidea.cn/2020/12/nezha/script.jpg)
 
@@ -164,9 +182,12 @@ description: 今天看到有人说哪吒面板这款探针，看了一下，感�
 ## 常见问题
 
 ### 1\. 国内服务器出现curl: (7) Failed to connect to raw.githubusercontent.com
-[code]
+
+```
+
     echo 199.232.68.133 raw.githubusercontent.com >> /etc/hosts
-[/code]
+
+```
 
 ### 2\. 修改服务器备注后变成"离线"久不恢复
 

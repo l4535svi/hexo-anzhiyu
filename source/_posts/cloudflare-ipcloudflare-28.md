@@ -15,7 +15,9 @@ description: 'Worker路由反代全球并优选（新） # 本方法的原理为
 > 以下代码是原Github全站反代代码的二改以实现Worker路由接入优选，可能有多余逻辑或者不完全适配于优选需求
 
 创建一个Cloudflare Worker，写入代码
-[code]
+
+```
+
     // 域名前缀映射配置
     const domain_mappings = {
       '源站.com': '最终访问头.',
@@ -100,7 +102,8 @@ description: 'Worker路由反代全球并优选（新） # 本方法的原理为
       }
       return null;
     }
-[/code]
+
+```
 
 创建路由
 

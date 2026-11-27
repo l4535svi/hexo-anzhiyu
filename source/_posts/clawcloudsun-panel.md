@@ -19,16 +19,23 @@ description: 'Sun-Panel 一个NAS、服务器导航面板、简易docker管理�
 Sun-Panel项目地址：[点击直达](https://github.com/hslr-s/sun-panel)  
 Sun-Panel文档：[点击直达](https://doc.sun-panel.top/zh_cn/introduce/project.html)  
 Claw Cloud：[链接直达](https://ap-northeast-1.run.claw.cloud/signin)
-[code]
+
+```
+
     1  
     
-[/code]
+
+```
 
 | 
-[code]
+
+```
+
     hslr/sun-panel:latest  
     VIM
-[/code]  
+
+```
+  
   
 ---|---  
   

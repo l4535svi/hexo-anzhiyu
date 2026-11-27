@@ -53,65 +53,92 @@ v2board| √| √| √
 ## centOS7为例
 
 ## 首先 CentOS 禁用 SELinux
-[code]
+
+```
+
     sed -i 's/enforcing/disabled/g' /etc/selinux/config /etc/selinux/config  
     #修改后要重启  
     reboot
-[/code]
+
+```
 
 安装加速
 
 推荐使用BBR2或BBRPlus
-[code]
+
+```
+
     yum install wget  
     wget -N --no-check-certificate "https://github.000060000.xyz/tcp.sh" && chmod +x tcp.sh && ./tcp.sh
-[/code]
+
+```
 
 关闭防火墙
-[code]
+
+```
+
     systemctl stop firewalld.service  \\关闭  
       
     systemctl disable firewalld.service  \\开机禁自启
-[/code]
+
+```
 
 ## 部署Nginx并安装stream模块
-[code]
+
+```
+
     yum update  
     yum -y install epel-release  
     yum install -y nginx  
     yum install nginx-mod-stream
-[/code]
+
+```
 
 检测Nginx状态，是否安装成功
-[code]
+
+```
+
     systemctl start nginx
-[/code]
-[code]
+
+```
+
+```
+
     systemctl status nginx.service
-[/code]
+
+```
 
 添加nginx开机自启
-[code]
+
+```
+
     systemctl enable nginx.service
-[/code]
+
+```
 
  
 
 安装失败自行排查原因，或手动编译Nginx 1.21.0
 
 cerbot部署证书
-[code]
+
+```
+
     yum install snapd  
     systemctl enable --now snapd.socket  
     ln -s /var/lib/snapd/snap /snap  
     snap install snap-store
-[/code]
-[code]
+
+```
+
+```
+
     snap install core;  snap refresh core  
     snap install --classic certbot  
     ln -s /snap/bin/certbot /usr/bin/certbot  
     certbot --nginx
-[/code]
+
+```
 
 ## PS：cerbot教程随官方文档更新，视频为老版本教程，两者同样适用，如果执行certbot –nginx 后 提示
 
@@ -120,15 +147,21 @@ cerbot部署证书
 ## 在/etc/nginx/nginx.conf 配置文件中 `server_name` 添加你的域名
 
 示例：
-[code]
+
+```
+
     server_name aaa.con
-[/code]
+
+```
 
 重载nginx；重新部署证书
-[code]
+
+```
+
     systemctl restart nginx.service  
     certbot --nginx
-[/code]
+
+```
 
  
 
@@ -137,7 +170,9 @@ cerbot部署证书
 Nginx配置
 
 修改/etc/nginx/nginx.conf配置文件
-[code]
+
+```
+
     stream {  
         server {  
             listen              443 ssl;                    # 设置监听端口为443  
@@ -153,14 +188,17 @@ Nginx配置
             proxy_pass        127.0.0.1:1234; # 后端Trojan监听端口  
         }  
     }
-[/code]
+
+```
 
  
 
 请将上方代码添加到http与events中间一行
 
 /etc/nginx/nginx.conf配置文件参考：
-[code]
+
+```
+
     events {  
         worker_connections 768;  
         # multi_accept on;  
@@ -187,12 +225,16 @@ Nginx配置
         ##  
         # Basic Settings  
         ##
-[/code]
+
+```
 
 继续重载nginx检查是否报错
-[code]
+
+```
+
     systemctl restart nginx.service
-[/code]
+
+```
 
  
 
@@ -207,9 +249,12 @@ Nginx配置
 ## 部署XrayR
 
 XrayR一键部署
-[code]
+
+```
+
     bash <(curl -Ls https://raw.githubusercontent.com/XrayR-project/XrayR-release/master/install.sh)
-[/code]
+
+```
 
 配置文件路径：`/etc/XrayR/config.yml`
 
@@ -230,7 +275,9 @@ XrayR Trojan配置
 注意2：在回落时请确保回落站点是http1.1，nginx如果有一个站点是h2会导致全部站点都变成h2（巨坑）
 
 完整样例
-[code]
+
+```
+
      -  
     PanelType: "SSpanel" # Panel type: SSpanel, V2board, PMpanel  
     ApiConfig:  
@@ -268,14 +315,22 @@ XrayR Trojan配置
     DNSEnv: # DNS ENV option used by DNS provider  
     ALICLOUD_ACCESS_KEY: aaa  
     ALICLOUD_SECRET_KEY: bbb
-[/code]
+
+```
 
 重启并检查 Nginx 和 XrayR
-[code]
+
+```
+
     systemctl restart nginx  
     XrayR restart
-[/code]
-[code]
+
+```
+
+```
+
     systemctl status nginx  
     XrayR status
-[/code]
+
+```
+

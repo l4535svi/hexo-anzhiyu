@@ -149,7 +149,9 @@ OpenWrt Passwall| 是，需要最新版本passwall
 ### [](https://github.com/live2364li/he002#cloudflare-workers%E5%8F%8D%E4%BB%A3%E4%BB%A3%E7%A0%81%E6%94%AF%E6%8C%81vlessvmesstrojan-go%E7%9A%84ws%E6%A8%A1%E5%BC%8F%E5%8F%AF%E5%88%86%E5%88%AB%E7%94%A8%E4%B8%A4%E4%B8%AA%E8%B4%A6%E5%8F%B7%E7%9A%84%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E5%90%8Duuid%E4%B8%8Epath%E4%BF%9D%E6%8C%81%E4%B8%80%E8%87%B4%E5%8D%95%E5%8F%8C%E5%8F%B7%E5%A4%A9%E5%88%86%E5%88%AB%E6%89%A7%E8%A1%8C%E9%82%A3%E4%B8%80%E4%B8%AA%E6%9C%88%E5%B0%B1%E6%9C%89550550%E5%B0%8F%E6%97%B6)CloudFlare Workers反代代码（支持VLESS\VMESS\Trojan-Go的WS模式，可分别用两个账号的应用程序名（UUID与path保持一致），单双号天分别执行，那一个月就有550+550小时）
 
 1.适用单一应用的反代代码
-[code]
+
+```
+
     addEventListener(  
       "fetch", event => {  
         let url = new URL(event.request.url);  
@@ -161,10 +163,13 @@ OpenWrt Passwall| 是，需要最新版本passwall
       }  
     )  
     
-[/code]
+
+```
 
 2.适用单双日循环执行的反代代码
-[code]
+
+```
+
     const SingleDay = '应用程序名1.herokuapp.com'  
     const DoubleDay = '应用程序名2.herokuapp.com'  
     addEventListener(  
@@ -186,10 +191,13 @@ OpenWrt Passwall| 是，需要最新版本passwall
         }  
     )  
     
-[/code]
+
+```
 
 3.适用多实例循环执行的反代代码
-[code]
+
+```
+
     const Day0 = 'app0.herokuapp.com'  
     const Day1 = 'app1.herokuapp.com'  
     const Day2 = 'app2.herokuapp.com'  
@@ -223,6 +231,7 @@ OpenWrt Passwall| 是，需要最新版本passwall
         }  
     )  
     
-[/code]
+
+```
 
 ### [](https://github.com/live2364li/he002#%E5%8E%9F%E4%BD%9C%E8%80%85%E9%A1%B9%E7%9B%AE%E5%9C%B0%E5%9D%80httpsgithubcommixoolxrayku)原作者项目地址：<https://github.com/mixool/xrayku>

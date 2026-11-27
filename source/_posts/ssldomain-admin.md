@@ -244,10 +244,14 @@ QQ群号: 731742868
     * [参考文章](https://domain-admin.readthedocs.io/zh-cn/latest/manual/article.html#id23)
 
 [下一页 ](https://domain-admin.readthedocs.io/zh-cn/latest/manual/index.html "用户手册")
-[code]
+
+```
+
     在数据管理中可以看到具体的证书以及证书的剩余有效天数。  
       
       
       
     这里显示的我个人博客站证书到期时间，与网页这边完全一致。
-[/code]
+
+```
+

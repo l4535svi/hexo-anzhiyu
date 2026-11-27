@@ -13,26 +13,35 @@ description: 把升级的文件拉进去之后执行这些命令都可以了 1.�
   
 
 1.项目有 `requirements.txt`，必须装：
-[code] 
+
+```
+ 
     pip3 install -r requirements.txt
-[/code]
+
+```
 
 统一用这个：
-[code] 
+
+```
+ 
     python3 -m pip install -r requirements.txt  
     python3 wfxl_openai_regst.py
-[/code]
+
+```
 
   
 
 ## 八、最短解决路径（只做这3步）
 
 直接执行：
-[code] 
+
+```
+ 
     cd /home/ubuntu/gpt  
     python3 -m pip install -r requirements.txt  
     python3 wfxl_openai_regst.py
-[/code]
+
+```
 
   
 
@@ -47,28 +56,37 @@ nohup python3 wfxl_openai_regst.py > run.log 2>&1 &
 更新无法运行都运行依赖安装
 
 #### 如果没用虚拟环境
-[code] 
+
+```
+ 
     pip3 install pymysql
-[/code]
+
+```
 
   
 
 ### 直接执行（最简单）
 
 cd /home/ubuntu/gpt
-[code]
+
+```
+
     unzip Wenfxl-Codex-Manager-v12.0.2.zip
-[/code]
+
+```
 
 → 会解压到当前目录（gpt文件夹） 
 
 * * *
 
 ### 推荐方式（避免文件混乱）
-[code]
+
+```
+
     mkdir codex  
     unzip Wenfxl-Codex-Manager-v9.0.1.zip -d codex
-[/code]
+
+```
 
 → 解压到 `codex` 文件夹，不污染当前目录 
 
@@ -87,7 +105,9 @@ cd /home/ubuntu/gpt
 * * *
 
 ## 一、最直接方案（推荐）
-[code] 
+
+```
+ 
     nohup python3 wfxl_openai_regst.py > log.txt 2>&1 &
     
       
@@ -200,10 +220,12 @@ cd /home/ubuntu/gpt
       
       
     
-[/code]
-[/code]
-[/code]
-[code]
+
+```
+
+```
+
   
 
-[/code]
+```
+

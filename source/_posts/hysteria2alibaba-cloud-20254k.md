@@ -17,11 +17,14 @@ description: 1、安装SSH连接工具Finalshell：【 点击进入 】 2、购�
 2、购买服务器：【[点击进入](https://account.aliyun.com/)】
 
 3、一键脚本开源项目：【[点击进入](https://github.com/233boy/sing-box)】
-[code]
+
+```
+
     解释
     
     bash <(wget -qO- -o- https://github.com/233boy/sing-box/raw/main/install.sh)Copy
-[/code]
+
+```
 
 4、解析域名：【[点击进入](https://dash.cloudflare.com/login)】
 

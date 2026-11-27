@@ -64,13 +64,19 @@ OpenWrt LuCI 图形界面配置应用，用于管理 [ECH Workers](https://githu
 [](https://github.com/SunshineList/luci-app-ech-workers#%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4)
 
   1. 上传到路由器
-[code]scp luci-app-ech-workers_*.ipk root@192.168.1.1:/tmp/
-[/code]
+
+```
+scp luci-app-ech-workers_*.ipk root@192.168.1.1:/tmp/
+
+```
 
   2. SSH 登录安装
-[code]ssh root@192.168.1.1
+
+```
+ssh root@192.168.1.1
          opkg install /tmp/luci-app-ech-workers_*.ipk
-[/code]
+
+```
 
   3. 访问界面
 
@@ -146,23 +152,32 @@ HTTP| 路由器 IP| 30001（默认）
 ### 查看服务状态
 
 [](https://github.com/SunshineList/luci-app-ech-workers#%E6%9F%A5%E7%9C%8B%E6%9C%8D%E5%8A%A1%E7%8A%B6%E6%80%81)
-[code]
+
+```
+
     /etc/init.d/ech-workers status
-[/code]
+
+```
 
 ### 查看运行日志
 
 [](https://github.com/SunshineList/luci-app-ech-workers#%E6%9F%A5%E7%9C%8B%E8%BF%90%E8%A1%8C%E6%97%A5%E5%BF%97)
-[code]
+
+```
+
     logread -e ech-workers | tail -n 50
-[/code]
+
+```
 
 ### 手动测试运行
 
 [](https://github.com/SunshineList/luci-app-ech-workers#%E6%89%8B%E5%8A%A8%E6%B5%8B%E8%AF%95%E8%BF%90%E8%A1%8C)
-[code]
+
+```
+
     /usr/bin/ech-workers -f your-worker.workers.dev:443 -l 0.0.0.0:30001
-[/code]
+
+```
 
 ### 常见问题
 
@@ -179,7 +194,9 @@ HTTP| 路由器 IP| 30001（默认）
 ## 📁 目录结构
 
 [](https://github.com/SunshineList/luci-app-ech-workers#-%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84)
-[code]
+
+```
+
     luci-app-ech-workers/
     ├── Makefile                 # OpenWrt SDK 构建配置
     ├── README.md                # 说明文档
@@ -194,7 +211,8 @@ HTTP| 路由器 IP| 30001（默认）
             ├── init.d/          # procd 服务脚本
             └── uci-defaults/    # 首次安装脚本
     
-[/code]
+
+```
 
 * * *
 

@@ -15,7 +15,9 @@ V免签能够免签约收款，但是很多都不支持V免签，对接上易支
 上传好源码后
 
 设置伪静态
-[code]
+
+```
+
     location / {  
      if (!-e $request_filename) {  
        rewrite ^/(.[a-zA-Z0-9\-\_]+).html$ /index.php?mod=$1 last;  
@@ -28,7 +30,8 @@ V免签能够免签约收款，但是很多都不支持V免签，对接上易支
     location ^~ /includes {  
       deny all;  
     }
-[/code]
+
+```
 
 [![image.png](https://heaid.top/usr/uploads/2021/08/756057888.png)](https://heaid.top/usr/uploads/2021/08/756057888.png)
 

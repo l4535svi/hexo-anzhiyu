@@ -30,7 +30,9 @@ udp端口：6万以内任意数字
   
 
 ### 3、挑选SNI伪装域名
-[code]
+
+```
+
     aws.com
     bing.com
     snap.licdn.com
@@ -52,4 +54,6 @@ udp端口：6万以内任意数字
     azure.microsoft.com
     beacon.gtv-pub.com
     amd.com
-[/code]
+
+```
+

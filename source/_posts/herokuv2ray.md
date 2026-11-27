@@ -49,7 +49,9 @@ description: 准备材料 一枚GitHub账号 一枚Heroku账号 一枚CloudFlare
 单账号
 
 JAVASCRIPT
-[code]
+
+```
+
     1  
     2  
     3  
@@ -61,10 +63,13 @@ JAVASCRIPT
     9  
     10  
     
-[/code]
+
+```
 
 | 
-[code]
+
+```
+
     addEventListener(  
         "fetch",event => {  
             let url=new URL(event.request.url);  
@@ -76,14 +81,18 @@ JAVASCRIPT
         }  
     )  
     
-[/code]  
+
+```
+  
   
 ---|---  
   
 双账号
 
 JAVASCRIPT
-[code]
+
+```
+
     1  
     2  
     3  
@@ -105,10 +114,13 @@ JAVASCRIPT
     19  
     20  
     
-[/code]
+
+```
 
 | 
-[code]
+
+```
+
     const SingleDay = 'app0.herokuapp.com'  
     const DoubleDay = 'app1.herokuapp.com'  
     addEventListener(  
@@ -130,7 +142,9 @@ JAVASCRIPT
         }  
     )  
     
-[/code]  
+
+```
+  
   
 ---|---  
   

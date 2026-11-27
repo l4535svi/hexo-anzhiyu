@@ -9,7 +9,9 @@ categories:
 description: '{ "urls": [ { "name": "摸鱼儿接口", "url": "http://我不是.摸鱼儿.com" }, { "name": "肥猫接口", "url": "http://肥猫.com" }, { "name": "饭太硬接口", "url": "http://'
 ---
 {
-[code]
+
+```
+
       "urls": [
         { "name": "摸鱼儿接口", "url": "http://我不是.摸鱼儿.com" },
         { "name": "肥猫接口", "url": "http://肥猫.com" },
@@ -30,16 +32,25 @@ description: '{ "urls": [ { "name": "摸鱼儿接口", "url": "http://我不是.
       ]
     }
     
-[/code]
-[code]
+
+```
+
+```
+
       
     
-[/code]
-[code]
+
+```
+
+```
+
       
     
-[/code]
-[code]
+
+```
+
+```
+
      http://我不是.摸鱼儿.com			# 摸鱼儿接口
      http://肥猫.com				# 肥猫接口
      http://www.饭太硬.com/tv/		# 饭太硬接口
@@ -56,14 +67,16 @@ description: '{ "urls": [ { "name": "摸鱼儿接口", "url": "http://我不是.
      https://dxawi.github.io/0/0.json	# dxawi
      https://github.moeyy.xyz/https://raw.githubusercontent.com/PizazzGY/TVBox/main/api.json		# 潇洒接口
      https://bitbucket.org/xduo/duoapi/raw/master/xpg.json		# 小苹果接口
-[/code]
-[code]
+
+```
+
+```
+
     ## 直播源 🌟
     
     [](https://github.com/youhunwl/TVAPP#%E7%9B%B4%E6%92%AD%E6%BA%90-)
     
     > github地址使用时 请自行添加代理
-[code]
     推荐在线源：
      https://www.iyouhun.com/tv/zb		# 游魂直播源
      https://live.zbds.top/tv/iptv4.txt  # 直播电视IPV4
@@ -115,13 +128,18 @@ description: '{ "urls": [ { "name": "摸鱼儿接口", "url": "http://我不是.
      https://www.goodiptv.club/bililive.m3u # 哔哩哔哩直播源
      https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/ya.m3u # 虎牙直播源
      https://raw.githubusercontent.com/YanG-1989/m3u/main/yu.m3u # 斗鱼直播源
-[/code]
-[/code]
-[code]
+
+```
+
+```
+
       
     
-[/code]
-[code]
+
+```
+
+```
+
     单仓：
      http://www.饭太硬.com/tv	# 饭太硬接口
      http://肥猫.com				# 肥猫接口
@@ -169,12 +187,14 @@ description: '{ "urls": [ { "name": "摸鱼儿接口", "url": "http://我不是.
      https://bitbucket.org/xduo/cool/raw/main/room.json   # 多多影音
      https://qixing.myhkw.com/DC.txt   # 七星宝盒
      http://xmbjm.fh4u.org/dc.txt   # 拾光多仓
-[/code]
-[code]
+
+```
+
+```
+
     ## 直播源与点播源
     
     [](https://github.com/Archmage83/tvapk#%E7%9B%B4%E6%92%AD%E6%BA%90%E4%B8%8E%E7%82%B9%E6%92%AD%E6%BA%90)
-[code]
     直播源：
     https://bit.ly/iptv-aptv
     https://bit.ly/yuechan-ipv6
@@ -218,5 +238,6 @@ description: '{ "urls": [ { "name": "摸鱼儿接口", "url": "http://我不是.
     http://tv.tv520.shop/
     http://tv.nxog.top/m/111.php?ou=公众号欧歌app&mz=all&jar=all&b=欧歌
     https://agit.ai/Yoursmile7/TVBox/raw/branch/master/XC.json
-[/code]
-[/code]
+
+```
+

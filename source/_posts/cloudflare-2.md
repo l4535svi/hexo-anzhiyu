@@ -35,10 +35,12 @@ description: 2. Vercel 部署 点击上方按钮即可快速部署到 Vercel，�
 ## 
 
 点击：
-[code] 
+
+```
+ 
     Upstash
-[/code]
-[/code]
+
+```
 
 * * *
 
@@ -47,10 +49,12 @@ description: 2. Vercel 部署 点击上方按钮即可快速部署到 Vercel，�
 ## 
 
 点：
-[code] 
+
+```
+ 
     Create Database
-[/code]
-[/code]
+
+```
 
 * * *
 
@@ -59,7 +63,9 @@ description: 2. Vercel 部署 点击上方按钮即可快速部署到 Vercel，�
 ## 
 
 创建 Redis 后你会看到：
-[code] 
+
+```
+ 
     REST URL  
     REST TOKEN  
     
@@ -79,13 +85,15 @@ description: 2. Vercel 部署 点击上方按钮即可快速部署到 Vercel，�
     
     
     
-[/code]
-[/code]
+
+```
 
 ## 一、跳出背景（你现在的问题本质）
 
 ## 
-[code]
+
+```
+
     
     
     你拿到的是 Upstash 自动生成的一整套 Redis/KV 连接信息：
@@ -122,45 +130,53 @@ description: 2. Vercel 部署 点击上方按钮即可快速部署到 Vercel，�
     
     
     
-[/code]
-[/code]
+
+```
 
 ## 二、必须填哪些（核心）
 
 ## 
-[code]
+
+```
+
     
     
     在 Vercel → Settings → Environment Variables 里只需要：
     
     
     
-[/code]
-[/code]
+
+```
 
 ### 1）KV_REST_API_URL
 
 ## 
-[code]
+
+```
+
     https://glowing-monster-103080.upstash.io
-[/code]
-[/code]
+
+```
 
 ### 2）KV_REST_API_TOKEN
 
 ## 
-[code]
+
+```
+
     gQAAAAAAAZKoAAIgcDEwZTRkNDhkMWU1YWI0MDIzYTBlMmMxMGI0NGVjMDg0ZQ
-[/code]
-[/code]
+
+```
 
 ### 3）KV_REST_API_READ_ONLY_TOKEN（可选）
 
 ## 
-[code]
+
+```
+
     ggAAAAAAAZKoAAIgcDGPDd3QfcDNNImndCeqtrf3PSv2cPULHbPQvUleb0bKMg
-[/code]
-[/code]
+
+```
 
   
 
@@ -173,7 +189,9 @@ AI 总结
 Sublink Worker 是一款旨在降低订阅转换与分发工具自托管门槛的工具。针对部分机场订阅缺乏分流（影响AI等应用使用）以及使用公共转换工具存在安全风险的问题，该项目支持利用 Cloudflare Workers 搭建私有的转换服务。用户可以通过 Cloudflare 与 GitHub 实现一键式快速部署，也可以通过手动 Fork 仓库、配置 Cloudflare KV 命名空间并修改配置文件等步骤进行手动部署，以便于后续的维护与更新。
 
 ![sublinkworker.png](https://imgbed.diggoo.xyz/file/blog/1782709166030_sublinkworker.png)
-[code]
+
+```
+
      很多机场的订阅链接没有做分流，比如要用AI，经常会使用到香港节点，
      导致不支持使用，这个时候就需要用到订阅转换。
      而订阅转换工具网上有很多，但毕竟是别人的后端，安全性不敢保证.
@@ -181,7 +199,8 @@ Sublink Worker 是一款旨在降低订阅转换与分发工具自托管门槛�
     
     Sublink Worker 的核心目标是**尽可能降低订阅转换/分发工具的自托管门槛**。
     
-[/code]
+
+```
 
 ## 视频教程
 

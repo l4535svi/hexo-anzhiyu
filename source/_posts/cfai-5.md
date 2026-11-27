@@ -89,10 +89,13 @@ description: CF AI Chat - Cloudflare Workers AI 聊天应用 一个基于 Cloudf
      * 找到 "Environment Variables" 部分
      * 点击 "Add variable"
      * 输入以下信息：
-[code]Variable name: CHAT_PASSWORD
+
+```
+Variable name: CHAT_PASSWORD
            Value: your_secure_password_123
            
-[/code]
+
+```
 
      * 点击 "Save and deploy"
   3. 环境变量安全建议
@@ -122,10 +125,13 @@ description: CF AI Chat - Cloudflare Workers AI 聊天应用 一个基于 Cloudf
      * 在 "Settings" > "Variables" 中找到 "KV Namespace Bindings"
      * 点击 "Add binding"
      * 输入以下信息：
-[code]Variable name: CHAT_HISTORY
+
+```
+Variable name: CHAT_HISTORY
            KV namespace: 选择刚创建的 CHAT_HISTORY 命名空间
            
-[/code]
+
+```
 
      * 点击 "Save and deploy"
 
@@ -156,20 +162,31 @@ description: CF AI Chat - Cloudflare Workers AI 聊天应用 一个基于 Cloudf
 [](https://github.com/wangai14/cf-gpt-ai#%E6%96%B9%E6%B3%95%E4%BA%8C%E4%BD%BF%E7%94%A8-wrangler-cli-%E9%83%A8%E7%BD%B2)
 
   1. 安装 Wrangler
-[code]npm install -g wrangler
-[/code]
+
+```
+npm install -g wrangler
+
+```
 
   2. 登录 Cloudflare
-[code]wrangler auth login
-[/code]
+
+```
+wrangler auth login
+
+```
 
   3. 下载项目代码
-[code]git clone <your-repo-url>
+
+```
+git clone <your-repo-url>
          cd cf-gpt-oss
-[/code]
+
+```
 
   4. 修改配置文件 编辑 `wrangler.toml` 文件：
-[code]name = "cf-ai-chat"
+
+```
+name = "cf-ai-chat"
          main = "src/worker.js"
          compatibility_date = "2024-01-15"
          
@@ -184,11 +201,15 @@ description: CF AI Chat - Cloudflare Workers AI 聊天应用 一个基于 Cloudf
          
          [vars]
          CHAT_PASSWORD = "your_secure_password_here"
-[/code]
+
+```
 
   5. 部署到 Cloudflare
-[code]wrangler deploy
-[/code]
+
+```
+wrangler deploy
+
+```
 
 ### 第六步：配置自定义域名（可选）
 

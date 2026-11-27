@@ -45,7 +45,9 @@ description: 思路是，在青龙容器中安装 dotnet 环境或 bilitool 的�
 #### 1.2.1. 方式一：订阅管理
 
 [](https://github.com/RayWangQvQ/BiliBiliToolPro/blob/main/qinglong/README.md#121-%E6%96%B9%E5%BC%8F%E4%B8%80%E8%AE%A2%E9%98%85%E7%AE%A1%E7%90%86)
-[code]
+
+```
+
     名称：Bilibili
     类型：公开仓库
     链接：https://github.com/RayWangQvQ/BiliBiliToolPro.git
@@ -54,7 +56,8 @@ description: 思路是，在青龙容器中安装 dotnet 环境或 bilitool 的�
     白名单：bili_task_.+\.sh
     文件后缀：sh
     
-[/code]
+
+```
 
 没提到的不要动。
 
@@ -65,12 +68,15 @@ description: 思路是，在青龙容器中安装 dotnet 环境或 bilitool 的�
 [](https://github.com/RayWangQvQ/BiliBiliToolPro/blob/main/qinglong/README.md#122-%E6%96%B9%E5%BC%8F%E4%BA%8C%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1%E6%8B%89%E5%BA%93)
 
 青龙面板，`定时任务`页，右上角`添加任务`，填入以下信息：
-[code]
+
+```
+
     名称：拉取Bili库
     命令：ql repo https://github.com/RayWangQvQ/BiliBiliToolPro.git "bili_task_"
     定时规则：2 2 28 * *
     
-[/code]
+
+```
 
 点击确定。
 
@@ -103,11 +109,14 @@ description: 思路是，在青龙容器中安装 dotnet 环境或 bilitool 的�
 青龙拉库时可以指定分支，develop分支的代码会超前于默认的main分支，包含当前正在开发的新功能。
 
 想提前体验新功能的朋友可以尝试切换先行版，但同时也意味着稳定性会相应降低（其实是相当于在帮我内测测试bug了~🤨）。
-[code]
+
+```
+
     分支：develop
     白名单：bili_dev_task_.+\.sh
     
-[/code]
+
+```
 
 其他选项同上。
 
@@ -118,12 +127,15 @@ description: 思路是，在青龙容器中安装 dotnet 环境或 bilitool 的�
 拉库时，如果服务器在国内，访问GitHub速度慢，可在仓库地址前加上加速代理进行加速。
 
 如：
-[code]
+
+```
+
     https://github.moeyy.xyz/https://github.com/RayWangQvQ/BiliBiliToolPro.git
     https://ghproxy.net/https://github.com/RayWangQvQ/BiliBiliToolPro.git
     ...
     
-[/code]
+
+```
 
 加速代理地址通常不能保证长期稳定，请自行查找使用。
 
@@ -140,11 +152,14 @@ description: 思路是，在青龙容器中安装 dotnet 环境或 bilitool 的�
 如果还不行，那么可以切换到基于`bilitool`的二进制包运行方式，该方式不需要安装`dotnet`，方式：
 
 编辑青龙面板的`配置文件`，新增如下两行：
-[code]
+
+```
+
     export BILI_MODE="bilitool" # bili运行模式，dotnet或bilitool
     export BILI_GITHUB_PROXY="https://github.moeyy.xyz/" # 下载二进制包时使用的加速代理，不要的话则置空
     
-[/code]
+
+```
 
 其中加速代理形如：`https://github.moeyy.xyz/`或`https://ghproxy.net/`，因通常不能保证长期稳定，请自行查找使用。
 
@@ -155,25 +170,31 @@ description: 思路是，在青龙容器中安装 dotnet 环境或 bilitool 的�
 [](https://github.com/RayWangQvQ/BiliBiliToolPro/blob/main/qinglong/README.md#42-couldnt-find-a-valid-icu-package-installed-on-the-system)
 
 如 #266 ，需要在青龙面板的环境变量添加如下环境变量：
-[code]
+
+```
+
     名称：DOTNET_SYSTEM_GLOBALIZATION_INVARIANT
     值：1
     
-[/code]
+
+```
 
 ### 4.3. 提示文件不存在或路径异常，怎么排查
 
 [](https://github.com/RayWangQvQ/BiliBiliToolPro/blob/main/qinglong/README.md#43-%E6%8F%90%E7%A4%BA%E6%96%87%E4%BB%B6%E4%B8%8D%E5%AD%98%E5%9C%A8%E6%88%96%E8%B7%AF%E5%BE%84%E5%BC%82%E5%B8%B8%E6%80%8E%E4%B9%88%E6%8E%92%E6%9F%A5)
 
 需要`docker exec -it qinglong bash`后，查看几个常用路径：
-[code]
+
+```
+
     /ql
         /data
             /repo
         /scripts
         /shell
     
-[/code]
+
+```
 
   * `/ql/dada/repo`目录下存储了拉库后，bilitool的源代码
   * `/ql/scripts`目录下存储了bilitool的定时运行脚本

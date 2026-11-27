@@ -36,27 +36,39 @@ description: 一、准备工作 1、 服务器一台 （下面是我常用的，
 #### 安装运行环境：
 
 1、Debian、Ubuntu系统
-[code]
+
+```
+
     apt update -y && apt install curl wget -y
-[/code]
+
+```
 
 2、CentOS、Alma、Rocky 系列系统
-[code]
+
+```
+
     yum update -y && yum install curl wget -y
-[/code]
+
+```
 
 #### 安装 H-ui 面板
-[code]
+
+```
+
     bash <(curl -fsSL https://raw.githubusercontent.com/jonssonyan/h-ui/main/install.sh)
-[/code]
+
+```
 
 说明：根据提示一步步安装即可,根据不同的 VPS 可能需要放行防火墙端口
 
 ## 一键脚本
-[code]
+
+```
+
      bash -c "$(curl -sS https://raw.githubusercontent.com/passeway/ufw/main/ufw.sh)"
     
-[/code]
+
+```
 
 这段脚本的作用是关闭和禁用防火墙服务（firewalld），关闭 SELinux，禁用 UFW 防火墙，设置 iptables 规则允许所有传入、转发和输出的流量，并且清除所有的 iptables 规则，最后保存 iptables 规则以防止重启后丢失。  
 1：停止并禁用 firewalld 服务：停止并禁用当前运行的 firewalld 服务，如果存在的话。  
@@ -68,9 +80,12 @@ description: 一、准备工作 1、 服务器一台 （下面是我常用的，
 ## 6：保存 iptables 规则以防止重启后丢失：使用 netfilter-persistent 工具保存当前的 iptables 规则。三、h-ui 配置 Hysteria2 节点
 
 #### 1、默认访问地址(根据安装成功显示的用户密码登录)：
-[code]
+
+```
+
     http://IP:端口
-[/code]
+
+```
 
 #### 2、解析域名
 

@@ -33,18 +33,24 @@ description: '基于 SagerNet/sing-box 的高级 Web 面板 本仓库是 alireza
 [](https://github.com/Teminuosi/s-ui#%E5%85%A8%E8%87%AA%E5%8A%A8%E5%AE%89%E8%A3%85%E6%8E%A8%E8%8D%90)
 
 一条命令装好,全程无需交互:全自动会自动生成随机管理员账号密码和随机面板路径,装完直接打印访问信息。
-[code]
+
+```
+
     SUI_AUTO=1 bash <(curl -Ls https://raw.githubusercontent.com/Teminuosi/s-ui/main/install.sh)
-[/code]
+
+```
 
 ### 交互式安装
 
 [](https://github.com/Teminuosi/s-ui#%E4%BA%A4%E4%BA%92%E5%BC%8F%E5%AE%89%E8%A3%85)
 
 想自己一步步设置端口、路径、账号密码,用普通模式:
-[code]
+
+```
+
     bash <(curl -Ls https://raw.githubusercontent.com/Teminuosi/s-ui/main/install.sh)
-[/code]
+
+```
 
 装好后,在服务器上随时输入 `s-ui` 打开管理菜单(启动/停止/重启、改设置、改账号、SSL 证书、BBR 等)。
 
@@ -113,7 +119,9 @@ macOS| amd64 / arm64| 🚧 实验性
 [](https://github.com/Teminuosi/s-ui#docker-%E5%AE%89%E8%A3%85)
 
 展开
-[code]
+
+```
+
     # 安装 Docker
     curl -fsSL https://get.docker.com | sh
     
@@ -125,26 +133,33 @@ macOS| amd64 / arm64| 🚧 实验性
         -v $PWD/cert/:/root/cert/ \
         --name s-ui --restart=unless-stopped \
         ghcr.io/teminuosi/s-ui:latest
-[/code]
+
+```
 
 自行构建镜像:
-[code]
+
+```
+
     git clone --recurse-submodules https://github.com/Teminuosi/s-ui
     cd s-ui
     docker build -t s-ui .
-[/code]
+
+```
 
 ## 卸载
 
 [](https://github.com/Teminuosi/s-ui#%E5%8D%B8%E8%BD%BD)
-[code]
+
+```
+
     sudo -i
     systemctl disable s-ui --now
     rm -f /etc/systemd/system/sing-box.service
     systemctl daemon-reload
     rm -fr /usr/local/s-ui
     rm -f /usr/bin/s-ui
-[/code]
+
+```
 
 * * *
 
@@ -153,24 +168,30 @@ macOS| amd64 / arm64| 🚧 实验性
 [](https://github.com/Teminuosi/s-ui#%E6%9C%AC%E5%9C%B0%E5%BC%80%E5%8F%91)
 
 展开
-[code]
+
+```
+
     # 克隆(含前端子模块)
     git clone --recurse-submodules https://github.com/Teminuosi/s-ui
     cd s-ui
     
     # 一键构建并运行(前端 + 后端)
     ./runSUI.sh
-[/code]
+
+```
 
 分步构建:
-[code]
+
+```
+
     # 前端
     cd frontend && npm install && npm run build && cd ..
     # 后端(需先构建前端)
     rm -fr web/html/* && cp -R frontend/dist/* web/html/
     go build -o sui main.go
     ./sui
-[/code]
+
+```
 
 前端代码在独立子模块仓库:[Teminuosi/s-ui-frontend](https://github.com/Teminuosi/s-ui-frontend)
 

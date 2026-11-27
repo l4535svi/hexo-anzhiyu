@@ -77,7 +77,9 @@ description: 工具 百度连接： 链接： https://pan.baidu.com/s/1tmvK9bpOe
 例子：
 
 ### plain
-[code]
+
+```
+
     root@HandsomeMod:~# ls
     image
     root@HandsomeMod:~# cd image/
@@ -91,7 +93,8 @@ description: 工具 百度连接： 链接： https://pan.baidu.com/s/1tmvK9bpOe
     root@HandsomeMod:~/image# du -sh ./44.2M ./
     root@HandsomeMod:~/image# cp ./* /lib/firmware/
     root@HandsomeMod:~/image# du -sh /lib/firmware/45.6M /lib/firmware/
-[/code]
+
+```
 
 Plain text
 

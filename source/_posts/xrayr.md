@@ -12,9 +12,11 @@ description: 1、XrayR开源项目地址： 【 点击进入 】 XrayR一键安�
 
   * XrayR一键安装
 
-[code]
+```
+
     wget -N https://raw.githubusercontent.com/XrayR-project/XrayR-release/master/install.sh && bash install.shCopy
-[/code]
+
+```
 
   * 配置文件路径：/etc/XrayR/config.yml
 
@@ -26,7 +28,8 @@ description: 1、XrayR开源项目地址： 【 点击进入 】 XrayR一键安�
 
   * 订阅管理的配置模板
 
-[code]
+```
+
     <style>
         .no-wrap {
             white-space:pre-wrap;;
@@ -43,18 +46,25 @@ description: 1、XrayR开源项目地址： 【 点击进入 】 XrayR一键安�
     ![✅](https://s.w.org/images/core/emoji/15.1.0/svg/2705.svg)在线客服售后保障
     </div>
     Copy
-[/code]
+
+```
 
 3、SSL设置参考资料：【[点击进入](https://go-acme.github.io/lego/dns/cloudflare/)】
-[code]
+
+```
+
     CLOUDFLARE_EMAIL=you@example.com \
     CLOUDFLARE_API_KEY=b9841238feb177a84330febba8a83208921177bffe733 \Copy
-[/code]
+
+```
 
 4、节点配置，参考XrayR详细教程：【[点击进入](https://xrayr-project.github.io/XrayR-doc/dui-jie-v2board/v2board.html)】
 
   * 放行端口
 
-[code]
+```
+
     ufw allow 需要放行的端口
-[/code]
+
+```
+

@@ -47,7 +47,9 @@ heroku官网
 使用cf进行反代,并且解决heroku免费账户550小时的问题.
 
 解决方案就是 需要创建两个容器 单双号交替使用.和以前的heroku-v2ray的处理方式是一样的.
-[code]
+
+```
+
     1  
     2  
     3  
@@ -69,10 +71,13 @@ heroku官网
     19  
     20  
     
-[/code]
+
+```
 
 | 
-[code]
+
+```
+
     const SingleDay = '应用程序名1.herokuapp.com'  
     const DoubleDay = '应用程序名2.herokuapp.com'  
     addEventListener(  
@@ -94,7 +99,9 @@ heroku官网
         }  
     )  
     
-[/code]  
+
+```
+  
   
 ---|---  
   

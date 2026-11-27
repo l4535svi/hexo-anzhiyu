@@ -13,30 +13,36 @@ description: '电脑win升级命令 pip install --upgrade hermes 卸载命令 �
 pip install --upgrade hermes
 
 卸载命令  ：hermes uninstall
-[/code]
-[code]
+
+```
+
 配置对话命令:
 
 ### 2\. Hermes接入Telegram
 
 执行：
-[code] 
     hermes gateway setup
-[/code]
+
+```
 
 选择：
 
   * Telegram 
 
 填入：
-[code] 
+
+```
+ 
     BOT TOKEN
-[/code]
+
+```
 
 * * *
 
 ### 3\. 启动机器人
-[code] 
+
+```
+ 
     hermes gateway start
     
       
@@ -45,58 +51,77 @@ pip install --upgrade hermes
     后台运行
     
     nohup hermes gateway run > ~/.hermes/logs/gateway.log 2>&1 &
-[/code]
+
+```
 
 ### 克隆本仓库
 
 [](https://github.com/byJoey/hermesctl#%E5%85%8B%E9%9A%86%E6%9C%AC%E4%BB%93%E5%BA%93)
-[code]
+
+```
+
     git clone https://github.com/byJoey/hermesctl.git
     cd hermesctl
     chmod +x hermesctl.sh
     ./hermesctl.sh
-[/code]
+
+```
 
 ### 一行下载运行（与克隆等价，便于随手试）
 
 [](https://github.com/byJoey/hermesctl#%E4%B8%80%E8%A1%8C%E4%B8%8B%E8%BD%BD%E8%BF%90%E8%A1%8C%E4%B8%8E%E5%85%8B%E9%9A%86%E7%AD%89%E4%BB%B7%E4%BE%BF%E4%BA%8E%E9%9A%8F%E6%89%8B%E8%AF%95)
-[code]
+
+```
+
     curl -fsSL https://raw.githubusercontent.com/byJoey/hermesctl/main/hermesctl.sh -o hermesctl.sh && chmod +x hermesctl.sh && ./hermesctl.sh
-[/code]
+
+```
 
 ### 直接运行（本地已有脚本时）
 
 [](https://github.com/byJoey/hermesctl#%E7%9B%B4%E6%8E%A5%E8%BF%90%E8%A1%8C%E6%9C%AC%E5%9C%B0%E5%B7%B2%E6%9C%89%E8%84%9A%E6%9C%AC%E6%97%B6)
-[code]
+
+```
+
     chmod +x hermesctl.sh
     ./hermesctl.sh
-[/code]
+
+```
 
 ### 快捷命令 `hc`
 
 [](https://github.com/byJoey/hermesctl#%E5%BF%AB%E6%8D%B7%E5%91%BD%E4%BB%A4-hc)
 
 首次启动脚本会把自身复制到 `~/.local/bin/hermesctl.sh` 并生成 `~/.local/bin/hc`，并在 `~/.zshrc` / `~/.bashrc` 中追加 `PATH`（若尚未包含）。之后：
-[code]
+
+```
+
     source ~/.zshrc   # 或 ~/.bashrc
     hc
-[/code]
+
+```
 
 ### 帮助
 
 [](https://github.com/byJoey/hermesctl#%E5%B8%AE%E5%8A%A9)
-[code]
+
+```
+
     ./hermesctl.sh --help
-[/code]
+
+```
 
 ## 1\. 安装 Hermes Agent
 
 运行一行安装程序：
-[code]
+
+```
+
     # Linux / macOS / WSL2 / Android (Termux)  
     curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash  
     
-[/code]
+
+```
 
 Android / Termux
 
@@ -107,20 +132,26 @@ Windows 用户
 请先安装[WSL2](https://learn.microsoft.com/en-us/windows/wsl/install)，然后在 WSL2 终端中运行上述命令。
 
 完成后，重新装填弹药：
-[code]
+
+```
+
     source ~/.bashrc   # or source ~/.zshrc  
     
-[/code]
+
+```
 
 ## 2\. 设置服务提供商
 
 安装程序会自动配置您的 LLM 提供程序。如需稍后更改，请使用以下命令之一：
-[code]
+
+```
+
     hermes model       # Choose your LLM provider and model  
     hermes tools       # Configure which tools are enabled  
     hermes setup       # Or configure everything at once  
     
-[/code]
+
+```
 
 `hermes model`引导您选择推理提供程序：
 
@@ -150,26 +181,35 @@ Vercel AI 网关| Vercel AI 网关路由| 放`AI_GATEWAY_API_KEY`
 您可以随时切换服务提供商`hermes model`，无需更改代码，也无需担心被锁定。配置自定义端点时，Hermes 会提示您输入上下文窗口大小，并在条件允许的情况下自动检测。详情请参阅[“上下文长度检测” 。](https://hermes-agent.nousresearch.com/docs/integrations/providers#context-length-detection)
 
 ## 3\. 开始聊天
-[code]
+
+```
+
     hermes  
     
-[/code]
+
+```
 
 搞定！你会看到一个欢迎横幅，上面显示你的模型、可用工具和技能。输入消息并按回车键。
-[code]
+
+```
+
     ❯ What can you help me with?  
     
-[/code]
+
+```
 
 该代理程序拥有网络搜索、文件操作、终端命令等工具——所有功能开箱即用。
 
 ## 4\. 试用主要功能
 
 ### 让它使用终端
-[code]
+
+```
+
     ❯ What's my disk usage? Show the top 5 largest directories.  
     
-[/code]
+
+```
 
 代理将代表您运行终端命令并向您显示结果。
 
@@ -196,11 +236,14 @@ Vercel AI 网关| Vercel AI 网关路由| 放`AI_GATEWAY_API_KEY`
 ### 恢复会话
 
 退出时，Hermes 会打印一个恢复命令：
-[code]
+
+```
+
     hermes --continue    # Resume the most recent session  
     hermes -c            # Short form  
     
-[/code]
+
+```
 
 ## 5\. 进一步探索
 
@@ -209,49 +252,66 @@ Vercel AI 网关| Vercel AI 网关路由| 放`AI_GATEWAY_API_KEY`
 ### 设置沙盒终端
 
 为了安全起见，请在 Docker 容器或远程服务器上运行代理：
-[code]
+
+```
+
     hermes config set terminal.backend docker    # Docker isolation  
     hermes config set terminal.backend ssh       # Remote server  
     
-[/code]
+
+```
 
 ### 连接消息平台
 
 通过 Telegram、Discord、Slack、WhatsApp、Signal、电子邮件或 Home Assistant，从您的手机或其他设备与 Hermes 聊天：
-[code]
+
+```
+
     hermes gateway setup    # Interactive platform configuration  
     
-[/code]
+
+```
 
 ### 添加语音模式
 
 想在命令行界面 (CLI) 中使用麦克风输入或在消息传递中使用语音回复吗？
-[code]
+
+```
+
     pip install "hermes-agent[voice]"  
       
     # Optional but recommended for free local speech-to-text  
     pip install faster-whisper  
     
-[/code]
+
+```
 
 然后启动 Hermes 并在命令行界面中启用它：
-[code]
+
+```
+
     /voice on  
     
-[/code]
+
+```
 
 按下此键`Ctrl+B`即可录音，或`/voice tts`让 Hermes 朗读回复。有关在 CLI、Telegram、Discord 和 Discord 语音频道中的完整设置，请参阅[“语音模式” 。](https://hermes-agent.nousresearch.com/docs/user-guide/features/voice-mode)
 
 ### 安排自动化任务
-[code]
+
+```
+
     ❯ Every morning at 9am, check Hacker News for AI news and send me a summary on Telegram.  
     
-[/code]
+
+```
 
 代理将设置一个定时任务，通过网关自动运行。
 
 ### 浏览并安装技能
-[code]
+
+```
+
     hermes skills search kubernetes  
     hermes skills search react --source skills-sh  
     hermes skills search https://mintlify.com/docs --source well-known  
@@ -259,7 +319,8 @@ Vercel AI 网关| Vercel AI 网关路由| 放`AI_GATEWAY_API_KEY`
     hermes skills install official/security/1password  
     hermes skills install skills-sh/vercel-labs/json-render/json-render-react --force  
     
-[/code]
+
+```
 
 尖端：
 
@@ -272,18 +333,23 @@ Vercel AI 网关| Vercel AI 网关路由| 放`AI_GATEWAY_API_KEY`
 ### 通过 ACP 在编辑器中使用 Hermes
 
 Hermes 还可以作为 ACP 服务器运行，供 VS Code、Zed 和 JetBrains 等兼容 ACP 的编辑器使用：
-[code]
+
+```
+
     pip install -e '.[acp]'  
     hermes acp  
     
-[/code]
+
+```
 
 有关设置详情，请参阅[ACP 编辑器集成。](https://hermes-agent.nousresearch.com/docs/user-guide/features/acp)
 
 ### 尝试使用 MCP 服务器
 
 通过模型上下文协议连接到外部工具：
-[code]
+
+```
+
     # Add to ~/.hermes/config.yaml  
     mcp_servers:  
       github:  
@@ -292,7 +358,8 @@ Hermes 还可以作为 ACP 服务器运行，供 VS Code、Zed 和 JetBrains 等
         env:  
           GITHUB_PERSONAL_ACCESS_TOKEN: "ghp_xxx"  
     
-[/code]
+
+```
 
 * * *
 

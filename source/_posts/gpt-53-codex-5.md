@@ -23,11 +23,14 @@ description: 朋友们好，看到就是赚到！今天教你完全本地用上 
 打开终端（ PowerShell 或 CMD），执行以下命令：
 
 bash重试  错误原因
-[code]
+
+```
+
     git clone https://github.com/icebear0828/codex-proxy.git
     cd codex-proxy
     copy .env.example .env
-[/code]
+
+```
 
 ## 
 
@@ -62,13 +65,16 @@ docker-compose --version重试  错误原因
 3.1 构建并启动 Codex Proxy 服务
 
 bash重试  错误原因
-[code]
+
+```
+
     # 只用运行这一条（下方是更新）
     docker compose up -d
     
     # 更新拉取新代码时使用重新构建部署（首次请忽略）
     docker compose up -d --build
-[/code]
+
+```
 
 [](https://x.com/laozhang2579/article/2027640589563662745/media/2027627100858159112)
 
@@ -89,7 +95,9 @@ bash重试  错误原因
 1、Claude Code 配置重试  错误原因
 
 json重试  错误原因
-[code]
+
+```
+
     # 编辑配置文件 C:\Users\Administrator\.claude\settings.json
     
     {
@@ -106,14 +114,17 @@ json重试  错误原因
       },
       "alwaysThinkingEnabled": false
     }
-[/code]
+
+```
 
 [](https://x.com/laozhang2579/article/2027640589563662745/media/2027631378578477060)
 
 2、OpenClaw配置重试  错误原因
 
 json重试  错误原因
-[code]
+
+```
+
     # 编辑 ~/.openclaw/openclaw.json,将models设置如下，然后重启网关
     "models": {
         "mode": "merge",
@@ -143,14 +154,17 @@ json重试  错误原因
           }
         }
       }
-[/code]
+
+```
 
 [](https://x.com/laozhang2579/article/2027640589563662745/media/2027634470258642944)
 
 3、Continue (VS Code) 配置重试  错误原因
 
 json重试  错误原因
-[code]
+
+```
+
     # 编辑 C:\Users\Administrator\.continue\config.json
     
     {
@@ -162,7 +176,8 @@ json重试  错误原因
         "apiKey": "pwd"
       }]
     }
-[/code]
+
+```
 
 [](https://x.com/laozhang2579/article/2027640589563662745/media/2027668217653796864)
 
@@ -171,7 +186,9 @@ json重试  错误原因
 4、OpenCode 配置重试  错误原因
 
 json重试  错误原因
-[code]
+
+```
+
     #  编辑C:\Users\Administrator\.config\opencode\opencode.jsonc，将下方配置粘贴覆盖这个配置文件
     
     {
@@ -191,7 +208,8 @@ json重试  错误原因
         }
       }
     }
-[/code]
+
+```
 
 [](https://x.com/laozhang2579/article/2027640589563662745/media/2027666607536017408)
 

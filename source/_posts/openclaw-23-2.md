@@ -73,6 +73,10 @@ ssh -L 18789:127.0.0.1:18789 ubuntu@192.168.160.128  （ip是你上边获取的�
 假如没看到界面，那就是ollama模型和端口问题，关于模型安装和选择还有配置，参照上期视频和教程:<https://www.dhzyw.com/archives/7891.html>
 
 openclaw网关和模型配置命令：
-[code]
+
+```
+
     openclaw onboard --install-daemon
-[/code]
+
+```
+

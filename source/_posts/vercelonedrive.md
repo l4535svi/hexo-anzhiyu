@@ -65,9 +65,12 @@ Vercel部署完毕后，会报错连不上Redis，因为我们还没创建和绑
   2. 输入一个名字，例如 my-onedrive-vercel-index。
 
   3. 将 _Supported account types_  设置为：
-[code]Accounts in any organizational directory (Any Azure AD directory - Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox)
+
+```
+Accounts in any organizational directory (Any Azure AD directory - Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox)
          
-[/code]
+
+```
 
 OneDrive 世纪互联用户设置为 - 任何组织目录（任何 Azure AD 目录 - 多租户）中的帐户。
 
@@ -100,10 +103,13 @@ OneDrive 世纪互联用户设置为 - 任何组织目录（任何 Azure AD 目�
 ### [修改 API 权限](https://ovi.swo.moe/zh/docs/advanced#%E4%BF%AE%E6%94%B9-api-%E6%9D%83%E9%99%90)
 
 Microsoft Graph API 可以设置 API 范围，我们只需要以下三个（ `api.config.js` 里要求的）：
-[code]
+
+```
+
     user.read files.read.all offline_access
     
-[/code]
+
+```
 
 点击 _API permissions_ ，再点击 _Microsoft Graph_ ，再点击 _Delegated permissions_ ，然后搜索：
 
@@ -130,10 +136,13 @@ Your client secret:
 Your obfuscated client secret:
 
 填写 client secret 后，你应该得到一个长得像这样的字符串：
-[code]
+
+```
+
     U2FsdGVkX1830zo3/pFDqaBCVBb37iLw3WnBDWGF9GIB2f4apzv0roemp8Y+iIxI3Ih5ecyukqELQEGzZlYiWg==
     
-[/code]
+
+```
 
 将它替换到 `obfuscatedClientSecret` 里。
 

@@ -20,9 +20,11 @@ description: 打开AppStore 点击右上角的头像 滑到最底部 点击Sign 
   8. **点击下载安装Shadowrocket**
   9. **安装完成后退出Apple ID，登回自己的Apple ID**
 
-[code]
+```
+
     **{****仅在App Store登陆请勿登陆iCloud需要双重验证，验证时请联系管理员获取短信验证码(管理员的Telegram: https://t.me/Its_Jacob_D)****}美区Apple ID:****jacobabc123@163.com****密码:****Its_Jacob_D123**
-[/code]
+
+```
 
 ![](http://jacobsblog.xyz/wp-content/uploads/2021/03/AE3E12B8-6768-46A7-BD66-51F5AD196423_1_102_o-473x1024.jpeg)
 

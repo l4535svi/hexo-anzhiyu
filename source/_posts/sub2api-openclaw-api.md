@@ -25,7 +25,9 @@ sub2api 处在应用与上游模型之间，负责请求转发、统一鉴权、
  
 
 ### 架构示意（文字图）
-[code]
+
+```
+
     App / OpenClaw
           |
           |  OpenAI-compatible API
@@ -36,7 +38,8 @@ sub2api 处在应用与上游模型之间，负责请求转发、统一鉴权、
           +-- Provider B
           +-- Provider C
     
-[/code]
+
+```
 
  
 
@@ -49,10 +52,13 @@ sub2api 处在应用与上游模型之间，负责请求转发、统一鉴权、
 ## 部署 sub2api
 
 使用 kejilion.sh 一键部署：
-[code]
+
+```
+
     bash <(curl -sL kejilion.sh) app sub2api
     
-[/code]
+
+```
 
  
 
@@ -67,10 +73,13 @@ sub2api 处在应用与上游模型之间，负责请求转发、统一鉴权、
 ## 部署 OpenClaw
 
 同样使用 kejilion.sh 一键部署：
-[code]
+
+```
+
     bash <(curl -sL kejilion.sh) app OpenClaw
     
-[/code]
+
+```
 
  
 
@@ -89,23 +98,29 @@ sub2api 处在应用与上游模型之间，负责请求转发、统一鉴权、
  
 
 ### 方式一：环境变量（推荐用于容器或 systemd 服务）
-[code]
+
+```
+
     # OpenClaw 环境变量示例（占位符请替换）
     OPENAI_API_BASE=https://your-sub2api.example.com/v1
     OPENAI_API_KEY=your-sub2api-key
     
-[/code]
+
+```
 
  
 
 ### 方式二：配置文件写法（示例占位符）
-[code]
+
+```
+
     # config.yaml / app.yml 中的示例片段（字段名按你实际配置文件为准）
     openai:
       api_base: "https://your-sub2api.example.com/v1"
       api_key: "your-sub2api-key"
     
-[/code]
+
+```
 
  
 

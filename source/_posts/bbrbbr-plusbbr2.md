@@ -28,11 +28,14 @@ BBR解决了两个问题：
 ## 二、选择VPS主机及BBR脚本  
 
 BBR加速脚本虾皮路直接选择安装Loc论坛上的不卸载内核的BBR脚本
-[code]
+
+```
+
     解释
     
     wget -N --no-check-certificate "https://github.000060000.xyz/tcpx.sh" && chmod +x tcpx.sh && ./tcpx.sh
-[/code]
+
+```
 
 [![哪个BBR/BBR PLUS/BBR2加速脚本最快最好 最新脚本及设置详细评测插图1](http://www.zmrbk.com/wp-content/uploads/a5263c0e77f1e94d3678a00b6df42887.jpg)](http://www.zmrbk.com/wp-content/uploads/a5263c0e77f1e94d3678a00b6df42887.jpg)
 
@@ -45,11 +48,14 @@ BBR加速脚本虾皮路直接选择安装Loc论坛上的不卸载内核的BBR�
 注意：每个VPS主机的环境和设置都不一样，本次脚本测试仅供参考，并不具备直接指导意义，因此对自己随意安装设置BBR脚本所带来的后果概不负责。
 
 测试的脚本虾皮路选择老鬼的测试脚本
-[code]
+
+```
+
     解释
     
     wget -qO- git.io/superbench.sh | bash
-[/code]
+
+```
 
 ## 三、BBR/BBR PLUS/BBR2加速脚本对比测试  
 

@@ -20,25 +20,30 @@ description: 1、OpenWrt软路由固件：【 点击进入 】 更多固件可�
 
   * 一键安装脚本
 
-[code]
+```
+
     解释
     
     wget https://gitee.com/mvscode/frps-onekey/raw/master/install-frps.sh -O ./install-frps.sh
     chmod 700 ./install-frps.sh
     ./install-frps.sh installCopy
-[/code]
+
+```
 
   * 设置后台运行
 
-[code]
+```
+
     解释
     
     nohup ./frps -c frps.ini >/dev/null 2>&1 &Copy
-[/code]
+
+```
 
   * 防火墙相关（国内服务器可以直接设置防火墙规则）
 
-[code]
+```
+
     解释
     
     Debian或Ubuntu系统放行端口：
@@ -47,11 +52,13 @@ description: 1、OpenWrt软路由固件：【 点击进入 】 更多固件可�
     
     CentOS系统放行端口：
     firewall-cmd --zone=public --add-port=端口号/tcp --permanentCopy
-[/code]
+
+```
 
   * FRP常用命令
 
-[code]
+```
+
     解释
     
     开启FRP：frps start
@@ -65,7 +72,8 @@ description: 1、OpenWrt软路由固件：【 点击进入 】 更多固件可�
     查看FRP版本：frps version
     
     检查FRP运行状态：frps statusCopy
-[/code]
+
+```
 
 4、openwrt设置
 
@@ -74,11 +82,13 @@ description: 1、OpenWrt软路由固件：【 点击进入 】 更多固件可�
     * luci-app-frpc和汉化包下载：【[点击进入](https://github.com/kuoruan/luci-app-frpc/releases)】
     * 查看CPU架构
 
-[code]
+```
+
     解释
     
     cat /etc/os-release |grep ARCHCopy
-[/code]
+
+```
 
   * 设置
 
@@ -102,46 +112,62 @@ description: 1、OpenWrt软路由固件：【 点击进入 】 更多固件可�
 [](https://github.com/MvsCode/frps-onekey?tab=readme-ov-file#gitee)
 
 解释
-[code]
+
+```
+
     wget https://gitee.com/mvscode/frps-onekey/raw/master/install-frps.sh -O ./install-frps.sh
     chmod 700 ./install-frps.sh
     ./install-frps.sh install
-[/code]
+
+```
 
 #### Github
 
 [](https://github.com/MvsCode/frps-onekey?tab=readme-ov-file#github)
 
 解释
-[code]
+
+```
+
     wget https://raw.githubusercontent.com/mvscode/frps-onekey/master/install-frps.sh -O ./install-frps.sh
     chmod 700 ./install-frps.sh
     ./install-frps.sh install
-[/code]
+
+```
 
 ### Uninstall（卸载）
 
 [](https://github.com/MvsCode/frps-onekey?tab=readme-ov-file#uninstall%E5%8D%B8%E8%BD%BD)
 
 解释
-[code]
+
+```
+
     ./install-frps.sh uninstall
-[/code]
+
+```
 
 ### Update（更新）
 
 [](https://github.com/MvsCode/frps-onekey?tab=readme-ov-file#update%E6%9B%B4%E6%96%B0)
 
 解释
-[code]
+
+```
+
     ./install-frps.sh update
-[/code]
+
+```
 
 ### Server management（服务管理器）
 
 [](https://github.com/MvsCode/frps-onekey?tab=readme-ov-file#server-management%E6%9C%8D%E5%8A%A1%E7%AE%A1%E7%90%86%E5%99%A8)
 
 解释
-[code]
+
+```
+
     Usage: /etc/init.d/frps {start|stop|restart|status|config|version}
-[/code]
+
+```
+

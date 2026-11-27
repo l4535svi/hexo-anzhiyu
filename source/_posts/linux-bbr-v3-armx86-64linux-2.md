@@ -11,22 +11,31 @@ description: 1️⃣ 下载脚本 打开终端，运行以下命令： wget http
 #### 1️⃣ 下载脚本
 
 打开终端，运行以下命令：
-[code]
+
+```
+
     wget https://raw.githubusercontent.com/byJoey/Actions-bbr-v3/refs/heads/main/install.sh
     
-[/code]
+
+```
 
 #### 2️⃣ 赋予脚本执行权限
-[code]
+
+```
+
     chmod +x install.sh
     
-[/code]
+
+```
 
 #### 3️⃣ 运行脚本
-[code]
+
+```
+
     sudo ./install.sh
     
-[/code]
+
+```
 
 然后按照提示操作就行啦！
 

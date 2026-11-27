@@ -19,18 +19,24 @@ rclone 想在 Windows 上用 FUSE 方式挂载盘符，但系统里 **找不到 
   
 
 通常在：
-[code]
+
+```
+
     C:\Users\你的用户名\AppData\Local\rclone\
     
-[/code]
+
+```
 
 里面有：
-[code]
+
+```
+
     vfs\
     vfsMeta\
     one\
     
-[/code]
+
+```
 
 甚至多几个随机名文件夹。
 
@@ -49,23 +55,32 @@ rclone 想在 Windows 上用 FUSE 方式挂载盘符，但系统里 **找不到 
      * 用“以管理员身份运行”打开 PowerShell 或 CMD。
 
      * 进到 rclone 目录，例如：
-[code] cd D:\rclone-v1.71.2-windows-amd64\
+
+```
+ cd D:\rclone-v1.71.2-windows-amd64\
            
-[/code]
+
+```
 
      * 执行挂载命令（你的是 remote 叫 `one`，盘符可以换成 R: / X:）：
-[code] .\rclone.exe mount one: R: --vfs-cache-mode full --fuse-flag sync_read
+
+```
+ .\rclone.exe mount one: R: --vfs-cache-mode full --fuse-flag sync_read
            
-[/code]
+
+```
 
 > 如果之前加了 `--network-mode` 也行，但先用上面这个简单版本测试。
 
   3. **如果提示“已经在运行 / 端口占用”**
 
      * 先关掉所有旧的 rclone 窗口，或者执行：
-[code] taskkill /f /im rclone.exe
+
+```
+ taskkill /f /im rclone.exe
            
-[/code]
+
+```
 
      * 再重新跑上面的挂载命令。
 
@@ -78,28 +93,40 @@ rclone 想在 Windows 上用 FUSE 方式挂载盘符，但系统里 **找不到 
 # ✅ **从零开始配置 OneDrive Business（完整命令流程）**
 
 ## **步骤 1：进入 rclone 文件夹**
-[code] 
+
+```
+ 
     cd D:\huansuan\rclone-v1.71.2-windows-amd64\
     
-[/code]
+
+```
 
 ## **步骤 2：开始配置**
-[code] 
+
+```
+ 
     .\rclone.exe config
     
-[/code]
+
+```
 
 出现提示后：
-[code] 
+
+```
+ 
     n/s/q>
     
-[/code]
+
+```
 
 输入：
-[code] 
+
+```
+ 
     n
     
-[/code]
+
+```
 
 新建一个 remote
 
@@ -114,66 +141,87 @@ rclone 想在 Windows 上用 FUSE 方式挂载盘符，但系统里 **找不到 
 ## **① remote name（名字随便，建议）**
 
 输入：
-[code] 
+
+```
+ 
     one
     
-[/code]
+
+```
 
 * * *
 
 ## **② 选择 storage 类型**
 
 出现大列表时，输入：
-[code] 
+
+```
+ 
     38
     
-[/code]
+
+```
 
 也就是：
-[code] 
+
+```
+ 
     Microsoft OneDrive (onedrive)
     
-[/code]
+
+```
 
 * * *
 
 ## **③ client_id**
 
 直接回车（留空）
-[code] 
+
+```
+ 
     client_id>
     
-[/code]
+
+```
 
 * * *
 
 ## **④ client_secret**
 
 直接回车（留空）
-[code] 
+
+```
+ 
     client_secret>
     
-[/code]
+
+```
 
 * * *
 
 ## **⑤ region（区域）**
 
 出现：
-[code] 
+
+```
+ 
     1) global
     2) us
     3) de
     4) cn
     
-[/code]
+
+```
 
 你使用的是 **国际 OneDrive 5T / E5**  
 输入：
-[code] 
+
+```
+ 
     1
     
-[/code]
+
+```
 
 * * *
 
@@ -181,46 +229,64 @@ rclone 想在 Windows 上用 FUSE 方式挂载盘符，但系统里 **找不到 
 
 这里 **必须空着**  
 直接回车：
-[code] 
+
+```
+ 
     tenant>
     
-[/code]
+
+```
 
 * * *
 
 ## **⑦ advanced config**
-[code] 
+
+```
+ 
     y/n>
     
-[/code]
+
+```
 
 输入：
-[code] 
+
+```
+ 
     n
     
-[/code]
+
+```
 
 * * *
 
 ## **⑧ 使用浏览器授权**
-[code] 
+
+```
+ 
     y/n>
     
-[/code]
+
+```
 
 输入：
-[code] 
+
+```
+ 
     y
     
-[/code]
+
+```
 
 浏览器会跳出微软登录窗口 → 登录你的 OneDrive（必须是 Business/E5 账号）
 
 登录成功后网页会显示：
-[code] 
+
+```
+ 
     Success! All done.
     
-[/code]
+
+```
 
 PowerShell 会显示获得 token。
 
@@ -229,7 +295,9 @@ PowerShell 会显示获得 token。
 ## **⑨ Type of connection（非常关键）**
 
 出现：
-[code] 
+
+```
+ 
     1) OneDrive Personal or Business
     2) Root Sharepoint site
     3) Sharepoint site URL
@@ -238,13 +306,17 @@ PowerShell 会显示获得 token。
     6) siteID
     7) path
     
-[/code]
+
+```
 
 你必须输入：
-[code] 
+
+```
+ 
     1
     
-[/code]
+
+```
 
 这是正常 OneDrive 而不是 SharePoint。
 
@@ -253,53 +325,74 @@ PowerShell 会显示获得 token。
 ## **⑩ 选择 drive**
 
 如果你的账号是 5T，会显示一条：
-[code] 
+
+```
+ 
     1) OneDrive (business)
     
-[/code]
+
+```
 
 输入：
-[code] 
+
+```
+ 
     1
     
-[/code]
+
+```
 
 * * *
 
 ## **⑪ Drive OK？**
-[code] 
+
+```
+ 
     y/n>
     
-[/code]
+
+```
 
 输入：
-[code] 
+
+```
+ 
     y
     
-[/code]
+
+```
 
 * * *
 
 ## **⑫ 保存并退出**
-[code] 
+
+```
+ 
     e/n/d/r/c/s/q>
     
-[/code]
+
+```
 
 输入：
-[code] 
+
+```
+ 
     q
     
-[/code]
+
+```
 
 * * *
 
 # 🎉 **配置完成！**
 
 现在你可以挂载：
-[code] 
+
+```
+ 
     .\rclone.exe mount one: X: --vfs-cache-mode full --fuse-flag sync_read
-[/code]
+
+```
 
 ## 一、这个报错到底是什么
 
@@ -329,10 +422,13 @@ PowerShell 会显示获得 token。
 ### 1\. 确认没有 rclone 正在后台跑
 
 在 PowerShell 里执行（管理员权限更好）：
-[code] 
+
+```
+ 
     taskkill /f /im rclone.exe
     
-[/code]
+
+```
 
 如果提示“没有找到进程 rclone.exe”就无所谓，说明已经没有了。
 
@@ -341,10 +437,13 @@ PowerShell 会显示获得 token。
 ### 2\. 清理 rclone 本地缓存
 
 在资源管理器打开：
-[code] 
+
+```
+ 
     C:\Users\你的Windows用户名\AppData\Local\rclone\
     
-[/code]
+
+```
 
 把里面的 `vfs`、`vfsMeta` 之类的缓存文件夹全部删掉（删不掉的先跳过，重启后再试也行）。
 
@@ -353,10 +452,13 @@ PowerShell 会显示获得 token。
 ### 3\. 让 OneDrive 服务器端也清理残留上传
 
 在 rclone 目录里（有 rclone.exe 的那个文件夹）打开 PowerShell，执行：
-[code] 
+
+```
+ 
     .\rclone.exe cleanup one:
     
-[/code]
+
+```
 
 这个命令就是专门用来告诉 OneDrive：  
 “把这个网盘里没用的 uploadSession / 未完成上传 清理掉”。
@@ -368,7 +470,9 @@ PowerShell 会显示获得 token。
 ## 三、重新挂载（先用一个相对保守、兼容性好的命令）
 
 还是在 rclone 所在目录，先试一个**简单稳定版** 挂载命令，不加 `--fuse-flag sync_read` 这些花活：
-[code] 
+
+```
+ 
     .\rclone.exe mount one: X: `
       --vfs-cache-mode full `
       --vfs-cache-max-size 20G `
@@ -380,7 +484,8 @@ PowerShell 会显示获得 token。
       --multi-thread-streams 4 `
       -vv
     
-[/code]
+
+```
 
 几条关键说明：
 

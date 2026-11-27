@@ -31,9 +31,11 @@ description: 免流原理 利用混淆参数来欺骗运营商从而伪装流量
   * **如果想实现零跳点，请使用电信停机卡**
   * **如果要使用国内节点，需要改远程DNS[Remote DNS(Optional)]**
 
-[code]
+```
+
     **{****V2RayNG使用国内免流节点时需要把远程DNS设置成114.114.114.114，不然会很慢，Shadowrocket请忽略此步骤国内节点是ping不通Google的，连上节点后直接到浏览器浏览网页进行测试(服务端已设置自动分流，可以ping通谷歌了)****}**
-[/code]
+
+```
 
   * ![](https://jacobsblog.xyz/wp-content/uploads/2021/05/81BA7AFC-9F26-47FE-87DF-B398A96746C8-512x1024.jpeg)**填写或者替换原有的host，路径不用改**
   * ![](https://jacobsblog.xyz/wp-content/uploads/2021/05/A5AA46BE-1171-4A1B-B083-8DC1385D5CD6-512x1024.jpeg)**点击保存**

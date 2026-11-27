@@ -37,18 +37,24 @@ Hysteria2 是一种现代化的加密传输协议，专为低延迟和高性能�
 ![](https://i0.wp.com/kejilaowang.com/wp-content/uploads/2025/01/image-10-1024x292.png?resize=1024%2C292&ssl=1)
 
 一键安装代码
-[code]
+
+```
+
     解释
     
     bash <(curl -fsSL https://raw.githubusercontent.com/jonssonyan/h-ui/main/install.sh)
-[/code]
+
+```
 
 原作者GitHub
-[code]
+
+```
+
     解释
     
     https://github.com/jonssonyan/h-ui
-[/code]
+
+```
 
 ###  用户名、密码和端口号
 

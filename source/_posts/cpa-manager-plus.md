@@ -15,20 +15,26 @@ description: 一键安装脚本 bash <(curl -sL kejilion.sh) app CLIProxyAPI 安
 安装脚本适合第一次部署，或已经有 CPA、只想把 CPAMP 跑起来的环境。它不会直接覆盖已有配置文件；执行前会先展示安装摘要，确认后才写入文件和启动服务。
 
 ## 
-[code]
+
+```
+
     cd ~/cpa-manager-plus
     cat secrets/cpamp-admin-key
-[/code]
-[/code]
+
+```
 
 如果输出类似：
-[code] 
+
+```
+ 
     cpamp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-[/code]
-[/code]
+
+```
 
 这就是登录密钥。打开：
-[code] 
+
+```
+ 
     http://你的服务器IP:18317/management.html  
       
     
@@ -41,13 +47,15 @@ description: 一键安装脚本 bash <(curl -sL kejilion.sh) app CLIProxyAPI 安
     
     
     docker image prune -f
-[/code]
-[/code]
+
+```
 
 ## 更新
 
 进入目录：
-[code] 
+
+```
+ 
     cd /root/cpa-manager-plus  
     
     
@@ -55,10 +63,9 @@ description: 一键安装脚本 bash <(curl -sL kejilion.sh) app CLIProxyAPI 安
     
     
     
-[code]
     docker pull seakee/cpa-manager-plus:latest
-[/code]
-[/code]
+
+```
 
 官方 Docker 镜像持续发布新版，例如近期版本包含 v1.10、v1.11 等更新。
 
@@ -67,23 +74,25 @@ description: 一键安装脚本 bash <(curl -sL kejilion.sh) app CLIProxyAPI 安
 如果你原来用 docker-compose：
 
 直接：
-[code] 
+
+```
+ 
     docker compose up -d
-[/code]
-[/code]
+
+```
 
 如果提示旧镜像：
-[code] 
+
+```
+ 
     docker compose pull
     docker compose up -d
-[/code]
-[/code]
+
+```
 
 这是最推荐方式。
 
 `
-[/code]
-[/code]
 
 ## 清理docker不用的；docker image prune -f
 
@@ -92,16 +101,22 @@ description: 一键安装脚本 bash <(curl -sL kejilion.sh) app CLIProxyAPI 安
   
 
 下载脚本后运行：
-[code]
+
+```
+
     curl -fsSLO https://raw.githubusercontent.com/seakee/CPA-Manager-Plus/main/bin/install-cpamp.sh
     bash install-cpamp.sh
-[/code]
+
+```
 
 如果需要先查看内容：
-[code]
+
+```
+
     less install-cpamp.sh
     bash install-cpamp.sh
-[/code]
+
+```
 
 脚本会按顺序处理：
 

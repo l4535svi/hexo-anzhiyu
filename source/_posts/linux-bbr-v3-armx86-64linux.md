@@ -36,7 +36,9 @@ BBR，全称 Bottleneck Bandwidth and RTT，是 Google 提出的 TCP 拥塞控�
 ## 🚀 脚本功能
 
 运行脚本后，你会进入一个操作菜单，如下：
-[code]
+
+```
+
     解释
     
     | ╭( ･ㅂ･)و ✧ 你可以选择以下操作哦：  
@@ -54,7 +56,8 @@ BBR，全称 Bottleneck Bandwidth and RTT，是 Google 提出的 TCP 拥塞控�
      
     
      
-[/code]
+
+```
 
 每个选项都对应一个实用功能，无论你是小白还是老鸟，都会觉得超简单。
 
@@ -65,7 +68,9 @@ BBR，全称 Bottleneck Bandwidth and RTT，是 Google 提出的 TCP 拥塞控�
 ### 1️⃣ 下载脚本
 
 打开终端，运行以下命令：
-[code]
+
+```
+
     解释
     
     | wget https://raw.githubusercontent.com/byJoey/Actions-bbr-v3/refs/heads/main/install.sh  
@@ -76,10 +81,13 @@ BBR，全称 Bottleneck Bandwidth and RTT，是 Google 提出的 TCP 拥塞控�
      
     
      
-[/code]
+
+```
 
 ### 2️⃣ 赋予脚本执行权限
-[code]
+
+```
+
     解释
     
     | chmod +x install.sh  
@@ -90,10 +98,13 @@ BBR，全称 Bottleneck Bandwidth and RTT，是 Google 提出的 TCP 拥塞控�
      
     
      
-[/code]
+
+```
 
 ### 3️⃣ 运行脚本
-[code]
+
+```
+
     解释
     
     | sudo ./install.sh  
@@ -104,7 +115,8 @@ BBR，全称 Bottleneck Bandwidth and RTT，是 Google 提出的 TCP 拥塞控�
      
     
      
-[/code]
+
+```
 
 然后按照提示操作就行啦！
 
@@ -132,7 +144,9 @@ BBR，全称 Bottleneck Bandwidth and RTT，是 Google 提出的 TCP 拥塞控�
 ## 🎨 脚本界面展示
 
 运行脚本后，首先会看到一段萌萌的欢迎语：
-[code]
+
+```
+
     解释
     
     | ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  
@@ -148,7 +162,8 @@ BBR，全称 Bottleneck Bandwidth and RTT，是 Google 提出的 TCP 拥塞控�
      
     
      
-[/code]
+
+```
 
 然后，你就可以选择你想执行的操作，每一步都会有详细的提示，确保不会出错。
 

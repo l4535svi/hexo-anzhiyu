@@ -3,9 +3,9 @@ title: 用Docker搭建一个在线观影平台LibreTV
 date: '2025-05-09 12:00:00'
 cover: /img/covers/dockerlibretv.jpg
 tags:
-- Netfix
+- Netflix
 categories:
-- Netfix
+- Netflix
 description: 用Docker搭建一个在线观影平台LibreTV yyzq 2025-04-30 / 0 评论 / 6 点赞 / 1,790 阅读 / 1,341 字 04/30 前言 关于在线影视类的项目之前给大家推荐苹果CMS的搭建教程，那么今天给大家分享一个类似的在线观影项目-LibreT
 ---
 # 用Docker搭建一个在线观影平台LibreTV
@@ -79,29 +79,43 @@ Ubuntu安装Docker和Docker-compose（中文）
 推荐直接用一键脚本
 
 ## docker安装脚本
-[code]
+
+```
+
     bash <(curl -sSL https://cdn.jsdelivr.net/gh/SuperManito/LinuxMirrors@main/DockerInstallation.sh)
     
-[/code]
+
+```
 
 ## docker-compose安装脚本
-[code]
+
+```
+
     curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose && chmod +x /usr/local/bin/docker-compose
     
-[/code]
+
+```
 
 # 二、创建docker-compose.yml文件
-[code]
+
+```
+
     mkdir libretv;cd libretv #创建一个目录，并进入此目录
     
-[/code]
+
+```
 
 然后再新建docker-compose.yml
-[code]
+
+```
+
     vim docker-compose.yml
     
-[/code]
-[code]
+
+```
+
+```
+
     services:
       libretv:
         image: bestzwei/libretv:latest  # 使用 libretv 的最新镜像
@@ -112,34 +126,47 @@ Ubuntu安装Docker和Docker-compose（中文）
           - PASSWORD=123456             # 设置访问密码（留空表示不启用密码保护）
         restart: always                 # 容器异常退出后自动重启
     
-[/code]
+
+```
 
 # 三、执行容器运行命令
-[code]
+
+```
+
     docker-compose up -d #运行容器
     
-[/code]
-[code]
+
+```
+
+```
+
     docker-compose ps  #查看是否开启成功
     
-[/code]
+
+```
 
 正常启动如下所示
-[code]
+
+```
+
      docker-compose ps
     NAME      IMAGE                     COMMAND                  SERVICE   CREATED        STATUS                  PORTS
     libretv   bestzwei/libretv:latest   "/docker-entrypoint.…"   libretv   43 hours ago   Up 43 hours (healthy)   443/tcp, 0.0.0.0:8899->80/tcp, [::]:8899->80/tcp
     
-[/code]
+
+```
 
 # 四、打开web页面使用
 
 成功以后需要打开自己相应的端口(8899)防火墙就可以web端访问了  
 打开自己VPS的端口加ip进入初始化页面
-[code]
+
+```
+
     http://ip:8899
     
-[/code]
+
+```
 
 有设置密码的自己输入  
 ![image-1746003196279](https://www.ywsj365.com/upload/2025/04/image-1746003196279.png)
@@ -205,7 +232,8 @@ NginxProxyManager
   5. 点击"Deploy site"
   6. 可选：在"Site settings" > “Build & deploy” > "Environment"中配置密码保护
 
-[code]
+```
+
     关于在线影视类的项目之前给大家推荐苹果CMS的搭建教程，那么今天给大家分享一个类似的在线观影项目-LibreTV  
       
       
@@ -345,4 +373,6 @@ NginxProxyManager
       
     等待一会即可使用自定义的域名访问  
     
-[/code]
+
+```
+

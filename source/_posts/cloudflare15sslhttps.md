@@ -8,7 +8,9 @@ categories:
 - 免费域名
 description: 目前最常用的免费证书是 Let’s Encrypt，但是它的有效期只有 90 天，到期需要手动更新。 不过也有很多工具可以自动更新续期，例如： 宝塔面板 certbot Nginx Proxy Manager nginxWebUI 等… 现在我部分域名使用 Cloudflare（
 ---
-[code]
+
+```
+
     目前最常用的免费证书是 Let’s Encrypt，但是它的有效期只有 90 天，到期需要手动更新。  
       
     不过也有很多工具可以自动更新续期，例如：  
@@ -68,4 +70,6 @@ description: 目前最常用的免费证书是 Let’s Encrypt，但是它的有
       
     主要区别在于颁发机构、支持的域名数量、有效期和自动续订。Let’s Encrypt R3证书需要手动续订，而Cloudflare E1证书会自动续订。Let’s Encrypt R3证书适用于个人网站、博客和小型企业网站，而Cloudflare E1证书适用于中小型企业网站和电子商务网站。  
     
-[/code]
+
+```
+

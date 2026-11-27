@@ -33,10 +33,13 @@ description: 最近 GitHub Trending 榜首的 OpenClaw (原名 ClawdBot / Mlotbo
 在 Codespaces 的下方终端（Terminal）中运行官方安装命令：
 
 Bash
-[code]
+
+```
+
     curl -fsSL https://openclaw.ai/install.sh | bash
     
-[/code]
+
+```
 
 安装速度很快，约两三分钟即可完成。
 
@@ -63,10 +66,13 @@ Bash
 codespaces 限制无法自启动在终端运行：
 
 Bash
-[code]
+
+```
+
     openclaw gateway --verbose
     
-[/code]
+
+```
 
 // 后台运行 
 
@@ -79,9 +85,12 @@ nohup openclaw gateway --verbose > /tmp/openclaw-gateway.log 2>&1 &
   * 回到终端，**先停止服务**  (Ctrl+C)，然后运行：
 
 Bash
-[code]openclaw pairing approve XXXX
+
+```
+openclaw pairing approve XXXX
         
-[/code]
+
+```
 
 (按提示输入配对码)
 

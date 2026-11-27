@@ -18,7 +18,9 @@ description: NEZHA配置生成器 根据个人情况填写参数，然后生成�
 ![e8d436226552a76b001.webp](https://img.211200.xyz/i/2025/07/04/e8d436226552a76b001.webp)  
 ![42c281d457cf7e0a001.webp](https://img.211200.xyz/i/2025/07/04/42c281d457cf7e0a001.webp)  
 这个时候我们在将以下代码添加到美化代码的下方即可：
-[code]
+
+```
+
     <script>
     /*
       window.TrafficScriptConfig = {
@@ -33,7 +35,8 @@ description: NEZHA配置生成器 根据个人情况填写参数，然后生成�
     </script>
     <script src="https://cdn.jsdelivr.net/gh/8730062/installnet@main/jdt.js"></script>
     
-[/code]
+
+```
 
 直接添加在我们之前美化代码的末尾之后就行  
 ![79eb8bf3d75bf1da001.webp](https://img.211200.xyz/i/2025/07/04/79eb8bf3d75bf1da001.webp)  

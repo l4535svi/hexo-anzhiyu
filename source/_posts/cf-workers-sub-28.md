@@ -31,20 +31,27 @@ description: 定制汇聚订阅 CF-Workers-SUB 汇聚订阅 是将 多个节点 
 解释
 
 plaintext
-[code]
+
+```
+
     1  
     2  
     3  
     
-[/code]
+
+```
 
 | 
-[code]
+
+```
+
     trojan://34ec6bdf-602c-4bbe-933a-5c0823524201@cmc6.5gsieuvip.vn:443?security=tls&allowInsecure=1&type=tcp&headerType=none#%E4%BA%9A%E5%A4%AA%E5%9C%B0%E5%8C%BA1  
     vmess://ew0KICAidiI6ICIyIiwNCiAgInBzIjogIlx1NEZDNFx1N0Y1N1x1NjVBRjIiLA0KICAiYWRkIjogIjE5NC44Ny42OS4yNDQiLA0KICAicG9ydCI6ICIzNjY0MSIsDQogICJpZCI6ICIxY2M1OWEzYS05NjI1LTQwZjctYjBlNi1lMjMzMjg2YWU4MmQiLA0KICAiYWlkIjogIjAiLA0KICAic2N5IjogImF1dG8iLA0KICAibmV0IjogIndzIiwNCiAgInR5cGUiOiAibm9uZSIsDQogICJob3N0IjogIiIsDQogICJwYXRoIjogIi8iLA0KICAidGxzIjogIiIsDQogICJzbmkiOiAiIiwNCiAgImFscG4iOiAiIiwNCiAgImZwIjogIiINCn0=  
     ss://YWVzLTI1Ni1nY206S2l4THZLendqZWtHMDBybQ%3D%3D@38.114.114.77:5500#%E7%BE%8E%E5%9B%BD3  
     
-[/code]  
+
+```
+  
   
 ---|---  
   
@@ -53,16 +60,23 @@ plaintext
 解释
 
 plaintext
-[code]
+
+```
+
     1  
     
-[/code]
+
+```
 
 | 
-[code]
+
+```
+
     dHJvamFuOi8vMzRlYzZiZGYtNjAyYy00YmJlLTkzM2EtNWMwODIzNTI0MjAxQGNtYzYuNWdzaWV1dmlwLnZuOjQ0Mz9zZWN1cml0eT10bHMmYWxsb3dJbnNlY3VyZT0xJnR5cGU9dGNwJmhlYWRlclR5cGU9bm9uZSMlRTQlQkElOUElRTUlQTQlQUElRTUlOUMlQjAlRTUlOEMlQkExCnZtZXNzOi8vZXcwS0lDQWlkaUk2SUNJeUlpd05DaUFnSW5Ceklqb2dJbHgxTkVaRE5GeDFOMFkxTjF4MU5qVkJSaklpTEEwS0lDQWlZV1JrSWpvZ0lqRTVOQzQ0Tnk0Mk9TNHlORFFpTEEwS0lDQWljRzl5ZENJNklDSXpOalkwTVNJc0RRb2dJQ0pwWkNJNklDSXhZMk0xT1dFellTMDVOakkxTFRRd1pqY3RZakJsTmkxbE1qTXpNamcyWVdVNE1tUWlMQTBLSUNBaVlXbGtJam9nSWpBaUxBMEtJQ0FpYzJONUlqb2dJbUYxZEc4aUxBMEtJQ0FpYm1WMElqb2dJbmR6SWl3TkNpQWdJblI1Y0dVaU9pQWlibTl1WlNJc0RRb2dJQ0pvYjNOMElqb2dJaUlzRFFvZ0lDSndZWFJvSWpvZ0lpOGlMQTBLSUNBaWRHeHpJam9nSWlJc0RRb2dJQ0p6Ym1raU9pQWlJaXdOQ2lBZ0ltRnNjRzRpT2lBaUlpd05DaUFnSW1ad0lqb2dJaUlOQ24wPQpzczovL1lXVnpMVEkxTmkxblkyMDZTMmw0VEhaTGVuZHFaV3RITURCeWJRJTNEJTNEQDM4LjExNC4xMTQuNzc6NTUwMCMlRTclQkUlOEUlRTUlOUIlQkQz  
     
-[/code]  
+
+```
+  
   
 ---|---  
   
@@ -106,20 +120,27 @@ plaintext
 解释
 
 plaintext
-[code]1  
+
+```
+1  
          2  
          3  
          4  
          
-[/code]
+
+```
 
 | 
-[code]vless://b7a392e2-4ef0-4496-90bc-1c37bb234904@cf.090227.xyz:443?encryption=none&security=tls&sni=edgetunnel-2z2.pages.dev&fp=random&type=ws&host=edgetunnel-2z2.pages.dev&path=%2F%3Fed%3D2048#%E5%8A%A0%E5%85%A5%E6%88%91%E7%9A%84%E9%A2%91%E9%81%93t.me%2FCMLiussss%E8%A7%A3%E9%94%81%E6%9B%B4%E5%A4%9A%E4%BC%98%E9%80%89%E8%8A%82%E7%82%B9  
+
+```
+vless://b7a392e2-4ef0-4496-90bc-1c37bb234904@cf.090227.xyz:443?encryption=none&security=tls&sni=edgetunnel-2z2.pages.dev&fp=random&type=ws&host=edgetunnel-2z2.pages.dev&path=%2F%3Fed%3D2048#%E5%8A%A0%E5%85%A5%E6%88%91%E7%9A%84%E9%A2%91%E9%81%93t.me%2FCMLiussss%E8%A7%A3%E9%94%81%E6%9B%B4%E5%A4%9A%E4%BC%98%E9%80%89%E8%8A%82%E7%82%B9  
          vmess://ew0KICAidiI6ICIyIiwNCiAgInBzIjogIuWKoOWFpeaIkeeahOmikemBk3QubWUvQ01MaXVzc3Nz6Kej6ZSB5pu05aSa5LyY6YCJ6IqC54K5PuiLseWbvSDlgKvmlabph5Hono3ln44iLA0KICAiYWRkIjogImNmLjA5MDIyNy54eXoiLA0KICAicG9ydCI6ICI4NDQzIiwNCiAgImlkIjogIjAzZmNjNjE4LWI5M2QtNjc5Ni02YWVkLThhMzhjOTc1ZDU4MSIsDQogICJhaWQiOiAiMCIsDQogICJzY3kiOiAiYXV0byIsDQogICJuZXQiOiAid3MiLA0KICAidHlwZSI6ICJub25lIiwNCiAgImhvc3QiOiAicHBmdjJ0bDl2ZW9qZC1tYWlsbGF6eS5wYWdlcy5kZXYiLA0KICAicGF0aCI6ICIvamFkZXIuZnVuOjQ0My9saW5rdndzIiwNCiAgInRscyI6ICJ0bHMiLA0KICAic25pIjogInBwZnYydGw5dmVvamQtbWFpbGxhenkucGFnZXMuZGV2IiwNCiAgImFscG4iOiAiIiwNCiAgImZwIjogIiINCn0=  
          https://sub.xf.free.hr/auto  
          https://hy2sub.pages.dev  
          
-[/code]  
+
+```
+  
   
 ---|---  
 
@@ -141,14 +162,21 @@ plaintext
 解释
 
 plaintext
-[code]1  
+
+```
+1  
         
-[/code]
+
+```
 
 | 
-[code]let mytoken = 'auto';  
+
+```
+let mytoken = 'auto';  
         
-[/code]  
+
+```
+  
   
 ---|---  
 如上所示，你的订阅地址则如下：
@@ -156,14 +184,21 @@ plaintext
 解释
 
 plaintext
-[code]1  
+
+```
+1  
         
-[/code]
+
+```
 
 | 
-[code]https://sub.cmliussss.workers.dev/auto  
+
+```
+https://sub.cmliussss.workers.dev/auto  
         
-[/code]  
+
+```
+  
   
 ---|---  
 
@@ -175,20 +210,27 @@ plaintext
 解释
 
 plaintext
-[code]1  
+
+```
+1  
          2  
          3  
          4  
          
-[/code]
+
+```
 
 | 
-[code]vless://b7a392e2-4ef0-4496-90bc-1c37bb234904@cf.090227.xyz:443?encryption=none&security=tls&sni=edgetunnel-2z2.pages.dev&fp=random&type=ws&host=edgetunnel-2z2.pages.dev&path=%2F%3Fed%3D2048#%E5%8A%A0%E5%85%A5%E6%88%91%E7%9A%84%E9%A2%91%E9%81%93t.me%2FCMLiussss%E8%A7%A3%E9%94%81%E6%9B%B4%E5%A4%9A%E4%BC%98%E9%80%89%E8%8A%82%E7%82%B9  
+
+```
+vless://b7a392e2-4ef0-4496-90bc-1c37bb234904@cf.090227.xyz:443?encryption=none&security=tls&sni=edgetunnel-2z2.pages.dev&fp=random&type=ws&host=edgetunnel-2z2.pages.dev&path=%2F%3Fed%3D2048#%E5%8A%A0%E5%85%A5%E6%88%91%E7%9A%84%E9%A2%91%E9%81%93t.me%2FCMLiussss%E8%A7%A3%E9%94%81%E6%9B%B4%E5%A4%9A%E4%BC%98%E9%80%89%E8%8A%82%E7%82%B9  
          vmess://ew0KICAidiI6ICIyIiwNCiAgInBzIjogIuWKoOWFpeaIkeeahOmikemBk3QubWUvQ01MaXVzc3Nz6Kej6ZSB5pu05aSa5LyY6YCJ6IqC54K5PuiLseWbvSDlgKvmlabph5Hono3ln44iLA0KICAiYWRkIjogImNmLjA5MDIyNy54eXoiLA0KICAicG9ydCI6ICI4NDQzIiwNCiAgImlkIjogIjAzZmNjNjE4LWI5M2QtNjc5Ni02YWVkLThhMzhjOTc1ZDU4MSIsDQogICJhaWQiOiAiMCIsDQogICJzY3kiOiAiYXV0byIsDQogICJuZXQiOiAid3MiLA0KICAidHlwZSI6ICJub25lIiwNCiAgImhvc3QiOiAicHBmdjJ0bDl2ZW9qZC1tYWlsbGF6eS5wYWdlcy5kZXYiLA0KICAicGF0aCI6ICIvamFkZXIuZnVuOjQ0My9saW5rdndzIiwNCiAgInRscyI6ICJ0bHMiLA0KICAic25pIjogInBwZnYydGw5dmVvamQtbWFpbGxhenkucGFnZXMuZGV2IiwNCiAgImFscG4iOiAiIiwNCiAgImZwIjogIiINCn0=  
          https://sub.xf.free.hr/auto  
          https://hy2sub.pages.dev  
          
-[/code]  
+
+```
+  
   
 ---|---  
 

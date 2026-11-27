@@ -46,14 +46,21 @@ description: 搭建Hexo博客，快速简洁高效，零成本搭建个人博客
   4. 修改npm源。npm下载各种模块，默认是从国处服务器下载，速度较慢，建议配置成华为云镜像源。打开CMD窗口，运行如下命令:
 
 CMD
-[code]1  
+
+```
+1  
          
-[/code]
+
+```
 
 | 
-[code]npm config set registry https://mirrors.huaweicloud.com/repository/npm/  
+
+```
+npm config set registry https://mirrors.huaweicloud.com/repository/npm/  
          
-[/code]  
+
+```
+  
   
 ---|---  
 
@@ -74,20 +81,27 @@ CMD
 常用 Git 命令
 
 SHELL
-[code]
+
+```
+
     1  
     2  
     3  
     
-[/code]
+
+```
 
 | 
-[code]
+
+```
+
     git config -l  //查看所有配置  
     git config --system --list //查看系统配置  
     git config --global --list //查看用户（全局）配置  
     
-[/code]  
+
+```
+  
   
 ---|---  
   
@@ -96,18 +110,25 @@ SHELL
 ### [](https://vercel.blog.cmliussss.com/p/HexoBlogNo1/#3-1-%E9%85%8D%E7%BD%AE%E7%94%A8%E6%88%B7%E5%90%8D%E5%92%8C%E9%82%AE%E7%AE%B1 "3.1. 配置用户名和邮箱")3.1. 配置用户名和邮箱
 
 SHELL
-[code]
+
+```
+
     1  
     2  
     
-[/code]
+
+```
 
 | 
-[code]
+
+```
+
     git config --global user.name "你的用户名"  
     git config --global user.email "你的邮箱"  
     
-[/code]  
+
+```
+  
   
 ---|---  
   
@@ -119,14 +140,21 @@ SHELL
   1. 执行以下命令生成ssh公钥，此公钥用于你的计算机连接Github
 
 SHELL
-[code]1  
+
+```
+1  
          
-[/code]
+
+```
 
 | 
-[code]ssh-keygen -t rsa -C "你的邮箱"  
+
+```
+ssh-keygen -t rsa -C "你的邮箱"  
          
-[/code]  
+
+```
+  
   
 ---|---  
 提示`Enter file in which to save the key`直接一路回车即可，新手小白不推荐设置密钥  
@@ -146,14 +174,21 @@ SHELL
   3. 测试连接，输入以下命令
 
 SHELL
-[code]1  
+
+```
+1  
          
-[/code]
+
+```
 
 | 
-[code]ssh -T git@github.com  
+
+```
+ssh -T git@github.com  
          
-[/code]  
+
+```
+  
   
 ---|---  
 第一次连接会提示`Are you sure you want to continue connecting (yes/no/[fingerprint])?`，输入`yes`即可  
@@ -177,14 +212,21 @@ SHELL
   2. 在`Git BASH`输入如下命令安装 Hexo
 
 SHELL
-[code]1  
+
+```
+1  
          
-[/code]
+
+```
 
 | 
-[code]npm install -g hexo-cli && hexo -v  
+
+```
+npm install -g hexo-cli && hexo -v  
          
-[/code]  
+
+```
+  
   
 ---|---  
 [![4.2](https://img.090227.xyz/file/808bff9b7ab5b13fcd200.png)](https://img.090227.xyz/file/808bff9b7ab5b13fcd200.png)
@@ -193,18 +235,25 @@ SHELL
   4. 初始化 Hexo 项目安装相关依赖。
 
 SHELL
-[code]1  
+
+```
+1  
          2  
          3  
          
-[/code]
+
+```
 
 | 
-[code]hexo init blog-demo  
+
+```
+hexo init blog-demo  
          cd blog-demo  
          npm i  
          
-[/code]  
+
+```
+  
   
 ---|---  
 [![4.4](https://img.090227.xyz/file/1c130d7beed537111d448.png)](https://img.090227.xyz/file/1c130d7beed537111d448.png)
@@ -232,14 +281,21 @@ SHELL
   1. 安装 hexo-deployer-git
 
 SHELL
-[code]1  
+
+```
+1  
          
-[/code]
+
+```
 
 | 
-[code]npm install hexo-deployer-git --save  
+
+```
+npm install hexo-deployer-git --save  
          
-[/code]  
+
+```
+  
   
 ---|---  
   2. 修改 `_config.yml` 文件  
@@ -247,26 +303,35 @@ SHELL
 修改最后一行的配置，将repository修改为你自己的github项目地址即可，还有分支要改为`main`代表主分支（注意缩进）。
 
 YAML
-[code]1  
+
+```
+1  
          2  
          3  
          4  
          
-[/code]
+
+```
 
 | 
-[code]deploy:  
+
+```
+deploy:  
            type: git  
            repository: git@github.com:cmliussss2024/cmliussss2024.github.io.git  
            branch: main  
          
-[/code]  
+
+```
+  
   
 ---|---  
   3. 修改好配置后，运行如下命令，将代码部署到 GitHub（Hexo三连）。
 
 SHELL
-[code]1  
+
+```
+1  
          2  
          3  
          4  
@@ -274,10 +339,13 @@ SHELL
          6  
          7  
          
-[/code]
+
+```
 
 | 
-[code]// Git BASH终端  
+
+```
+// Git BASH终端  
          hexo clean && hexo generate && hexo deploy    
            
          // 或者  
@@ -285,7 +353,9 @@ SHELL
          // VSCODE终端  
          hexo cl; hexo g; hexo d  
          
-[/code]  
+
+```
+  
   
 ---|---  
 
@@ -329,16 +399,23 @@ SHELL
 ## [](https://vercel.blog.cmliussss.com/p/HexoBlogNo1/#%E6%96%B0%E5%BB%BA%E4%B8%80%E7%AF%87%E5%8D%9A%E6%96%87 "新建一篇博文")新建一篇博文
 
 SHELL
-[code]
+
+```
+
     1  
     
-[/code]
+
+```
 
 | 
-[code]
+
+```
+
     hexo new 这是一篇新的博文  
     
-[/code]  
+
+```
+  
   
 ---|---  
   
@@ -348,7 +425,9 @@ SHELL
 ## [](https://vercel.blog.cmliussss.com/p/HexoBlogNo1/#%E7%BC%96%E8%BE%91%E5%AE%8C%E6%96%87%E7%AB%A0%E4%BF%9D%E5%AD%98%E5%90%8E%E5%8F%AF%E4%BB%A5%E4%BD%BF%E7%94%A8%E5%A6%82%E4%B8%8B%E5%91%BD%E4%BB%A4%EF%BC%8C%E7%94%9F%E6%88%90%E6%9C%AC%E5%9C%B0%E9%A1%B5%E9%9D%A2-http-localhost-4000-%EF%BC%8C%E8%BF%9B%E8%A1%8C%E9%A2%84%E8%A7%88 "编辑完文章保存后可以使用如下命令，生成本地页面 http://localhost:4000/ ，进行预览")编辑完文章保存后可以使用如下命令，生成本地页面 <http://localhost:4000/> ，进行预览
 
 SHELL
-[code]
+
+```
+
     1  
     2  
     3  
@@ -357,10 +436,13 @@ SHELL
     6  
     7  
     
-[/code]
+
+```
 
 | 
-[code]
+
+```
+
     // Git BASH终端  
     hexo cl && hexo s  
       
@@ -369,14 +451,18 @@ SHELL
     // VSCODE终端  
     hexo cl; hexo s  
     
-[/code]  
+
+```
+  
   
 ---|---  
   
 ## [](https://vercel.blog.cmliussss.com/p/HexoBlogNo1/#%E7%A1%AE%E8%AE%A4%E6%97%A0%E8%AF%AF%E5%90%8E%E4%BD%BF%E7%94%A8%E4%BB%A5%E4%B8%8B%E5%91%BD%E4%BB%A4%EF%BC%8C%E5%B0%86%E6%9C%AC%E5%9C%B0%E6%96%87%E7%AB%A0%E6%8E%A8%E9%80%81%E8%87%B3GitHub%E4%BB%93%E5%BA%93%E5%8D%B3%E5%8F%AF "确认无误后使用以下命令，将本地文章推送至GitHub仓库即可")确认无误后使用以下命令，将本地文章推送至GitHub仓库即可
 
 SHELL
-[code]
+
+```
+
     1  
     2  
     3  
@@ -385,10 +471,13 @@ SHELL
     6  
     7  
     
-[/code]
+
+```
 
 | 
-[code]
+
+```
+
     // Git BASH终端  
     hexo cl && hexo g && hexo d  
       
@@ -397,7 +486,9 @@ SHELL
     // VSCODE终端  
     hexo cl; hexo g; hexo d  
     
-[/code]  
+
+```
+  
   
 ---|---  
   
@@ -410,14 +501,21 @@ SHELL
 使用管理员身份打开 powershell ,输入以下命令
 
 POWERSHELL
-[code]
+
+```
+
     1  
     
-[/code]
+
+```
 
 | 
-[code]
+
+```
+
     Set-ExecutionPolicy RemoteSigned
-[/code]  
+
+```
+  
   
 ---|---

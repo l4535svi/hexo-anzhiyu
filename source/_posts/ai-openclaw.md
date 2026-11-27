@@ -77,16 +77,23 @@ Intel| `ClawPanel_x.x.x_x64.dmg`| 2020 年及之前的 Mac
 安装方式：打开 `.dmg` 文件，先将 ClawPanel 拖入「应用程序」文件夹，再双击打开。
 
 > ⚠️ 首次打开提示"已损坏"或"无法验证开发者"？ 由于应用未签名，macOS 会拦截。请在终端执行以下命令解除限制：
-[code]
+
+```
+
 >     sudo xattr -rd com.apple.quarantine /Applications/ClawPanel.app
-[/code]
+
+```
+
 > 
 > 或者前往「系统设置 → 隐私与安全性」，找到 ClawPanel 点击「仍要打开」。
 > 
 > 提示 `No such file`？说明没有拖入应用程序文件夹。请先拖入，或改用：
-[code]
+
+```
+
 >     sudo xattr -rd com.apple.quarantine ~/Downloads/ClawPanel.app
-[/code]
+
+```
 
 ### Windows
 
@@ -112,9 +119,12 @@ RPM| `ClawPanel-x.x.x-1.x86_64.rpm`| Fedora / RHEL：`sudo rpm -i *.rpm`
 [](https://github.com/qingchencloud/clawpanel#linux-%E6%9C%8D%E5%8A%A1%E5%99%A8web-%E7%89%88)
 
 没有桌面环境？一键部署 ClawPanel Web 版，通过浏览器远程管理 OpenClaw：
-[code]
+
+```
+
     curl -fsSL https://raw.githubusercontent.com/qingchencloud/clawpanel/main/scripts/linux-deploy.sh | bash
-[/code]
+
+```
 
 部署完成后访问 `http://服务器IP:1420`，功能与桌面版一致。
 
@@ -123,7 +133,9 @@ RPM| `ClawPanel-x.x.x-1.x86_64.rpm`| Fedora / RHEL：`sudo rpm -i *.rpm`
 ### Docker 部署
 
 [](https://github.com/qingchencloud/clawpanel#docker-%E9%83%A8%E7%BD%B2)
-[code]
+
+```
+
     docker run -d --name clawpanel --restart unless-stopped \
       -p 1420:1420 -v clawpanel-data:/root/.openclaw \
       node:22-slim \
@@ -131,7 +143,8 @@ RPM| `ClawPanel-x.x.x-1.x86_64.rpm`| Fedora / RHEL：`sudo rpm -i *.rpm`
         npm install -g @qingchencloud/openclaw-zh --registry https://registry.npmmirror.com && \
         git clone https://github.com/qingchencloud/clawpanel.git /app && \
         cd /app && npm install && npm run build && npm run serve"
-[/code]
+
+```
 
 📖 详细教程见 [Docker 部署指南](https://github.com/qingchencloud/clawpanel/blob/main/docs/docker-deploy.md)（含 Compose、自定义镜像、Nginx 反向代理等）
 
@@ -307,7 +320,9 @@ AI 等你回答后才会继续操作，实现真正的人机协作。
 后端| Rust + Tauri v2| 原生性能，跨平台打包  
 通信| Tauri IPC + Shell Plugin| 前后端桥接，本地命令执行  
 样式| 纯 CSS（CSS Variables）| 暗色/亮色主题，玻璃拟态风格
-[code]
+
+```
+
     clawpanel/
     ├── src/                    # 前端源码
     │   ├── pages/              # 10 个页面模块
@@ -331,7 +346,9 @@ AI 等你回答后才会继续操作，实现真正的人机协作。
     ├── vite.config.js          # Vite 配置
     └── package.json            # 前端依赖
     
-[/code]  
+
+```
+  
   
 ## 从源码构建
 
@@ -348,33 +365,42 @@ AI 等你回答后才会继续操作，实现真正的人机协作。
 ### 安装与开发
 
 [](https://github.com/qingchencloud/clawpanel#%E5%AE%89%E8%A3%85%E4%B8%8E%E5%BC%80%E5%8F%91)
-[code]
+
+```
+
     git clone https://github.com/qingchencloud/clawpanel.git
     cd clawpanel
     npm install
-[/code]
+
+```
 
 #### macOS / Linux
 
 [](https://github.com/qingchencloud/clawpanel#macos--linux)
-[code]
+
+```
+
     # 启动完整 Tauri 桌面应用
     ./scripts/dev.sh
     
     # 仅启动 Vite 前端（浏览器调试，使用 mock 数据）
     ./scripts/dev.sh web
-[/code]
+
+```
 
 #### Windows
 
 [](https://github.com/qingchencloud/clawpanel#windows-1)
-[code]
+
+```
+
     # 启动完整 Tauri 桌面应用
     npm run tauri dev
     
     # 仅启动 Vite 前端（浏览器调试，使用 mock 数据）
     npm run dev
-[/code]
+
+```
 
 ### 构建
 
@@ -383,7 +409,9 @@ AI 等你回答后才会继续操作，实现真正的人机协作。
 #### macOS / Linux
 
 [](https://github.com/qingchencloud/clawpanel#macos--linux-1)
-[code]
+
+```
+
     # 编译 debug 版本
     ./scripts/build.sh
     
@@ -392,12 +420,15 @@ AI 等你回答后才会继续操作，实现真正的人机协作。
     
     # 编译正式发布版本（含打包）
     ./scripts/build.sh release
-[/code]
+
+```
 
 #### Windows
 
 [](https://github.com/qingchencloud/clawpanel#windows-2)
-[code]
+
+```
+
     # 检查 Rust 编译
     cd src-tauri && cargo check
     
@@ -406,7 +437,8 @@ AI 等你回答后才会继续操作，实现真正的人机协作。
     
     # 指定打包格式（NSIS 安装器）
     npm run tauri build -- --bundles nsis
-[/code]
+
+```
 
 产物位于 `src-tauri/target/release/` 目录。
 
@@ -415,7 +447,9 @@ AI 等你回答后才会继续操作，实现真正的人机协作。
 [](https://github.com/qingchencloud/clawpanel#web-%E5%BC%80%E5%8F%91%E7%89%88%E6%97%A0%E9%9C%80-rusttauri)
 
 如果你只想开发前端或部署 Web 版，不需要安装 Rust：
-[code]
+
+```
+
     # 克隆并安装
     git clone https://github.com/qingchencloud/clawpanel.git
     cd clawpanel
@@ -431,7 +465,8 @@ AI 等你回答后才会继续操作，实现真正的人机协作。
     # 启动 Web 服务器（Headless，适用于 Linux/ARM/Docker）
     npm run serve
     # 默认监听 0.0.0.0:1420，支持 --port 和 --host 参数
-[/code]
+
+```
 
 Web 版功能与桌面版一致，后端通过 `scripts/dev-api.js` 调用本机 OpenClaw CLI 实现。
 
@@ -503,9 +538,12 @@ Web 版适用于 Linux 服务器（无桌面环境），通过浏览器远程管
 ### 一键部署
 
 [](https://github.com/qingchencloud/clawpanel#%E4%B8%80%E9%94%AE%E9%83%A8%E7%BD%B2)
-[code]
+
+```
+
     curl -fsSL https://raw.githubusercontent.com/qingchencloud/clawpanel/main/scripts/linux-deploy.sh | bash
-[/code]
+
+```
 
 部署完成后访问 `http://服务器IP:1420`。
 
@@ -520,7 +558,9 @@ Web 版适用于 Linux 服务器（无桌面环境），通过浏览器远程管
   3. Nginx 反向代理 + HTTPS — 生产环境强烈建议使用 HTTPS
 
 Nginx 反向代理配置示例
-[code]
+
+```
+
     server {
         listen 443 ssl;
         server_name openclaw.example.com;
@@ -545,7 +585,8 @@ Nginx 反向代理配置示例
             proxy_set_header Host $host;
         }
     }
-[/code]
+
+```
 
 ### API Key 安全
 
@@ -606,9 +647,12 @@ QQ 机器人| 官方 Bot| ⭐⭐⭐| 需在 QQ 开放平台注册
 [](https://github.com/qingchencloud/clawpanel#macos-%E6%8F%90%E7%A4%BA%E5%B7%B2%E6%8D%9F%E5%9D%8F%E6%97%A0%E6%B3%95%E6%89%93%E5%BC%80)
 
 没有苹果开发者签名，macOS Gatekeeper 会拦截。终端执行：
-[code]
+
+```
+
     sudo xattr -rd com.apple.quarantine /Applications/ClawPanel.app
-[/code]
+
+```
 
 或前往「系统设置 → 隐私与安全性」点击「仍要打开」。
 
@@ -621,9 +665,12 @@ QQ 机器人| 官方 Bot| ⭐⭐⭐| 需在 QQ 开放平台注册
 v0.4.1 已修复：自动补充 `/usr/local/bin`、`/opt/homebrew/bin`、`~/.nvm`、`~/.volta` 等常见路径。
 
 临时解决：从终端启动 ClawPanel：
-[code]
+
+```
+
     open /Applications/ClawPanel.app
-[/code]
+
+```
 
 ### Windows 安装 OpenClaw 报 ENOENT (-4058)
 
@@ -633,8 +680,11 @@ v0.4.1 已修复：自动补充 `/usr/local/bin`、`/opt/homebrew/bin`、`~/.nvm
 
   1. 以管理员身份运行 ClawPanel
   2. 或打开 PowerShell（管理员）手动安装：
-[code]npm install -g @qingchencloud/openclaw-zh --registry https://registry.npmmirror.com
-[/code]
+
+```
+npm install -g @qingchencloud/openclaw-zh --registry https://registry.npmmirror.com
+
+```
 
   3. 如果仍报错，清理 npm 缓存：`npm cache clean --force`
 
@@ -643,10 +693,13 @@ v0.4.1 已修复：自动补充 `/usr/local/bin`、`/opt/homebrew/bin`、`~/.nvm
 [](https://github.com/qingchencloud/clawpanel#windows-%E5%AE%89%E8%A3%85%E6%8A%A5-exit-128-access-rights)
 
 npm 依赖需要 Git。如果已装 Git 但仍报 128，是因为依赖用了 SSH 协议拉代码但你没配 GitHub SSH Key。运行以下命令改用 HTTPS：
-[code]
+
+```
+
     git config --global url."https://github.com/".insteadOf ssh://git@github.com/
     git config --global url."https://github.com/".insteadOf git@github.com:
-[/code]
+
+```
 
 没装 Git 的请先安装 [Git for Windows](https://git-scm.com/download/win)。v0.4.2+ 已自动配置 HTTPS 模式。
 
@@ -655,10 +708,13 @@ npm 依赖需要 Git。如果已装 Git 但仍报 128，是因为依赖用了 SS
 [](https://github.com/qingchencloud/clawpanel#windows-%E5%AE%89%E8%A3%85%E6%8A%A5-eperm-operation-not-permitted)
 
 文件被其他进程锁定。先关闭 ClawPanel 和所有 Node.js 进程，以管理员身份打开 PowerShell 重装：
-[code]
+
+```
+
     npm cache clean --force
     npm install -g @qingchencloud/openclaw-zh --registry https://registry.npmmirror.com
-[/code]
+
+```
 
 ### 安装后 Node.js 检测不到（Windows）
 
@@ -706,13 +762,16 @@ npm 依赖需要 Git。如果已装 Git 但仍报 128，是因为依赖用了 SS
 [](https://github.com/qingchencloud/clawpanel#web-%E7%89%88%E6%8A%A5%E6%9C%AA%E5%AE%9E%E7%8E%B0%E7%9A%84%E5%91%BD%E4%BB%A4)
 
 升级到 v0.8.5+。旧版本的 Web 后端缺少部分命令实现，v0.8.5 已补全所有 handler。
-[code]
+
+```
+
     cd /opt/clawpanel  # 替换为实际安装目录
     git pull origin main
     npm install
     npm run build
     sudo systemctl restart clawpanel  # 或 pm2 restart clawpanel
-[/code]
+
+```
 
 ### 消息渠道保存后不生效
 

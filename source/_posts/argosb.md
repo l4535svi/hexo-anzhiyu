@@ -102,62 +102,88 @@ description: 【ArgoSB当前版本：V25.8.27】 1、基于Sing-box + Xray + Clo
 
 [](https://github.com/yonggekkk/ArgoSB#%E6%A8%A1%E7%89%881%E5%A4%9A%E4%B8%AA%E4%BB%BB%E6%84%8F%E5%8D%8F%E8%AE%AE%E7%BB%84%E5%90%88%E8%BF%90%E8%A1%8C)
 
-[code]
+```
+
     sspt="" vlpt="" vmpt="" hypt="" tupt="" xhpt="" anpt="" arpt="" bash <(curl -Ls https://raw.githubusercontent.com/yonggekkk/argosb/main/argosb.sh)
     
-[/code]
+
+```
 
   * ### 模版2：主流TCP或UDP单个协议运行
 
 [](https://github.com/yonggekkk/ArgoSB#%E6%A8%A1%E7%89%882%E4%B8%BB%E6%B5%81tcp%E6%88%96udp%E5%8D%95%E4%B8%AA%E5%8D%8F%E8%AE%AE%E8%BF%90%E8%A1%8C)
 
 Vless-Reality-Vision协议节点
-[code]
+
+```
+
     vlpt="" bash <(curl -Ls https://raw.githubusercontent.com/yonggekkk/argosb/main/argosb.sh)
     
-[/code]
+
+```
 
 Vless-Xhttp-Reality协议节点
-[code]
+
+```
+
     xhpt="" bash <(curl -Ls https://raw.githubusercontent.com/yonggekkk/argosb/main/argosb.sh)
     
-[/code]
+
+```
 
 Shadowsocks-2022协议节点
-[code]
+
+```
+
     sspt="" bash <(curl -Ls https://raw.githubusercontent.com/yonggekkk/argosb/main/argosb.sh)
     
-[/code]
+
+```
 
 AnyTLS协议节点
-[code]
+
+```
+
     anpt="" bash <(curl -Ls https://raw.githubusercontent.com/yonggekkk/argosb/main/argosb.sh)
     
-[/code]
+
+```
 
 Any-Reality协议节点
-[code]
+
+```
+
     arpt="" bash <(curl -Ls https://raw.githubusercontent.com/yonggekkk/argosb/main/argosb.sh)
     
-[/code]
+
+```
 
 Vmess-ws协议节点
-[code]
+
+```
+
     vmpt="" bash <(curl -Ls https://raw.githubusercontent.com/yonggekkk/argosb/main/argosb.sh)
     
-[/code]
+
+```
 
 Hysteria2协议节点
-[code]
+
+```
+
     hypt="" bash <(curl -Ls https://raw.githubusercontent.com/yonggekkk/argosb/main/argosb.sh)
     
-[/code]
+
+```
 
 Tuic协议节点
-[code]
+
+```
+
     tupt="" bash <(curl -Ls https://raw.githubusercontent.com/yonggekkk/argosb/main/argosb.sh)
     
-[/code]
+
+```
 
   * ### 模版3：开启CDN优选的节点运行
 
@@ -166,22 +192,31 @@ Tuic协议节点
 Argo临时/固定隧道运行优选节点，类似无公网的IDX-Google-VPS容器推荐使用此脚本，快速一键内网穿透获取节点
 
 Argo临时隧道CDN优选节点
-[code]
+
+```
+
     vmpt="" argo="y" bash <(curl -Ls https://raw.githubusercontent.com/yonggekkk/argosb/main/argosb.sh)
     
-[/code]
+
+```
 
 Argo固定隧道CDN优选节点，必须填写端口(vmpt)、域名(agn)、token(agk)
-[code]
+
+```
+
     vmpt="端口" argo="y" agn="解析的CF域名" agk="CF获取的token" bash <(curl -Ls https://raw.githubusercontent.com/yonggekkk/argosb/main/argosb.sh)
     
-[/code]
+
+```
 
 80系端口、回源端口的CDN优选节点
-[code]
+
+```
+
     vmpt="80系端口、指定随机端口" cdnym="ip已解析的CF域名" bash <(curl -Ls https://raw.githubusercontent.com/yonggekkk/argosb/main/argosb.sh)
     
-[/code]
+
+```
 
 * * *
 

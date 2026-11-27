@@ -11,16 +11,22 @@ description: 二、现在执行最后验证 先执行： sync md5sum /dev/mmcblk
 ## 二、现在执行最后验证
 
 先执行：
-[code]
+
+```
+
     sync
     md5sum /dev/mmcblk0p13
     md5sum /dev/mmcblk0p14
-[/code]
+
+```
 
 两个结果都必须是：
-[code]
+
+```
+
     2266697f5106c170a91e283adf7a3d19
-[/code]
+
+```
 
   
 

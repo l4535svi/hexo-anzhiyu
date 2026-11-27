@@ -24,10 +24,12 @@ description: 前言：别再守着那点免费额度扣扣搜搜了！CLIProxyAP
 部署方式，先装CLIProxyAPI 一键搞定。我已经帮大家做成一键脚本了，安装设置登录密钥，自动docker部署。
 
 Bash
-[/code]
-[code]
+
+```
+
     bash <(curl -sL kejilion.sh) app CLIProxyAPI 
-[/code]
+
+```
 
 [![](https://blog.kejilion.pro/wp-content/uploads/2026/02/Snipaste_2026-02-10_21-30-52.webp)](https://blog.kejilion.pro/wp-content/uploads/2026/02/Snipaste_2026-02-10_21-30-52.webp)
 
@@ -87,10 +89,12 @@ CLIProxyAPI 管理面板中，添加Antigravity（反重力） Gemini、Kimi，Q
 接下来将OpenClaw的安装与对接CLIProxyAPI，非常简单，依然是一键脚本，还是熟悉的配方。我优化了这个脚本他可以把你的CLIProxyAPI中的所有模型一次性导入，方便你快速切换模型，可谓是更进一步。
 
 Bash
-[/code]
-[code]
+
+```
+
     bash <(curl -sL kejilion.sh) app OpenClaw 
-[/code]
+
+```
 
 [![](https://blog.kejilion.pro/wp-content/uploads/2026/02/Snipaste_2026-02-10_22-28-36.webp)](https://blog.kejilion.pro/wp-content/uploads/2026/02/Snipaste_2026-02-10_22-28-36.webp)[![](https://blog.kejilion.pro/wp-content/uploads/2026/02/Snipaste_2026-02-10_22-30-43.webp)](https://blog.kejilion.pro/wp-content/uploads/2026/02/Snipaste_2026-02-10_22-30-43.webp)
 

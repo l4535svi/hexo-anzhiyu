@@ -16,19 +16,24 @@ description: 1、下载并安装SSH连接工具Finalshell：【 点击进入 】
 
   * 电脑端——VPS 路由
 
-[code]
+```
+
     tracert -w 3000 -h 30 VPS_IPCopy
-[/code]
+
+```
 
   * 归属/地理/ASN查询
 
-[code]
+```
+
     curl.exe -s https://ipinfo.io/路由IPCopy
-[/code]
+
+```
 
   * 一键查询所有路由信息（用终端管理员执行）
 
-[code]
+```
+
     $target = 'VPS_IP'   # 目标：可以填你 VPS 或网站 IP
     $raw = tracert -d -w 3000 -h 30 $target
     
@@ -77,20 +82,24 @@ description: 1、下载并安装SSH连接工具Finalshell：【 点击进入 】
     }
     $rows | Sort-Object 跳数 | Format-Table -AutoSize
     Copy
-[/code]
+
+```
 
 3、VPS（Linux）——目标网站路由信息查询
 
   * 安装依赖
 
-[code]
+```
+
     sudo apt update && sudo apt install -y mtr-tiny curl jq dnsutils tracerouteCopy
-[/code]
+
+```
 
   * 一键查询VPS——目标网站的所有路由信息
     * 把下面整段在 VPS 上粘贴执行（会生成 `routeview.sh`，覆盖旧的）
 
-[code]
+```
+
     cat > routeview.sh <<'BASH'
     #!/usr/bin/env bash
     set -euo pipefail
@@ -201,18 +210,21 @@ description: 1、下载并安装SSH连接工具Finalshell：【 点击进入 】
     chmod +x routeview.sh
     echo "已生成 ./routeview.sh"
     Copy
-[/code]
+
+```
 
   * 用法（如查询VPS——Google的路由信息）
     * 红色部分替换成自己想要查询的网站
 
-[code]
+```
+
     #TCP 443（推荐，贴近浏览器访问）
     ./routeview.sh --tcp 443 google.com
     
     #ICMP（传统 ping/trace）
     ./routeview.sh google.com
     Copy
-[/code]
+
+```
 
   * 路由信息查询（适合查询机场节点）：【[点击进入](https://tools.ipip.net/traceroute.php)】

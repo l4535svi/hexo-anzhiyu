@@ -67,16 +67,22 @@ description: 一、目前CloufFlare自选IP存在问题 二、使用CloudFlare�
 ### 方法二：在自己的VPS或电脑中运行
 
   1. 安装依赖包
-[code]pip install -r requirements.txtCOPY
-[/code]
+
+```
+pip install -r requirements.txtCOPY
+
+```
 
   2. 登录[腾讯云后台](https://console.cloud.tencent.com/cam/capi),获取 SecretId、SecretKey
   3. 将[GitHub中脚本](https://github.com/ddgth/cf2dns)下载到本地
   4. 将第一步中获取到的SecretId、SecretKey配置到cf2dns.py脚本中,并修改脚本中DOMAINS配置信息，可配置多个域名和多个子域名,但必须是在同一个DNSPOD账号下
   5. (可选)从[商店](https://shop.hostmonit.com/)购买KEY，当然也可以用脚本中自带的KEY，区别是脚本中自带的KEY是历史优选的Cloudflare IP（可以从[全球主机补货监控](https://stock.hostmonit.com/CloudFlareYes)中查看IP的信息），而购买的KEY是15分钟内获取到的连接到各运营商速度最优的Cloudflare IP。
   6. 运行程序，如果能够正常运行可以选择cron或Windows计划任务定时执行（建议15分钟执行一次）
-[code]python3 cf2dns.pyCOPY
-[/code]
+
+```
+python3 cf2dns.pyCOPY
+
+```
 
 ## 四、总结
 

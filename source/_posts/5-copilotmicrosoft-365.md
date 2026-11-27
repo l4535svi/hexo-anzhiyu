@@ -39,18 +39,26 @@ description: 🎬 视频教程 YouTube ： 免费使用 5 年 Copilot（Microsof
 > 可通过修改 `market=US` 参数直接切换国家
 
 ### [](https://blog.nbvil.com/wool/Microsoft365-edu/#%E9%93%BE%E6%8E%A5%E4%B8%80%EF%BC%9A%E5%AD%A6%E7%94%9F%E4%B8%AA%E4%BA%BA%E7%89%88%EF%BC%88Student-Free%EF%BC%89 "链接一：学生个人版（Student Free）")链接一：学生个人版（Student Free）
-[code]
+
+```
+
     https://checkout.microsoft365.com/acquire/purchase?language=zh-TW&market=US&requestedDuration=Month&scenario=microsoft-365-student&client=poc&campaign=StudentFree12M  
     
-[/code]  
+
+```
+  
   
 ---  
   
 ### [](https://blog.nbvil.com/wool/Microsoft365-edu/#%E9%93%BE%E6%8E%A5%E4%BA%8C%EF%BC%9A%E5%AD%A6%E7%94%9F%E8%BF%9B%E9%98%B6%E7%89%88%EF%BC%88Student-Premium%EF%BC%89 "链接二：学生进阶版（Student Premium）")链接二：学生进阶版（Student Premium）
-[code]
+
+```
+
     https://checkout.microsoft365.com/acquire/purchase?language=zh-TW&market=US&requestedDuration=Month&scenario=microsoft-365-premium&client=poc&campaign=StudentPremiumFree12M  
     
-[/code]  
+
+```
+  
   
 ---  
   

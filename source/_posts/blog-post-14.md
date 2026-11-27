@@ -13,13 +13,20 @@ description: 使用 解释 bash -c " $( curl --insecure -fsSL https://ddsrem.com
 [](https://github.com/xiaoyaDev/xiaoya-alist#%E4%BD%BF%E7%94%A8)
 
 解释
-[code]
+
+```
+
     bash -c "$(curl --insecure -fsSL https://ddsrem.com/xiaoya_install.sh)"
-[/code]
+
+```
 
 备用地址
 
 解释
-[code]
+
+```
+
     bash <(curl --insecure -fsSL https://ddsrem.com/xiaoya/all_in_one.sh)
-[/code]
+
+```
+

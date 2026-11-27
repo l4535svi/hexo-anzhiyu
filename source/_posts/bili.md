@@ -35,20 +35,26 @@ description: '拉取Bili库:ql repo https://github.com/RayWangQvQ/BiliBiliToolPr
 国内机（带代理）：
 
 解释
-[code]
+
+```
+
     ql repo https://js.okyago.com/https://github.com/6dylan6/jdpro.git "jd_|jx_|jddj_" "backUp" "^jd[^_]|USER|JD|function|sendNotify|utils"
     
     
-[/code]
+
+```
 
 国外机：
 
 解释
-[code]
+
+```
+
     ql repo https://github.com/6dylan6/jdpro.git "jd_|jx_|jddj_" "backUp" "^jd[^_]|USER|JD|function|sendNotify|utils"
     
     
-[/code]
+
+```
 
 线报监控类，[入口](https://github.com/6dylan6/jdm.git)
 
@@ -63,23 +69,32 @@ description: '拉取Bili库:ql repo https://github.com/RayWangQvQ/BiliBiliToolPr
 6dylan6/jdpro（集合库），任务定时建议十分钟一次。
 
 复制
-[code]
+
+```
+
     ql repo https://github.com/6dylan6/jdpro.git "jd_|jx_|jddj_" "backUp" "^jd[^_]|USER|JD|function|sendNotify|utils"
-[/code]
+
+```
 
 [Faker2](https://github.com/shufflewzc/faker2) 助力池
 
 复制
-[code]
+
+```
+
     ql repo https://github.com/shufflewzc/faker2.git "jd_|jx_|gua_|jddj_|jdCookie" "activity|backUp" "^jd[^_]|USER|function|utils|sendNotify|ZooFaker_Necklace.js|JDJRValidator_|sign_graphics_validate|ql|JDSignValidator|magic|depend|h5sts" "main"
-[/code]
+
+```
 
 [Faker3](https://github.com/shufflewzc/faker3) 纯净版
 
 复制
-[code]
+
+```
+
     ql repo https://github.com/shufflewzc/faker3.git "jd_|jx_|gua_|jddj_|jdCookie" "activity|backUp" "^jd[^_]|USER|function|utils|sendNotify|ZooFaker_Necklace.js|JDJRValidator_|sign_graphics_validate|ql|JDSignValidator|magic|depend|h5sts" "main"
-[/code]
+
+```
 
 咱们为了防止漏掉某些羊毛，上方所有的库新建定时任务拉取，里面有重复脚本禁用脚本，重复的内容会被禁用的。
 

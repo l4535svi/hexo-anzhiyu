@@ -227,7 +227,9 @@ export const expressiveCodeConfig: ExpressiveCodeConfig = {
 ### ✅ 2. 直接改成 GitHub 的未受污染源码
 
 项目正在与 npm 官方沟通恢复，你可以暂时从 GitHub 源安装：
-[code] 
+
+```
+ 
     json
     
     复制编辑
@@ -236,7 +238,8 @@ export const expressiveCodeConfig: ExpressiveCodeConfig = {
       "stylus": "github:stylus/stylus#0.64.0"
     }
     
-[/code]
+
+```
 
 这会从最新的官方源码安装 Stylus，而不是经过 npm 注册表 [Hacker News](https://news.ycombinator.com/item?id=44655660&utm_source=chatgpt.com)[Yarn](https://classic.yarnpkg.com/en/package/jstransformer-stylus?utm_source=chatgpt.com)。
 
@@ -245,7 +248,9 @@ export const expressiveCodeConfig: ExpressiveCodeConfig = {
 请按照以下方法将 `stylus` 的依赖改为 GitHub 源代码安装：
 
 ### 👉 找到 `package.json` 中的 stylus 依赖，替换成这样：
-[code]
+
+```
+
     json
     
     复制编辑
@@ -254,7 +259,8 @@ export const expressiveCodeConfig: ExpressiveCodeConfig = {
       "stylus": "github:stylus/stylus#master"
     }
     
-[/code]
+
+```
 
 如果它是在 `devDependencies` 中，也一样替换。
 
@@ -263,14 +269,17 @@ export const expressiveCodeConfig: ExpressiveCodeConfig = {
 ## ✅ 2. 执行安装命令
 
 确保你已经安装 `git`，然后运行：
-[code]
+
+```
+
     bash
     
     复制编辑
     
     npm install
     
-[/code]
+
+```
 
 它会直接从 GitHub 上克隆并构建 Stylus 源码。
 
@@ -279,14 +288,17 @@ export const expressiveCodeConfig: ExpressiveCodeConfig = {
 ## ✅ 3. 可选：锁定某个提交（非 master）
 
 如果你不想用 `master`（主分支可能变动），可以锁定到具体发布版本：
-[code]
+
+```
+
     json
     
     复制编辑
     
     "stylus": "github:stylus/stylus#0.54.8"
     
-[/code]
+
+```
 
 你可以去这个页面查看所有发布 tag：  
 <https://github.com/stylus/stylus/tags>
@@ -294,7 +306,9 @@ export const expressiveCodeConfig: ExpressiveCodeConfig = {
 * * *
 
 ## 💡 示例 package.json 段落（完整参考）
-[code]
+
+```
+
     json
     
     复制编辑
@@ -308,7 +322,8 @@ export const expressiveCodeConfig: ExpressiveCodeConfig = {
       }
     }
     
-[/code]
+
+```
 
 * * *
 

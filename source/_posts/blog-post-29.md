@@ -34,17 +34,23 @@ description: 携趣代理注册地址 https://www.xiequ.cn/index.html?2f4ff690 �
 [image.png](http://cxgc.top/upload/2022/03/image-4d0182b137aa463a99b82fd2f9ae1089.png)
 
 ### 青龙一键安装依赖
-[code]
+
+```
+
     docker exec -it QL bash -c "$(curl -fsSL https://github.com/JDWXX/jd_job/blob/master/QLOneKeyDependency.sh | sh)"  
     
-[/code]
+
+```
 
 ### 一键安装不行的试试手动安装依赖
-[code]
+
+```
+
     docker exec -it QL bash -c "npm install superagent-proxy"  
     docker exec -it QL bash -c "yarn add superagent"  
     
-[/code]
+
+```
 
 ### 青龙面板脚本使用
 

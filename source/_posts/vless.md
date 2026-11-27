@@ -22,16 +22,22 @@ description: 温馨提示 免责声明：该项目仅供个人学习、交流，
 #### 请复制以下指令到ssh连接软件粘贴执行
 
 #### 单IP安装命令
-[code]
+
+```
+
     bash <(curl -Ls https://raw.geto.run/proxy/node/main/vless.sh)
     
-[/code]
+
+```
 
 #### 多IP安装命令
-[code]
+
+```
+
     bash <(curl -Ls https://raw.geto.run/proxy/node/main/vless-plus.sh)
     
-[/code]
+
+```
 
 * * *
 

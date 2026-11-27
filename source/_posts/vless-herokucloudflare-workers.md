@@ -1,13 +1,11 @@
 ---
 title: 免费高速VLESS
-cover: /img/covers/vless-herokucloudflare-workers.jpg
----Heroku+cloudflare workers
-date: '2022-04-22 12:00:00'
+date: '2026-11-27 12:00:00'
 tags:
 - 建站
 categories:
 - 建站
-description: Heroku是一个支持多种编程语言的云平台即服务。目前支持Ruby、Java、Node.js、Scala、Clojure、Python、PHP和Perl等语言，基础操作系统是Debian。 本项目用于在 Heroku 上部署 vless+websocket+tls，每次部署自动选
+cover: /img/covers/vless-herokucloudflare-workers.jpg
 ---
 Heroku是一个支持多种编程语言的云平台即服务。目前支持Ruby、Java、Node.js、Scala、Clojure、Python、PHP和Perl等语言，基础操作系统是Debian。
 
@@ -25,11 +23,14 @@ heroku容器部署在亚马逊ec2上，目前免费用户可以选择美国和�
 [![Deploy](https://www.herokucdn.com/deploy/button.png) 注册](https://dashboard.heroku.com/new?template=https%3A%2F%2Fgithub.com%2Frptec%2Fheroku-vless)
 
 地址：
-[code]1. https://dashboard.heroku.com/new?template=https://github.com/rptec/heroku-vless  
+
+```
+1. https://dashboard.heroku.com/new?template=https://github.com/rptec/heroku-vless  
          
     
     
-[/code]
+
+```
 
 3、你也可以在浏览器上复制上述地址部署应用！  
 其中App name你可以自由填写，UUID 为安全考虑，建议你自行替换掉我用的默认id。  
@@ -51,7 +52,9 @@ heroku容器部署在亚马逊ec2上，目前免费用户可以选择美国和�
  创建
 
 3、复制下方代码，并添加进去！注意把下面的中文替换成你之前在Domains项看见的那个域名前缀
-[code]1. addEventListener(  
+
+```
+1. addEventListener(  
          
         2.       "fetch",event => {  
          
@@ -73,7 +76,8 @@ heroku容器部署在亚马逊ec2上，目前免费用户可以选择美国和�
          
     
     
-[/code]
+
+```
 
 至此！部署完成了，你可以直接使用V2客户端！  
 三、配置V2客户端

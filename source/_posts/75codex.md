@@ -16,7 +16,9 @@ description: 安装命令用这个： REPO_URL=https://github.com/sosoveooo-bit/
 `cd /root/xboard-one-click  
 ``./healthcheck.sh``  
 `可以，下面是使用我现在改好的脚本部署 VPS 的教程。
-[code]
+
+```
+
     ## **一键安装命令  
     ** 在 VPS 用 root 登录后执行：  
     apt update -y  
@@ -74,4 +76,6 @@ description: 安装命令用这个： REPO_URL=https://github.com/sosoveooo-bit/
     备份迁移包：  
     cd /root/xboard-one-click  
     bash backup.sh
-[/code]
+
+```
+

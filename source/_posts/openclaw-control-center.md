@@ -58,14 +58,17 @@ Token 消耗归因
 ## 5 分钟启动
 
 [](https://github.com/TianyiDataScience/openclaw-control-center#5-%E5%88%86%E9%92%9F%E5%90%AF%E5%8A%A8)
-[code]
+
+```
+
     npm install
     cp .env.example .env
     npm run build
     npm test
     npm run smoke:ui
     UI_MODE=true npm run dev
-[/code]
+
+```
 
 然后打开：
 
@@ -170,12 +173,15 @@ Token 消耗归因
 ### 2\. 安装项目
 
 [](https://github.com/TianyiDataScience/openclaw-control-center#2-%E5%AE%89%E8%A3%85%E9%A1%B9%E7%9B%AE)
-[code]
+
+```
+
     git clone https://github.com/TianyiDataScience/openclaw-control-center.git
     cd control-center
     npm install
     cp .env.example .env
-[/code]
+
+```
 
 如果你的 OpenClaw 说“仓库缺少 `src/runtime`”或“缺少核心源码”，先不要改代码。这个仓库的标准结构本来就包含：
 
@@ -223,7 +229,9 @@ Token 消耗归因
   * 某些数据源缺失，但控制中心仍然应该先以“安全只读”方式跑起来
 
 直接把下面整段原样交给 OpenClaw：
-[code]
+
+```
+
     你现在要帮我把 OpenClaw Control Center 安装并接到这台机器自己的 OpenClaw 环境上。
     
     你的目标不是解释原理，而是直接完成一次安全的首次接入。
@@ -327,7 +335,8 @@ Token 消耗归因
     - 下一步命令
     - 首次打开页面
     
-[/code]
+
+```
 
 ### 4\. 如果你要手动配置 `.env`
 
@@ -338,7 +347,9 @@ Token 消耗归因
 第一次接入建议保持安全默认值，不要急着打开写操作。
 
 基线配置如下：
-[code]
+
+```
+
     GATEWAY_URL=ws://127.0.0.1:18789
     READONLY_MODE=true
     APPROVAL_ACTIONS_ENABLED=false
@@ -353,7 +364,8 @@ Token 消耗归因
     # OPENCLAW_HOME=/path/to/.openclaw
     # CODEX_HOME=/path/to/.codex
     # OPENCLAW_SUBSCRIPTION_SNAPSHOT_PATH=/path/to/subscription.json
-[/code]
+
+```
 
 一般只需要在这些情况下修改：
 
@@ -368,11 +380,14 @@ Token 消耗归因
 [](https://github.com/TianyiDataScience/openclaw-control-center#5-%E9%AA%8C%E8%AF%81%E5%AE%89%E8%A3%85)
 
 执行：
-[code]
+
+```
+
     npm run build
     npm test
     npm run smoke:ui
-[/code]
+
+```
 
 预期结果：
 
@@ -383,9 +398,12 @@ Token 消耗归因
 ### 6\. 启动界面
 
 [](https://github.com/TianyiDataScience/openclaw-control-center#6-%E5%90%AF%E5%8A%A8%E7%95%8C%E9%9D%A2)
-[code]
+
+```
+
     UI_MODE=true npm run dev
-[/code]
+
+```
 
 然后打开：
 

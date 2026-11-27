@@ -15,18 +15,27 @@ description: 前言 相信现在很多人都在用青龙面板，今天写一篇
 ## 青龙面板拉取
 
   1. **使用下面命令进行单独的青龙面板`镜像拉取`。前提您操作系统已经安装了`Docker`**
-[code]docker pull whyour/qinglong:latest
-[/code]
+
+```
+docker pull whyour/qinglong:latest
+
+```
 
 Copy
 
   2. **如果您的拉取出现拉取`过慢`，或者`拉取不下来`问题，可以去`Docker的配置文件`修改`加速地址`配置。或者使用`命令修改`即可。（请`替换`[ "[https://Docker加速网址](https://xn--docker-8e4jr91ar77gee9a/)"] 里面的`地址`），替换完毕后记得`重启docker`才可生效**
-[code]sudo tee /etc/docker/daemon.json <
-[/code]
+
+```
+sudo tee /etc/docker/daemon.json <
+
+```
 
 Copy
-[code]systemctl restart  docker
-[/code]
+
+```
+systemctl restart  docker
+
+```
 
 Copy
 
@@ -37,14 +46,17 @@ Copy
   1. **我们首先通过`ssh工具`连接你的`服务器`，这里我使用的是`FinalShell`工具连接。输入你服务器的`正确IP`或者`本地IP`和`端口`，输入`用户`和`密码`确认即可。**  
 [![file](https://lmu5.com/wp-content/uploads/2024/06/20240626095128744441.webp)](https://lmu5.com/wp-content/uploads/2024/06/20240626095128744441.webp)
   2. **连接完毕后我们就使用下面命令进行创建容器，这里记住，[-v $PWD/`ql`/data:/ql/data] 里前面的`ql`是可以更改的,[-p `5700`:5700] 里面:前面的`5700`可以`更改`，这就是`映射`出来的`端口号`，也是你后续`网页端`要输入的`端口号`。后面的默认`5700不动`，因为后面的是`容器端口`，每个容器都是`独立`的，不会冲突。[--name `qinglong`和--hostname `qinglong`]里面的`qinglon`g也是可以`更改`的。修改代码后回车即可！**
-[code]docker run -dit \
+
+```
+docker run -dit \
          -v $PWD/ql/data:/ql/data \
          -p 5700:5700 \
          --name qinglong \
          --hostname qinglong \
          --restart always \
          whyour/qinglong:latest
-[/code]
+
+```
 
 Copy
 
@@ -72,62 +84,77 @@ Copy
 ### 多容器命令
 
   * **容器1**
-[code]docker run -dit \
+
+```
+docker run -dit \
         -v $PWD/ql1/data:/ql/data \
         -p 5701:5700 \
         --name ql1 \
         --hostname ql1 \
         --restart always \
         whyour/qinglong:latest
-[/code]
+
+```
 
 Copy
 
   * **容器2**
-[code]docker run -dit \
+
+```
+docker run -dit \
         -v $PWD/ql2/data:/ql/data \
         -p 5702:5700 \
         --name ql2 \
         --hostname ql2 \
         --restart always \
         whyour/qinglong:latest
-[/code]
+
+```
 
 Copy
 
   * **容器3**
-[code]docker run -dit \
+
+```
+docker run -dit \
         -v $PWD/ql3/data:/ql/data \
         -p 5703:5700 \
         --name ql3 \
         --hostname ql3 \
         --restart always \
         whyour/qinglong:latest
-[/code]
+
+```
 
 Copy
 
   * **容器4**
-[code]docker run -dit \
+
+```
+docker run -dit \
         -v $PWD/ql4/data:/ql/data \
         -p 5704:5700 \
         --name ql4 \
         --hostname ql4 \
         --restart always \
         whyour/qinglong:latest
-[/code]
+
+```
 
 Copy
 
   * **容器5**
-[code]docker run -dit \
+
+```
+docker run -dit \
         -v $PWD/ql5/data:/ql/data \
         -p 5705:5700 \
         --name ql5\
         --hostname ql5\
         --restart always \
         whyour/qinglong:latest
-[/code]
+
+```
 
 Copy
 
@@ -136,14 +163,20 @@ Copy
 ### 删除青龙面板容器
 
 **命令`docker ps`列出`所有`容器，然后找到你的青龙容器`CREATED`下面你设置的`容器name`。用命令`docker rm -f 容器name`删除,注意下面的`qinglong`要自己更改`CREATED`下面显示的。**
-[code]
+
+```
+
     docker ps
-[/code]
+
+```
 
 Copy
-[code]
+
+```
+
     docker rm -f qinglong
-[/code]
+
+```
 
 Copy
 
@@ -152,9 +185,12 @@ Copy
 ### 删除青龙面板镜像
 
 **下面的命令`删除镜像`，但是前提你需要先`删除`依赖此镜像的容器才可以`删除镜像`。**
-[code]
+
+```
+
     docker rmi whyour/qinglong:latest
-[/code]
+
+```
 
 Copy
 
@@ -163,47 +199,72 @@ Copy
 ## 基础命令
 
   * 更新青龙
-[code]docker exec -it qinglong ql update
-[/code]
+
+```
+docker exec -it qinglong ql update
+
+```
 
 Copy
 
   * 更新青龙并编译
-[code]docker exec -it qinglong ql restart
-[/code]
+
+```
+docker exec -it qinglong ql restart
+
+```
 
 Copy
 
   * 删除7天前的所有日志
-[code]docker exec -it qinglong ql rmlog 7
-[/code]
+
+```
+docker exec -it qinglong ql rmlog 7
+
+```
 
 Copy
 
   * 启动bot
-[code]docker exec -it qinglong ql bot
-[/code]
+
+```
+docker exec -it qinglong ql bot
+
+```
 
 Copy
 
   * 导出互助码
-[code]docker exec -it qinglong ql code
-[/code]
+
+```
+docker exec -it qinglong ql code
+
+```
 
 Copy
 
   * 通知测试
-[code]docker exec -it qinglong notify test test
-[/code]
+
+```
+docker exec -it qinglong notify test test
+
+```
 
 Copy
 
   * 立即执行脚本
-[code]docker exec -it qinglong task test.js now
-[/code]
+
+```
+docker exec -it qinglong task test.js now
+
+```
 
 Copy
 
   * 并行执行脚本
-[code]docker exec -it qinglong task test.js conc
-[/code]
+
+```
+docker exec -it qinglong task test.js conc
+
+```
+

@@ -14,7 +14,8 @@ description: 本教程介绍如何在vps上搭建个人专属的高速vpn, 晚�
 
   
 
-[code]
+```
+
     章节：
     00:00 开场白
     00:42 本视频使用的资源下载
@@ -28,7 +29,8 @@ description: 本教程介绍如何在vps上搭建个人专属的高速vpn, 晚�
     32:56 搭建的VPN效果展示
     33:48 下期预告
     
-[/code]
+
+```
 
 ## 1\. 资源下载
 
@@ -92,41 +94,58 @@ description: 本教程介绍如何在vps上搭建个人专属的高速vpn, 晚�
 
 关闭翻墙软件  
 打开命令行(快捷键 `Win+R`), 输入`cmd`, 敲回车
-[code]
+
+```
+
     ping 你vps的ip地址
     
-[/code]
+
+```
 
 ## 4\. 检测响应速度
-[code]
+
+```
+
     htpps://itdog.cn
     
-[/code]
+
+```
 
 ## 5\. 安装系统
 
 Ubuntu 22.04 或 Ubuntu 24.0
 
 ## 6\. 升级apt
-[code]
+
+```
+
     apt update
     
-[/code]
+
+```
 
 ## 7\. 安装防火墙
-[code]
+
+```
+
     apt install ufw -y
     
-[/code]
+
+```
 
 开启所有端口
-[code]
+
+```
+
     ufw disable
     
-[/code]
+
+```
 
 ## 8\. 安装hy2
-[code]
+
+```
+
     #一键安装Hysteria2
     bash <(curl -fsSL https://get.hy2.sh/)
     
@@ -136,10 +155,13 @@ Ubuntu 22.04 或 Ubuntu 24.0
     #启用Hysteria2 设置开机自启
     systemctl enable hysteria-server.service
     
-[/code]
+
+```
 
 ## 9\. VPS配置
-[code]
+
+```
+
     cat << EOF > /etc/hysteria/config.yaml
     listen: :443 #监听端口
     
@@ -159,19 +181,26 @@ Ubuntu 22.04 或 Ubuntu 24.0
         rewriteHost: true
     EOF
     
-[/code]
+
+```
 
 重启Hysteria2
-[code]
+
+```
+
     systemctl restart hysteria-server.service
     
-[/code]
+
+```
 
 查看Hysteria2状态
-[code]
+
+```
+
     systemctl status hysteria-server.service
     
-[/code]
+
+```
 
 查看后, 在英文输入法下 按字母 Q 退出
 
@@ -180,7 +209,9 @@ active (running)
 server up and running {"listen": ":443"}
 
 ## 10\. v2rayN 客户端配置
-[code]
+
+```
+
     server: 104.160.22.22:443
     auth: 123456
     
@@ -197,7 +228,8 @@ server up and running {"listen": ":443"}
     http:
       listen: 127.0.0.1:8080
     
-[/code]
+
+```
 
 ## 11\. sing-box配置文件(Android/IOS)
 

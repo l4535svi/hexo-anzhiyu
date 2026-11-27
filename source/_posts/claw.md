@@ -39,7 +39,9 @@ file name ： /etc/nginx/conf.d/default.conf
 http://nezha.ns-imc7mqm6.svc.cluster.local:8008
 
 内容：
-[code]
+
+```
+
     upstream dashboard {
         server nezha.ns-imc7mqm6.svc.cluster.local:8008;
         keepalive 512;
@@ -62,7 +64,8 @@ http://nezha.ns-imc7mqm6.svc.cluster.local:8008
             grpc_pass grpc://dashboard;
         }
     }
-[/code]
+
+```
 
 现在可以访问域名啦
 

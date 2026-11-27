@@ -42,16 +42,24 @@ Worker 继续处理代理连接和保存配置；Vercel 负责控制台、优选
   6. 给 Worker 绑定一个自己能正常访问的域名。没有自定义域名时，也可以先用可访问的 `workers.dev` 地址。
 
 UUID 要自己生成，不要照抄别人截图里的。macOS / Linux 可以运行：
-[code]
+
+```
+
     uuidgen  
     ---
-[/code]  
+
+```
+  
   
 Windows PowerShell：
-[code]
+
+```
+
     [guid]::NewGuid().ToString()  
     ---
-[/code]  
+
+```
+  
   
 如果你用 Cloudflare Pages，可以下载同一分支的 `pages.zip`，通过 Pages 直接上传，再设置 `u` 和 KV 绑定。
 
@@ -188,11 +196,15 @@ Vercel 会自动签发和续期 HTTPS 证书，一般不用自己上传。然后
 ### 第六步：换成新域名的订阅
 
 绑定完成后，重新用新域名打开面板，再复制订阅。客户端里以前保存的旧链接不会自己换域名，需要手动替换。
-[code]
+
+```
+
     控制台：https://panel.example.com/你的UUID  
     ---  
     订阅：  https://panel.example.com/你的UUID/sub?target=clash
-[/code]  
+
+```
+  
   
 公共模式仍然从首页填写 Worker 域名和 UUID。只绑定面板域名，不需要修改 Worker 的 `u` 或 KV，也不需要把 `w` 改成面板地址。
 
@@ -234,13 +246,17 @@ Environment| Production；要让预览部署也绑定时，再选 Preview
   * 换查询参数也不能让这个面板连接其他 Worker。
 
 例如，你的面板是 `panel.example.com`，Worker 是 `worker.example.com`。`w` 填后者，浏览器打开前者加 UUID。
-[code]
+
+```
+
     w=https://worker.example.com  
     ---  
        
     控制台：https://panel.example.com/你的UUID  
     订阅：  https://panel.example.com/你的UUID/sub
-[/code]  
+
+```
+  
   
 ![绑定 Worker 后直接进入原控制台，截图中的访问凭据已遮盖](https://images.joeyblog.net/2026/10/17/cfnew-panel-bound-rebuilt.png)
 
@@ -253,16 +269,24 @@ Environment| Production；要让预览部署也绑定时，再选 Preview
 在面板里设置协议、优选地址，然后复制客户端对应的订阅链接。不要继续使用 Worker 上旧的 `/sub` 地址。
 
 固定 Worker 的 Clash 订阅示例：
-[code]
+
+```
+
     https://panel.example.com/你的UUID/sub?target=clash  
     ---
-[/code]  
+
+```
+  
   
 公共模式示例：
-[code]
+
+```
+
     https://panel.example.com/sub?host=worker.example.com&uuid=你的UUID&target=clash  
     ---
-[/code]  
+
+```
+  
   
 也支持 `singbox`、`surge`、`loon`、`quanx`、`stash`、`base64` 和 `v2ray`。不指定时，按客户端请求头识别格式。各客户端对协议的支持不同，生成前先在面板启用客户端能使用的协议。
 

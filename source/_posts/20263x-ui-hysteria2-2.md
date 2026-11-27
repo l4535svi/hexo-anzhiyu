@@ -33,25 +33,35 @@ https://github.com/2dust/v2rayN
 # 更新软件源
 
  ______
-[code]
+
+```
+
     apt update -y 
-[/code]
+
+```
 
 # 安装 iptables、ip6tables 及规则持久化工具
 
  ______
-[code]
+
+```
+
     apt install -y iptables iptables-persistent
-[/code]
+
+```
 
 转发命令
 
  ______
-[code]
+
+```
+
     iptables -t nat - A PREROUTING -p udp --dport 48000:50000 -j REDIRECT --to-ports 35406  
     ---  
     ip6tables -t nat -A PREROUTING -p udp --dport 48000:50000 -j REDIRECT --to-ports 35406
-[/code]  
+
+```
+  
   
 观看是不是真正成功端口跳跃  
 tcpdump -ni any udp port 26142 or portrange 48000-50000

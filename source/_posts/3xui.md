@@ -20,10 +20,13 @@ description: 温馨提示 免责声明：该项目仅供个人学习、交流，
 ## [](https://geto.run/3xui.html#header-install)安装方式
 
 #### 请复制以下指令到ssh连接软件粘贴执行
-[code]
+
+```
+
     bash <(curl -Ls https://raw.geto.run/proxy/node/main/3xui.sh)
     
-[/code]
+
+```
 
 * * *
 

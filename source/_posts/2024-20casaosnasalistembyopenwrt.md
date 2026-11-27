@@ -19,14 +19,20 @@ description: 前我们给大家分享了如何在20元的玩客云里安装casao
 三. 安装OpenWrt
 
 首先打开网卡混杂模式
-[code]
+
+```
+
     ip link set eth0 promisc on
-[/code]
+
+```
 
 然后创建OpenWrt网络(自行替换网段，网关)，如果你的主路由是192.168.0.1的网关，我们需要将网关更改为192.168.0.1，docker network create -d macvlan –subnet=192.168.0.0/24 –gateway=192.168.0.1 -o parent=eth0 macnet，（subnet的最后那位必须是0）
-[code]
+
+```
+
     docker network create -d macvlan --subnet=192.168.5.0/24 --gateway=192.168.5.1 -o parent=eth0 macnet
-[/code]
+
+```
 
 ## 解决目前Docker Hub国内无法访问方法
 
@@ -39,7 +45,9 @@ description: 前我们给大家分享了如何在20元的玩客云里安装casao
 配置加速地址：适用于Ubuntu 16.04+、Debian 8+、CentOS 7+
 
 使用以下命令设置registry mirror：但是需要重启docker服务
-[code]
+
+```
+
     sudo mkdir -p /etc/docker
     sudo tee /etc/docker/daemon.json <<-'EOF'
     {
@@ -55,17 +63,24 @@ description: 前我们给大家分享了如何在20元的玩客云里安装casao
     EOF
     sudo systemctl daemon-reload
     sudo systemctl restart docker
-[/code]
+
+```
 
 创建容器
-[code]
+
+```
+
     docker pull dreamwsbg/openwrt:12.0
-[/code]
+
+```
 
 安装并启动容器
-[code]
+
+```
+
     docker run -d --name="openwrt" --restart unless-stopped --network macnet --privileged dreamwsbg/openwrt:12.0 /sbin/init
-[/code]
+
+```
 
 ［此固件默认IP为10.0.0.1 密码root］
 
@@ -73,15 +88,20 @@ description: 前我们给大家分享了如何在20元的玩客云里安装casao
 
 修改后台地址  
  进入容器后台
-[code]
+
+```
+
     docker exec -it openwrt bash
-[/code]
+
+```
 
 修改网络  
   
 
 vim /etc/config/network
-[code]
+
+```
+
     修改部分选项（按需修改。按“i”输入 ;     按“ESC” ,输入":" ,"w" , "q" 保存退出）
       
       config interface ‘lan’
@@ -92,12 +112,16 @@ vim /etc/config/network
       option gateway ‘192.168.0.1’(网关)
       option broadcast ‘192.168.0.255’
       option dns ‘192.168.0.111’(dns)
-[/code]
+
+```
 
 重启网络
-[code]
+
+```
+
      /etc/init.d/network restart 
-[/code]
+
+```
 
 到这应该已经可以进入后台了  
 192.168.0.6  
@@ -109,14 +133,18 @@ passwall 导入梯子……愉快的翻墙啦！
 
 安装docker  
 4.1.1 输入以下指令：(依次执行)
-[code]
+
+```
+
     docker pull whyour/qinglong:latest
     
-[/code]
+
+```
 
 4.1.2创建青龙面板容器  
 
-[code]
+```
+
     docker run -dit \
       -v /home/docker/ql/config:/ql/config \
       -v /home/docker/ql/log:/ql/log \
@@ -126,7 +154,8 @@ passwall 导入梯子……愉快的翻墙啦！
       --hostname qinglong \
       whyour/qinglong:latest
     
-[/code]
+
+```
 
 以上命令将创建一个名为`qinglong`的Docker容器，并将青龙面板的配置文件、日志和数据库等数据挂载到本地目录，同时将容器的5700端口映射到主机的5700端口。
 

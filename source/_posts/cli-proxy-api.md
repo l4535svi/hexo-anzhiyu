@@ -17,7 +17,9 @@ description: '升级本质就3步： 拉取新镜像 停掉旧容器 用新镜�
 你这个项目用的是 Docker 镜像 `seakee/cpa-manager:latest`。
 
 如果你是 `docker run` 部署：
-[code]
+
+```
+
     # 1. 拉最新镜像  
     docker pull seakee/cpa-manager:latest  
       
@@ -34,8 +36,8 @@ description: '升级本质就3步： 拉取新镜像 停掉旧容器 用新镜�
       -p 18317:18317 \  
       -v cpa-manager-data:/data \  
       seakee/cpa-manager:latest
-[/code]
-[/code]
+
+```
 
 重点：
 
@@ -105,7 +107,9 @@ CPA 控制面板方案| `http://<cpa-host>:8317/management.html`| 先登录 CPA�
 ### 完整 Docker 方案
 
 [](https://github.com/seakee/CPA-Manager/blob/main/README_CN.md#%E5%AE%8C%E6%95%B4-docker-%E6%96%B9%E6%A1%88)
-[code]
+
+```
+
     浏览器
       -> Usage Service :18317
           -> 内置 management.html
@@ -114,7 +118,8 @@ CPA 控制面板方案| `http://<cpa-host>:8317/management.html`| 先登录 CPA�
           -> HTTP/RESP 消费器 -> CPA API 端口
           -> SQLite /data/usage.sqlite
     
-[/code]
+
+```
 
 登录页会调用 `GET /usage-service/info`，识别当前是否由 Usage Service 托管。如果响应显示尚未配置，会进入 setup wizard：你填写 CPA 地址、Management Key，并选择是否启用请求监控。启用时还需要填写采集轮询间隔，Usage Service 会验证 CPA Management API，启用 CPA 用量统计，校验采集间隔不超过 CPA 队列保留时间，把 CPA-Manager 配置保存到 SQLite，按配置的采集模式启动采集器（默认 `auto`：先 subscribe，再 HTTP 队列，最后回退 RESP），并从同源提供完整管理面板。关闭请求监控时仍会保存 CPA 连接用于反代管理接口，但不会启用 CPA 用量统计或启动采集器。
 
@@ -123,7 +128,9 @@ Usage Service 配置完成后，新浏览器再次打开同一地址会使用普
 ### CPA 控制面板方案
 
 [](https://github.com/seakee/CPA-Manager/blob/main/README_CN.md#cpa-%E6%8E%A7%E5%88%B6%E9%9D%A2%E6%9D%BF%E6%96%B9%E6%A1%88)
-[code]
+
+```
+
     浏览器
       -> CPA /management.html
           -> 普通 CPA Management API 请求仍然访问 CPA
@@ -133,7 +140,8 @@ Usage Service 配置完成后，新浏览器再次打开同一地址会使用普
       -> HTTP/RESP 消费器 -> CPA API 端口
       -> SQLite /data/usage.sqlite
     
-[/code]
+
+```
 
 当你希望保留 CPA 自动下载并托管面板的机制时，使用这个方案。该模式由 CPA 托管页面，因此不会显示 Usage Service 托管面板的 setup wizard。请求监控是可选能力；如果没有部署 Usage Service，面板会自动隐藏请求监控入口，直接访问监控页时会提示先部署并配置 Usage Service。需要请求监控时，先登录 CPA，再单独部署 Usage Service，然后在面板的「配置面板 -> CPA-Manager 配置」中启用并填写地址。
 
@@ -146,20 +154,26 @@ Usage Service 配置完成后，新浏览器再次打开同一地址会使用普
 ### Docker Hub 镜像
 
 [](https://github.com/seakee/CPA-Manager/blob/main/README_CN.md#docker-hub-%E9%95%9C%E5%83%8F)
-[code]
+
+```
+
     docker run -d \
       --name cpa-manager \
       --restart unless-stopped \
       -p 18317:18317 \
       -v cpa-manager-data:/data \
       seakee/cpa-manager:latest
-[/code]
+
+```
 
 打开：
-[code]
+
+```
+
     http://<host>:18317/management.html
     
-[/code]
+
+```
 
 首次 setup 时填写：
 
@@ -187,28 +201,37 @@ GitHub Releases 同时提供内置面板的原生运行包：
   * `cpa-manager_<version>_windows_arm64.zip`
 
 macOS/Linux：
-[code]
+
+```
+
     tar -xzf cpa-manager_vX.Y.Z_linux_amd64.tar.gz
     cd cpa-manager_vX.Y.Z_linux_amd64
     ./cpa-manager
-[/code]
+
+```
 
 tar 包已保留执行权限，正常解压后不需要额外 `chmod +x`。macOS 如果提示无法打开未签名程序，可在解压目录执行 `xattr -dr com.apple.quarantine .` 后再运行。
 
 Windows PowerShell：
-[code]
+
+```
+
     Expand-Archive .\cpa-manager_vX.Y.Z_windows_amd64.zip -DestinationPath .
     cd .\cpa-manager_vX.Y.Z_windows_amd64
     .\cpa-manager.exe
-[/code]
+
+```
 
 Windows 可直接双击 `cpa-manager.exe` 启动，但推荐用 PowerShell 运行，方便查看日志和错误信息。
 
 启动后打开：
-[code]
+
+```
+
     http://<host>:18317/management.html
     
-[/code]
+
+```
 
 原生包不包含 CPA 本体。请让 CPA 独立运行，并在首次 setup 时填写 CPA 地址和 Management Key。setup 完成后，登录页只需要 Management Key。需要自定义数据位置时，可以设置 `USAGE_DATA_DIR` 或 `USAGE_DB_PATH` 覆盖默认值。
 
@@ -217,7 +240,9 @@ Windows 可直接双击 `cpa-manager.exe` 启动，但推荐用 PowerShell 运�
 ### Docker Compose
 
 [](https://github.com/seakee/CPA-Manager/blob/main/README_CN.md#docker-compose)
-[code]
+
+```
+
     services:
       cpa-manager:
         image: seakee/cpa-manager:latest
@@ -229,19 +254,25 @@ Windows 可直接双击 `cpa-manager.exe` 启动，但推荐用 PowerShell 运�
     
     volumes:
       cpa-manager-data:
-[/code]
+
+```
 
 启动：
-[code]
+
+```
+
     docker compose up -d
-[/code]
+
+```
 
 ### Linux 宿主机运行 CPA
 
 [](https://github.com/seakee/CPA-Manager/blob/main/README_CN.md#linux-%E5%AE%BF%E4%B8%BB%E6%9C%BA%E8%BF%90%E8%A1%8C-cpa)
 
 如果 CPA 直接运行在 Linux 宿主机，Usage Service 运行在 Docker 中，需要添加 host gateway：
-[code]
+
+```
+
     docker run -d \
       --name cpa-manager \
       --restart unless-stopped \
@@ -249,7 +280,8 @@ Windows 可直接双击 `cpa-manager.exe` 启动，但推荐用 PowerShell 运�
       -p 18317:18317 \
       -v cpa-manager-data:/data \
       seakee/cpa-manager:latest
-[/code]
+
+```
 
 然后在首次 setup 时将 CPA 地址填写为 `http://host.docker.internal:8317`。
 
@@ -258,30 +290,42 @@ Windows 可直接双击 `cpa-manager.exe` 启动，但推荐用 PowerShell 运�
 [](https://github.com/seakee/CPA-Manager/blob/main/README_CN.md#%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8Bcpa-%E6%8E%A7%E5%88%B6%E9%9D%A2%E6%9D%BF%E6%96%B9%E6%A1%88)
 
   1. 正常启动 CPA，打开：
-[code]http://<cpa-host>:8317/management.html
+
+```
+http://<cpa-host>:8317/management.html
          
-[/code]
+
+```
 
 使用 CPA Management Key 登录 CPA。这个入口由 CPA 托管，不使用 Usage Service setup wizard。
 
   2. 单独部署 Usage Service：
-[code]docker run -d \
+
+```
+docker run -d \
            --name cpa-manager \
            --restart unless-stopped \
            -p 18317:18317 \
            -v cpa-manager-data:/data \
            seakee/cpa-manager:latest
-[/code]
+
+```
 
   3. 在 CPA 面板进入：
-[code]配置面板 -> CPA-Manager 配置
+
+```
+配置面板 -> CPA-Manager 配置
          
-[/code]
+
+```
 
   4. 启用并填写：
-[code]http://<usage-service-host>:18317
+
+```
+http://<usage-service-host>:18317
          
-[/code]
+
+```
 
   5. 保存 CPA-Manager 配置。
 
@@ -290,9 +334,12 @@ Windows 可直接双击 `cpa-manager.exe` 启动，但推荐用 PowerShell 运�
 ## 本地从源码构建
 
 [](https://github.com/seakee/CPA-Manager/blob/main/README_CN.md#%E6%9C%AC%E5%9C%B0%E4%BB%8E%E6%BA%90%E7%A0%81%E6%9E%84%E5%BB%BA)
-[code]
+
+```
+
     docker compose -f docker-compose.usage.yml up --build
-[/code]
+
+```
 
 该命令会构建 React 面板，并把它内置到 Go Usage Service 二进制中。
 
@@ -324,12 +371,15 @@ Windows 可直接双击 `cpa-manager.exe` 启动，但推荐用 PowerShell 运�
 `PANEL_PATH`| 空| 使用自定义 `management.html` 替代内置面板  
   
 启动类配置的优先级为：环境变量 > `config.json` > 程序默认值。配置文件中的相对路径按配置文件所在目录解析。默认生成的配置文件内容如下：
-[code]
+
+```
+
     {
       "httpAddr": "0.0.0.0:18317",
       "dataDir": "./data"
     }
-[/code]
+
+```
 
 如果设置了 `CPA_UPSTREAM_URL` 和 `CPA_MANAGEMENT_KEY`，服务启动后会自动开始采集，并作为环境变量管理的连接配置展示在面板中。否则通过面板 setup 流程配置，保存到 SQLite `settings.manager_config_v1`；旧版 `settings.setup` 会继续写入，用于兼容已有数据和回滚。
 
@@ -408,22 +458,28 @@ setup 后，`/status`、用量、模型价格和 `/v0/management/*` 反代接口
 [](https://github.com/seakee/CPA-Manager/blob/main/README_CN.md#%E5%BC%80%E5%8F%91%E5%91%BD%E4%BB%A4)
 
 前端：
-[code]
+
+```
+
     npm ci
     npm run dev
     npm run type-check
     npm run lint
     npm run build
-[/code]
+
+```
 
 打开 `http://localhost:5173`，然后连接到你的 CLI Proxy API 后端实例。
 
 Usage Service：
-[code]
+
+```
+
     cd usage-service
     go test ./...
     go run ./cmd/cpa-manager
-[/code]
+
+```
 
 ## 构建与发布
 

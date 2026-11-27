@@ -15,7 +15,9 @@ description: 'Docker 部署 Kvrocks 存储（推荐） services: moontv-core: im
 #### Kvrocks 存储（推荐）
 
  ______
-[code]
+
+```
+
     services:  
     ---  
       moontv-core:  
@@ -46,11 +48,17 @@ description: 'Docker 部署 Kvrocks 存储（推荐） services: moontv-core: im
         driver: bridge  
     volumes:  
       kvrocks-data:
-[/code]  
+
+```
+  
   
 资源连接：
 
  ______
-[code]
+
+```
+
     https://raw.githubusercontent.com/hafrey1/LunaTV- config/refs/heads/main/LunaTV-config.txt
-[/code]
+
+```
+

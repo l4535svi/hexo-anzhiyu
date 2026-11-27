@@ -69,8 +69,8 @@ description: 这是一个将多个节点和订阅合并为单一链接的工具�
 
   1. ``
   2. ``
-[/code]
-[code]
+
+```
 
 ## 🛠️ Workers 部署方法
 
@@ -91,9 +91,10 @@ description: 这是一个将多个节点和订阅合并为单一链接的工具�
 ``
 
   * ``
-[/code]
-[/code]
-[code]
+
+```
+
+```
 
 ### 
 
@@ -101,8 +102,10 @@ description: 这是一个将多个节点和订阅合并为单一链接的工具�
 
   1. ``
   2. ``
-[/code]
-[code]
+
+```
+
+```
 
 ## 📋 变量说明
 
@@ -122,3 +125,5 @@ SUBCONFIG| [https://raw.github.../ACL4SSR_Online_MultiCountry.ini](https://raw.g
 [](https://github.com/cmliu/CF-Workers-SUB#%EF%B8%8F-%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9)
 
 项目中，TGTOKEN和TGID在使用时需要先到Telegram注册并获取。其中，TGTOKEN是telegram bot的凭证，TGID是用来接收通知的telegram用户或者组的id。
+
+```

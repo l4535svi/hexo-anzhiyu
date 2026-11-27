@@ -56,7 +56,9 @@ description: '✨ 特性与应用场景 将 Telegram Channel 转为微博客 作
 ## [](https://www.limin.studio/2024/11/08/BroadcastChannel/#%E2%9A%92%EF%B8%8F-%E9%85%8D%E7%BD%AE%E7%A4%BA%E4%BE%8B "⚒️ 配置示例")⚒️ 配置示例
 
 plaintext
-[code]
+
+```
+
     1  
     2  
     3  
@@ -105,10 +107,13 @@ plaintext
     46  
     47  
     
-[/code]
+
+```
 
 | 
-[code]
+
+```
+
     ## Telegram 频道用户名（必须配置），t.me/ 后的字符  
     CHANNEL=miantiao_me  
       
@@ -157,7 +162,8 @@ plaintext
     ## 侧边栏导航配置  
     NAVS=Title1,URL1;Title2,URL2;Title3,URL3;  
     
-[/code]
+
+```
 
   
   

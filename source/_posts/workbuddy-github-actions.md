@@ -64,14 +64,17 @@ gh 已登录| `gh auth status`| `gh auth login`
 **方法一：让 gh 也走你 git 用的那个代理**
 
 TERMINAL COMMAND复制命令
-[code]
+
+```
+
     # 先看看你自己的代理地址
     git config --get http.proxy
     
     # 然后把它传给部署器
     python deploy.py --gh-proxy http://127.0.0.1:10808
     复制BASH
-[/code]
+
+```
 
 脚本在检测到「git 有代理但 gh 没有」时会自动提示你，不用自己记。
 
@@ -81,10 +84,13 @@ TERMINAL COMMAND复制命令
   2. 存成 `token.txt`，然后执行：
 
 TERMINAL COMMAND复制命令
-[code]
+
+```
+
     gh auth login --with-token < token.txt
     复制BASH
-[/code]
+
+```
 
 这条只依赖 `api.github.com`，在 github.com 被墙、也没配代理的网络下同样可用。授权完成后重跑 `python deploy.py` 就行。
 
@@ -99,24 +105,32 @@ TERMINAL COMMAND复制命令
 ### 第 2 步：先预演，不动任何东西
 
 TERMINAL COMMAND复制命令
-[code]
+
+```
+
     cd 解压后的目录
     python deploy.py --dry-run复制BASH
-[/code]
+
+```
 
 这一步会把所有前置条件检查一遍，并打印出「待会儿到底要干什么」。全绿了再往下走。如果哪一项报红，它会直接告诉你缺什么、怎么补。
 
 ### 第 3 步：正式部署
 
 TERMINAL COMMAND复制命令
-[code]
+
+```
+
     python deploy.py复制BASH
-[/code]
+
+```
 
 接下来它会自动完成这些事，你只需要看着：
 
 TERMINAL COMMAND复制命令
-[code]
+
+```
+
     [1] 检查运行环境
         ✓ git   git version 2.55.0
         ✓ gh    gh version 2.89.0
@@ -141,18 +155,22 @@ TERMINAL COMMAND复制命令
         ✓ 运行 #35711817988 成功复制BASH
     
     展开全部代码 (22 行)
-[/code]
+
+```
 
 最后会直接打印这次的真实运行结果，比如：
 
 TERMINAL COMMAND复制命令
-[code]
+
+```
+
     📊 各账号运行报告
        💰 主套餐剩余 1363.42 积分（共 7320，已用 5956.58）
        📊 共 46 类资源，本月已使用 2241 次
        🌱 等级 14 | 连签 22 天 | 能量 5
     📊 ══ 总计 ══复制BASH
-[/code]
+
+```
 
 看到这个就说明整条链路通了。
 
@@ -171,7 +189,9 @@ TERMINAL COMMAND复制命令
 实测一次运行的完整输出大概是这样：
 
 TERMINAL COMMAND复制命令
-[code]
+
+```
+
     ✅签到: 今天已签到，请明天再来
     🎁领奖[Hp_Appearance]: +100积分+5能量
     🎁领奖[Expert_team_use_3]: +100积分+5能量
@@ -183,7 +203,8 @@ TERMINAL COMMAND复制命令
     🏅徽章: 8个
     🏫 lottery → 6积分
     🏁 完成 14/19  等级14  剩余: 公益专家, 发现应用, 企鹅教师助手, 关注公众号, 夜猫子活动复制BASH
-[/code]
+
+```
 
 有 3 项是**设计上做不了** 的，别被「全自动」误导：公益专家需要真实捐款、学生认证需要微信实名、关注公众号需要你自己扫码。剩下的会在后续运行里逐步补齐。
 
@@ -194,13 +215,16 @@ TERMINAL COMMAND复制命令
 这里用的是 **AT + RT（refreshToken）三元组** ，逻辑是：
 
 TERMINAL COMMAND复制命令
-[code]
+
+```
+
     距上次刷新 > 10 天  或  AT 7 天内即将过期
             ↓
     用 RT 换发全新的 AT + RT，立即写回仓库
             ↓
     下次运行读到的就是新令牌复制BASH
-[/code]
+
+```
 
 因为每次刷新都会轮换新令牌并落盘，所以**理论上配一次就永续** 。Actions 会自动把令牌状态提交回你的私有仓库，不需要你介入。
 
@@ -236,16 +260,22 @@ TERMINAL COMMAND复制命令
 想随时看状态：
 
 TERMINAL COMMAND复制命令
-[code]
+
+```
+
     python deploy.py --check复制BASH
-[/code]
+
+```
 
 想改签到时间（比如只在早上跑一次）：
 
 TERMINAL COMMAND复制命令
-[code]
+
+```
+
     python deploy.py --schedule 09:10复制BASH
-[/code]
+
+```
 
 重复运行是安全的——部署器会复用已有仓库，只提交真正的差异。
 

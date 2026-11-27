@@ -19,27 +19,38 @@ description: 演示站（随着时间推移，有可能会关闭演示站）： 
 1.解析两个域名，一个是面板域名，另一个是通讯域名。
 
 2.安装nginx和docker，并进行反代。
-[code]
+
+```
+
     wget -O 1keji.sh "https://www.1keji.net" && chmod +x 1keji.sh && ./1keji.sh
     
-[/code]
+
+```
 
 3.安装哪吒探针程序。
-[code]
+
+```
+
     curl -L https://raw.githubusercontent.com/nezhahq/scripts/refs/heads/main/install.sh -o nezha.sh && chmod +x nezha.sh && sudo ./nezha.sh
     
-[/code]
+
+```
 
 大陆地区使用以下镜像：
-[code]
+
+```
+
     curl -L https://gitee.com/naibahq/scripts/raw/main/install.sh -o nezha.sh && chmod +x nezha.sh && sudo CN=true ./nezha.sh
     
-[/code]
+
+```
 
 4.美化：
 
 前端自定义代码
-[code]
+
+```
+
     <script>
       // 禁用系统默认的小人（哪吒）动画
       window.DisableAnimatedMan = true;
@@ -102,10 +113,13 @@ description: 演示站（随着时间推移，有可能会关闭演示站）： 
       });
     </script>
     
-[/code]
+
+```
 
 仪表板自定义代码：
-[code]
+
+```
+
     <script>
       // 禁用默认小人图（哪吒官方保留变量）
       window.DisableAnimatedMan = true;
@@ -200,7 +214,8 @@ description: 演示站（随着时间推移，有可能会关闭演示站）： 
       }
     </style>
     
-[/code]
+
+```
 
 视频教程：
 
@@ -209,7 +224,9 @@ description: 演示站（随着时间推移，有可能会关闭演示站）： 
 [哪吒探针V1版，最新稳定简单安装教程。前后端高级美化：背景更换、小人定制、头像替换全搞定！](https://www.youtube.com/watch?v=TU5bqzBiU0w "哪吒探针V1版，最新稳定简单安装教程。前后端高级美化：背景更换、小人定制、头像替换全搞定！")
 
 前端添加ip显示
-[code]
+
+```
+
     <script>
         // 插入 IP 图片
     const observerImg = new MutationObserver(() => {
@@ -318,7 +335,8 @@ description: 演示站（随着时间推移，有可能会关闭演示站）： 
       });
     </script>
     
-[/code]
+
+```
 
 显示位置：
 

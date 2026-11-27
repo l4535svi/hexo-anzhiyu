@@ -92,13 +92,16 @@ description: 不需要懂 Linux，不需要懂 Docker。复制两行命令，几
 SSH 登录到你的服务器，把下面整段复制粘贴进去，回车：
 
 TERMINAL COMMAND复制命令
-[code]
+
+```
+
     # 1. 下载安装脚本
     curl -fsSL -o install.sh https://raw.githubusercontent.com/yys9253462-gif/muse-video-installer/main/install.sh
     
     # 2. 跑起来（会问你 1-2 个问题）
     sudo bash install.sh
-[/code]
+
+```
 
 就这样。脚本会自己检查系统、装好缺的东西、下载程序、配好密钥、启动服务。
 
@@ -107,16 +110,22 @@ TERMINAL COMMAND复制命令
 **想全自动、一个都不问：**
 
 TERMINAL COMMAND复制命令
-[code]
+
+```
+
     sudo bash install.sh --yes
-[/code]
+
+```
 
 **想先看看它会做什么、但不动系统：**
 
 TERMINAL COMMAND复制命令
-[code]
+
+```
+
     sudo bash install.sh --dry-run
-[/code]
+
+```
 
 > 💡 装完之后，你下载的那份 `install.sh` 删掉也没关系——脚本会把自己另存一份到安装目录里（如 `/opt/mvw/install.sh`），以后升级、查状态、卸载都用那一份。安装结束时也会把这条命令直接打印给你。
 
@@ -132,7 +141,9 @@ TERMINAL COMMAND复制命令
 用哪个端口？| 自动挑| 先看 `18610` / `8090` 有没有被占，占了就往后找  
   
 然后它就自己干活了，大概 **2~5 分钟** ，你会看到这样的输出：
-[code]
+
+```
+
     ▸ 开始检查环境
       ✓ 系统：debian 12（用 apt 装东西）
     ▸ 检查并安装 git / docker / docker compose
@@ -151,7 +162,8 @@ TERMINAL COMMAND复制命令
       ✓ 网页服务已启动复制
     
     展开全部代码 (16 行)
-[/code]
+
+```
 
 > "HTTP 401 属正常"这句可能反直觉——401 是"未授权"，但在这里恰恰说明服务活着且在正常鉴权，是好事。
 
@@ -160,13 +172,16 @@ TERMINAL COMMAND复制命令
 ## 五、装完了，怎么用？
 
 安装结束会给你这几行信息，**建议截图保存** （尤其 API Key）：
-[code]
+
+```
+
     网页地址：      http://你的服务器IP:8090/
     接口地址：      http://你的服务器IP:18610/v1
     API Key：       m2a_xxxxxxxxxxxxxxxxxxxx
     安装目录：      /opt/mvw
     账号池面板：    http://你的服务器IP:18610/admin?key=你的Key复制
-[/code]
+
+```
 
 ### 第 1 步：打开网页看看
 
@@ -202,9 +217,12 @@ TERMINAL COMMAND复制命令
 **第 1 步：下载导号小工具**
 
 下载这个文件，**存到桌面** （文件名叫 `get_muse_cookie.py`，别改名）：
-[code]
+
+```
+
     https://raw.githubusercontent.com/yys9253462-gif/muse-video-installer/main/tools/get_muse_cookie.py复制
-[/code]
+
+```
 
 > 它就是一个普通的 Python 脚本，你可以用记事本打开看内容，不会在你电脑上偷偷装任何东西。
 
@@ -213,10 +231,13 @@ TERMINAL COMMAND复制命令
 在桌面打开命令行（Windows 按 `Win+R` → 输入 `cmd` → 回车），然后：
 
 TERMINAL COMMAND复制命令
-[code]
+
+```
+
     cd Desktop
     python get_muse_cookie.py
-[/code]
+
+```
 
 它会问你两件事（从安装结束的输出里复制过去）：
 
@@ -232,12 +253,15 @@ API Key| 安装结束时显示的 `m2a_` 开头那串（随时可以用 `sudo ba
 **第 3 步：在弹出的窗口里登录 muse.ai**
 
 用你平时的方式登录即可。**登录成功、能看到聊天界面后** ，脚本会自己把账号传上服务器，你会看到：
-[code]
+
+```
+
       ✓ 导入成功！
           账号标签：你的邮箱
           账号 ID： 160c1f16435f
           cookie： 10 条复制
-[/code]
+
+```
 
 然后它会问你「**还要再导入一个 muse.ai 账号吗？** 」：
 
@@ -247,9 +271,12 @@ API Key| 安装结束时显示的 `m2a_` 开头那串（随时可以用 `sudo ba
 **第 4 步：核对**
 
 TERMINAL COMMAND复制命令
-[code]
+
+```
+
     sudo bash install.sh --status
-[/code]
+
+```
 
 看到「账号池：**N** 个账号」就对上了。
 
@@ -273,12 +300,15 @@ TERMINAL COMMAND复制命令
 **第 1 步：从浏览器里抄出 4 串 cookie**
 
 1\. 在你自己的浏览器里**登录 muse.ai** （要先登录成功） 2. 按 `F12` 打开开发者工具 → 切到 **Application** （中文版叫「应用」）标签页 3. 左侧找到 **Cookies** → 点开 `https://muse.ai` 4\. 在右侧列表里依次找到这 **4 个名字** ，双击它的 **Value** 列复制：
-[code]
+
+```
+
     hatch_sess
     hatch_gw
     hatch_vml
     hatch_native_auth_device复制
-[/code]
+
+```
 
 > ⚠️ 这 4 个的值都很长，要完整复制，少一个字符就不行。  
 > 它们都标着 `HttpOnly ✓`——这正是为什么不能直接在控制台敲 `document.cookie` 读它们，必须到 Application 面板里看。
@@ -286,20 +316,29 @@ TERMINAL COMMAND复制命令
 **第 2 步：拼成一行，粘进面板**
 
 把这 4 个值拼成**一行** （用分号 + 空格分隔）：
-[code]
+
+```
+
     hatch_sess=你复制的值; hatch_gw=你复制的值; hatch_vml=你复制的值; hatch_native_auth_device=你复制的值复制
-[/code]
+
+```
 
 打开面板 → 点「**添加账号** 」→ 粘进去 → 保存：
-[code]
+
+```
+
     http://你的服务器IP:18610/admin?key=你的Key复制
-[/code]
+
+```
 
 **想一次加多个？** 面板支持批量，**每行一个账号** ：
-[code]
+
+```
+
     acc-01 | hatch_sess=...; hatch_gw=...; hatch_vml=...; hatch_native_auth_device=...
     acc-02 | hatch_sess=...; hatch_gw=...; hatch_vml=...; hatch_native_auth_device=...复制
-[/code]
+
+```
 
 * * *
 
@@ -326,12 +365,15 @@ API Key| `m2a_xxxxxxxxxxxx`
 脚本会**记住上次的配置** ，所以重跑这些命令**不用再带参数** ：
 
 TERMINAL COMMAND复制命令
-[code]
+
+```
+
     sudo bash install.sh --status      # 看运行状态 + 找回地址和 API Key
     sudo bash install.sh --upgrade     # 升级到最新版（Key 不变）
     sudo bash install.sh --uninstall   # 卸载（默认保留数据）
     sudo bash install.sh --help        # 看全部用法
-[/code]
+
+```
 
 > 💡 找不到安装脚本了？ 脚本在安装时会把自己存一份到安装目录，所以下面这条永远可用：  
 > ```bash  
@@ -353,12 +395,15 @@ TERMINAL COMMAND复制命令
 **在小工具里直接管账号池** （不用打开网页）：
 
 TERMINAL COMMAND复制命令
-[code]
+
+```
+
     python get_muse_cookie.py                    # 导一个，它会问「还要再来一个吗」
     python get_muse_cookie.py --count 3          # 一口气导 3 个（全自动）
     python get_muse_cookie.py --list             # 看账号池现在有哪些账号
     python get_muse_cookie.py --remove acc-02    # 删掉某个账号
-[/code]
+
+```
 
 * * *
 
@@ -383,9 +428,12 @@ TERMINAL COMMAND复制命令
 不用重装，直接查：
 
 TERMINAL COMMAND复制命令
-[code]
+
+```
+
     sudo bash install.sh --status
-[/code]
+
+```
 
 输出里有一段「**连接信息** 」，网页地址、接口地址、API Key、面板链接全列出来。
 
@@ -396,25 +444,34 @@ TERMINAL COMMAND复制命令
 ### ❌ 网页能开，但生成视频报错 / 一直转
 
 多半是账号没导入或掉线了。打开账号池面板看数量：
-[code]
+
+```
+
     http://你的服务器IP:18610/admin?key=你的Key复制
-[/code]
+
+```
 
 数量是 `0` → 回去重新导号；有账号但报错 → 重新导一次（账号会过期，脚本每 48 小时自动续期，但偶尔会失效）。
 
 ### ❌ 安装时报「端口已被占用」
 
 TERMINAL COMMAND复制命令
-[code]
+
+```
+
     sudo ss -lntp | grep 8090      # 看谁占了
-[/code]
+
+```
 
 要么停掉那个服务，要么换个端口：
 
 TERMINAL COMMAND复制命令
-[code]
+
+```
+
     sudo bash install.sh --api-port 19000 --web-port 9000
-[/code]
+
+```
 
 ### ❌ 内存不够 / 容器被系统杀掉
 
@@ -427,9 +484,12 @@ TERMINAL COMMAND复制命令
 如果你的域名已经解析到了这台服务器，装的时候**加一个参数** 就自动配好 HTTPS：
 
 TERMINAL COMMAND复制命令
-[code]
+
+```
+
     sudo bash install.sh --domain video.你的域名.com
-[/code]
+
+```
 
 脚本会自动用 Caddy 起反代、申请 Let's Encrypt 免费证书，装完直接 `https://video.你的域名.com/` 访问。
 
@@ -438,7 +498,9 @@ TERMINAL COMMAND复制命令
 * * *
 
 ## 九、全部参数一览
-[code]
+
+```
+
     用法：sudo bash install.sh [选项]
     
     常用：
@@ -458,12 +520,15 @@ TERMINAL COMMAND复制命令
       --no-deps            不自动装依赖，缺什么只告诉你复制
     
     展开全部代码 (17 行)
-[/code]
+
+```
 
 **几个实用例子：**
 
 TERMINAL COMMAND复制命令
-[code]
+
+```
+
     # 全自动，指定网页端口
     sudo bash install.sh --yes --web-port 8090
     
@@ -472,7 +537,8 @@ TERMINAL COMMAND复制命令
     
     # 绑域名
     sudo bash install.sh --domain video.example.com
-[/code]
+
+```
 
 * * *
 
@@ -491,9 +557,12 @@ TERMINAL COMMAND复制命令
 **同一台机器想装多份？可以。** 脚本会从安装目录自动派生容器名和服务名，两份互不干扰：
 
 TERMINAL COMMAND复制命令
-[code]
+
+```
+
     sudo bash install.sh --dir /opt/mvw-2 --api-port 18620 --web-port 8100
-[/code]
+
+```
 
 > 💡 目录名是中文也没问题（比如 `/opt/视频工作台`）。脚本会给 Docker 显式指定一个英文项目名，不会踩"项目名不能为空"那个坑。
 
@@ -502,9 +571,12 @@ TERMINAL COMMAND复制命令
 ## 十一、怎么卸载？
 
 TERMINAL COMMAND复制命令
-[code]
+
+```
+
     sudo bash install.sh --uninstall
-[/code]
+
+```
 
 默认行为：
 
@@ -517,9 +589,12 @@ TERMINAL COMMAND复制命令
 想**连数据一起删干净** ，卸载后手动执行：
 
 TERMINAL COMMAND复制命令
-[code]
+
+```
+
     sudo rm -rf /opt/mvw
-[/code]
+
+```
 
 * * *
 

@@ -35,12 +35,15 @@ description: 1. 首先点击 Deploy to Cloudflare 2 登陆账号后会进入，�
 #### 5\. 添加完成后点击部署即可
 
 [](https://github.com/idinging/freemail/blob/master/docs/yijianbushu.md#5-%E6%B7%BB%E5%8A%A0%E5%AE%8C%E6%88%90%E5%90%8E%E7%82%B9%E5%87%BB%E9%83%A8%E7%BD%B2%E5%8D%B3%E5%8F%AF)
-[code]
+
+```
+
     `注：这三个变量是必须的，其他变量例如 管理员名称，发邮件密钥可自行决定是否添加`
     
     最后就可以打开对应的worker连接登陆了
     
-[/code]
+
+```
 
 [![5a0cc80913848aca4b5f4058538ad6aa|690x333](https://github.com/idinging/freemail/raw/master/pic/v4/depl5.jpeg)](https://github.com/idinging/freemail/blob/master/pic/v4/depl5.jpeg)
 
