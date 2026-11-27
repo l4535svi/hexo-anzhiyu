@@ -1,7 +1,7 @@
 ---
 title: 来！让我们用Vercel来分享你的OneDrive！
 date: '2025-11-29 12:00:00'
-cover: https://picsum.photos/seed/vercelonedrive/800/450
+cover: /img/covers/vercelonedrive.jpg
 tags:
 - Azure薅羊毛
 categories:

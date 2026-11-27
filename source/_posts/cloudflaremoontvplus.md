@@ -1,7 +1,7 @@
 ---
 title: Cloudflare搭建Moontvplus^
 date: '2026-05-26 12:00:00'
-cover: https://picsum.photos/seed/cloudflaremoontvplus/800/450
+cover: /img/covers/cloudflaremoontvplus.jpg
 tags:
 - 影视大全
 categories:

@@ -1,7 +1,7 @@
 ---
 title: Myurls-Railway
 date: '2022-04-26 12:00:00'
-cover: https://picsum.photos/seed/myurls-railway/800/450
+cover: /img/covers/myurls-railway.jpg
 tags:
 - 建站
 categories:

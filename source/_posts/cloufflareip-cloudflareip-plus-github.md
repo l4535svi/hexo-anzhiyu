@@ -1,7 +1,7 @@
 ---
 title: cloufflareip-cloudflareip-plus-github
 date: '2022-05-10 12:00:00'
-cover: https://picsum.photos/seed/cloufflareip-cloudflareip-plus-github/800/450
+cover: /img/covers/cloufflareip-cloudflareip-plus-github.jpg
 description: 一、目前CloufFlare自选IP存在问题 二、使用CloudFlare自选IP PLUS解决上述问题？ 三、使用方法 必要条件： 用前必读： 方法一：GitHub Actions 运行（推荐） 方法二：在自己的VPS或电脑中运行 四、总结 WPJAM TOC 一、目前Clou
 ---
 * [一、目前CloufFlare自选IP存在问题](https://hostmonit.com/cloudflare-select-ip-plus/#toc-1)

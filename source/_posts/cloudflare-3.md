@@ -1,7 +1,7 @@
 ---
 title: 🔥 还在用别人家的导航站？这个开源项目直接把导航网站部署到 Cloudflare！
 date: '2026-08-21 12:00:00'
-cover: https://picsum.photos/seed/cloudflare-3/800/450
+cover: /img/covers/cloudflare-3.jpg
 tags:
 - cloudflare项目
 categories:

@@ -1,7 +1,7 @@
 ---
 title: 青龙面板关于定时任务cron表达式的填写规则介绍
 date: '2022-03-11 12:00:00'
-cover: https://picsum.photos/seed/cron/800/450
+cover: /img/covers/cron.jpg
 tags:
 - 青龙全部
 categories:

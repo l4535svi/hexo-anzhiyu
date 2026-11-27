@@ -1,7 +1,7 @@
 ---
 title: chromium浏览器伪造sni工具网页版
 date: '2024-11-17 12:00:00'
-cover: https://picsum.photos/seed/chromiumsni/800/450
+cover: /img/covers/chromiumsni.jpg
 tags:
 - 科学上网
 categories:

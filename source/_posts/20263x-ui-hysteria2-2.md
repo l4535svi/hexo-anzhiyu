@@ -1,7 +1,7 @@
 ---
 title: 2026年3X-UI 最新版 Hysteria2 歇斯底里2 端口跳跃实战 保姆级教程
 date: '2026-08-04 12:00:00'
-cover: https://picsum.photos/seed/20263x-ui-hysteria2-2/800/450
+cover: /img/covers/20263x-ui-hysteria2-2.jpg
 tags:
 - 节点搭建
 categories:

@@ -1,7 +1,7 @@
 ---
 title: cloudflare搭建的vps探针和网站检测面板^
 date: '2026-01-17 12:00:00'
-cover: https://picsum.photos/seed/cloudflarevps-2/800/450
+cover: /img/covers/cloudflarevps-2.jpg
 tags:
 - 哪吒探针
 categories:

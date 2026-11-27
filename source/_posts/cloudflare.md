@@ -1,7 +1,7 @@
 ---
 title: 用 Cloudflare 打造你的临时邮箱服务｜免费、稳定、无需服务器，手把手完整教学！
 date: '2025-11-16 12:00:00'
-cover: https://picsum.photos/seed/cloudflare/800/450
+cover: /img/covers/cloudflare.jpg
 tags:
 - 临时邮箱
 categories:

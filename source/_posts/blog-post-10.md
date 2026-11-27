@@ -1,7 +1,7 @@
 ---
 title: 免流混淆参数
 date: '2021-04-10 12:00:00'
-cover: https://picsum.photos/seed/blog-post-10/800/450
+cover: /img/covers/blog-post-10.jpg
 tags:
 - 免流搭建安卓
 categories:

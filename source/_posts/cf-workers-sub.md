@@ -1,7 +1,7 @@
 ---
 title: 自建汇聚订阅 CF-Workers-SUB
 date: '2025-01-18 12:00:00'
-cover: https://picsum.photos/seed/cf-workers-sub/800/450
+cover: /img/covers/cf-workers-sub.jpg
 tags:
 - 节点分享
 categories:

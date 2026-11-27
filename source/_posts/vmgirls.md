@@ -1,7 +1,7 @@
 ---
 title: vmgirls爬取经验
 date: '2021-03-17 12:00:00'
-cover: https://picsum.photos/seed/vmgirls/800/450
+cover: /img/covers/vmgirls.jpg
 tags:
 - 免费图库
 categories:

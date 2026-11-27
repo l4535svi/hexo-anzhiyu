@@ -1,7 +1,7 @@
 ---
 title: 2025最新国外短信接码平台推荐！虚拟手机号、国外号码完美支持Google Voice、ChatGPT、Telegram等验证码，轻松解决验证码注册难题！
 date: '2025-12-10 12:00:00'
-cover: https://picsum.photos/seed/2025google-voicechatgpttelegram/800/450
+cover: /img/covers/2025google-voicechatgpttelegram.jpg
 tags:
 - TIKTOK
 categories:

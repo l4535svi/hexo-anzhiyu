@@ -1,7 +1,7 @@
 ---
 title: 哪吒探针搭建教程
 date: '2025-07-16 12:00:00'
-cover: https://picsum.photos/seed/blog-post-21/800/450
+cover: /img/covers/blog-post-21.jpg
 tags:
 - 哪吒探针
 categories:

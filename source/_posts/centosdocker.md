@@ -1,7 +1,7 @@
 ---
 title: 【青龙面板】Centos用Docker安装青龙面板以及多青龙面板教程
 date: '2025-01-17 12:00:00'
-cover: https://picsum.photos/seed/centosdocker/800/450
+cover: /img/covers/centosdocker.jpg
 tags:
 - 青龙全部
 categories:

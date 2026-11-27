@@ -1,7 +1,7 @@
 ---
 title: XrayR为GIthub上开源项目，项目地址
 date: '2022-04-18 12:00:00'
-cover: https://picsum.photos/seed/xrayrgithub/800/450
+cover: /img/covers/xrayrgithub.jpg
 tags:
 - 建站
 categories:

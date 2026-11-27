@@ -1,7 +1,7 @@
 ---
 title: FB新广告账号怎么起量？
 date: '2026-06-08 12:00:00'
-cover: https://picsum.photos/seed/fb/800/450
+cover: /img/covers/fb.jpg
 tags:
 - FB广告
 categories:

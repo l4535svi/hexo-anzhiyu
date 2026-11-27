@@ -1,7 +1,7 @@
 ---
 title: 3x-ui面板搭建！一键搭建xray面板科学上网，轻松自建vps节点
 date: '2025-03-05 12:00:00'
-cover: https://picsum.photos/seed/3x-uixrayvps/800/450
+cover: /img/covers/3x-uixrayvps.jpg
 tags:
 - 科学上网
 categories:

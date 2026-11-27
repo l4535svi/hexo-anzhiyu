@@ -1,7 +1,7 @@
 ---
 title: 哪吒面板探针
 date: '2022-03-17 12:00:00'
-cover: https://picsum.photos/seed/blog-post-6/800/450
+cover: /img/covers/blog-post-6.jpg
 tags:
 - 建站
 categories:

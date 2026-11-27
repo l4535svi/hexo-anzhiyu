@@ -1,7 +1,7 @@
 ---
 title: 将Telegram channel变成博客/QQ空间说说/树洞/备忘录/情侣日常记录，cloudflare超好玩的新项目，超多好玩
 date: '2024-12-29 12:00:00'
-cover: https://picsum.photos/seed/telegram-channelqqcloudflare/800/450
+cover: /img/covers/telegram-channelqqcloudflare.jpg
 tags:
 - 建站
 categories:

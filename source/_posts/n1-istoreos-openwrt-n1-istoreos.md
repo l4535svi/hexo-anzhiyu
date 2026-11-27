@@ -1,7 +1,7 @@
 ---
 title: 斐讯 n1 如何安装或刷入 iStoreOS openwrt 固件｜N1 iStoreOS 科学上网
 date: '2025-09-19 12:00:00'
-cover: https://picsum.photos/seed/n1-istoreos-openwrt-n1-istoreos/800/450
+cover: /img/covers/n1-istoreos-openwrt-n1-istoreos.jpg
 tags:
 - 软路由
 categories:

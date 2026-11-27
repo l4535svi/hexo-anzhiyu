@@ -1,7 +1,7 @@
 ---
 title: Hermes Agent
 date: '2026-04-12 12:00:00'
-cover: https://picsum.photos/seed/hermes-agent/800/450
+cover: /img/covers/hermes-agent.jpg
 tags:
 - Hermes Agent
 categories:

@@ -1,7 +1,7 @@
 ---
 title: 【2021 YouTube轉MP3/MP4】12種推薦下載方法大評比
 date: '2021-02-26 12:00:00'
-cover: https://picsum.photos/seed/2021-youtubemp3mp412/800/450
+cover: /img/covers/2021-youtubemp3mp412.jpg
 tags:
 - 建站
 categories:

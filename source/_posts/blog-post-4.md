@@ -1,7 +1,7 @@
 ---
 title: 科学上网教程汇总
 date: '2021-09-09 12:00:00'
-cover: https://picsum.photos/seed/blog-post-4/800/450
+cover: /img/covers/blog-post-4.jpg
 tags:
 - 免流搭建安卓
 - 科学上网

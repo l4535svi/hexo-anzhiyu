@@ -1,7 +1,7 @@
 ---
 title: 🎯 图图超级模型训练器 - AI 模型训练终极解决方案
 date: '2026-02-05 12:00:00'
-cover: https://picsum.photos/seed/ai/800/450
+cover: /img/covers/ai.jpg
 tags:
 - AI软件
 categories:

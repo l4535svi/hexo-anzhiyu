@@ -1,7 +1,7 @@
 ---
 title: 拜拜Midjourney！超強免费AI绘画神器！媲美Midjourney的顶级AI绘图模型 ，免费开源，用Cloudflare一键部署安装，小白有手就会！Flux.1模型进行图片生成，完全免费，每天10000次，保护隐私，无限次数!生成效果惊人!手机电脑都能用
 date: '2024-10-10 12:00:00'
-cover: https://picsum.photos/seed/midjourneyaimidjourneyai/800/450
+cover: /img/covers/midjourneyaimidjourneyai.jpg
 tags:
 - 免费图库
 categories:

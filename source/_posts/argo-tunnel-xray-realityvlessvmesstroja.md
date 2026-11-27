@@ -1,7 +1,7 @@
 ---
 title: 一键搭建 Argo Tunnel + Xray科学上网（支持 Reality、VLESS/VMESS/Trojan/SS+WS）｜不暴露端口更安全｜订阅自适配多客户端
 date: '2025-11-11 12:00:00'
-cover: https://picsum.photos/seed/argo-tunnel-xray-realityvlessvmesstroja/800/450
+cover: /img/covers/argo-tunnel-xray-realityvlessvmesstroja.jpg
 tags:
 - 科学上网
 categories:

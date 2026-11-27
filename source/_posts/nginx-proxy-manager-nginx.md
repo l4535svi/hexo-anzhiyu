@@ -1,7 +1,7 @@
 ---
 title: Nginx Proxy Manager 一款Nginx可视化面板 嫌弃宝塔了
 date: '2025-02-27 12:00:00'
-cover: https://picsum.photos/seed/nginx-proxy-manager-nginx/800/450
+cover: /img/covers/nginx-proxy-manager-nginx.jpg
 tags:
 - 建站
 categories:

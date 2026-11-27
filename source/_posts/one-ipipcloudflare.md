@@ -1,7 +1,7 @@
 ---
 title: One IP：一个开源IP查询工具箱，Cloudflare零成本部署
 date: '2026-09-17 12:00:00'
-cover: https://picsum.photos/seed/one-ipipcloudflare/800/450
+cover: /img/covers/one-ipipcloudflare.jpg
 tags:
 - cloudflare项目
 categories:

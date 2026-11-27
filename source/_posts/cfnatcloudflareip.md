@@ -1,7 +1,7 @@
 ---
 title: CFnat：Cloudflare优选新思路，专治泛播IP动态路由，提升网络体验！
 date: '2024-11-17 12:00:00'
-cover: https://picsum.photos/seed/cfnatcloudflareip/800/450
+cover: /img/covers/cfnatcloudflareip.jpg
 tags:
 - 科学上网
 categories:

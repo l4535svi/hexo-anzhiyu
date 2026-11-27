@@ -1,7 +1,7 @@
 ---
 title: 停机卡免流操作教程
 date: '2021-07-02 12:00:00'
-cover: https://picsum.photos/seed/blog-post-50/800/450
+cover: /img/covers/blog-post-50.jpg
 tags:
 - 免流搭建安卓
 - 科学上网

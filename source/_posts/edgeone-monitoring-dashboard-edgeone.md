@@ -1,7 +1,7 @@
 ---
 title: EdgeOne Monitoring Dashboard (EdgeOne 监控大屏)
 date: '2025-12-30 12:00:00'
-cover: https://picsum.photos/seed/edgeone-monitoring-dashboard-edgeone/800/450
+cover: /img/covers/edgeone-monitoring-dashboard-edgeone.jpg
 tags:
 - EdgeOne监控大屏
 categories:

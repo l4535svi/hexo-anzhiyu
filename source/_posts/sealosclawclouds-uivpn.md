@@ -1,7 +1,7 @@
 ---
 title: 全网首发]Sealos和Clawcloud搭建s-ui面板，零成本部署永久免费多协议VPN节点，新人小白必看！
 date: '2025-11-28 12:00:00'
-cover: https://picsum.photos/seed/sealosclawclouds-uivpn/800/450
+cover: /img/covers/sealosclawclouds-uivpn.jpg
 tags:
 - 节点搭建
 categories:

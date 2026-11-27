@@ -1,7 +1,7 @@
 ---
 title: Perplexity官网
 date: '2025-09-12 12:00:00'
-cover: https://picsum.photos/seed/perplexity/800/450
+cover: /img/covers/perplexity.jpg
 tags:
 - GPT
 categories:

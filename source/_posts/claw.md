@@ -1,7 +1,7 @@
 ---
 title: claw容器搭建哪吒监控
 date: '2025-07-16 12:00:00'
-cover: https://picsum.photos/seed/claw/800/450
+cover: /img/covers/claw.jpg
 tags:
 - 哪吒探针
 categories:

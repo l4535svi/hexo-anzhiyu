@@ -1,7 +1,7 @@
 ---
 title: ChatGPT2API最新版本可以聊天的
 date: '2026-07-29 12:00:00'
-cover: https://picsum.photos/seed/chatgpt2api-2/800/450
+cover: /img/covers/chatgpt2api-2.jpg
 tags:
 - GPT
 categories:

@@ -1,7 +1,7 @@
 ---
 title: 免费无限使用GPT-4！ Coze AI是一个非常不错的选择！！
 date: '2024-09-22 12:00:00'
-cover: https://picsum.photos/seed/gpt-4-coze-ai/800/450
+cover: /img/covers/gpt-4-coze-ai.jpg
 tags:
 - 建站
 categories:

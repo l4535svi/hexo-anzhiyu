@@ -1,7 +1,7 @@
 ---
 title: sspanle手动对接v2ray、trojan、ss
 date: '2022-04-18 12:00:00'
-cover: https://picsum.photos/seed/sspanlev2raytrojanss/800/450
+cover: /img/covers/sspanlev2raytrojanss.jpg
 tags:
 - 建站
 categories:

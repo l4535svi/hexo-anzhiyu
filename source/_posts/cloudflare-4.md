@@ -1,7 +1,7 @@
 ---
 title: 🚀 不用买服务器！这个开源二维码工具支持 Cloudflare 零成本部署，还能接广告做副业！
 date: '2026-10-13 12:00:00'
-cover: https://picsum.photos/seed/cloudflare-4/800/450
+cover: /img/covers/cloudflare-4.jpg
 tags:
 - cloudflare项目
 categories:

@@ -1,7 +1,7 @@
 ---
 title: gta5外挂需要的可以咨询
 date: '2022-04-24 12:00:00'
-cover: https://picsum.photos/seed/gta5/800/450
+cover: /img/covers/gta5.jpg
 tags:
 - 免费图库
 categories:

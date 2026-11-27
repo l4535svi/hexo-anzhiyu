@@ -1,7 +1,7 @@
 ---
 title: MoonTV 的Docker 搭建
 date: '2026-03-02 12:00:00'
-cover: https://picsum.photos/seed/moontv-docker/800/450
+cover: /img/covers/moontv-docker.jpg
 tags:
 - 影视大全
 categories:

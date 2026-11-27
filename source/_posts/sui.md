@@ -1,7 +1,7 @@
 ---
 title: 零基础新手节点搭建教程、S‐UI面板自建上网节点、包含多协议应有尽有、一次学会
 date: '2025-11-19 12:00:00'
-cover: https://picsum.photos/seed/sui/800/450
+cover: /img/covers/sui.jpg
 tags:
 - 节点搭建
 categories:

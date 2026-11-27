@@ -1,7 +1,7 @@
 ---
 title: 免费代理面板，BPB面板更新，支持大部分代理软件
 date: '2024-10-04 12:00:00'
-cover: https://picsum.photos/seed/bpb/800/450
+cover: /img/covers/bpb.jpg
 tags:
 - 节点分享
 categories:

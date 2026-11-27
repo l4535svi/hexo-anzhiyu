@@ -1,7 +1,7 @@
 ---
 title: Dify 接入硅基流动免费满血版 DeePseekAPI 无需本地部署
 date: '2025-02-19 12:00:00'
-cover: https://picsum.photos/seed/dify-deepseekapi/800/450
+cover: /img/covers/dify-deepseekapi.jpg
 tags:
 - GPT
 categories:

@@ -1,7 +1,7 @@
 ---
 title: Shopify 产品页面品牌风点击一键复制折扣码卡片分享
 date: '2025-11-20 12:00:00'
-cover: https://picsum.photos/seed/shopify/800/450
+cover: /img/covers/shopify.jpg
 tags:
 - Shopify教程
 categories:

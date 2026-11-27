@@ -1,7 +1,7 @@
 ---
 title: 终级教程 零成本部署VLESS、Trojan免费节点 | 二合一 | 一键部署生成两协议订阅节点
 date: '2025-06-01 12:00:00'
-cover: https://picsum.photos/seed/vlesstrojan/800/450
+cover: /img/covers/vlesstrojan.jpg
 tags:
 - 科学上网
 categories:

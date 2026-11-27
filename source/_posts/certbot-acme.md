@@ -1,7 +1,7 @@
 ---
 title: 用certbot申请免费的域名证书 比acme还好用！
 date: '2025-03-06 12:00:00'
-cover: https://picsum.photos/seed/certbot-acme/800/450
+cover: /img/covers/certbot-acme.jpg
 tags:
 - 免费域名
 categories:

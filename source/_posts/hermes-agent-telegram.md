@@ -1,7 +1,7 @@
 ---
 title: Hermes Agent 本地部署实战：从安装到 Telegram 控制（含完整踩坑记录
 date: '2026-04-12 12:00:00'
-cover: https://picsum.photos/seed/hermes-agent-telegram/800/450
+cover: /img/covers/hermes-agent-telegram.jpg
 tags:
 - Hermes Agent
 categories:

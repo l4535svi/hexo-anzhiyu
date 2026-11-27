@@ -1,7 +1,7 @@
 ---
 title: 【Hexo博客系列】No.1 搭建Hexo博客，快速简洁高效，零成本搭建个人博客：Hexo + GitHub Pages +
 date: '2025-04-07 12:00:00'
-cover: https://picsum.photos/seed/hexono1-hexohexo-github-pages/800/450
+cover: /img/covers/hexono1-hexohexo-github-pages.jpg
 tags:
 - 建站
 categories:

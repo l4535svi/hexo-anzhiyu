@@ -1,7 +1,7 @@
 ---
 title: 试试Cloudflare IP优选！让Cloudflare在国内再也不是减速器
 date: '2025-07-16 12:00:00'
-cover: https://picsum.photos/seed/cloudflare-ipcloudflare/800/450
+cover: /img/covers/cloudflare-ipcloudflare.jpg
 tags:
 - CF优选域名
 categories:

@@ -1,7 +1,7 @@
 ---
 title: Facebook广告文案怎么写？
 date: '2026-06-08 12:00:00'
-cover: https://picsum.photos/seed/facebook/800/450
+cover: /img/covers/facebook.jpg
 tags:
 - FB广告
 categories:

@@ -604,21 +604,21 @@ site_verification:
 
 theme_color:
   enable: true
-  main: "#425AEF"
+  main: "#7C5CFF"
   dark_main: "#f2b94b"
-  paginator: "#425AEF"
+  paginator: "#7C5CFF"
   #   button_hover: "#FF7242"
-  text_selection: "#2128bd"
+  text_selection: "#7C5CFF"
   link_color: "var(--anzhiyu-fontcolor)"
   meta_color: "var(--anzhiyu-fontcolor)"
-  hr_color: "#4259ef23"
+  hr_color: "#7c5cff23"
   code_foreground: "#fff"
   code_background: "var(--anzhiyu-code-stress)"
-  toc_color: "#425AEF"
+  toc_color: "#7C5CFF"
   #   blockquote_padding_color: "#425AEF"
   #   blockquote_background_color: "#425AEF"
   scrollbar_color: "var(--anzhiyu-scrollbar)"
-  meta_theme_color_light: "#f7f9fe"
+  meta_theme_color_light: "#F6F2FF"
   meta_theme_color_dark: "#18171d"
 
 # 移动端侧栏
@@ -666,7 +666,7 @@ rightside-bottom: 100px
 # canvas_ribbon (静止彩带背景)
 # See: https://github.com/hustcc/ribbon.js
 canvas_ribbon:
-  enable: true
+  enable: false
   size: 150
   alpha: 0.6
   zIndex: -1
@@ -675,13 +675,13 @@ canvas_ribbon:
 
 # Fluttering Ribbon (动态彩带)
 canvas_fluttering_ribbon:
-  enable: true
+  enable: false
   mobile: false
 
 # canvas_nest
 # https://github.com/hustcc/canvas-nest.js
 canvas_nest:
-  enable: true
+  enable: false
   color: "0,0,255" #color of lines, default: '0,0,0'; RGB values: (R,G,B).(note: use ',' to separate.)
   opacity: 0.7 # the opacity of line (0~1), default: 0.5.
   zIndex: -1 # z-index property of the background, default: -1.
@@ -996,7 +996,7 @@ aplayerInject:
 snackbar:
   enable: true
   position: top-center
-  bg_light: "#425AEF" # The background color of Toast Notification in light mode
+  bg_light: "#7C5CFF" # The background color of Toast Notification in light mode
   bg_dark: "#1f1f1f" # The background color of Toast Notification in dark mode
 
 # https://instant.page/
@@ -1070,7 +1070,7 @@ home_top:
   banner:
     tips: 最新文章
     title: MoonTv 一键搭建数据接口
-    image: https://picsum.photos/seed/moontv-banner/1200/600
+    image: /img/covers/moontv.jpg
     link: /2026/11/19/moontv/
 
 # 朋友圈配置

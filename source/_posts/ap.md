@@ -1,7 +1,7 @@
 ---
 title: ap
 date: '2026-11-10 12:00:00'
-cover: https://picsum.photos/seed/ap/800/450
+cover: /img/covers/ap.jpg
 description: '我看了你的截图，不是 eMMC 硬盘损坏，而是 ImmortalWrt 系统没有安装 mmc 检测工具。 你的终端报错： -ash: mmc: not found 说明系统找不到 mmc 命令，所以暂时无法查询 eMMC 寿命。 而且从截图来看，你的京东云亚瑟已经成功运行 Imm'
 ---
 我看了你的截图，不是 eMMC 硬盘损坏，而是 ImmortalWrt 系统没有安装 `mmc` 检测工具。

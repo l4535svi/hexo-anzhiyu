@@ -1,7 +1,7 @@
 ---
 title: 共享美区苹果账号分享
 date: '2022-04-09 12:00:00'
-cover: https://picsum.photos/seed/blog-post-8/800/450
+cover: /img/covers/blog-post-8.jpg
 tags:
 - 免流搭建安卓
 categories:

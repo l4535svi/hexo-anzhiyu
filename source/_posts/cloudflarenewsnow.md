@@ -1,7 +1,7 @@
 ---
 title: 通过Cloudflare免费部署newsnow 优雅地阅读实时热门新闻
 date: '2025-03-31 12:00:00'
-cover: https://picsum.photos/seed/cloudflarenewsnow/800/450
+cover: /img/covers/cloudflarenewsnow.jpg
 tags:
 - 建站
 categories:

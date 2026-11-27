@@ -1,7 +1,7 @@
 ---
 title: 3X-ui科学上网面板
 date: '2025-03-17 12:00:00'
-cover: https://picsum.photos/seed/3x-ui/800/450
+cover: /img/covers/3x-ui.jpg
 tags:
 - 科学上网
 categories:

@@ -1,7 +1,7 @@
 ---
 title: 最新 OpenClaw + Ollama + ChatGPT 本地部署！无需API、永久免费AI、断网也能用（Windows保姆级教程）
 date: '2026-03-30 12:00:00'
-cover: https://picsum.photos/seed/openclaw-ollama-chatgpt-apiaiwindows/800/450
+cover: /img/covers/openclaw-ollama-chatgpt-apiaiwindows.jpg
 tags:
 - OpenClaw
 categories:

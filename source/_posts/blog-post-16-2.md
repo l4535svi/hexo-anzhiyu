@@ -1,7 +1,7 @@
 ---
 title: 国内频道
 date: '2026-10-17 12:00:00'
-cover: https://picsum.photos/seed/blog-post-16-2/800/450
+cover: /img/covers/blog-post-16-2.jpg
 tags:
 - 影视大全
 categories:

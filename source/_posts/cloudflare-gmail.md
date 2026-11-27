@@ -1,7 +1,7 @@
 ---
 title: 免费教你用 Cloudflare + Gmail 搭建自定义域名邮箱！零成本打造自己的 @域名 邮箱，不暴露真实邮箱，安全又专业！
 date: '2025-12-15 12:00:00'
-cover: https://picsum.photos/seed/cloudflare-gmail/800/450
+cover: /img/covers/cloudflare-gmail.jpg
 tags:
 - 临时邮箱
 categories:

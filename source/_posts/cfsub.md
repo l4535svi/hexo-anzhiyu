@@ -1,7 +1,7 @@
 ---
 title: cf免费节点sub对接端口
 date: '2025-01-28 12:00:00'
-cover: https://picsum.photos/seed/cfsub/800/450
+cover: /img/covers/cfsub.jpg
 tags:
 - 节点分享
 categories:

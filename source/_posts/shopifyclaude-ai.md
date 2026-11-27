@@ -1,7 +1,7 @@
 ---
 title: Shopify无货源新玩法：Claude AI帮你选品、上架、写广告、处理订单
 date: '2026-06-26 12:00:00'
-cover: https://picsum.photos/seed/shopifyclaude-ai/800/450
+cover: /img/covers/shopifyclaude-ai.jpg
 tags:
 - 选品
 categories:

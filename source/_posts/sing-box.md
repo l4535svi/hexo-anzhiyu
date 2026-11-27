@@ -1,7 +1,7 @@
 ---
 title: sing-box下载使用教程
 date: '2024-09-13 12:00:00'
-cover: https://picsum.photos/seed/sing-box/800/450
+cover: /img/covers/sing-box.jpg
 tags:
 - 科学上网
 categories:

@@ -1,7 +1,7 @@
 ---
 title: OpenClaw流式输出配置指南
 date: '2026-03-06 12:00:00'
-cover: https://picsum.photos/seed/openclaw-2/800/450
+cover: /img/covers/openclaw-2.jpg
 tags:
 - OpenClaw
 categories:

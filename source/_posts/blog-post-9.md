@@ -1,7 +1,7 @@
 ---
 title: 软件大全
 date: '2022-04-09 12:00:00'
-cover: https://picsum.photos/seed/blog-post-9/800/450
+cover: /img/covers/blog-post-9.jpg
 description: 索引 推薦信息 訂閱鏈接 翻牆教程 免流混淆 TG語言包 GitHub鏡像站 科學上網客戶端 精選VPN推薦 機場推薦 遊戲加速器 捐贈地址 友情推薦 📢 推薦信息 📢 📞 [TG電報群] https://t.me/payday4478 📞 [TG電報頻道] https://t.
 ---
 ### 索引

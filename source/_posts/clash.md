@@ -1,7 +1,7 @@
 ---
 title: 自建clash在线订阅转换
 date: '2022-04-19 12:00:00'
-cover: https://picsum.photos/seed/clash/800/450
+cover: /img/covers/clash.jpg
 tags:
 - 建站
 categories:

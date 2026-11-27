@@ -1,7 +1,7 @@
 ---
 title: 永久免费节点搭建！通过Cloudflare Worker部署免费的VLESS节点，4K高速，解锁Netflix、ChatGPT
 date: '2024-09-13 12:00:00'
-cover: https://picsum.photos/seed/cloudflare-workervless4knetflixchatgpt/800/450
+cover: /img/covers/cloudflare-workervless4knetflixchatgpt.jpg
 tags:
 - 节点分享
 categories:

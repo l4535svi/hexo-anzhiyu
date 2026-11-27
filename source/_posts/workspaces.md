@@ -1,7 +1,7 @@
 ---
 title: 飞书多个机器人配置多个\workspaces教程
 date: '2026-03-16 12:00:00'
-cover: https://picsum.photos/seed/workspaces/800/450
+cover: /img/covers/workspaces.jpg
 tags:
 - OpenClaw
 categories:

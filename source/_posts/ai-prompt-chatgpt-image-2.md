@@ -1,7 +1,7 @@
 ---
 title: AI 多广告创意生成器 Prompt (ChatGPT Image 2)
 date: '2026-10-18 12:00:00'
-cover: https://picsum.photos/seed/ai-prompt-chatgpt-image-2/800/450
+cover: /img/covers/ai-prompt-chatgpt-image-2.jpg
 tags:
 - AI视频
 categories:

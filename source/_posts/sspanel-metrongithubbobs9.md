@@ -1,7 +1,7 @@
 ---
 title: SSPanel-Metron为Github开源项目，目前由BobS9维护开发中
 date: '2022-04-18 12:00:00'
-cover: https://picsum.photos/seed/sspanel-metrongithubbobs9/800/450
+cover: /img/covers/sspanel-metrongithubbobs9.jpg
 tags:
 - 建站
 categories:

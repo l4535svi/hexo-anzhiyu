@@ -1,7 +1,7 @@
 ---
 title: Clash for Mac 使用教程
 date: '2021-04-24 12:00:00'
-cover: https://picsum.photos/seed/clash-for-mac/800/450
+cover: /img/covers/clash-for-mac.jpg
 tags:
 - 免流搭建苹果
 categories:

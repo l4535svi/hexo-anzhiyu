@@ -1,7 +1,7 @@
 ---
 title: Grok2API 保姆级教程，免费搭建大模型 API
 date: '2026-04-01 12:00:00'
-cover: https://picsum.photos/seed/grok2api-api-2/800/450
+cover: /img/covers/grok2api-api-2.jpg
 tags:
 - OpenClaw
 categories:

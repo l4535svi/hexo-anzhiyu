@@ -1,7 +1,7 @@
 ---
 title: 安卓V2RAY免流使用教程
 date: '2021-05-17 12:00:00'
-cover: https://picsum.photos/seed/v2ray-17/800/450
+cover: /img/covers/v2ray-17.jpg
 tags:
 - 免流搭建安卓
 - 科学上网

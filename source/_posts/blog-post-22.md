@@ -1,7 +1,7 @@
 ---
 title: 看视频神器 免费看遍所有视频
 date: '2025-11-16 12:00:00'
-cover: https://picsum.photos/seed/blog-post-22/800/450
+cover: /img/covers/blog-post-22.jpg
 tags:
 - Netfix
 categories:

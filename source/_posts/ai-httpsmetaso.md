@@ -1,7 +1,7 @@
 ---
 title: ai-httpsmetaso
 date: '2025-02-09 12:00:00'
-cover: https://picsum.photos/seed/ai-httpsmetaso/800/450
+cover: /img/covers/ai-httpsmetaso.jpg
 tags:
 - GPT
 categories:

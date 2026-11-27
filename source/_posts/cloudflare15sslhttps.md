@@ -1,7 +1,7 @@
 ---
 title: Cloudflare免费申请使用15年有效期的SSL自签证书，支持泛域名，实现全站https访问
 date: '2025-03-06 12:00:00'
-cover: https://picsum.photos/seed/cloudflare15sslhttps/800/450
+cover: /img/covers/cloudflare15sslhttps.jpg
 tags:
 - 免费域名
 categories:

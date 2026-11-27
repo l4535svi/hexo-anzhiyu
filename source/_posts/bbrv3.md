@@ -1,7 +1,7 @@
 ---
 title: BBRv3 管理脚本
 date: '2026-06-15 12:00:00'
-cover: https://picsum.photos/seed/bbrv3/800/450
+cover: /img/covers/bbrv3.jpg
 tags:
 - 节点搭建
 categories:

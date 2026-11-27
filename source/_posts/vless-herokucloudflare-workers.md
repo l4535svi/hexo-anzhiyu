@@ -1,6 +1,6 @@
 ---
 title: 免费高速VLESS
-cover: https://picsum.photos/seed/vless-herokucloudflare-workers/800/450
+cover: /img/covers/vless-herokucloudflare-workers.jpg
 ---Heroku+cloudflare workers
 date: '2022-04-22 12:00:00'
 tags:

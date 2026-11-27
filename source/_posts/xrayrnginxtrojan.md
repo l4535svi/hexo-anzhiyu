@@ -1,7 +1,7 @@
 ---
 title: 当前最强后端，XrayR部署Nginx+Trojan
 date: '2022-04-18 12:00:00'
-cover: https://picsum.photos/seed/xrayrnginxtrojan/800/450
+cover: /img/covers/xrayrnginxtrojan.jpg
 tags:
 - 建站
 categories:

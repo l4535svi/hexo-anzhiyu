@@ -1,7 +1,7 @@
 ---
 title: CLIProxyAPIPlus版本如何安装更新
 date: '2026-04-07 12:00:00'
-cover: https://picsum.photos/seed/cliproxyapiplus/800/450
+cover: /img/covers/cliproxyapiplus.jpg
 tags:
 - GPT
 categories:

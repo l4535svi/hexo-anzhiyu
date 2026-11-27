@@ -1,7 +1,7 @@
 ---
 title: 3XUI 搭建 HY2 节点：UDP 端口跳跃配置与不生效排障
 date: '2026-11-08 12:00:00'
-cover: https://picsum.photos/seed/3xui-hy2-udp/800/450
+cover: /img/covers/3xui-hy2-udp.jpg
 tags:
 - 节点搭建
 categories:

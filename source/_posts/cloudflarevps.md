@@ -1,7 +1,7 @@
 ---
 title: 自建门户导航网站，CloudFlare搭建轻量化导航页面，无需服务器，无需vps，免费且开源！！！
 date: '2024-09-14 12:00:00'
-cover: https://picsum.photos/seed/cloudflarevps/800/450
+cover: /img/covers/cloudflarevps.jpg
 tags:
 - 建站
 categories:

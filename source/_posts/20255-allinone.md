@@ -1,7 +1,7 @@
 ---
 title: 【必备收藏】2025最新免费5大直播源，高清看遍港澳台电视台，稳定到离谱！| allinone | 教程 | 演示 | 有效 | 长久 |
 date: '2026-05-25 12:00:00'
-cover: https://picsum.photos/seed/20255-allinone/800/450
+cover: /img/covers/20255-allinone.jpg
 tags:
 - 影视大全
 categories:

@@ -1,7 +1,7 @@
 ---
 title: 免流普卡热点共享教程
 date: '2022-02-19 12:00:00'
-cover: https://picsum.photos/seed/blog-post-5/800/450
+cover: /img/covers/blog-post-5.jpg
 tags:
 - 免流搭建安卓
 categories:

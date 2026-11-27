@@ -1,7 +1,7 @@
 ---
 title: 换帮一个github吧，命令发我一下
 date: '2026-10-16 12:00:00'
-cover: https://picsum.photos/seed/github/800/450
+cover: /img/covers/github.jpg
 tags:
 - 电脑优化
 categories:

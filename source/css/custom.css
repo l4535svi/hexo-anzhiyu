@@ -7,3 +7,83 @@
     left: 262px !important;
   }
 }
+
+/* ===== Heo 风改造 ===== */
+
+/* 1. 即刻短文条：长文案单行省略，不再溢出重叠 */
+#bbtalk .swiper-slide {
+  display: block;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 2. 页面背景：浅紫渐变（仅浅色模式） */
+html[data-theme="light"] body {
+  background: linear-gradient(180deg, #f2edff 0%, #f8f5ff 35%, #f7f9fe 75%) fixed;
+}
+
+/* 主题透明色变量：主题源码里这两个是写死的蓝色，在此覆盖为紫色 */
+:root {
+  --anzhiyu-theme-op: #7c5cff23;
+  --anzhiyu-theme-op-deep: #7c5cffdd;
+}
+
+/* 引用块、评论切换、明暗开关里残留的蓝色也改紫 */
+blockquote {
+  border-left-color: #7c5cff !important;
+}
+#post-comment .comment-head .comment-switch .first-comment {
+  color: #7c5cff !important;
+}
+#switch-btn {
+  background-color: #7c5cff !important;
+}
+
+/* 3. 悬浮胶囊导航 */
+#page-header #nav,
+#page-header.nav-fixed #nav {
+  top: 12px;
+  left: 12px;
+  right: 12px;
+  width: auto;
+  border-radius: 16px;
+  outline: none !important;
+  border: 1px solid rgba(124, 92, 255, 0.14);
+  box-shadow: 0 8px 30px rgba(124, 92, 255, 0.14);
+}
+html[data-theme="light"] #page-header #nav,
+html[data-theme="light"] #page-header.nav-fixed #nav {
+  background: rgba(255, 255, 255, 0.88) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(1.6);
+  backdrop-filter: blur(20px) saturate(1.6);
+}
+html[data-theme="dark"] #page-header #nav,
+html[data-theme="dark"] #page-header.nav-fixed #nav {
+  background: rgba(24, 23, 29, 0.88) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(1.6);
+  backdrop-filter: blur(20px) saturate(1.6);
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* 4. 首页轮播卡片：淡紫底，切换瞬间也不显空白 */
+.blog-slider,
+.blog-slider__item {
+  background: linear-gradient(135deg, #ede7ff 0%, #f6f2ff 100%);
+}
+
+/* 5. 首页三张快捷入口统一紫色系 */
+.categoryButton.blue {
+  background: linear-gradient(to right, #7c5cff, #9d7bff) !important;
+}
+.categoryButton.red {
+  background: linear-gradient(to right, #9d4edd, #c77dff) !important;
+}
+.categoryButton.green {
+  background: linear-gradient(to right, #5b5bf5, #7c8cff) !important;
+}
+.categoryItem {
+  box-shadow: 0 6px 18px rgba(124, 92, 255, 0.22) !important;
+}

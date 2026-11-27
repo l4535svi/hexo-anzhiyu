@@ -1,7 +1,7 @@
 ---
 title: 青龙拉库
 date: '2025-06-02 12:00:00'
-cover: https://picsum.photos/seed/blog-post-19/800/450
+cover: /img/covers/blog-post-19.jpg
 tags:
 - 青龙全部
 categories:

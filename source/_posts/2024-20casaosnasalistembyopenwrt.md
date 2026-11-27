@@ -1,7 +1,7 @@
 ---
 title: 2024年最佳电子玩具-极限榨取只需20元的玩客云全部性能！casaos轻NAS+小雅原版ALIST+Emby海报墙+Openwrt 千兆软路由+青龙面板
 date: '2024-09-06 12:00:00'
-cover: https://picsum.photos/seed/2024-20casaosnasalistembyopenwrt/800/450
+cover: /img/covers/2024-20casaosnasalistembyopenwrt.jpg
 tags:
 - 科学上网
 categories:

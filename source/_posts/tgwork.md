@@ -1,7 +1,7 @@
 ---
 title: tg推送必须部署到work代码（不然无法使用）
 date: '2025-01-11 12:00:00'
-cover: https://picsum.photos/seed/tgwork/800/450
+cover: /img/covers/tgwork.jpg
 tags:
 - 青龙全部
 categories:

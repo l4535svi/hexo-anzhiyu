@@ -1,7 +1,7 @@
 ---
 title: 最新Tuic V5协议搭建教程 | 一键搭建tuic节点，轻松实现科学上网，提高安全性和稳定性，搭建非常的简单，强大八合一脚本，功能非常强大，简单配置即可使用，非常适合初体验的小伙伴#一瓶奶油
 date: '2025-04-09 12:00:00'
-cover: https://picsum.photos/seed/tuic-v5-tuic/800/450
+cover: /img/covers/tuic-v5-tuic.jpg
 tags:
 - 科学上网
 categories:

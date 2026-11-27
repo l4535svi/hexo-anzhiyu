@@ -1,7 +1,7 @@
 ---
 title: ChatGPT Business 版本免费1一个月
 date: '2025-12-15 12:00:00'
-cover: https://picsum.photos/seed/chatgpt-business-1/800/450
+cover: /img/covers/chatgpt-business-1.jpg
 tags:
 - GPT
 categories:

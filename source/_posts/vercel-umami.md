@@ -1,7 +1,7 @@
 ---
 title: 使用 Vercel 部署自托管 Umami 实时监控网站
 date: '2026-08-10 12:00:00'
-cover: https://picsum.photos/seed/vercel-umami/800/450
+cover: /img/covers/vercel-umami.jpg
 tags:
 - cloudflare项目
 categories:

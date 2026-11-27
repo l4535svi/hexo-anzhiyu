@@ -1,7 +1,7 @@
 ---
 title: 科学上网免费翻墙！完美替代WARP 1.1.1.1的方法！使用cloudflare pages搭建vless免费节点，并且开启TLS传输协议，安全隐私更进一步！解锁Netflix、ChatGPT！
 date: '2024-10-11 12:00:00'
-cover: https://picsum.photos/seed/warp-1111cloudflare-pagesvlesstlsnetfli/800/450
+cover: /img/covers/warp-1111cloudflare-pagesvlesstlsnetfli.jpg
 tags:
 - 节点分享
 categories:

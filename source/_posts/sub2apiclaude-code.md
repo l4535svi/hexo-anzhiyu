@@ -1,7 +1,7 @@
 ---
 title: Sub2API自建Claude Code中转站，原来这么简单！
 date: '2026-03-20 12:00:00'
-cover: https://picsum.photos/seed/sub2apiclaude-code/800/450
+cover: /img/covers/sub2apiclaude-code.jpg
 tags:
 - OpenClaw
 categories:

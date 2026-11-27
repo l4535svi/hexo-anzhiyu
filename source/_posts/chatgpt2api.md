@@ -1,7 +1,7 @@
 ---
 title: ChatGPT2API
 date: '2026-04-27 12:00:00'
-cover: https://picsum.photos/seed/chatgpt2api/800/450
+cover: /img/covers/chatgpt2api.jpg
 tags:
 - GPT
 categories:

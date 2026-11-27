@@ -1,7 +1,7 @@
 ---
 title: 【升级】docker部署PHP运行教程+项目分享（国内高清直播）
 date: '2025-11-21 12:00:00'
-cover: https://picsum.photos/seed/dockerphp/800/450
+cover: /img/covers/dockerphp.jpg
 tags:
 - 影视大全
 categories:

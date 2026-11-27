@@ -1,7 +1,7 @@
 ---
 title: 免费注册US.KG域名：从身份生成到Cloudflare托管的全流程指南
 date: '2024-10-10 12:00:00'
-cover: https://picsum.photos/seed/uskgcloudflare-2/800/450
+cover: /img/covers/uskgcloudflare-2.jpg
 tags:
 - 建站
 categories:

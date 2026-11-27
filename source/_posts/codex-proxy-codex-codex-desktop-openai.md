@@ -1,7 +1,7 @@
 ---
 title: Codex Proxy 您的本地 Codex 编程助手中转站 将 Codex Desktop 的能力以 OpenAI 标准协议对外暴露，无缝接入任意 AI 客户端。
 date: '2026-03-14 12:00:00'
-cover: https://picsum.photos/seed/codex-proxy-codex-codex-desktop-openai/800/450
+cover: /img/covers/codex-proxy-codex-codex-desktop-openai.jpg
 tags:
 - OpenClaw
 categories:

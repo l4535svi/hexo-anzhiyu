@@ -1,7 +1,7 @@
 ---
 title: 一条命令，给自己的服务器装个「输入文字就出视频」的工作台（小白向）
 date: '2026-10-09 12:00:00'
-cover: https://picsum.photos/seed/blog-post-27/800/450
+cover: /img/covers/blog-post-27.jpg
 tags:
 - GPT
 categories:

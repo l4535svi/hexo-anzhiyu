@@ -1,7 +1,7 @@
 ---
 title: 在青龙中运行
 date: '2024-09-07 12:00:00'
-cover: https://picsum.photos/seed/blog-post-11/800/450
+cover: /img/covers/blog-post-11.jpg
 description: 思路是，在青龙容器中安装 dotnet 环境或 bilitool 的二进制包，利用青龙的拉库命令，拉取本仓库源码，添加cron定时任务，定时运行相应的Task。 开始前，请先确保你的青龙面板是运行正常的。 1. 步骤 1.1. 登录青龙面板并修改配置 1.2. 在青龙面板中添加拉
 ---
 思路是，在青龙容器中安装`dotnet`环境或`bilitool`的二进制包，利用青龙的拉库命令，拉取本仓库源码，添加cron定时任务，定时运行相应的Task。

@@ -1,7 +1,7 @@
 ---
 title: 利用Cloudflare R2 +Pages搭建在线图床系统，不限空间，不被墙，超级简单，完全免费
 date: '2024-11-17 12:00:00'
-cover: https://picsum.photos/seed/cloudflare-r2-pages/800/450
+cover: /img/covers/cloudflare-r2-pages.jpg
 tags:
 - 免费图库
 categories:

@@ -1,7 +1,7 @@
 ---
 title: CLI Proxy API 管理中心搭配cpa使用，可以看数据花费情况
 date: '2026-05-26 12:00:00'
-cover: https://picsum.photos/seed/cli-proxy-api/800/450
+cover: /img/covers/cli-proxy-api.jpg
 tags:
 - GPT
 categories:

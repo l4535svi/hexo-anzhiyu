@@ -1,7 +1,7 @@
 ---
 title: 用ChatGPT Sol做Shopify跨境电商：从选品、建站到广告完整实操
 date: '2026-08-03 12:00:00'
-cover: https://picsum.photos/seed/chatgpt-solshopify/800/450
+cover: /img/covers/chatgpt-solshopify.jpg
 tags:
 - AI有风
 categories:

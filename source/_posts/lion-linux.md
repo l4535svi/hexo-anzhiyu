@@ -1,7 +1,7 @@
 ---
 title: 科技lion一键脚本 Linux服务器运维工具箱 监控管理建站一个脚本全搞定！
 date: '2025-02-21 12:00:00'
-cover: https://picsum.photos/seed/lion-linux/800/450
+cover: /img/covers/lion-linux.jpg
 tags:
 - 建站
 categories:

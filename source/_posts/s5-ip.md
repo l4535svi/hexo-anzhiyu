@@ -1,7 +1,7 @@
 ---
 title: S5一键搭建脚本 附无限换IP教程
 date: '2025-07-17 12:00:00'
-cover: https://picsum.photos/seed/s5-ip/800/450
+cover: /img/covers/s5-ip.jpg
 tags:
 - 科学上网
 categories:

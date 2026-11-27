@@ -1,7 +1,7 @@
 ---
 title: 如何提高网站的SEO？
 date: '2025-07-31 12:00:00'
-cover: https://picsum.photos/seed/seo/800/450
+cover: /img/covers/seo.jpg
 tags:
 - 建站
 categories:

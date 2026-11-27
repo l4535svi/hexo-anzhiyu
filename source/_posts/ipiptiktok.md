@@ -1,7 +1,7 @@
 ---
 title: 【再谈住宅IP】如何使用住宅IP运营海外TikTok（多号/单号直播
 date: '2025-08-10 12:00:00'
-cover: https://picsum.photos/seed/ipiptiktok/800/450
+cover: /img/covers/ipiptiktok.jpg
 tags:
 - TIKTOK
 categories:

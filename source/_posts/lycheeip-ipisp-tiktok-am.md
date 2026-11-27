@@ -1,7 +1,7 @@
 ---
 title: lycheeip 🚀高速静态住宅IP推荐！原生独享双ISP！| 大带宽TikTok运营 | 跨境电商运营 | 静态住宅代理 | AM科技
 date: '2025-03-17 12:00:00'
-cover: https://picsum.photos/seed/lycheeip-ipisp-tiktok-am/800/450
+cover: /img/covers/lycheeip-ipisp-tiktok-am.jpg
 tags:
 - 节点分享
 categories:

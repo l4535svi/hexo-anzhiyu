@@ -1,7 +1,7 @@
 ---
 title: 搭建vpn节点 高速hy2 无需域名 用搬瓦工vps实操演示
 date: '2025-04-02 12:00:00'
-cover: https://picsum.photos/seed/vpn-hy2-vps/800/450
+cover: /img/covers/vpn-hy2-vps.jpg
 tags:
 - VPS
 categories:

@@ -1,7 +1,7 @@
 ---
 title: 创建生图机器人
 date: '2026-04-15 12:00:00'
-cover: https://picsum.photos/seed/blog-post-25/800/450
+cover: /img/covers/blog-post-25.jpg
 tags:
 - Hermes Agent
 categories:

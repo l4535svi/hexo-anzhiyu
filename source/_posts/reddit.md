@@ -1,7 +1,7 @@
 ---
 title: Reddit 选品技巧大全：快速找到老外真正想买的东西
 date: '2026-04-02 12:00:00'
-cover: https://picsum.photos/seed/reddit/800/450
+cover: /img/covers/reddit.jpg
 tags:
 - 选品
 categories:

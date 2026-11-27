@@ -1,7 +1,7 @@
 ---
 title: blogger教程|文章怎么关联分类？菜单如何设置？
 date: '2022-04-09 12:00:00'
-cover: https://picsum.photos/seed/blogger/800/450
+cover: /img/covers/blogger.jpg
 description: 我们在使用bloger进行博客内容创作时，往往会碰到这样一个问题：文章怎么关联到一个分类？或者像有些网友问到的那样，怎么把文章关联到导航菜单？ 由于blogger没有像其它博客平台(例如：wordpress)那样提供丰富的编辑功能，也没有灵活的文章撰写插件。只在右侧拥有极其简单的
 ---
 ##  [![blogger教程](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhaJrMx5Bn6DaH4yuHGMKthihAhORowGEsZ9HpVVwQDJKAfl5bfm1ZiLWk6-qJMs2kMZVfXEGWTn1ylAMZSfnTRKiPLpaGgxqQ1p6a_493R-4Q0011WzAxZbLVYS07Y0mXILgswkF9KgQ/s1600/Vive+La+France%2521+%25281%2529.jpg)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhaJrMx5Bn6DaH4yuHGMKthihAhORowGEsZ9HpVVwQDJKAfl5bfm1ZiLWk6-qJMs2kMZVfXEGWTn1ylAMZSfnTRKiPLpaGgxqQ1p6a_493R-4Q0011WzAxZbLVYS07Y0mXILgswkF9KgQ/s1600/Vive+La+France%2521+%25281%2529.jpg)

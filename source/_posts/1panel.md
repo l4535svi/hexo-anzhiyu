@@ -1,7 +1,7 @@
 ---
 title: 1Panel脚本
 date: '2025-01-11 12:00:00'
-cover: https://picsum.photos/seed/1panel/800/450
+cover: /img/covers/1panel.jpg
 tags:
 - 建站
 categories:

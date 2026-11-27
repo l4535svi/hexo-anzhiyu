@@ -1,7 +1,7 @@
 ---
 title: 小雅搭建教程
 date: '2025-01-31 12:00:00'
-cover: https://picsum.photos/seed/blog-post-14/800/450
+cover: /img/covers/blog-post-14.jpg
 tags:
 - 影视大全
 categories:

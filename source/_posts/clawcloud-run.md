@@ -1,7 +1,7 @@
 ---
 title: Clawcloud-run自动登录助手，无忧保号，应对爪云新政策！
 date: '2026-01-04 12:00:00'
-cover: https://picsum.photos/seed/clawcloud-run/800/450
+cover: /img/covers/clawcloud-run.jpg
 tags:
 - ClawCloud项目
 categories:

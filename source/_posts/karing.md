@@ -1,7 +1,7 @@
 ---
 title: Karing科学上网
 date: '2025-04-28 12:00:00'
-cover: https://picsum.photos/seed/karing/800/450
+cover: /img/covers/karing.jpg
 tags:
 - 科学上网
 categories:

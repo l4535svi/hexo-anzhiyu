@@ -1,7 +1,7 @@
 ---
 title: workbuddy2api-hub部署教程
 date: '2026-09-20 12:00:00'
-cover: https://picsum.photos/seed/workbuddy2api-hub/800/450
+cover: /img/covers/workbuddy2api-hub.jpg
 description: 直接 Docker Compose 部署 如果你是在 Linux / Ubuntu / Debian / NAS / VPS 上： git clone https://github.com/ardeyouxipianyi/workbuddy2api-hub.git cd work
 ---
 ### 直接 Docker Compose 部署

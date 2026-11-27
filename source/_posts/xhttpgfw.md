@@ -1,7 +1,7 @@
 ---
 title: 【代理新姿势】全场景通吃的xhttp传输协议快速上手，GFW直呼内行
 date: '2025-03-05 12:00:00'
-cover: https://picsum.photos/seed/xhttpgfw/800/450
+cover: /img/covers/xhttpgfw.jpg
 tags:
 - 节点分享
 categories:

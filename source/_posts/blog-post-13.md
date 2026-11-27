@@ -1,7 +1,7 @@
 ---
 title: 全自动获取免费机场节点/订阅方法分享【立即实现代理节点自由】
 date: '2024-11-10 12:00:00'
-cover: https://picsum.photos/seed/blog-post-13/800/450
+cover: /img/covers/blog-post-13.jpg
 tags:
 - 科学上网
 categories:

@@ -1,7 +1,7 @@
 ---
 title: OpenClaw 官方已经内置了备份命令
 date: '2026-03-15 12:00:00'
-cover: https://picsum.photos/seed/openclaw-15-2/800/450
+cover: /img/covers/openclaw-15-2.jpg
 tags:
 - OpenClaw
 categories:

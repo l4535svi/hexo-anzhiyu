@@ -1,7 +1,7 @@
 ---
 title: https://github.com/wenfxl/openai-cpa/tree/v8.9.1项目升级教程
 date: '2026-04-09 12:00:00'
-cover: https://picsum.photos/seed/httpsgithubcomwenfxlopenai-cpatreev891/800/450
+cover: /img/covers/httpsgithubcomwenfxlopenai-cpatreev891.jpg
 tags:
 - GPT
 categories:

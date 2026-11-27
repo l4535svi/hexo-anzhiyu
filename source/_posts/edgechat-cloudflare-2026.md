@@ -1,7 +1,7 @@
 ---
 title: EdgeChat 部署教程：在 Cloudflare 上免费搭建团队聊天室（2026实测）
 date: '2026-10-11 12:00:00'
-cover: https://picsum.photos/seed/edgechat-cloudflare-2026/800/450
+cover: /img/covers/edgechat-cloudflare-2026.jpg
 tags:
 - cloudflare项目
 categories:

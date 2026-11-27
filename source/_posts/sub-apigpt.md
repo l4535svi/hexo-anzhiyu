@@ -1,7 +1,7 @@
 ---
 title: 安装sub-api，白嫖gpt的反带工具
 date: '2026-04-15 12:00:00'
-cover: https://picsum.photos/seed/sub-apigpt/800/450
+cover: /img/covers/sub-apigpt.jpg
 tags:
 - GPT
 categories:

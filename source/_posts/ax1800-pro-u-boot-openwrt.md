@@ -1,7 +1,7 @@
 ---
 title: 京东云 AX1800 Pro 路由器(亚瑟)刷入 u-boot 和 OpenWrt
 date: '2025-08-25 12:00:00'
-cover: https://picsum.photos/seed/ax1800-pro-u-boot-openwrt/800/450
+cover: /img/covers/ax1800-pro-u-boot-openwrt.jpg
 tags:
 - 软路由
 categories:

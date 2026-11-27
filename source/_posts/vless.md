@@ -1,7 +1,7 @@
 ---
 title: Vless一键脚本
 date: '2025-11-22 12:00:00'
-cover: https://picsum.photos/seed/vless/800/450
+cover: /img/covers/vless.jpg
 tags:
 - 节点搭建
 categories:

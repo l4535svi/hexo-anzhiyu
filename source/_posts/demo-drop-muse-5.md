@@ -1,7 +1,7 @@
 ---
 title: 接单 demo 怎么给客户看？花生壳 Drop 实测：Muse 写官网，5 分钟生成公网链接
 date: '2026-10-13 12:00:00'
-cover: https://picsum.photos/seed/demo-drop-muse-5/800/450
+cover: /img/covers/demo-drop-muse-5.jpg
 tags:
 - cloudflare项目
 categories:

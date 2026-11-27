@@ -1,7 +1,7 @@
 ---
 title: 使用BT宝塔Nginx反向代理导致 后台无法登录的解决方法
 date: '2022-04-18 12:00:00'
-cover: https://picsum.photos/seed/btnginx/800/450
+cover: /img/covers/btnginx.jpg
 tags:
 - 建站
 categories:

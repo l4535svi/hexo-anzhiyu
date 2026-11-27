@@ -1,7 +1,7 @@
 ---
 title: ArgoSB一键无交互小钢炮脚本💣：极简 + 轻量 + 快速
 date: '2025-08-30 12:00:00'
-cover: https://picsum.photos/seed/argosb/800/450
+cover: /img/covers/argosb.jpg
 tags:
 - 节点分享
 categories:

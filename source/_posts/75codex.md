@@ -1,7 +1,7 @@
 ---
 title: 7.5机场脚本升级codex优化
 date: '2026-07-05 12:00:00'
-cover: https://picsum.photos/seed/75codex/800/450
+cover: /img/covers/75codex.jpg
 tags:
 - 节点搭建
 categories:

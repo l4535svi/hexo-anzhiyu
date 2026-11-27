@@ -1,7 +1,7 @@
 ---
 title: 不错的域名和SSL证书监控项目：Domain Admin
 date: '2025-02-26 12:00:00'
-cover: https://picsum.photos/seed/ssldomain-admin/800/450
+cover: /img/covers/ssldomain-admin.jpg
 tags:
 - 建站
 categories:

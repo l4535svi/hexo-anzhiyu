@@ -1,7 +1,7 @@
 ---
 title: 跨境TK电商网络搭建一键脚本
 date: '2025-11-22 12:00:00'
-cover: https://picsum.photos/seed/tk/800/450
+cover: /img/covers/tk.jpg
 tags:
 - 节点搭建
 categories:

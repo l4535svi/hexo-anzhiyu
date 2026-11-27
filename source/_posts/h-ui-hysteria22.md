@@ -1,7 +1,7 @@
 ---
 title: 最新 H-ui 面板一键安装 hysteria2|歇斯底里2 节点，新手小白轻松搭建翻墙节点，支持多用户管理、链式代理出站
 date: '2025-05-13 12:00:00'
-cover: https://picsum.photos/seed/h-ui-hysteria22/800/450
+cover: /img/covers/h-ui-hysteria22.jpg
 tags:
 - 科学上网
 categories:

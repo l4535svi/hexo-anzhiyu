@@ -1,7 +1,7 @@
 ---
 title: 超萌 Linux BBR V3 管理脚本：支持arm和x86-64轻松加速网络，让服务器飞起来！同步Linux内核更新
 date: '2025-03-07 12:00:00'
-cover: https://picsum.photos/seed/linux-bbr-v3-armx86-64linux/800/450
+cover: /img/covers/linux-bbr-v3-armx86-64linux.jpg
 tags:
 - 科学上网
 categories:

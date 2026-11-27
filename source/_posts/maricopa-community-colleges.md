@@ -1,7 +1,7 @@
 ---
 title: 🇺🇸 美国教育邮箱注册教程（Maricopa Community Colleges）
 date: '2026-01-23 12:00:00'
-cover: https://picsum.photos/seed/maricopa-community-colleges/800/450
+cover: /img/covers/maricopa-community-colleges.jpg
 tags:
 - 教育邮箱
 categories:

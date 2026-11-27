@@ -1,7 +1,7 @@
 ---
 title: 易支付对接sspanel Metron 教程以及支付源码
 date: '2022-04-18 12:00:00'
-cover: https://picsum.photos/seed/sspanel-metron/800/450
+cover: /img/covers/sspanel-metron.jpg
 tags:
 - 建站
 categories:

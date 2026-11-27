@@ -1,7 +1,7 @@
 ---
 title: 永不被盗的订阅转换方法！白嫖永久免费服务器！小白也能拥有个人专属私密转换服务，守护科学上网的节点信息！零成本！自建订阅转换API后端 告别订阅转换节点泄露风险！新手小白必备，建议人手一个
 date: '2025-07-28 12:00:00'
-cover: https://picsum.photos/seed/api/800/450
+cover: /img/covers/api.jpg
 tags:
 - 科学上网
 categories:

@@ -1,7 +1,7 @@
 ---
 title: 本地openclaw虚拟机一键打包安装，开启免费极速养虾模式
 date: '2026-03-24 12:00:00'
-cover: https://picsum.photos/seed/openclaw-23-2/800/450
+cover: /img/covers/openclaw-23-2.jpg
 tags:
 - OpenClaw
 categories:

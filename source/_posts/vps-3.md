@@ -1,7 +1,7 @@
 ---
 title: 一键查路由：自研脚本带你从家宽到 VPS、再到目标网站做全链路追踪
 date: '2025-11-25 12:00:00'
-cover: https://picsum.photos/seed/vps-3/800/450
+cover: /img/covers/vps-3.jpg
 tags:
 - 科学上网
 categories:
